@@ -11,7 +11,7 @@ https://github.com/alex-shpak/hugo-book
 <meta name="description" content="Round#round(3.5)Result: &gt;&gt;&gt; 4
 round(2.5)Result: &gt;&gt;&gt; 2
 “For halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding.”
-- Automate the Boring Stuff with Python by Al Swigart, chapter 1 - Value comparision#42 == 42Result: True
+- Automate the Boring Stuff with Python by Al Swigart, Chapter 1 - Value comparision#42 == 42Result: True
 42 == 42.0Result: True
 42 == &#39;42&#39;Result: False
 &#34; The expression 42 == ‘42’ evaluates to False because Python considers the integer 42 to be different from the string ‘42’. However, Python does consider the integer 42 to be the same as the float 42.0.&#34;
@@ -24,7 +24,7 @@ round(2.5)Result: &gt;&gt;&gt; 2
   <meta property="og:description" content="Round#round(3.5)Result: &gt;&gt;&gt; 4
 round(2.5)Result: &gt;&gt;&gt; 2
 “For halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding.”
-- Automate the Boring Stuff with Python by Al Swigart, chapter 1 - Value comparision#42 == 42Result: True
+- Automate the Boring Stuff with Python by Al Swigart, Chapter 1 - Value comparision#42 == 42Result: True
 42 == 42.0Result: True
 42 == &#39;42&#39;Result: False
 &#34; The expression 42 == ‘42’ evaluates to False because Python considers the integer 42 to be different from the string ‘42’. However, Python does consider the integer 42 to be the same as the float 42.0.&#34;">
@@ -36,11 +36,11 @@ round(2.5)Result: &gt;&gt;&gt; 2
   <meta itemprop="description" content="Round#round(3.5)Result: &gt;&gt;&gt; 4
 round(2.5)Result: &gt;&gt;&gt; 2
 “For halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding.”
-- Automate the Boring Stuff with Python by Al Swigart, chapter 1 - Value comparision#42 == 42Result: True
+- Automate the Boring Stuff with Python by Al Swigart, Chapter 1 - Value comparision#42 == 42Result: True
 42 == 42.0Result: True
 42 == &#39;42&#39;Result: False
 &#34; The expression 42 == ‘42’ evaluates to False because Python considers the integer 42 to be different from the string ‘42’. However, Python does consider the integer 42 to be the same as the float 42.0.&#34;">
-  <meta itemprop="wordCount" content="141">
+  <meta itemprop="wordCount" content="453">
 
 <title>Python | My programming note</title>
 <link rel="icon" href="/favicon.png" >
@@ -50,7 +50,7 @@ round(2.5)Result: &gt;&gt;&gt; 2
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.4ecae7d602f7f8df3a80b41b9eaee348851847e589200333f109e9e3bab79f5d.js" integrity="sha256-Tsrn1gL3&#43;N86gLQbnq7jSIUYR&#43;WJIAMz8Qnp47q3n10=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.cd91acfbc4e08e41f1e60af597427cf60e1cd96b3bc12cbc0e6cbf961f87ce3c.js" integrity="sha256-zZGs&#43;8TgjkHx5gr1l0J89g4c2Ws7wSy8Dmy/lh&#43;Hzjw=" crossorigin="anonymous"></script>
 
 
 <link rel="alternate" type="application/rss+xml" href="https://example.org/docs/1-note/1-python/index.xml" title="My programming note" />
@@ -181,6 +181,8 @@ round(2.5)Result: &gt;&gt;&gt; 2
     <li><a href="#round">Round</a></li>
     <li><a href="#value-comparision">Value comparision</a></li>
     <li><a href="#bool-funtion">bool() funtion</a></li>
+    <li><a href="#none-value">None value</a></li>
+    <li><a href="#named-parameters">Named Parameters</a></li>
   </ul>
 </nav>
 
@@ -197,16 +199,32 @@ round(2.5)Result: &gt;&gt;&gt; 2
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>round(<span style="color:#ae81ff">3.5</span>)</span></span></code></pre></div><p>Result: <code>&gt;&gt;&gt; 4</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>round(<span style="color:#ae81ff">2.5</span>)</span></span></code></pre></div><p>Result: <code>&gt;&gt;&gt; 2</code></p>
 <p>&ldquo;For <strong>halfway numbers</strong> that <strong>end with .5</strong>, the number is <strong>rounded to the nearest even integer</strong>. This is called <strong>banker’s rounding</strong>.&rdquo;</p>
-<p style="text-align: right;"> - Automate the Boring Stuff with Python by Al Swigart, chapter 1 - </p>
+<p style="text-align: right;"> - Automate the Boring Stuff with Python by Al Swigart, Chapter 1 - </p>
 <h2 id="value-comparision">Value comparision<a class="anchor" href="#value-comparision">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ae81ff">42</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">42</span></span></span></code></pre></div><p>Result: <code>True</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ae81ff">42</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">42.0</span></span></span></code></pre></div><p>Result: <code>True</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ae81ff">42</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;42&#39;</span></span></span></code></pre></div><p>Result: <code>False</code></p>
 <p>&quot; The expression <strong>42 == &lsquo;42&rsquo;</strong> evaluates to <strong>False</strong> because Python considers the integer 42 to be different from the string &lsquo;42&rsquo;. However, Python does consider the <strong>integer 42</strong> to be the <strong>same</strong> as the <strong>float 42.0</strong>.&quot;</p>
-<p style="text-align: right;"> - Automate the Boring Stuff with Python by Al Swigart, chapter 2 - </p>
+<p style="text-align: right;"> - Automate the Boring Stuff with Python by Al Swigart, Chapter 2 - </p>
 <h2 id="bool-funtion">bool() funtion<a class="anchor" href="#bool-funtion">#</a></h2>
 <p>When used in conditions, <strong>0, 0.0, and &rsquo;&rsquo; (the empty string)</strong> are considered <strong>False</strong>, while <strong>all other values</strong> are considered <strong>True</strong>.</p>
-<p style="text-align: right;"> - Automate the Boring Stuff with Python by Al Swigart, chapter 3 - </p>
+<p style="text-align: right;"> - Automate the Boring Stuff with Python by Al Swigart, Chapter 3 - </p>
+<h2 id="none-value">None value<a class="anchor" href="#none-value">#</a></h2>
+<p>In Python, a value called <strong>None</strong> represents the <strong>absence of a value</strong>. The None value is the <strong>only value</strong> of the <strong>NoneType data type</strong>. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N.</p>
+<p>This value-without-a-value can be helpful when you need to store something that shouldn’t be confused for a real value in a variable. One place where <strong>None</strong> is used is as the <strong>return value of print()</strong>. The print() function displays text on the screen, and doesn’t need to return anything in the same way len() or input() does. But since all function calls need to evaluate to a return value, print() returns None. To see this in action, enter the following into the interactive shell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> print(<span style="color:#e6db74">&#39;Hello!&#39;</span>)</span></span></code></pre></div><p>Result: <code>Hello!</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">None</span> <span style="color:#f92672">==</span> spam</span></span></code></pre></div><p>Result: <code>True</code></p>
+<p>Behind the scenes, Python adds <strong>return None</strong> to the end of any <strong>function definition with no return statement</strong>. This behavior resembles the way in which a while or for loop implicitly ends with a continue statement. Functions also <strong>return None</strong> if you use a <strong>return statement without a value</strong> (that is, just the return keyword by itself).</p>
+<p style="text-align: right;"> - Automate the Boring Stuff with Python by Al Swigart, Chapter 4 - </p>
+<h2 id="named-parameters">Named Parameters<a class="anchor" href="#named-parameters">#</a></h2>
+<p>On the other hand, Python identifies named parameters by the name placed before them in the function call. You’ll also hear named parameters called keyword parameters or keyword arguments, though they have nothing to do with Python keywords. Programmers often use named parameters to provide optional arguments. For example, the print() function uses the optional parameters end and sep to specify separator characters to print at the end of its arguments and between its arguments, respectively.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;World&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Hello
+World</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;World&#39;</span>)</span></span></code></pre></div><p>Result: <code>HelloWorld</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;mice&#39;</span>)</span></span></code></pre></div><p>Result: <code>cats dogs mice</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;mice&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>)</span></span></code></pre></div><p>Result: <code>cats,dogs,mice</code></p>
 </article>
  
       
@@ -268,6 +286,8 @@ round(2.5)Result: &gt;&gt;&gt; 2
     <li><a href="#round">Round</a></li>
     <li><a href="#value-comparision">Value comparision</a></li>
     <li><a href="#bool-funtion">bool() funtion</a></li>
+    <li><a href="#none-value">None value</a></li>
+    <li><a href="#named-parameters">Named Parameters</a></li>
   </ul>
 </nav>
 
