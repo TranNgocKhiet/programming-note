@@ -1,0 +1,1 @@
+[{"id":0,"href":"/docs/1-note/1-python/","title":"Python","section":"Note","content":"Round#\rround(3.5) \u0026gt;\u0026gt;\u0026gt; 4round(2.5) \u0026gt;\u0026gt;\u0026gt; 2\u0026ldquo;For halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding.\u0026rdquo;\n"}]
