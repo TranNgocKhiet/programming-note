@@ -1,25 +1,12 @@
 ---
 title: "04_Functions"
-weight: 2
+weight: 4
 chapter: false
 ---
 
-## The pop() Function
-
-```python
-my_list = [1, 2, 3, 4, 5]
-popped_element = my_list.pop()
-print(popped_element)
-```
-Result:
-```
-5
-```
-
 ## The round() Function
 
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 1 - Python Basics](https://automatetheboringstuff.com/3e/chapter1.html)"
-{style="text-align: right;"}
+- For **halfway numbers** that **end with .5**, the number is **rounded to the nearest even integer**. This is called **banker’s rounding**.
 
 ```python
 round(3.5)
@@ -37,35 +24,9 @@ Result:
 2
 ```
 
-For **halfway numbers** that **end with .5**, the number is **rounded to the nearest even integer**. This is called **banker’s rounding**.
-
 ## The bool() Function
 
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 3 - Loops](https://automatetheboringstuff.com/3e/chapter3.html)"
-{style="text-align: right;"}
-
-When used in conditions, **0, 0.0, and '' (the empty string)** are considered **False**, while **all other values** are considered **True**.
-
-## The copy() and deepcopy() Functions
-
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 6 - Lists](https://automatetheboringstuff.com/3e/chapter6.html)"
-{style="text-align: right;"}
-
-```python
-import copy
-spam = ['A', 'B', 'C']
-cheese = copy.copy(spam)  # Creates a duplicate copy of the list
-cheese[1] = 42  # Changes cheese
-print(spam ) # The spam variable is unchanged
-print(cheese) # The cheese variable is changed
-```
-Result:
-```
-['A', 'B', 'C']
-['A', 42, 'C']
-```
-
-If the list you need to copy contains lists, use the copy.deepcopy() function instead of copy.copy(). The copy.deepcopy() function will copy these inner lists as well.\
+- When used in conditions, **0, 0.0, and '' (the empty string)** are considered **False**, while **all other values** are considered **True**.
 
 ## The print() Function
 

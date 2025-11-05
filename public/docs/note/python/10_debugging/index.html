@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -8,46 +8,43 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Exception Handling#“Automate the Boring Stuff with Python by Al Swigart, Chapter 4 - Functions”
-def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
+<meta name="description" content="Exception Handling#def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
 21.03.5Error: Invalid argument.None42.0def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Result:
-21.03.5Error: Invalid argument.Raising Exceptions#“Automate the Boring Stuff with Python by Al Swigart, Chapter 5 - Debugging”
-raise Exception(&#39;This is the error message.&#39;)Result:
+21.03.5Error: Invalid argument.Raising Exceptions#raise Exception(&#39;This is the error message.&#39;)Result:
+Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.def box_print(symbol, width, height): if len(symbol) != 1: raise Exception(&#39;Symbol must be a single character string.&#39;) if width &lt;= 2: raise Exception(&#39;Width must be greater than 2.&#39;) if height &lt;= 2: raise Exception(&#39;Height must be greater than 2.&#39;) print(symbol * width) for i in range(height - 2): print(symbol &#43; (&#39; &#39; * (width - 2)) &#43; symbol) print(symbol * width) try: box_print(&#39;*&#39;, 4, 4) box_print(&#39;O&#39;, 20, 5) box_print(&#39;x&#39;, 1, 3) box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err)) try: box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err))Result:
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/note/python/10_debugging/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/python/10_debugging/">
   <meta property="og:site_name" content="My programming note">
   <meta property="og:title" content="10_Debugging">
-  <meta property="og:description" content="Exception Handling#“Automate the Boring Stuff with Python by Al Swigart, Chapter 4 - Functions”
-def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
+  <meta property="og:description" content="Exception Handling#def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
 21.03.5Error: Invalid argument.None42.0def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Result:
-21.03.5Error: Invalid argument.Raising Exceptions#“Automate the Boring Stuff with Python by Al Swigart, Chapter 5 - Debugging”
-raise Exception(&#39;This is the error message.&#39;)Result:">
+21.03.5Error: Invalid argument.Raising Exceptions#raise Exception(&#39;This is the error message.&#39;)Result:
+Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.def box_print(symbol, width, height): if len(symbol) != 1: raise Exception(&#39;Symbol must be a single character string.&#39;) if width &lt;= 2: raise Exception(&#39;Width must be greater than 2.&#39;) if height &lt;= 2: raise Exception(&#39;Height must be greater than 2.&#39;) print(symbol * width) for i in range(height - 2): print(symbol &#43; (&#39; &#39; * (width - 2)) &#43; symbol) print(symbol * width) try: box_print(&#39;*&#39;, 4, 4) box_print(&#39;O&#39;, 20, 5) box_print(&#39;x&#39;, 1, 3) box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err)) try: box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err))Result:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="10_Debugging">
-  <meta itemprop="description" content="Exception Handling#“Automate the Boring Stuff with Python by Al Swigart, Chapter 4 - Functions”
-def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
+  <meta itemprop="description" content="Exception Handling#def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
 21.03.5Error: Invalid argument.None42.0def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Result:
-21.03.5Error: Invalid argument.Raising Exceptions#“Automate the Boring Stuff with Python by Al Swigart, Chapter 5 - Debugging”
-raise Exception(&#39;This is the error message.&#39;)Result:">
-  <meta itemprop="wordCount" content="809">
+21.03.5Error: Invalid argument.Raising Exceptions#raise Exception(&#39;This is the error message.&#39;)Result:
+Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.def box_print(symbol, width, height): if len(symbol) != 1: raise Exception(&#39;Symbol must be a single character string.&#39;) if width &lt;= 2: raise Exception(&#39;Width must be greater than 2.&#39;) if height &lt;= 2: raise Exception(&#39;Height must be greater than 2.&#39;) print(symbol * width) for i in range(height - 2): print(symbol &#43; (&#39; &#39; * (width - 2)) &#43; symbol) print(symbol * width) try: box_print(&#39;*&#39;, 4, 4) box_print(&#39;O&#39;, 20, 5) box_print(&#39;x&#39;, 1, 3) box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err)) try: box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err))Result:">
+  <meta itemprop="wordCount" content="718">
 
 <title>10_Debugging | My programming note</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/docs/note/python/10_debugging/">
+<link rel="canonical" href="http://localhost:1313/docs/note/python/10_debugging/">
 <link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.ca76ff35db505d924316521944c682ec294730f4b0b1e45eb14b8feb667c92f7.js" integrity="sha256-ynb/NdtQXZJDFlIZRMaC7ClHMPSwseResUuP62Z8kvc=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.3c8191f94d8f240d0b2b4bb6bcb78bb07255d53caf7091a1f9470093673a9de5.js" integrity="sha256-PIGR&#43;U2PJA0LK0u2vLeLsHJV1TyvcJGh&#43;UcAk2c6neU=" crossorigin="anonymous"></script>
 
 
-<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/note/python/10_debugging/index.xml" title="My programming note" />
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/note/python/10_debugging/index.xml" title="My programming note" />
 
   
 </head>
@@ -133,7 +130,16 @@ raise Exception(&#39;This is the error message.&#39;)Result:">
           
   <ul>
     
-  </ul>
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/01_list/" class="">
+      List</a>
+  
 
         </li>
       
@@ -145,12 +151,68 @@ raise Exception(&#39;This is the error message.&#39;)Result:">
   
 
   
-    <a href="/docs/note/python/04_functions/" class="">
-      04_Functions</a>
+    <a href="/docs/note/python/01_data-structures/02_tuple/" class="">
+      Tuple</a>
   
 
+        </li>
+      
+    
+      
+        <li>
           
-  <ul>
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/03_dictionary/" class="">
+      Dictionary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/04_string/" class="">
+      String</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/05_set/" class="">
+      Set</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/06_comparision/" class="">
+      Comparision</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -202,8 +264,8 @@ raise Exception(&#39;This is the error message.&#39;)Result:">
   
 
   
-    <a href="/docs/note/python/09_regular-expressions/" class="">
-      09_Regular-Expressions</a>
+    <a href="/docs/note/python/04_functions/" class="">
+      04_Functions</a>
   
 
           
@@ -221,27 +283,8 @@ raise Exception(&#39;This is the error message.&#39;)Result:">
   
 
   
-    <a href="/docs/note/python/08_libraries/" class="">
-      08_Libraries</a>
-  
-
-          
-  <ul>
-    
-  </ul>
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/docs/note/python/07_files/" class="">
-      07_Files</a>
+    <a href="/docs/note/python/05_parameters/" class="">
+      05_Parameters</a>
   
 
           
@@ -278,8 +321,46 @@ raise Exception(&#39;This is the error message.&#39;)Result:">
   
 
   
-    <a href="/docs/note/python/05_parameters/" class="">
-      05_Parameters</a>
+    <a href="/docs/note/python/07_files/" class="">
+      07_Files</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/08_libraries/" class="">
+      08_Libraries</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/09_regular-expressions/" class="">
+      09_Regular-Expressions</a>
   
 
           
@@ -383,7 +464,6 @@ raise Exception(&#39;This is the error message.&#39;)Result:">
       
       
   <article class="markdown book-article"><h2 id="exception-handling">Exception Handling<a class="anchor" href="#exception-handling">#</a></h2>
-<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter4.html">Chapter 4 - Functions</a>&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span> <span style="color:#f92672">/</span> divide_by
@@ -411,7 +491,6 @@ None
 <pre tabindex="0"><code>21.0
 3.5
 Error: Invalid argument.</code></pre><h2 id="raising-exceptions">Raising Exceptions<a class="anchor" href="#raising-exceptions">#</a></h2>
-<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter5.html">Chapter 5 - Debugging</a>&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#39;This is the error message.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
 <pre tabindex="0"><code>Traceback (most recent call last):
   File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;
@@ -451,7 +530,6 @@ O                  O
 OOOOOOOOOOOOOOOOOOOO
 An exception happened: Width must be greater than 2.
 An exception happened: Symbol must be a single character string.</code></pre><h2 id="assertions">Assertions<a class="anchor" href="#assertions">#</a></h2>
-<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter5.html">Chapter 5 - Debugging</a>&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
 </span></span><span style="display:flex;"><span>ages<span style="color:#f92672">.</span>sort()
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> ages[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> ages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># Assert that the first age is &lt;= the last age</span></span></span></code></pre></div><p>Result:</p>
@@ -461,7 +539,6 @@ An exception happened: Symbol must be a single character string.</code></pre><h2
 <pre tabindex="0"><code>Traceback (most recent call last):
   File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
 AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a class="anchor" href="#the-logging-module">#</a></h2>
-<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter5.html">Chapter 5 - Debugging</a>&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>DEBUG, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Start of program&#39;</span>)
@@ -488,11 +565,9 @@ AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a clas
 2025-11-02 22:53:01,430 -  DEBUG -  End of factorial(5)
 0
 2025-11-02 22:53:01,430 -  DEBUG -  End of program</code></pre><h2 id="logfiles">Logfiles<a class="anchor" href="#logfiles">#</a></h2>
-<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter5.html">Chapter 5 - Debugging</a>&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;myProgramLog.txt&#39;</span>, level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>DEBUG,
 </span></span><span style="display:flex;"><span>format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div><h2 id="logging-levels">Logging Levels<a class="anchor" href="#logging-levels">#</a></h2>
-<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter5.html">Chapter 5 - Debugging</a>&rdquo;</p>
 <table>
   <thead>
       <tr>
@@ -531,7 +606,6 @@ AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a clas
 </table>
 <p>Passing logging.DEBUG to the basicConfig() function’s level named parameter will show messages from all the logging levels (DEBUG being the lowest level). But after developing your program some more, you may be interested only in errors. In that case, you can set basicConfig()’s level argument to logging.ERROR. This will show only ERROR and CRITICAL messages and will skip the DEBUG, INFO, and WARNING messages.</p>
 <h2 id="disabled-logging">Disabled Logging<a class="anchor" href="#disabled-logging">#</a></h2>
-<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter5.html">Chapter 5 - Debugging</a>&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>critical(<span style="color:#e6db74">&#39;Critical error! Critical error!&#39;</span>)
@@ -583,9 +657,9 @@ This block always executes</code></pre></article>
   <div class="flex flex-wrap justify-between">
     <span>
     
-      <a href="/docs/note/python/05_parameters/" class="flex align-center">
+      <a href="/docs/note/python/09_regular-expressions/" class="flex align-center">
         <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
-        <span>05_Parameters</span>
+        <span>09_Regular-Expressions</span>
       </a>
     
     </span>

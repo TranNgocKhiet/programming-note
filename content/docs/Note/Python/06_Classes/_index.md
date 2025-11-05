@@ -1,8 +1,10 @@
 ---
 title: "06_Classes"
-weight: 9
+weight: 6
 chapter: false
 ---
+
+## Syntax
 
 ```python
 class Car:
@@ -34,7 +36,7 @@ Car started.
 Car is moving.
 ```
 
-### Inheritance
+## Inheritance
 
 ```python
 class Animal:

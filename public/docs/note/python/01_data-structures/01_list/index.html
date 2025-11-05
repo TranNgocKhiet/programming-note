@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Syntax#squares = [x**2 for x in range(10)] print(squares)Result:
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]products = [i * j for j in range(3) for i in range(3)] print(products)Result:
+[0, 0, 0, 0, 1, 2, 0, 2, 4]words = [&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;] lengths = [len(word) for word in words] print(lengths)Result:
+[5, 6, 6]Finding Index | index()#spam = [&#39;hello&#39;, &#39;hi&#39;, &#39;howdy&#39;, &#39;heyas&#39;] print(spam.index(&#39;hello&#39;))Result:
+0spam = [&#39;Zophie&#39;, &#39;Pooka&#39;, &#39;Fat-tail&#39;, &#39;Pooka&#39;] print(spam.index(&#39;Pooka&#39;)) # When the list contains duplicates of the value, the method returns the index of its first appearanceResult:
+1Adding Values | append()#spam = [&#39;cat&#39;, &#39;dog&#39;, &#39;bat&#39;] spam.append(&#39;moose&#39;) print(spam)Result:
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/python/01_data-structures/01_list/">
+  <meta property="og:site_name" content="My programming note">
+  <meta property="og:title" content="List">
+  <meta property="og:description" content="Syntax#squares = [x**2 for x in range(10)] print(squares)Result:
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]products = [i * j for j in range(3) for i in range(3)] print(products)Result:
+[0, 0, 0, 0, 1, 2, 0, 2, 4]words = [&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;] lengths = [len(word) for word in words] print(lengths)Result:
+[5, 6, 6]Finding Index | index()#spam = [&#39;hello&#39;, &#39;hi&#39;, &#39;howdy&#39;, &#39;heyas&#39;] print(spam.index(&#39;hello&#39;))Result:
+0spam = [&#39;Zophie&#39;, &#39;Pooka&#39;, &#39;Fat-tail&#39;, &#39;Pooka&#39;] print(spam.index(&#39;Pooka&#39;)) # When the list contains duplicates of the value, the method returns the index of its first appearanceResult:
+1Adding Values | append()#spam = [&#39;cat&#39;, &#39;dog&#39;, &#39;bat&#39;] spam.append(&#39;moose&#39;) print(spam)Result:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="List">
+  <meta itemprop="description" content="Syntax#squares = [x**2 for x in range(10)] print(squares)Result:
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]products = [i * j for j in range(3) for i in range(3)] print(products)Result:
+[0, 0, 0, 0, 1, 2, 0, 2, 4]words = [&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;] lengths = [len(word) for word in words] print(lengths)Result:
+[5, 6, 6]Finding Index | index()#spam = [&#39;hello&#39;, &#39;hi&#39;, &#39;howdy&#39;, &#39;heyas&#39;] print(spam.index(&#39;hello&#39;))Result:
+0spam = [&#39;Zophie&#39;, &#39;Pooka&#39;, &#39;Fat-tail&#39;, &#39;Pooka&#39;] print(spam.index(&#39;Pooka&#39;)) # When the list contains duplicates of the value, the method returns the index of its first appearanceResult:
+1Adding Values | append()#spam = [&#39;cat&#39;, &#39;dog&#39;, &#39;bat&#39;] spam.append(&#39;moose&#39;) print(spam)Result:">
+  <meta itemprop="wordCount" content="485">
+
+<title>List | My programming note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/note/python/01_data-structures/01_list/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.3c8191f94d8f240d0b2b4bb6bcb78bb07255d53caf7091a1f9470093673a9de5.js" integrity="sha256-PIGR&#43;U2PJA0LK0u2vLeLsHJV1TyvcJGh&#43;UcAk2c6neU=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My programming note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Note</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/" class="">
+      Python</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/" class="">
+      01_Data-structures</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/01_list/" class="active">
+      List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/02_tuple/" class="">
+      Tuple</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/03_dictionary/" class="">
+      Dictionary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/04_string/" class="">
+      String</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/05_set/" class="">
+      Set</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/06_comparision/" class="">
+      Comparision</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/02_operators/" class="">
+      02_Operators</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/03_statements/" class="">
+      03_Statements</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/04_functions/" class="">
+      04_Functions</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/05_parameters/" class="">
+      05_Parameters</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/06_classes/" class="">
+      06_Classes</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/07_files/" class="">
+      07_Files</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/08_libraries/" class="">
+      08_Libraries</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/09_regular-expressions/" class="">
+      09_Regular-Expressions</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/10_debugging/" class="">
+      10_Debugging</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#syntax">Syntax</a></li>
+    <li><a href="#finding-index--index">Finding Index | <code>index()</code></a></li>
+    <li><a href="#adding-values--append">Adding Values | <code>append()</code></a></li>
+    <li><a href="#removing-values--remove">Removing Values | <code>remove()</code></a></li>
+    <li><a href="#pop-values--pop">Pop Values | <code>pop()</code></a></li>
+    <li><a href="#sorting-values--sort">Sorting Values | <code>sort()</code></a></li>
+    <li><a href="#reversing-values--reverse">Reversing Values | <code>reverse()</code></a></li>
+    <li><a href="#list-item-enumeration--enumerate">List Item Enumeration | <code>enumerate()</code></a></li>
+    <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
+    <li><a href="#negative-indexes">Negative Indexes</a></li>
+    <li><a href="#slices">Slices</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="syntax">Syntax<a class="anchor" href="#syntax">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>squares <span style="color:#f92672">=</span> [x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>)]
+</span></span><span style="display:flex;"><span>print(squares)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>products <span style="color:#f92672">=</span> [i <span style="color:#f92672">*</span> j <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>print(products)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[0, 0, 0, 0, 1, 2, 0, 2, 4]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>]
+</span></span><span style="display:flex;"><span>lengths <span style="color:#f92672">=</span> [len(word) <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words]
+</span></span><span style="display:flex;"><span>print(lengths)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[5, 6, 6]</code></pre><h2 id="finding-index--index">Finding Index | <code>index()</code><a class="anchor" href="#finding-index--index">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;hi&#39;</span>, <span style="color:#e6db74">&#39;howdy&#39;</span>, <span style="color:#e6db74">&#39;heyas&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>index(<span style="color:#e6db74">&#39;hello&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>0</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Zophie&#39;</span>, <span style="color:#e6db74">&#39;Pooka&#39;</span>, <span style="color:#e6db74">&#39;Fat-tail&#39;</span>, <span style="color:#e6db74">&#39;Pooka&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>index(<span style="color:#e6db74">&#39;Pooka&#39;</span>)) <span style="color:#75715e"># When the list contains duplicates of the value, the method returns the index of its first appearance</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>1</code></pre><h2 id="adding-values--append">Adding Values | <code>append()</code><a class="anchor" href="#adding-values--append">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;moose&#39;</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;dog&#39;, &#39;bat&#39;, &#39;moose&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;chicken&#39;</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;chicken&#39;, &#39;dog&#39;, &#39;bat&#39;]</code></pre><h2 id="removing-values--remove">Removing Values | <code>remove()</code><a class="anchor" href="#removing-values--remove">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;bat&#39;</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;rat&#39;, &#39;elephant&#39;]</code></pre><ul>
+<li>If the value appears multiple times in the list, the method will remove only the first instance of it</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;hat&#39;</span>, <span style="color:#e6db74">&#39;cat&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;cat&#39;</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;bat&#39;, &#39;rat&#39;, &#39;cat&#39;, &#39;hat&#39;, &#39;cat&#39;]</code></pre><h2 id="pop-values--pop">Pop Values | <code>pop()</code><a class="anchor" href="#pop-values--pop">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_list <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>popped_element <span style="color:#f92672">=</span> my_list<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>print(popped_element)
+</span></span><span style="display:flex;"><span>print(my_list)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>5
+[1, 2, 3, 4]</code></pre><h2 id="sorting-values--sort">Sorting Values | <code>sort()</code><a class="anchor" href="#sorting-values--sort">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3.14</span>, <span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">7</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>print(spam)
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Ants&#39;</span>, <span style="color:#e6db74">&#39;Cats&#39;</span>, <span style="color:#e6db74">&#39;Dogs&#39;</span>, <span style="color:#e6db74">&#39;Badgers&#39;</span>, <span style="color:#e6db74">&#39;Elephants&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[-7, 1, 2, 3.14, 5]
+[&#39;Ants&#39;, &#39;Badgers&#39;, &#39;Cats&#39;, &#39;Dogs&#39;, &#39;Elephants&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Ants&#39;</span>, <span style="color:#e6db74">&#39;Cats&#39;</span>, <span style="color:#e6db74">&#39;Dogs&#39;</span>, <span style="color:#e6db74">&#39;Badgers&#39;</span>, <span style="color:#e6db74">&#39;Elephants&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort(reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;Elephants&#39;, &#39;Dogs&#39;, &#39;Cats&#39;, &#39;Badgers&#39;, &#39;Ants&#39;]</code></pre><ul>
+<li>sort() uses ASCIIbetical order rather than actual alphabetical order for sorting strings, this means uppercase letters come before lowercase letters, placing the lowercase a after the uppercase Z</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;ants&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;badgers&#39;</span>, <span style="color:#e6db74">&#39;Carol&#39;</span>, <span style="color:#e6db74">&#39;cats&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;Alice&#39;, &#39;Bob&#39;, &#39;Carol&#39;, &#39;ants&#39;, &#39;badgers&#39;, &#39;cats&#39;]</code></pre><ul>
+<li>Can’t sort lists that have both number values and string values in them, as Python doesn’t know how to compare these values</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Traceback (most recent call last):
+  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
+    spam.sort()
+TypeError: &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &#39;int&#39;</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;Z&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span>str<span style="color:#f92672">.</span>lower)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;a&#39;, &#39;A&#39;, &#39;z&#39;, &#39;Z&#39;]</code></pre><h2 id="reversing-values--reverse">Reversing Values | <code>reverse()</code><a class="anchor" href="#reversing-values--reverse">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#e6db74">&#39;moose&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>reverse()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;moose&#39;, &#39;dog&#39;, &#39;cat&#39;]</code></pre><h2 id="list-item-enumeration--enumerate">List Item Enumeration | <code>enumerate()</code><a class="anchor" href="#list-item-enumeration--enumerate">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>supplies <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;pens&#39;</span>, <span style="color:#e6db74">&#39;staplers&#39;</span>, <span style="color:#e6db74">&#39;flamethrowers&#39;</span>, <span style="color:#e6db74">&#39;binders&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> index, item <span style="color:#f92672">in</span> enumerate(supplies):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Index &#39;</span> <span style="color:#f92672">+</span> str(index) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; in supplies is: &#39;</span> <span style="color:#f92672">+</span> item)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Index 0 in supplies is: pens
+Index 1 in supplies is: staplers
+Index 2 in supplies is: flamethrowers
+Index 3 in supplies is: binders</code></pre><h2 id="the-multiple-assignment-trick">The Multiple Assignment Trick<a class="anchor" href="#the-multiple-assignment-trick">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cat <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;fat&#39;</span>, <span style="color:#e6db74">&#39;gray&#39;</span>, <span style="color:#e6db74">&#39;loud&#39;</span>]
+</span></span><span style="display:flex;"><span>size, color, disposition <span style="color:#f92672">=</span> cat
+</span></span><span style="display:flex;"><span>print(size, color, disposition)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>fat gray loud</code></pre><h2 id="negative-indexes">Negative Indexes<a class="anchor" href="#negative-indexes">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;The &#39;</span> <span style="color:#f92672">+</span> spam[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; is afraid of the &#39;</span> <span style="color:#f92672">+</span> spam[<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>The elephant is afraid of the bat.</code></pre><h2 id="slices">Slices<a class="anchor" href="#slices">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;bat&#39;, &#39;rat&#39;, &#39;elephant&#39;]
+[&#39;bat&#39;, &#39;rat&#39;]
+[&#39;cat&#39;, &#39;bat&#39;, &#39;rat&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam[:<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>print(spam[:])</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;bat&#39;]
+[&#39;bat&#39;, &#39;rat&#39;, &#39;elephant&#39;]
+[&#39;cat&#39;, &#39;bat&#39;, &#39;rat&#39;, &#39;elephant&#39;]</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/python/01_data-structures/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>01_Data-structures</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/python/01_data-structures/02_tuple/" class="flex align-center">
+        <span>Tuple</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#syntax">Syntax</a></li>
+    <li><a href="#finding-index--index">Finding Index | <code>index()</code></a></li>
+    <li><a href="#adding-values--append">Adding Values | <code>append()</code></a></li>
+    <li><a href="#removing-values--remove">Removing Values | <code>remove()</code></a></li>
+    <li><a href="#pop-values--pop">Pop Values | <code>pop()</code></a></li>
+    <li><a href="#sorting-values--sort">Sorting Values | <code>sort()</code></a></li>
+    <li><a href="#reversing-values--reverse">Reversing Values | <code>reverse()</code></a></li>
+    <li><a href="#list-item-enumeration--enumerate">List Item Enumeration | <code>enumerate()</code></a></li>
+    <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
+    <li><a href="#negative-indexes">Negative Indexes</a></li>
+    <li><a href="#slices">Slices</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

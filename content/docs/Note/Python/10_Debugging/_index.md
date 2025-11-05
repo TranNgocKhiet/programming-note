@@ -6,9 +6,6 @@ chapter: false
 
 ## Exception Handling
 
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 4 - Functions](https://automatetheboringstuff.com/3e/chapter4.html)"
-{style="text-align: right;"}
-
 ```python
 def spam(divide_by):
     try:
@@ -50,9 +47,6 @@ Error: Invalid argument.
 ```
 
 ## Raising Exceptions
-
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 5 - Debugging](https://automatetheboringstuff.com/3e/chapter5.html)"
-{style="text-align: right;"}
 
 ```python
 raise Exception('This is the error message.')
@@ -108,9 +102,6 @@ An exception happened: Symbol must be a single character string.
 
 ## Assertions
 
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 5 - Debugging](https://automatetheboringstuff.com/3e/chapter5.html)"
-{style="text-align: right;"}
-
 ```python
 ages = [26, 57, 92, 54, 22, 15, 17, 80, 47, 73]
 ages.sort()
@@ -133,9 +124,6 @@ AssertionError
 ```
 
 ## The logging Module
-
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 5 - Debugging](https://automatetheboringstuff.com/3e/chapter5.html)"
-{style="text-align: right;"}
 
 ```python
 import logging
@@ -171,9 +159,6 @@ Result:
 
 ## Logfiles
 
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 5 - Debugging](https://automatetheboringstuff.com/3e/chapter5.html)"
-{style="text-align: right;"}
-
 ```python
 import logging
 logging.basicConfig(filename='myProgramLog.txt', level=logging.DEBUG,
@@ -181,9 +166,6 @@ format=' %(asctime)s -  %(levelname)s -  %(message)s')
 ```
 
 ## Logging Levels
-
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 5 - Debugging](https://automatetheboringstuff.com/3e/chapter5.html)"
-{style="text-align: right;"}
 
 | Level    | Logging function   | Description                                                                                                                    |
 |----------|--------------------|--------------------------------------------------------------------------------------------------------------------------------|
@@ -196,9 +178,6 @@ format=' %(asctime)s -  %(levelname)s -  %(message)s')
 Passing logging.DEBUG to the basicConfig() function’s level named parameter will show messages from all the logging levels (DEBUG being the lowest level). But after developing your program some more, you may be interested only in errors. In that case, you can set basicConfig()’s level argument to logging.ERROR. This will show only ERROR and CRITICAL messages and will skip the DEBUG, INFO, and WARNING messages.
 
 ## Disabled Logging
-
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 5 - Debugging](https://automatetheboringstuff.com/3e/chapter5.html)"
-{style="text-align: right;"}
 
 ```python
 import logging

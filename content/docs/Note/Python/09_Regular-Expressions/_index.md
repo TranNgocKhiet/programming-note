@@ -1,6 +1,6 @@
 ---
 title: "09_Regular-Expressions"
-weight: 5
+weight: 9
 chapter: false
 ---
 
@@ -17,7 +17,7 @@ Result:
 415-555-4242
 ```
 
-### Grouping with Parentheses
+## Grouping with Parentheses
 
 ```python
 import re
@@ -43,7 +43,7 @@ Result:
 555-4242
 ```
 
-### Using Escape Characters
+## Using Escape Characters
 
 ```python
 import re
@@ -58,7 +58,7 @@ Result:
 555-4242
 ```
 
-### Matching Characters from Alternate Groups
+## Matching Characters from Alternate Groups
 
 ```python
 import re
@@ -73,7 +73,7 @@ Catch
 ch
 ```
 
-### Returning All Matches
+## Returning All Matches
 
 ```python
 import re
@@ -111,7 +111,7 @@ Result:
 ['123', '456']
 ```
 
-### Using Character Classes and Negative Character Classes
+## Using Character Classes and Negative Character Classes
 
 ```python
 import re
@@ -133,7 +133,7 @@ Result:
 ['R', 'b', 'C', 'p', ' ', 't', 's', ' ', 'B', 'B', 'Y', ' ', 'F', 'D', '.']
 ```
 
-### Using Shorthand Character Classes
+## Using Shorthand Character Classes
 
 | Shorthand character class | Represents ...                                                                                         |
 |---------------------------|--------------------------------------------------------------------------------------------------------|
@@ -154,7 +154,7 @@ Result:
 ['12 drummers', '11 pipers', '10 lords', '9 ladies', '8 maids', '7 swans', '6 geese', '5 rings', '4 birds', '3 hens', '2 doves', '1 partridge']
 ```
 
-### Matching Everything with the Dot Character
+## Matching Everything with the Dot Character
 
 ```python
 import re
@@ -166,7 +166,7 @@ Result:
 ['cat', 'hat', 'sat', 'lat', 'mat']
 ```
 
-### Being Careful What You Match For
+## Being Careful What You Match For
 
 The best and worst thing about regular expressions is that they will match exactly what you ask for. Here are some common points of confusion regarding character classes:
 - The [A-Z] or [a-z] character class matches uppercase or lowercase letters, respectively, but not both. You need to use [A-Za-z] to match both cases.
@@ -175,7 +175,7 @@ The best and worst thing about regular expressions is that they will match exact
 - The \w character class matches all letters, but the regex string r'Last Name: (\w+)' would capture Sinéad O’Connor’s last name only up until the apostrophe character. This means the group would capture her last name as 'O'.
 - Straight and smart quote characters (' " ‘ ’ “ ”) are considered completely different from each other and must be specified separately.
 
-### Matching an Optional Pattern
+## Matching an Optional Pattern
 
 ```python
 import re

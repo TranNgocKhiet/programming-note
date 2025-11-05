@@ -1,8 +1,15 @@
 ---
 title: "08_Libraries"
-weight: 7
+weight: 8
 chapter: false
 ---
+
+
+1. Ensure you are in the Python 3 mode in the **Mu editor**. The current mode is displayed in the bottom right corner of the window.
+2. Click the Admin or cog icon (gear icon) in the bottom right corner of the Mu editor.
+3. In the window that appears, select the Third Party Packages tab.
+4. Type name of the libraries into the text box. You can install multiple packages by placing each on a new line.
+5. Click OK. 
 
 ## math
 
@@ -191,4 +198,62 @@ plt.ylabel('Y-axis')
 plt.title('Scatter plot')
 
 plt.show()
+```
+
+
+## pyperclip
+
+```python
+import pyperclip
+pyperclip.copy('Hello, world!')
+print(pyperclip.paste())
+```
+Result:
+```
+Hello, world!
+```
+
+```python
+import pyperclip
+print(pyperclip.paste())
+```
+```python
+For example, if I copied this sentence to the clipboard and then called paste(), it would look like this:
+```
+Result:
+```
+For example, if I copied this sentence to the clipboard and then called paste(), it would look like this:
+```
+
+## random
+
+```Python
+import random
+pets = ['Dog', 'Cat', 'Moose']
+print(random.choice(pets))
+```
+
+```Python
+import random
+people = ['Alice', 'Bob', 'Carol', 'David']
+random.shuffle(people)
+print(people)
+```
+
+## copy
+
+- If the list you need to copy contains lists, use the copy.deepcopy() function instead of copy.copy(). The copy.deepcopy() function will copy these inner lists as well.
+
+```python
+import copy
+spam = ['A', 'B', 'C']
+cheese = copy.copy(spam)  # Creates a duplicate copy of the list
+cheese[1] = 42  # Changes cheese
+print(spam ) # The spam variable is unchanged
+print(cheese) # The cheese variable is changed
+```
+Result:
+```
+['A', 'B', 'C']
+['A', 42, 'C']
 ```

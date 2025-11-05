@@ -1,6 +1,6 @@
 ---
 title: "03_Statements"
-weight: 4
+weight: 3
 chapter: false
 ---
 
@@ -21,6 +21,3 @@ Result:
 ```
 spam
 ```
-
-"[Automate the Boring Stuff with Python by Al Swigart](https://automatetheboringstuff.com/), [Chapter 4 - Functions](https://automatetheboringstuff.com/3e/chapter4.html)"
-{style="text-align: right;"}

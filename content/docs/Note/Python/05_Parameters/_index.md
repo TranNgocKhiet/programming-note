@@ -1,6 +1,6 @@
 ---
 title: "05_Parameters"
-weight: 10
+weight: 5
 chapter: false
 ---
 
