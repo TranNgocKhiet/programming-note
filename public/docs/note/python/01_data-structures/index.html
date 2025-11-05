@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NoneType#“Automate the Boring Stuff with Python by Al Swigart, Chapter 4 - Functions”
+In Python, a value called None represents the absence of a value. The None value is the only value of the NoneType data type. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N.
+spam = print(&#39;Hello!&#39;) None == spamResult:
+TrueSequence Data Types#“Automate the Boring Stuff with Python by Al Swigart, Chapter 6 - Lists”
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/note/python/01_data-structures/">
+  <meta property="og:site_name" content="My programming note">
+  <meta property="og:title" content="01_Data-structures">
+  <meta property="og:description" content="NoneType#“Automate the Boring Stuff with Python by Al Swigart, Chapter 4 - Functions”
+In Python, a value called None represents the absence of a value. The None value is the only value of the NoneType data type. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N.
+spam = print(&#39;Hello!&#39;) None == spamResult:
+TrueSequence Data Types#“Automate the Boring Stuff with Python by Al Swigart, Chapter 6 - Lists”">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="01_Data-structures">
+  <meta itemprop="description" content="NoneType#“Automate the Boring Stuff with Python by Al Swigart, Chapter 4 - Functions”
+In Python, a value called None represents the absence of a value. The None value is the only value of the NoneType data type. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N.
+spam = print(&#39;Hello!&#39;) None == spamResult:
+TrueSequence Data Types#“Automate the Boring Stuff with Python by Al Swigart, Chapter 6 - Lists”">
+  <meta itemprop="wordCount" content="1979">
+
+<title>01_Data-structures | My programming note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/note/python/01_data-structures/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.ca76ff35db505d924316521944c682ec294730f4b0b1e45eb14b8feb667c92f7.js" integrity="sha256-ynb/NdtQXZJDFlIZRMaC7ClHMPSwseResUuP62Z8kvc=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/note/python/01_data-structures/index.xml" title="My programming note" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My programming note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Note</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/" class="">
+      Python</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/01_data-structures/" class="active">
+      01_Data-structures</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/04_functions/" class="">
+      04_Functions</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/02_operators/" class="">
+      02_Operators</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/03_statements/" class="">
+      03_Statements</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/09_regular-expressions/" class="">
+      09_Regular-Expressions</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/08_libraries/" class="">
+      08_Libraries</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/07_files/" class="">
+      07_Files</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/06_classes/" class="">
+      06_Classes</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/05_parameters/" class="">
+      05_Parameters</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/python/10_debugging/" class="">
+      10_Debugging</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#nonetype">NoneType</a></li>
+    <li><a href="#sequence-data-types">Sequence Data Types</a></li>
+    <li><a href="#mutable-and-immutable-data-types">Mutable and Immutable Data types</a></li>
+    <li><a href="#list">List</a>
+      <ul>
+        <li><a href="#random-selection-and-ordering">Random Selection and Ordering</a></li>
+        <li><a href="#finding-values">Finding Values</a></li>
+        <li><a href="#adding-values">Adding Values</a></li>
+        <li><a href="#removing-values">Removing Values</a></li>
+        <li><a href="#sorting-values">Sorting Values</a></li>
+        <li><a href="#reversing-values">Reversing Values</a></li>
+        <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
+        <li><a href="#list-item-enumeration">List Item Enumeration</a></li>
+        <li><a href="#negative-indexes">Negative Indexes</a></li>
+        <li><a href="#slices">Slices</a></li>
+      </ul>
+    </li>
+    <li><a href="#tuples">Tuples</a>
+      <ul>
+        <li><a href="#the-tuple-data-type">The Tuple Data Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#list-and-tuple-type-conversion">List and Tuple Type Conversion</a></li>
+    <li><a href="#the-dictionary-data-type">The Dictionary Data Type</a>
+      <ul>
+        <li><a href="#returning-keys-and-values">Returning Keys and Values</a></li>
+        <li><a href="#the-multiple-assignment-trick-1">The Multiple Assignment Trick</a></li>
+        <li><a href="#checking-whether-a-key-exists">Checking Whether a Key Exists</a></li>
+        <li><a href="#setting-default-values">Setting Default Values</a></li>
+      </ul>
+    </li>
+    <li><a href="#comparing-dictionaries-and-lists">Comparing Dictionaries and Lists</a></li>
+    <li><a href="#string">String</a>
+      <ul>
+        <li><a href="#escape-characters">Escape Characters</a></li>
+        <li><a href="#raw-strings">Raw Strings</a></li>
+        <li><a href="#multiline-strings">Multiline Strings</a></li>
+        <li><a href="#multiline-comments">Multiline Comments</a></li>
+        <li><a href="#indexes-and-slices">Indexes and Slices</a></li>
+        <li><a href="#the-in-and-not-in-operators">The in and not in Operators</a></li>
+        <li><a href="#f-strings">F-Strings</a></li>
+        <li><a href="#f-string-alternatives-s-and-format">F-String Alternatives: %s and format()</a></li>
+        <li><a href="#changing-the-case">Changing the Case</a></li>
+        <li><a href="#checking-string-characteristics">Checking String Characteristics</a></li>
+        <li><a href="#checking-the-start-or-end-of-a-string">Checking the Start or End of a String</a></li>
+        <li><a href="#joining-and-splitting-strings">Joining and Splitting Strings</a></li>
+        <li><a href="#justifying-and-centering-text">Justifying and Centering Text</a></li>
+        <li><a href="#removing-whitespace">Removing Whitespace</a></li>
+        <li><a href="#numeric-code-points-of-characters">Numeric Code Points of Characters</a></li>
+        <li><a href="#copying-and-pasting-strings">Copying and Pasting Strings</a></li>
+      </ul>
+    </li>
+    <li><a href="#set">Set</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="nonetype">NoneType<a class="anchor" href="#nonetype">#</a></h2>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter4.html">Chapter 4 - Functions</a>&rdquo;</p>
+<p>In Python, a value called <strong>None</strong> represents the <strong>absence of a value</strong>. The None value is the <strong>only value</strong> of the <strong>NoneType data type</strong>. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> print(<span style="color:#e6db74">&#39;Hello!&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">None</span> <span style="color:#f92672">==</span> spam</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>True</code></pre><h2 id="sequence-data-types">Sequence Data Types<a class="anchor" href="#sequence-data-types">#</a></h2>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter6.html">Chapter 6 - Lists</a>&rdquo;</p>
+<p>Lists aren’t the only data types that represent ordered sequences of values. For example, strings and lists are actually similar if you consider a string to be a “list” of single text characters. The Python sequence data types include lists, strings, range objects returned by range(), and tuples (explained in “The Tuple Data Type” on page 127). Many of the things you can do with lists can also be done with strings and other values of sequence types.</p>
+<h2 id="mutable-and-immutable-data-types">Mutable and Immutable Data types<a class="anchor" href="#mutable-and-immutable-data-types">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Zophie a cat&#39;</span>
+</span></span><span style="display:flex;"><span>name[<span style="color:#ae81ff">7</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;the&#39;</span> <span style="color:#75715e"># A list value is a mutable data type: you can add, remove, or change its values; however, a string is immutable: it cannot be changed</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Traceback (most recent call last):
+  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
+    name[7] = &#39;the&#39;
+TypeError: &#39;str&#39; object does not support item assignment</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Zophie a cat&#39;</span>
+</span></span><span style="display:flex;"><span>new_name <span style="color:#f92672">=</span> name[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">7</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;the&#39;</span> <span style="color:#f92672">+</span> name[<span style="color:#ae81ff">8</span>:<span style="color:#ae81ff">12</span>] <span style="color:#75715e"># The proper way to “mutate” a string is to use slicing and concatenation to build a new string by copying from parts of the old string</span>
+</span></span><span style="display:flex;"><span>print(new_name)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Zophie the cat</code></pre><h2 id="list">List<a class="anchor" href="#list">#</a></h2>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter6.html">Chapter 6 - Lists</a>&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>squares <span style="color:#f92672">=</span> [x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>)]
+</span></span><span style="display:flex;"><span>print(squares)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>products <span style="color:#f92672">=</span> [i <span style="color:#f92672">*</span> j <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>)]
+</span></span><span style="display:flex;"><span>print(products)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[0, 0, 0, 0, 1, 2, 0, 2, 4]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>words <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>]
+</span></span><span style="display:flex;"><span>lengths <span style="color:#f92672">=</span> [len(word) <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words]
+</span></span><span style="display:flex;"><span>print(lengths)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[5, 6, 6]</code></pre><h3 id="random-selection-and-ordering">Random Selection and Ordering<a class="anchor" href="#random-selection-and-ordering">#</a></h3>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter6.html">Chapter 6 - Lists</a>&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>pets <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Dog&#39;</span>, <span style="color:#e6db74">&#39;Cat&#39;</span>, <span style="color:#e6db74">&#39;Moose&#39;</span>]
+</span></span><span style="display:flex;"><span>print(random<span style="color:#f92672">.</span>choice(pets))</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> random
+</span></span><span style="display:flex;"><span>people <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Carol&#39;</span>, <span style="color:#e6db74">&#39;David&#39;</span>]
+</span></span><span style="display:flex;"><span>random<span style="color:#f92672">.</span>shuffle(people)
+</span></span><span style="display:flex;"><span>print(people)</span></span></code></pre></div><h3 id="finding-values">Finding Values<a class="anchor" href="#finding-values">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;hi&#39;</span>, <span style="color:#e6db74">&#39;howdy&#39;</span>, <span style="color:#e6db74">&#39;heyas&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>index(<span style="color:#e6db74">&#39;hello&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>0</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Zophie&#39;</span>, <span style="color:#e6db74">&#39;Pooka&#39;</span>, <span style="color:#e6db74">&#39;Fat-tail&#39;</span>, <span style="color:#e6db74">&#39;Pooka&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>index(<span style="color:#e6db74">&#39;Pooka&#39;</span>)) <span style="color:#75715e"># When the list contains duplicates of the value, the method returns the index of its first appearance</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>1</code></pre><h3 id="adding-values">Adding Values<a class="anchor" href="#adding-values">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;moose&#39;</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;dog&#39;, &#39;bat&#39;, &#39;moose&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;chicken&#39;</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;chicken&#39;, &#39;dog&#39;, &#39;bat&#39;]</code></pre><h3 id="removing-values">Removing Values<a class="anchor" href="#removing-values">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;bat&#39;</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;rat&#39;, &#39;elephant&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;hat&#39;</span>, <span style="color:#e6db74">&#39;cat&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;cat&#39;</span>) <span style="color:#75715e"># If the value appears multiple times in the list, the method will remove only the first instance of it</span>
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;bat&#39;, &#39;rat&#39;, &#39;cat&#39;, &#39;hat&#39;, &#39;cat&#39;]</code></pre><h3 id="sorting-values">Sorting Values<a class="anchor" href="#sorting-values">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3.14</span>, <span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">7</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>print(spam)
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Ants&#39;</span>, <span style="color:#e6db74">&#39;Cats&#39;</span>, <span style="color:#e6db74">&#39;Dogs&#39;</span>, <span style="color:#e6db74">&#39;Badgers&#39;</span>, <span style="color:#e6db74">&#39;Elephants&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[-7, 1, 2, 3.14, 5]
+[&#39;Ants&#39;, &#39;Badgers&#39;, &#39;Cats&#39;, &#39;Dogs&#39;, &#39;Elephants&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Ants&#39;</span>, <span style="color:#e6db74">&#39;Cats&#39;</span>, <span style="color:#e6db74">&#39;Dogs&#39;</span>, <span style="color:#e6db74">&#39;Badgers&#39;</span>, <span style="color:#e6db74">&#39;Elephants&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort(reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;Elephants&#39;, &#39;Dogs&#39;, &#39;Cats&#39;, &#39;Badgers&#39;, &#39;Ants&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;ants&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;badgers&#39;</span>, <span style="color:#e6db74">&#39;Carol&#39;</span>, <span style="color:#e6db74">&#39;cats&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort() <span style="color:#75715e"># sort() uses ASCIIbetical order rather than actual alphabetical order for sorting strings, this means uppercase letters come before lowercase letters, placing the lowercase a after the uppercase Z</span>
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;Alice&#39;, &#39;Bob&#39;, &#39;Carol&#39;, &#39;ants&#39;, &#39;badgers&#39;, &#39;cats&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Alice&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort() <span style="color:#75715e"># Can’t sort lists that have both number values and string values in them, as Python doesn’t know how to compare these values</span>
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Traceback (most recent call last):
+  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
+    spam.sort()
+TypeError: &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &#39;int&#39;</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;Z&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span>str<span style="color:#f92672">.</span>lower)
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;a&#39;, &#39;A&#39;, &#39;z&#39;, &#39;Z&#39;]</code></pre><h3 id="reversing-values">Reversing Values<a class="anchor" href="#reversing-values">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#e6db74">&#39;moose&#39;</span>]
+</span></span><span style="display:flex;"><span>spam<span style="color:#f92672">.</span>reverse()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;moose&#39;, &#39;dog&#39;, &#39;cat&#39;]</code></pre><h3 id="the-multiple-assignment-trick">The Multiple Assignment Trick<a class="anchor" href="#the-multiple-assignment-trick">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cat <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;fat&#39;</span>, <span style="color:#e6db74">&#39;gray&#39;</span>, <span style="color:#e6db74">&#39;loud&#39;</span>]
+</span></span><span style="display:flex;"><span>size, color, disposition <span style="color:#f92672">=</span> cat
+</span></span><span style="display:flex;"><span>print(size, color, disposition)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>fat gray loud</code></pre><h3 id="list-item-enumeration">List Item Enumeration<a class="anchor" href="#list-item-enumeration">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>supplies <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;pens&#39;</span>, <span style="color:#e6db74">&#39;staplers&#39;</span>, <span style="color:#e6db74">&#39;flamethrowers&#39;</span>, <span style="color:#e6db74">&#39;binders&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> index, item <span style="color:#f92672">in</span> enumerate(supplies):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Index &#39;</span> <span style="color:#f92672">+</span> str(index) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; in supplies is: &#39;</span> <span style="color:#f92672">+</span> item)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Index 0 in supplies is: pens
+Index 1 in supplies is: staplers
+Index 2 in supplies is: flamethrowers
+Index 3 in supplies is: binders</code></pre><h3 id="negative-indexes">Negative Indexes<a class="anchor" href="#negative-indexes">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;The &#39;</span> <span style="color:#f92672">+</span> spam[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; is afraid of the &#39;</span> <span style="color:#f92672">+</span> spam[<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>The elephant is afraid of the bat.</code></pre><h3 id="slices">Slices<a class="anchor" href="#slices">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;bat&#39;, &#39;rat&#39;, &#39;elephant&#39;]
+[&#39;bat&#39;, &#39;rat&#39;]
+[&#39;cat&#39;, &#39;bat&#39;, &#39;rat&#39;]</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;bat&#39;</span>, <span style="color:#e6db74">&#39;rat&#39;</span>, <span style="color:#e6db74">&#39;elephant&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam[:<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>print(spam[:])</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;cat&#39;, &#39;bat&#39;]
+[&#39;bat&#39;, &#39;rat&#39;, &#39;elephant&#39;]
+[&#39;cat&#39;, &#39;bat&#39;, &#39;rat&#39;, &#39;elephant&#39;]</code></pre><h2 id="tuples">Tuples<a class="anchor" href="#tuples">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a, b, c <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>print(a)
+</span></span><span style="display:flex;"><span>print(b)
+</span></span><span style="display:flex;"><span>print(c)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>10
+20
+30</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mixed_tuple <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;hello&#39;</span> , <span style="color:#ae81ff">3.14</span>)
+</span></span><span style="display:flex;"><span>print(mixed_tuple)
+</span></span><span style="display:flex;"><span>print(type(mixed_tuple[<span style="color:#ae81ff">0</span>]))
+</span></span><span style="display:flex;"><span>print(type(mixed_tuple[<span style="color:#ae81ff">1</span>]))
+</span></span><span style="display:flex;"><span>print(type(mixed_tuple[<span style="color:#ae81ff">2</span>]))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>(1, &#39;hello&#39;, 3.14)
+&lt;class &#39;int&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+&lt;class &#39;float&#39;&gt;</code></pre><h3 id="the-tuple-data-type">The Tuple Data Type<a class="anchor" href="#the-tuple-data-type">#</a></h3>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter6.html">Chapter 6 - Lists</a>&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>eggs <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>print(eggs[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>print(eggs[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>print(len(eggs))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>hello
+(42, 0.5)
+3</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>eggs <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>eggs[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">99</span> <span style="color:#75715e"># Tuples, like strings, are immutable: you can’t modify, append, or remove their values</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code class="language-Traceback" data-lang="Traceback">  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
+    eggs[1] = 99
+TypeError: &#39;tuple&#39; object does not support item assignment</code></pre><h2 id="list-and-tuple-type-conversion">List and Tuple Type Conversion<a class="anchor" href="#list-and-tuple-type-conversion">#</a></h2>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter6.html">Chapter 6 - Lists</a>&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(tuple([<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#ae81ff">5</span>]))
+</span></span><span style="display:flex;"><span>print(list((<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#ae81ff">5</span>)))
+</span></span><span style="display:flex;"><span>print(list(<span style="color:#e6db74">&#39;hello&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>(&#39;cat&#39;, &#39;dog&#39;, 5)
+[&#39;cat&#39;, &#39;dog&#39;, 5]
+[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]</code></pre><h2 id="the-dictionary-data-type">The Dictionary Data Type<a class="anchor" href="#the-dictionary-data-type">#</a></h2>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter7.html">Chapter 7 - Dictionaries and Structuring Data</a>&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_cat <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;size&#39;</span>: <span style="color:#e6db74">&#39;fat&#39;</span>, <span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;gray&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">17</span>}
+</span></span><span style="display:flex;"><span>print(my_cat[<span style="color:#e6db74">&#39;size&#39;</span>])
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My cat has &#39;</span> <span style="color:#f92672">+</span> my_cat[<span style="color:#e6db74">&#39;color&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; fur.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>fat
+My cat has gray fur</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#ae81ff">12345</span>: <span style="color:#e6db74">&#39;Luggage Combination&#39;</span>, <span style="color:#ae81ff">42</span>: <span style="color:#e6db74">&#39;The Answer&#39;</span>}
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">12345</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">42</span>])
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>])</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Luggage Combination
+The Answer
+Traceback (most recent call last):
+  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
+KeyError: 0</code></pre><h3 id="returning-keys-and-values">Returning Keys and Values<a class="anchor" href="#returning-keys-and-values">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>values():
+</span></span><span style="display:flex;"><span>  print(v)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>red
+42</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>keys():
+</span></span><span style="display:flex;"><span>  print(k)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>color
+age</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>  print(i)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>(&#39;color&#39;, &#39;red&#39;)
+(&#39;age&#39;, 42)</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;color&#39;</span> <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>keys())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;age&#39;</span> <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>keys())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;red&#39;</span> <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>values())</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>True
+False
+True</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>keys())
+</span></span><span style="display:flex;"><span>print(list(spam<span style="color:#f92672">.</span>keys()))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>dict_keys([&#39;color&#39;, &#39;age&#39;])
+[&#39;color&#39;, &#39;age&#39;]</code></pre><h3 id="the-multiple-assignment-trick-1">The Multiple Assignment Trick<a class="anchor" href="#the-multiple-assignment-trick-1">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#39;Key: &#39;</span> <span style="color:#f92672">+</span> str(k) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; Value: &#39;</span> <span style="color:#f92672">+</span> str(v))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Key: color Value: red
+Key: age Value: 42</code></pre><h3 id="checking-whether-a-key-exists">Checking Whether a Key Exists<a class="anchor" href="#checking-whether-a-key-exists">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>picnic_items <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;apples&#39;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;cups&#39;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Dictionaries have a get() method that takes two arguments: the key of the value to retrieve and a fallback value to return if that key doesn’t exis</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I am bringing &#39;</span> <span style="color:#f92672">+</span> str(picnic_items<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;cups&#39;</span>, <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; cups.&#39;</span>) 
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I am bringing &#39;</span> <span style="color:#f92672">+</span> str(picnic_items<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;eggs&#39;</span>, <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; eggs.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>I am bringing 2 cups.
+I am bringing 0 eggs.</code></pre><h3 id="setting-default-values">Setting Default Values<a class="anchor" href="#setting-default-values">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Pooka&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The first argument passed to the method is the key to check for, and the second argument is the value to set at that key if the key doesn’t exist; if the key does exist, the setdefault() method returns the key’s value</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>))  <span style="color:#75715e"># Sets &#39;color&#39; key to &#39;black&#39;</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>))  <span style="color:#75715e"># Does nothing</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>black
+black</code></pre><h2 id="comparing-dictionaries-and-lists">Comparing Dictionaries and Lists<a class="anchor" href="#comparing-dictionaries-and-lists">#</a></h2>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter7.html">Chapter 7 - Dictionaries and Structuring Data</a>&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;moose&#39;</span>]
+</span></span><span style="display:flex;"><span>bacon <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;moose&#39;</span>, <span style="color:#e6db74">&#39;cats&#39;</span>]
+</span></span><span style="display:flex;"><span>print(spam <span style="color:#f92672">==</span> bacon) <span style="color:#75715e"># The order of list items matters</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>False</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>eggs <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Zophie&#39;</span>, <span style="color:#e6db74">&#39;species&#39;</span>: <span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#e6db74">&#39;8&#39;</span>}
+</span></span><span style="display:flex;"><span>ham <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;species&#39;</span>: <span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#e6db74">&#39;8&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Zophie&#39;</span>}
+</span></span><span style="display:flex;"><span>print(eggs <span style="color:#f92672">==</span> ham) <span style="color:#75715e"># The order of dictionary key-value pairs doesn&#39;t matter</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>True</code></pre><h2 id="string">String<a class="anchor" href="#string">#</a></h2>
+<p style="text-align: right;">&ldquo;<a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Swigart</a>, <a href="https://automatetheboringstuff.com/3e/chapter8.html">Chapter 8 - Strings and Text Editing</a>&rdquo;</p>
+<h3 id="escape-characters">Escape Characters<a class="anchor" href="#escape-characters">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Say hi to Bob</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">s mother.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Say hi to Bob&#39;s mother.</code></pre><h3 id="raw-strings">Raw Strings<a class="anchor" href="#raw-strings">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;The file is in C:\Users\Alice\Desktop&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>The file is in C:\Users\Alice\Desktop</code></pre><h3 id="multiline-strings">Multiline Strings<a class="anchor" href="#multiline-strings">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;&#39;&#39;Dear Alice,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Can you feed Eve&#39;s cat this weekend?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Sincerely,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Bob&#39;&#39;&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Dear Alice,
+
+Can you feed Eve&#39;s cat this weekend?
+
+Sincerely,
+Bob</code></pre><h3 id="multiline-comments">Multiline Comments<a class="anchor" href="#multiline-comments">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;This is a test Python program.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Written by Al Sweigart al@inventwithpython.com
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">This program was designed for Python 3, not Python 2.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">say_hello</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;This function prints hello.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    It does not return anything.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Hello!&#39;</span>)</span></span></code></pre></div><h3 id="indexes-and-slices">Indexes and Slices<a class="anchor" href="#indexes-and-slices">#</a></h3>
+<p>Strings use indexes and slices the same way lists do. You can think of the string &lsquo;Hello, world!&rsquo; as a list and each character in the string as an item with a corresponding index and negative index.</p>
+<h3 id="the-in-and-not-in-operators">The in and not in Operators<a class="anchor" href="#the-in-and-not-in-operators">#</a></h3>
+<p>You can use the in and not in operators with strings just as you can with list values.</p>
+<h3 id="f-strings">F-Strings<a class="anchor" href="#f-strings">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74"> years old.&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;In ten years I will be </span><span style="color:#e6db74">{</span>age <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>My name is Al. I am 4000 years old.
+In ten years I will be 4010</code></pre><h3 id="f-string-alternatives-s-and-format">F-String Alternatives: %s and format()<a class="anchor" href="#f-string-alternatives-s-and-format">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> years old.&#39;</span> <span style="color:#f92672">%</span> (name, age))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;In ten years I will be </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (age <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>My name is Al. I am 4000 years old.
+In ten years I will be 4010</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> years old.&#39;</span><span style="color:#f92672">.</span>format(name, age))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>My name is Al. I am 4000 years old.</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{1}</span><span style="color:#e6db74"> years ago, </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74"> was born and named </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">.&#39;</span><span style="color:#f92672">.</span>format(name, age)) <span style="color:#75715e"># You can put the index integer (starting at 0) inside the curly brackets to note which of the arguments to format() should be inserted</span></span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>4000 years ago, Al was born and named Al.</code></pre><h3 id="changing-the-case">Changing the Case<a class="anchor" href="#changing-the-case">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello, world!&#39;</span>
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> spam<span style="color:#f92672">.</span>upper()
+</span></span><span style="display:flex;"><span>print(spam)
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> spam<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>HELLO, WORLD!
+hello, world!</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello, world!&#39;</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>isupper())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;HELLO&#39;</span><span style="color:#f92672">.</span>isupper())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc12345&#39;</span><span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;12345&#39;</span><span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;12345&#39;</span><span style="color:#f92672">.</span>isupper())</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>False
+False
+True
+True
+False
+False</code></pre><h3 id="checking-string-characteristics">Checking String Characteristics<a class="anchor" href="#checking-string-characteristics">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">.</span>isalpha())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello123&#39;</span><span style="color:#f92672">.</span>isalpha())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello123&#39;</span><span style="color:#f92672">.</span>isalnum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">.</span>isalnum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;123&#39;</span><span style="color:#f92672">.</span>isdecimal())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;    &#39;</span><span style="color:#f92672">.</span>isspace())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;This Is Title Case&#39;</span><span style="color:#f92672">.</span>istitle())</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>True
+False
+True
+True
+True
+True
+True</code></pre><h3 id="checking-the-start-or-end-of-a-string">Checking the Start or End of a String<a class="anchor" href="#checking-the-start-or-end-of-a-string">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;Hello&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;world!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc123&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;abcdef&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc123&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;12&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>True
+True
+False
+False
+True
+True</code></pre><h3 id="joining-and-splitting-strings">Joining and Splitting Strings<a class="anchor" href="#joining-and-splitting-strings">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;, &#39;</span><span style="color:#f92672">.</span>join([<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;rats&#39;</span>, <span style="color:#e6db74">&#39;bats&#39;</span>]))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>cats, rats, bats</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is Simon&#39;</span><span style="color:#f92672">.</span>split())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is Simon&#39;</span><span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;m&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>[&#39;My&#39;, &#39;name&#39;, &#39;is&#39;, &#39;Simon&#39;]
+[&#39;My na&#39;, &#39;e is Si&#39;, &#39;on&#39;]</code></pre><h3 id="justifying-and-centering-text">Justifying and Centering Text<a class="anchor" href="#justifying-and-centering-text">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, World&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>ljust(<span style="color:#ae81ff">10</span>)) </span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>     Hello
+               Hello
+        Hello, World
+Hello     </code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;*&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>ljust(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;-&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>***************Hello
+Hello---------------    </code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>center(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>center(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;=&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>       Hello        
+=======Hello========    </code></pre><h3 id="removing-whitespace">Removing Whitespace<a class="anchor" href="#removing-whitespace">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;    Hello, World    &#39;</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>lstrip())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>rstrip())
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SpamSpamBaconSpamEggsSpamSpam&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A string argument will specify which characters on the ends to strip</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;ampS&#39;</span>))
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;Spam&#39;</span>))  </span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Hello, World
+Hello, World    
+    Hello, World
+BaconSpamEggs
+BaconSpamEggs</code></pre><h3 id="numeric-code-points-of-characters">Numeric Code Points of Characters<a class="anchor" href="#numeric-code-points-of-characters">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;A&#39;</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;4&#39;</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(chr(<span style="color:#ae81ff">65</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;A&#39;</span>) <span style="color:#f92672">&lt;</span> ord(<span style="color:#e6db74">&#39;B&#39;</span>))
+</span></span><span style="display:flex;"><span>print(chr(ord(<span style="color:#e6db74">&#39;A&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>))</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>65
+52
+33
+A
+True
+B</code></pre><h3 id="copying-and-pasting-strings">Copying and Pasting Strings<a class="anchor" href="#copying-and-pasting-strings">#</a></h3>
+<ol>
+<li>Ensure you are in the Python 3 mode in the <strong>Mu editor</strong>. The current mode is displayed in the bottom right corner of the window.</li>
+<li>Click the Admin or cog icon (gear icon) in the bottom right corner of the Mu editor.</li>
+<li>In the window that appears, select the Third Party Packages tab.</li>
+<li>Type pyperclip into the text box. You can install multiple packages by placing each on a new line.</li>
+<li>Click OK.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pyperclip
+</span></span><span style="display:flex;"><span>pyperclip<span style="color:#f92672">.</span>copy(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>)
+</span></span><span style="display:flex;"><span>print(pyperclip<span style="color:#f92672">.</span>paste())</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>Hello, world!</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pyperclip
+</span></span><span style="display:flex;"><span>print(pyperclip<span style="color:#f92672">.</span>paste()) <span style="color:#75715e"># paste whatever you copy from your device, even outside the program</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>For example, <span style="color:#66d9ef">if</span> I copied this sentence to the clipboard <span style="color:#f92672">and</span> then called paste(), it would look like this:</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>For example, if I copied this sentence to the clipboard and then called paste(), it would look like this:</code></pre><h2 id="set">Set<a class="anchor" href="#set">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_set <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>print(my_set)
+</span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>print(my_set)
+</span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(my_set)
+</span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>print(my_set)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>  my_set<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#39;Error: &#39;</span>, e)
+</span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>discard(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>print(my_set)
+</span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>discard(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>{1, 2, 3}
+{1, 2, 3, 4}
+{1, 2, 3, 4}
+{1, 2, 4}
+Error:  5
+{1, 4}
+{1, 4}</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>set1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>set2 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>}
+</span></span><span style="display:flex;"><span>union_set <span style="color:#f92672">=</span> set1<span style="color:#f92672">.</span>union(set2)
+</span></span><span style="display:flex;"><span>print(union_set)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>{1, 2, 3, 4, 5, 6}</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>set1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>set2 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
+</span></span><span style="display:flex;"><span>intersection_set <span style="color:#f92672">=</span> set1<span style="color:#f92672">.</span>intersection(set2)
+</span></span><span style="display:flex;"><span>print(intersection_set)</span></span></code></pre></div><p>Result:</p>
+<pre tabindex="0"><code>{3}</code></pre></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/python/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Python</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/python/04_functions/" class="flex align-center">
+        <span>04_Functions</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#nonetype">NoneType</a></li>
+    <li><a href="#sequence-data-types">Sequence Data Types</a></li>
+    <li><a href="#mutable-and-immutable-data-types">Mutable and Immutable Data types</a></li>
+    <li><a href="#list">List</a>
+      <ul>
+        <li><a href="#random-selection-and-ordering">Random Selection and Ordering</a></li>
+        <li><a href="#finding-values">Finding Values</a></li>
+        <li><a href="#adding-values">Adding Values</a></li>
+        <li><a href="#removing-values">Removing Values</a></li>
+        <li><a href="#sorting-values">Sorting Values</a></li>
+        <li><a href="#reversing-values">Reversing Values</a></li>
+        <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
+        <li><a href="#list-item-enumeration">List Item Enumeration</a></li>
+        <li><a href="#negative-indexes">Negative Indexes</a></li>
+        <li><a href="#slices">Slices</a></li>
+      </ul>
+    </li>
+    <li><a href="#tuples">Tuples</a>
+      <ul>
+        <li><a href="#the-tuple-data-type">The Tuple Data Type</a></li>
+      </ul>
+    </li>
+    <li><a href="#list-and-tuple-type-conversion">List and Tuple Type Conversion</a></li>
+    <li><a href="#the-dictionary-data-type">The Dictionary Data Type</a>
+      <ul>
+        <li><a href="#returning-keys-and-values">Returning Keys and Values</a></li>
+        <li><a href="#the-multiple-assignment-trick-1">The Multiple Assignment Trick</a></li>
+        <li><a href="#checking-whether-a-key-exists">Checking Whether a Key Exists</a></li>
+        <li><a href="#setting-default-values">Setting Default Values</a></li>
+      </ul>
+    </li>
+    <li><a href="#comparing-dictionaries-and-lists">Comparing Dictionaries and Lists</a></li>
+    <li><a href="#string">String</a>
+      <ul>
+        <li><a href="#escape-characters">Escape Characters</a></li>
+        <li><a href="#raw-strings">Raw Strings</a></li>
+        <li><a href="#multiline-strings">Multiline Strings</a></li>
+        <li><a href="#multiline-comments">Multiline Comments</a></li>
+        <li><a href="#indexes-and-slices">Indexes and Slices</a></li>
+        <li><a href="#the-in-and-not-in-operators">The in and not in Operators</a></li>
+        <li><a href="#f-strings">F-Strings</a></li>
+        <li><a href="#f-string-alternatives-s-and-format">F-String Alternatives: %s and format()</a></li>
+        <li><a href="#changing-the-case">Changing the Case</a></li>
+        <li><a href="#checking-string-characteristics">Checking String Characteristics</a></li>
+        <li><a href="#checking-the-start-or-end-of-a-string">Checking the Start or End of a String</a></li>
+        <li><a href="#joining-and-splitting-strings">Joining and Splitting Strings</a></li>
+        <li><a href="#justifying-and-centering-text">Justifying and Centering Text</a></li>
+        <li><a href="#removing-whitespace">Removing Whitespace</a></li>
+        <li><a href="#numeric-code-points-of-characters">Numeric Code Points of Characters</a></li>
+        <li><a href="#copying-and-pasting-strings">Copying and Pasting Strings</a></li>
+      </ul>
+    </li>
+    <li><a href="#set">Set</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@ theme = 'hugo-book'
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true
+      unsafe = true # Allow markdown compiler to prersent raw HTML
 
-[params]
-  BookCodeCopy = false
+[markup.goldmark.parser.attribute]
+  block = true # Allow to add attribute to block
