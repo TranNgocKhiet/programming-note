@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Parameters#*args#Đây là một hàm đơn giản, nhận vào hai tham số và trả về tổng của chúng: Input
+def foo(x, y): return x &#43; y print(foo(1, 2))Output
+3 Bây giờ, vấn đề của chúng ta là cần tính tổng của tất cả các số được truyền vào hàm, nhưng không biết trước số lượng của chúng. Đây là lúc là cú pháp *args cực kỳ hữu ích, bởi nó cũng giúp chúng ta có thể truyền một số lượng tham số tuỳ ý vào hàm. Input
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/note/programming-languages/python/05_parameters/">
+  <meta property="og:site_name" content="My programming note">
+  <meta property="og:title" content="05_Parameters">
+  <meta property="og:description" content="Parameters#*args#Đây là một hàm đơn giản, nhận vào hai tham số và trả về tổng của chúng: Input
+def foo(x, y): return x &#43; y print(foo(1, 2))Output
+3 Bây giờ, vấn đề của chúng ta là cần tính tổng của tất cả các số được truyền vào hàm, nhưng không biết trước số lượng của chúng. Đây là lúc là cú pháp *args cực kỳ hữu ích, bởi nó cũng giúp chúng ta có thể truyền một số lượng tham số tuỳ ý vào hàm. Input">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="05_Parameters">
+  <meta itemprop="description" content="Parameters#*args#Đây là một hàm đơn giản, nhận vào hai tham số và trả về tổng của chúng: Input
+def foo(x, y): return x &#43; y print(foo(1, 2))Output
+3 Bây giờ, vấn đề của chúng ta là cần tính tổng của tất cả các số được truyền vào hàm, nhưng không biết trước số lượng của chúng. Đây là lúc là cú pháp *args cực kỳ hữu ích, bởi nó cũng giúp chúng ta có thể truyền một số lượng tham số tuỳ ý vào hàm. Input">
+  <meta itemprop="wordCount" content="619">
+
+<title>05_Parameters | My programming note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/note/programming-languages/python/05_parameters/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.684d9ad0cf56d9333f07e561a77420ed59b04bdb3a7692b234b8cd335c51fd23.js" integrity="sha256-aE2a0M9W2TM/B&#43;Vhp3Qg7VmwS9s6dpKyNLjNM1xR/SM=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/note/programming-languages/python/05_parameters/index.xml" title="My programming note" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My programming note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Note</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Operating-Systems</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Linux</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Ubuntu</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Programming-Languages</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/" class="">
+      Python</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/01_data-structures/" class="">
+      01_Data-structures</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/01_data-structures/01_list/" class="">
+      List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/01_data-structures/02_tuple/" class="">
+      Tuple</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/01_data-structures/03_dictionary/" class="">
+      Dictionary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/01_data-structures/04_string/" class="">
+      String</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/01_data-structures/05_set/" class="">
+      Set</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/01_data-structures/06_comparision/" class="">
+      Comparision</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/02_operators/" class="">
+      02_Operators</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/03_statements/" class="">
+      03_Statements</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/04_functions/" class="">
+      04_Functions</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/05_parameters/" class="active">
+      05_Parameters</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/06_classes/" class="">
+      06_Classes</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/07_files/" class="">
+      07_Files</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/08_libraries/" class="">
+      08_Libraries</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/09_regular-expressions/" class="">
+      09_Regular-Expressions</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/note/programming-languages/python/10_debugging/" class="">
+      10_Debugging</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Virtual-Machines</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Virtual-Box</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#args"><code>*args</code></a></li>
+    <li><a href="#kwargs"><code>**kwargs</code></a></li>
+    <li><a href="#notice-for-args-and-kwargs">Notice for <code>*args</code> and ```**kwargs``</a></li>
+    <li><a href="#upack-with--and-">Upack with <code>*</code> and <code>**</code></a>
+      <ul>
+        <li><a href="#when-calling-function">When calling function</a></li>
+        <li><a href="#when-define-variables">When define variables</a></li>
+        <li><a href="#other-cases">Other cases</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="parameters">Parameters<a class="anchor" href="#parameters">#</a></h1>
+<h2 id="args"><code>*args</code><a class="anchor" href="#args">#</a></h2>
+<ul>
+<li>Đây là một hàm đơn giản, nhận vào hai tham số và trả về tổng của chúng:</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>(x, y):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(foo(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>3</code></pre><ul>
+<li>Bây giờ, vấn đề của chúng ta là cần tính tổng của tất cả các số được truyền vào hàm, nhưng không biết trước số lượng của chúng. Đây là lúc là cú pháp *args cực kỳ hữu ích, bởi nó cũng giúp chúng ta có thể truyền một số lượng tham số tuỳ ý vào hàm.</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>(<span style="color:#f92672">*</span>args):
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> args:
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">+=</span> x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(foo(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>print(foo(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>3 
+6</code></pre><ul>
+<li>Về lý thuyết, chúng ta có thể đặt *args ở bất cứ đâu chúng ta muốn trong định nghĩa hàm. Tuy nhiên, nếu đặt ở giữa, chúng ta sẽ không thể gọi hàm được bởi mọi lời gọi sẽ đều gặp lỗi. Nguyên nhân là do *args sẽ nhận toàn bộ các tham số &ldquo;còn lại&rdquo; sau khi các tham số đầu tiên đã có giá trị, do đó, các tham số phía sau *args sẽ không bao giờ được truyền vào nữa.</li>
+</ul>
+<hr>
+<h2 id="kwargs"><code>**kwargs</code><a class="anchor" href="#kwargs">#</a></h2>
+<ul>
+<li>Cách sử dụng **kwargs cũng tương tự như như *args, tuy nhiên, nó không dùng cho các tham số thông thường truyền vào lần lượt, mà nó được sử dụng cho các tham số đặt tên (thuật ngữ chính xác là named arguments hoặc keyword arguments).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>(a<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(foo())
+</span></span><span style="display:flex;"><span>print(foo(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>print(foo(b<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, a<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>1
+3
+7</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>(<span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> kwargs<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        print(key, value)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(foo(a<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>a 1
+b 2</code></pre><ul>
+<li>Lưu ý rằng, với cách sử dụng **kwargs thì kwargs trong hàm sẽ nhận giá trị là một dict với key là các tham số được truyền kèm giá trị tương ứng của chúng.</li>
+</ul>
+<hr>
+<h2 id="notice-for-args-and-kwargs">Notice for <code>*args</code> and ```**kwargs``<a class="anchor" href="#notice-for-args-and-kwargs">#</a></h2>
+<ul>
+<li>Thứ tự khi khai báo các tham số này rất quan trọng và không thể thay đổi được. Thứ tự đúng sẽ là:</li>
+</ul>
+<ol>
+<li>Các tham số bình thường</li>
+<li>*args</li>
+<li>**kwargs</li>
+</ol>
+<hr>
+<h2 id="upack-with--and-">Upack with <code>*</code> and <code>**</code><a class="anchor" href="#upack-with--and-">#</a></h2>
+<h3 id="when-calling-function">When calling function<a class="anchor" href="#when-calling-function">#</a></h3>
+<ul>
+<li>
+<p>Cú pháp * và ** khi gọi hàm sẽ yêu cầu unpack giá trị được truyền vào trước khi thực hiện hàm đó. Và khi unpack, hàm sẽ nhận các tham số đơn lẻ như các tham số riêng biệt vậy.</p>
+</li>
+<li>
+<p>Chúng ta có thể sử dụng unpack để truyền tham số vào cho hàm. Nói một cách đơn giản thì cú pháp * được xử dụng với một đối tượng iterable, còn ** chỉ có thể dùng được với dict mà thôi.</p>
+</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>(<span style="color:#f92672">**</span>kargs):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> data <span style="color:#f92672">in</span> kargs<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        print(data, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>    print()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#ae81ff">7</span>, <span style="color:#e6db74">&#39;b&#39;</span>: <span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;c&#39;</span>: <span style="color:#ae81ff">9</span>}
+</span></span><span style="display:flex;"><span>print(x)
+</span></span><span style="display:flex;"><span>print(<span style="color:#f92672">*</span>x)
+</span></span><span style="display:flex;"><span>foo(<span style="color:#f92672">**</span>y)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>(1, 2, 3)
+1 2 3
+(&#39;a&#39;, 7)(&#39;b&#39;, 8)(&#39;c&#39;, 9)</code></pre><hr>
+<h3 id="when-define-variables">When define variables<a class="anchor" href="#when-define-variables">#</a></h3>
+<ul>
+<li>Một nhu cầu khá thường xuyên của lập trình viên đó là chia giá trị một list (hoặc tuple) vào các biến riêng biệt.</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>a, <span style="color:#f92672">*</span>b, c <span style="color:#f92672">=</span> x
+</span></span><span style="display:flex;"><span>print(a)
+</span></span><span style="display:flex;"><span>print(b)
+</span></span><span style="display:flex;"><span>print(c)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>1
+[2, 3, 4, 5]
+6</code></pre><ul>
+<li>Một vấn đề nho nhỏ là cú pháp ** không áp dụng được khi gán biến để unpack một dict được.</li>
+</ul>
+<hr>
+<h3 id="other-cases">Other cases<a class="anchor" href="#other-cases">#</a></h3>
+<ul>
+<li>Một điều thú vị là unpack có thể áp dụng với mọi đối tượng iterable, nó sẽ rất cần thiết nếu chúng ta cần làm &ldquo;phẳng&rdquo; 2 hay nhiều list.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>list1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>list2 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>list3 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>]
+</span></span><span style="display:flex;"><span>print([<span style="color:#f92672">*</span>list1, <span style="color:#f92672">*</span>list2, <span style="color:#f92672">*</span>list3])</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>dict1 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;A&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;B&#34;</span>: <span style="color:#ae81ff">2</span>}
+</span></span><span style="display:flex;"><span>dict2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;C&#34;</span>: <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;D&#34;</span>: <span style="color:#ae81ff">4</span>}
+</span></span><span style="display:flex;"><span>print({<span style="color:#f92672">**</span>dict1, <span style="color:#f92672">**</span>dict2})</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>{&#39;A&#39;: 1, &#39;B&#39;: 2, &#39;C&#39;: 3, &#39;D&#39;: 4}</code></pre><hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/04_functions/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>04_Functions</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/06_classes/" class="flex align-center">
+        <span>06_Classes</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#args"><code>*args</code></a></li>
+    <li><a href="#kwargs"><code>**kwargs</code></a></li>
+    <li><a href="#notice-for-args-and-kwargs">Notice for <code>*args</code> and ```**kwargs``</a></li>
+    <li><a href="#upack-with--and-">Upack with <code>*</code> and <code>**</code></a>
+      <ul>
+        <li><a href="#when-calling-function">When calling function</a></li>
+        <li><a href="#when-define-variables">When define variables</a></li>
+        <li><a href="#other-cases">Other cases</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

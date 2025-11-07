@@ -8,34 +8,49 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Syntax#my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Result:
-fatMy cat has gray furspam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Result:
-Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0Returning Values | values()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for v in spam.values(): print(v)Result:
-red42Returning Keys | keys()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for k in spam.keys(): print(k)Result:
-colorageReturning Keys and Values | items()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for i in spam.items(): print(i)Result:
+<meta name="description" content="Dictionary#Syntax#Input
+my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Output
+fatMy cat has gray fur
+Input
+spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Output
+Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0 Returning Values | values()#Input
+spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for v in spam.values(): print(v)Output
+red42 Returning Keys | keys()#Input
+spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for k in spam.keys(): print(k)Output
+colorage Returning Keys and Values | items()#Input
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/python/01_data-structures/03_dictionary/">
   <meta property="og:site_name" content="My programming note">
   <meta property="og:title" content="Dictionary">
-  <meta property="og:description" content="Syntax#my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Result:
-fatMy cat has gray furspam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Result:
-Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0Returning Values | values()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for v in spam.values(): print(v)Result:
-red42Returning Keys | keys()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for k in spam.keys(): print(k)Result:
-colorageReturning Keys and Values | items()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for i in spam.items(): print(i)Result:">
+  <meta property="og:description" content="Dictionary#Syntax#Input
+my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Output
+fatMy cat has gray fur
+Input
+spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Output
+Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0 Returning Values | values()#Input
+spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for v in spam.values(): print(v)Output
+red42 Returning Keys | keys()#Input
+spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for k in spam.keys(): print(k)Output
+colorage Returning Keys and Values | items()#Input">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
 
 
   <meta itemprop="name" content="Dictionary">
-  <meta itemprop="description" content="Syntax#my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Result:
-fatMy cat has gray furspam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Result:
-Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0Returning Values | values()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for v in spam.values(): print(v)Result:
-red42Returning Keys | keys()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for k in spam.keys(): print(k)Result:
-colorageReturning Keys and Values | items()#spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for i in spam.items(): print(i)Result:">
-  <meta itemprop="wordCount" content="285">
+  <meta itemprop="description" content="Dictionary#Syntax#Input
+my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Output
+fatMy cat has gray fur
+Input
+spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Output
+Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0 Returning Values | values()#Input
+spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for v in spam.values(): print(v)Output
+red42 Returning Keys | keys()#Input
+spam = {&#39;color&#39;: &#39;red&#39;, &#39;age&#39;: 42} for k in spam.keys(): print(k)Output
+colorage Returning Keys and Values | items()#Input">
+  <meta itemprop="wordCount" content="302">
 
 <title>Dictionary | My programming note</title>
 <link rel="icon" href="/favicon.png" >
@@ -45,7 +60,7 @@ colorageReturning Keys and Values | items()#spam = {&#39;color&#39;: &#39;red&
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.3c8191f94d8f240d0b2b4bb6bcb78bb07255d53caf7091a1f9470093673a9de5.js" integrity="sha256-PIGR&#43;U2PJA0LK0u2vLeLsHJV1TyvcJGh&#43;UcAk2c6neU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.6dae63a2d7d5b28291dc3b333a46b2755f70f769187864a510dac05381033610.js" integrity="sha256-ba5jotfVsoKR3DszOkaydV9w92kYeGSlENrAU4EDNhA=" crossorigin="anonymous"></script>
 
 
 
@@ -104,6 +119,44 @@ colorageReturning Keys and Values | items()#spam = {&#39;color&#39;: &#39;red&
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Linux</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Ubuntu</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
     
       
         <li>
@@ -434,6 +487,13 @@ colorageReturning Keys and Values | items()#spam = {&#39;color&#39;: &#39;red&
       <header class="book-header hidden">
         
   <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
@@ -466,61 +526,79 @@ colorageReturning Keys and Values | items()#spam = {&#39;color&#39;: &#39;red&
 
       
       
-  <article class="markdown book-article"><h2 id="syntax">Syntax<a class="anchor" href="#syntax">#</a></h2>
+  <article class="markdown book-article"><h1 id="dictionary">Dictionary<a class="anchor" href="#dictionary">#</a></h1>
+<h2 id="syntax">Syntax<a class="anchor" href="#syntax">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_cat <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;size&#39;</span>: <span style="color:#e6db74">&#39;fat&#39;</span>, <span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;gray&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">17</span>}
 </span></span><span style="display:flex;"><span>print(my_cat[<span style="color:#e6db74">&#39;size&#39;</span>])
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My cat has &#39;</span> <span style="color:#f92672">+</span> my_cat[<span style="color:#e6db74">&#39;color&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; fur.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My cat has &#39;</span> <span style="color:#f92672">+</span> my_cat[<span style="color:#e6db74">&#39;color&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; fur.&#39;</span>)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>fat
-My cat has gray fur</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#ae81ff">12345</span>: <span style="color:#e6db74">&#39;Luggage Combination&#39;</span>, <span style="color:#ae81ff">42</span>: <span style="color:#e6db74">&#39;The Answer&#39;</span>}
+My cat has gray fur</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#ae81ff">12345</span>: <span style="color:#e6db74">&#39;Luggage Combination&#39;</span>, <span style="color:#ae81ff">42</span>: <span style="color:#e6db74">&#39;The Answer&#39;</span>}
 </span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">12345</span>])
 </span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">42</span>])
-</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>])</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>])</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>Luggage Combination
 The Answer
 Traceback (most recent call last):
   File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
-KeyError: 0</code></pre><h2 id="returning-values--values">Returning Values | <code>values()</code><a class="anchor" href="#returning-values--values">#</a></h2>
+KeyError: 0</code></pre><hr>
+<h2 id="returning-values--values">Returning Values | <code>values()</code><a class="anchor" href="#returning-values--values">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>values():
-</span></span><span style="display:flex;"><span>  print(v)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>  print(v)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>red
-42</code></pre><h2 id="returning-keys--keys">Returning Keys | <code>keys()</code><a class="anchor" href="#returning-keys--keys">#</a></h2>
+42</code></pre><hr>
+<h2 id="returning-keys--keys">Returning Keys | <code>keys()</code><a class="anchor" href="#returning-keys--keys">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>keys():
-</span></span><span style="display:flex;"><span>  print(k)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>  print(k)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>color
-age</code></pre><h2 id="returning-keys-and-values--items">Returning Keys and Values | <code>items()</code><a class="anchor" href="#returning-keys-and-values--items">#</a></h2>
+age</code></pre><hr>
+<h2 id="returning-keys-and-values--items">Returning Keys and Values | <code>items()</code><a class="anchor" href="#returning-keys-and-values--items">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>items():
-</span></span><span style="display:flex;"><span>  print(i)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>  print(i)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>(&#39;color&#39;, &#39;red&#39;)
-(&#39;age&#39;, 42)</code></pre><h2 id="checking-whether-a-key-exists--get">Checking Whether a Key Exists | <code>get()</code><a class="anchor" href="#checking-whether-a-key-exists--get">#</a></h2>
+(&#39;age&#39;, 42)</code></pre><hr>
+<h2 id="checking-whether-a-key-exists--get">Checking Whether a Key Exists | <code>get()</code><a class="anchor" href="#checking-whether-a-key-exists--get">#</a></h2>
 <ul>
 <li>Dictionaries have a get() method that takes two arguments: the key of the value to retrieve and a fallback value to return if that key doesn’t exis</li>
 </ul>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>picnic_items <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;apples&#39;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;cups&#39;</span>: <span style="color:#ae81ff">2</span>}
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I am bringing &#39;</span> <span style="color:#f92672">+</span> str(picnic_items<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;cups&#39;</span>, <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; cups.&#39;</span>) 
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I am bringing &#39;</span> <span style="color:#f92672">+</span> str(picnic_items<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;eggs&#39;</span>, <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; eggs.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I am bringing &#39;</span> <span style="color:#f92672">+</span> str(picnic_items<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;eggs&#39;</span>, <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; eggs.&#39;</span>)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>I am bringing 2 cups.
-I am bringing 0 eggs.</code></pre><h2 id="setting-default-values--setdefault">Setting Default Values | <code>setdefault()</code><a class="anchor" href="#setting-default-values--setdefault">#</a></h2>
+I am bringing 0 eggs.</code></pre><hr>
+<h2 id="setting-default-values--setdefault">Setting Default Values | <code>setdefault()</code><a class="anchor" href="#setting-default-values--setdefault">#</a></h2>
 <ul>
 <li>The first argument passed to the method is the key to check for, and the second argument is the value to set at that key if the key doesn’t exist; if the key does exist, the setdefault() method returns the key’s value</li>
 </ul>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Pooka&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">5</span>}
 </span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>))  <span style="color:#75715e"># Sets &#39;color&#39; key to &#39;black&#39;</span>
-</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>))  <span style="color:#75715e"># Does nothing</span></span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>))  <span style="color:#75715e"># Does nothing</span></span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>black
 black</code></pre><h2 id="view-object">View object<a class="anchor" href="#view-object">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
 </span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>keys())
-</span></span><span style="display:flex;"><span>print(list(spam<span style="color:#f92672">.</span>keys()))</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(list(spam<span style="color:#f92672">.</span>keys()))</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>dict_keys([&#39;color&#39;, &#39;age&#39;])
-[&#39;color&#39;, &#39;age&#39;]</code></pre><h2 id="the-multiple-assignment-trick">The Multiple Assignment Trick<a class="anchor" href="#the-multiple-assignment-trick">#</a></h2>
+[&#39;color&#39;, &#39;age&#39;]</code></pre><hr>
+<h2 id="the-multiple-assignment-trick">The Multiple Assignment Trick<a class="anchor" href="#the-multiple-assignment-trick">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>items():
-</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#39;Key: &#39;</span> <span style="color:#f92672">+</span> str(k) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; Value: &#39;</span> <span style="color:#f92672">+</span> str(v))</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#39;Key: &#39;</span> <span style="color:#f92672">+</span> str(k) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; Value: &#39;</span> <span style="color:#f92672">+</span> str(v))</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>Key: color Value: red
-Key: age Value: 42</code></pre></article>
+Key: age Value: 42</code></pre><hr>
+</article>
  
       
 

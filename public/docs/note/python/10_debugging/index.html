@@ -8,30 +8,45 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Exception Handling#def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
-21.03.5Error: Invalid argument.None42.0def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Result:
-21.03.5Error: Invalid argument.Raising Exceptions#raise Exception(&#39;This is the error message.&#39;)Result:
-Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.def box_print(symbol, width, height): if len(symbol) != 1: raise Exception(&#39;Symbol must be a single character string.&#39;) if width &lt;= 2: raise Exception(&#39;Width must be greater than 2.&#39;) if height &lt;= 2: raise Exception(&#39;Height must be greater than 2.&#39;) print(symbol * width) for i in range(height - 2): print(symbol &#43; (&#39; &#39; * (width - 2)) &#43; symbol) print(symbol * width) try: box_print(&#39;*&#39;, 4, 4) box_print(&#39;O&#39;, 20, 5) box_print(&#39;x&#39;, 1, 3) box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err)) try: box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err))Result:
+<meta name="description" content="Debugging#Exception Handling#Input
+def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Output
+21.03.5Error: Invalid argument.None42.0
+Input
+def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Output
+21.03.5Error: Invalid argument. Raising Exceptions#Input
+raise Exception(&#39;This is the error message.&#39;)Output
+Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.
+Input
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/python/10_debugging/">
   <meta property="og:site_name" content="My programming note">
   <meta property="og:title" content="10_Debugging">
-  <meta property="og:description" content="Exception Handling#def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
-21.03.5Error: Invalid argument.None42.0def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Result:
-21.03.5Error: Invalid argument.Raising Exceptions#raise Exception(&#39;This is the error message.&#39;)Result:
-Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.def box_print(symbol, width, height): if len(symbol) != 1: raise Exception(&#39;Symbol must be a single character string.&#39;) if width &lt;= 2: raise Exception(&#39;Width must be greater than 2.&#39;) if height &lt;= 2: raise Exception(&#39;Height must be greater than 2.&#39;) print(symbol * width) for i in range(height - 2): print(symbol &#43; (&#39; &#39; * (width - 2)) &#43; symbol) print(symbol * width) try: box_print(&#39;*&#39;, 4, 4) box_print(&#39;O&#39;, 20, 5) box_print(&#39;x&#39;, 1, 3) box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err)) try: box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err))Result:">
+  <meta property="og:description" content="Debugging#Exception Handling#Input
+def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Output
+21.03.5Error: Invalid argument.None42.0
+Input
+def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Output
+21.03.5Error: Invalid argument. Raising Exceptions#Input
+raise Exception(&#39;This is the error message.&#39;)Output
+Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.
+Input">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="10_Debugging">
-  <meta itemprop="description" content="Exception Handling#def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Result
-21.03.5Error: Invalid argument.None42.0def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Result:
-21.03.5Error: Invalid argument.Raising Exceptions#raise Exception(&#39;This is the error message.&#39;)Result:
-Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.def box_print(symbol, width, height): if len(symbol) != 1: raise Exception(&#39;Symbol must be a single character string.&#39;) if width &lt;= 2: raise Exception(&#39;Width must be greater than 2.&#39;) if height &lt;= 2: raise Exception(&#39;Height must be greater than 2.&#39;) print(symbol * width) for i in range(height - 2): print(symbol &#43; (&#39; &#39; * (width - 2)) &#43; symbol) print(symbol * width) try: box_print(&#39;*&#39;, 4, 4) box_print(&#39;O&#39;, 20, 5) box_print(&#39;x&#39;, 1, 3) box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err)) try: box_print(&#39;ZZ&#39;, 3, 3) except Exception as err: print(&#39;An exception happened: &#39; &#43; str(err))Result:">
-  <meta itemprop="wordCount" content="718">
+  <meta itemprop="description" content="Debugging#Exception Handling#Input
+def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;) print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1))Output
+21.03.5Error: Invalid argument.None42.0
+Input
+def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Output
+21.03.5Error: Invalid argument. Raising Exceptions#Input
+raise Exception(&#39;This is the error message.&#39;)Output
+Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;raise Exception(&#39;This is the error message.&#39;)Exception: This is the error message.
+Input">
+  <meta itemprop="wordCount" content="739">
 
 <title>10_Debugging | My programming note</title>
 <link rel="icon" href="/favicon.png" >
@@ -41,7 +56,7 @@ Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, i
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.3c8191f94d8f240d0b2b4bb6bcb78bb07255d53caf7091a1f9470093673a9de5.js" integrity="sha256-PIGR&#43;U2PJA0LK0u2vLeLsHJV1TyvcJGh&#43;UcAk2c6neU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.6dae63a2d7d5b28291dc3b333a46b2755f70f769187864a510dac05381033610.js" integrity="sha256-ba5jotfVsoKR3DszOkaydV9w92kYeGSlENrAU4EDNhA=" crossorigin="anonymous"></script>
 
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/note/python/10_debugging/index.xml" title="My programming note" />
@@ -101,6 +116,44 @@ Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, i
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Linux</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Ubuntu</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
     
       
         <li>
@@ -431,6 +484,13 @@ Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, i
       <header class="book-header hidden">
         
   <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
@@ -463,7 +523,9 @@ Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, i
 
       
       
-  <article class="markdown book-article"><h2 id="exception-handling">Exception Handling<a class="anchor" href="#exception-handling">#</a></h2>
+  <article class="markdown book-article"><h1 id="debugging">Debugging<a class="anchor" href="#debugging">#</a></h1>
+<h2 id="exception-handling">Exception Handling<a class="anchor" href="#exception-handling">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span> <span style="color:#f92672">/</span> divide_by
@@ -473,12 +535,14 @@ Traceback (most recent call last):File &#34;&lt;pyshell#191&gt;&#34;, line 1, i
 </span></span><span style="display:flex;"><span>print(spam(<span style="color:#ae81ff">2</span>))
 </span></span><span style="display:flex;"><span>print(spam(<span style="color:#ae81ff">12</span>))
 </span></span><span style="display:flex;"><span>print(spam(<span style="color:#ae81ff">0</span>))
-</span></span><span style="display:flex;"><span>print(spam(<span style="color:#ae81ff">1</span>))</span></span></code></pre></div><p>Result</p>
+</span></span><span style="display:flex;"><span>print(spam(<span style="color:#ae81ff">1</span>))</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>21.0
 3.5
 Error: Invalid argument.
 None
-42.0</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
+42.0</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span> <span style="color:#f92672">/</span> divide_by
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
@@ -487,15 +551,19 @@ None
 </span></span><span style="display:flex;"><span>    print(spam(<span style="color:#ae81ff">0</span>))
 </span></span><span style="display:flex;"><span>    print(spam(<span style="color:#ae81ff">1</span>))
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ZeroDivisionError</span>:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Error: Invalid argument.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Error: Invalid argument.&#39;</span>)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>21.0
 3.5
-Error: Invalid argument.</code></pre><h2 id="raising-exceptions">Raising Exceptions<a class="anchor" href="#raising-exceptions">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#39;This is the error message.&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+Error: Invalid argument.</code></pre><hr>
+<h2 id="raising-exceptions">Raising Exceptions<a class="anchor" href="#raising-exceptions">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#39;This is the error message.&#39;</span>)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>Traceback (most recent call last):
   File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;
     raise Exception(&#39;This is the error message.&#39;)
-Exception: This is the error message.</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">box_print</span>(symbol, width, height):
+Exception: This is the error message.</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">box_print</span>(symbol, width, height):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(symbol) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#39;Symbol must be a single character string.&#39;</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> width <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>:
@@ -518,7 +586,7 @@ Exception: This is the error message.</code></pre><div class="highlight"><pre ta
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>    box_print(<span style="color:#e6db74">&#39;ZZ&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> err:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;An exception happened: &#39;</span> <span style="color:#f92672">+</span> str(err))</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;An exception happened: &#39;</span> <span style="color:#f92672">+</span> str(err))</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>****
 *  *
 *  *
@@ -529,16 +597,22 @@ O                  O
 O                  O
 OOOOOOOOOOOOOOOOOOOO
 An exception happened: Width must be greater than 2.
-An exception happened: Symbol must be a single character string.</code></pre><h2 id="assertions">Assertions<a class="anchor" href="#assertions">#</a></h2>
+An exception happened: Symbol must be a single character string.</code></pre><hr>
+<h2 id="assertions">Assertions<a class="anchor" href="#assertions">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
 </span></span><span style="display:flex;"><span>ages<span style="color:#f92672">.</span>sort()
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> ages[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> ages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># Assert that the first age is &lt;= the last age</span></span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code></code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> ages[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> ages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># Assert that the first age is &lt;= the last age</span></span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code></code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
 </span></span><span style="display:flex;"><span>ages<span style="color:#f92672">.</span>reverse()
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> ages[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> ages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># Assert that the first age is &lt;= the last age</span></span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> ages[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> ages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># Assert that the first age is &lt;= the last age</span></span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>Traceback (most recent call last):
   File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
-AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a class="anchor" href="#the-logging-module">#</a></h2>
+AssertionError</code></pre><hr>
+<h2 id="the-logging-module">The logging Module<a class="anchor" href="#the-logging-module">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>DEBUG, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Start of program&#39;</span>)
@@ -553,7 +627,7 @@ AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a clas
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> total
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>print(factorial(<span style="color:#ae81ff">5</span>))
-</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;End of program&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;End of program&#39;</span>)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>2025-11-02 22:53:01,430 -  DEBUG -  Start of program
 2025-11-02 22:53:01,430 -  DEBUG -  Start of factorial(5)
 2025-11-02 22:53:01,430 -  DEBUG -  i is 0, total is 0
@@ -564,10 +638,13 @@ AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a clas
 2025-11-02 22:53:01,430 -  DEBUG -  i is 5, total is 0
 2025-11-02 22:53:01,430 -  DEBUG -  End of factorial(5)
 0
-2025-11-02 22:53:01,430 -  DEBUG -  End of program</code></pre><h2 id="logfiles">Logfiles<a class="anchor" href="#logfiles">#</a></h2>
+2025-11-02 22:53:01,430 -  DEBUG -  End of program</code></pre><hr>
+<h2 id="logfiles">Logfiles<a class="anchor" href="#logfiles">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;myProgramLog.txt&#39;</span>, level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>DEBUG,
-</span></span><span style="display:flex;"><span>format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div><h2 id="logging-levels">Logging Levels<a class="anchor" href="#logging-levels">#</a></h2>
+</span></span><span style="display:flex;"><span>format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div><hr>
+<h2 id="logging-levels">Logging Levels<a class="anchor" href="#logging-levels">#</a></h2>
 <table>
   <thead>
       <tr>
@@ -604,22 +681,29 @@ AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a clas
       </tr>
   </tbody>
 </table>
-<p>Passing logging.DEBUG to the basicConfig() function’s level named parameter will show messages from all the logging levels (DEBUG being the lowest level). But after developing your program some more, you may be interested only in errors. In that case, you can set basicConfig()’s level argument to logging.ERROR. This will show only ERROR and CRITICAL messages and will skip the DEBUG, INFO, and WARNING messages.</p>
+<ul>
+<li>Passing logging.DEBUG to the basicConfig() function’s level named parameter will show messages from all the logging levels (DEBUG being the lowest level). But after developing your program some more, you may be interested only in errors. In that case, you can set basicConfig()’s level argument to logging.ERROR. This will show only ERROR and CRITICAL messages and will skip the DEBUG, INFO, and WARNING messages.</li>
+</ul>
 <h2 id="disabled-logging">Disabled Logging<a class="anchor" href="#disabled-logging">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>critical(<span style="color:#e6db74">&#39;Critical error! Critical error!&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>disable(logging<span style="color:#f92672">.</span>CRITICAL)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>critical(<span style="color:#e6db74">&#39;Critical error! Critical error!&#39;</span>)
-</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;Error! Error!&#39;</span>)</span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>2025-11-02 22:39:52,251 - CRITICAL -  Critical error! Critical error!</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;Error! Error!&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>2025-11-02 22:39:52,251 - CRITICAL -  Critical error! Critical error!</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>critical(<span style="color:#e6db74">&#39;Critical error! Critical error!&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>disable(logging<span style="color:#f92672">.</span>ERROR)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>critical(<span style="color:#e6db74">&#39;Critical error! Critical error!&#39;</span>)
-</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;Error! Error!&#39;</span>)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;Error! Error!&#39;</span>)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>2025-11-02 22:41:46,767 - CRITICAL -  Critical error! Critical error!
-2025-11-02 22:41:46,767 - CRITICAL -  Critical error! Critical error!</code></pre><h2 id="finally">Finally<a class="anchor" href="#finally">#</a></h2>
+2025-11-02 22:41:46,767 - CRITICAL -  Critical error! Critical error!</code></pre><hr>
+<h2 id="finally">Finally<a class="anchor" href="#finally">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ZeroDivisionError</span>:
@@ -627,9 +711,10 @@ AssertionError</code></pre><h2 id="the-logging-module">The logging Module<a clas
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Division successful, result is : &#34;</span>, result)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">finally</span>:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;This block always executes&#34;</span>)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;This block always executes&#34;</span>)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>Division successful, result is :  10.0
-This block always executes</code></pre></article>
+This block always executes</code></pre><hr>
+</article>
  
       
 

@@ -8,18 +8,26 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="List and Tuple Type Conversion#print(tuple([&#39;cat&#39;, &#39;dog&#39;, 5])) print(list((&#39;cat&#39;, &#39;dog&#39;, 5))) print(list(&#39;hello&#39;))Result:
-(&#39;cat&#39;, &#39;dog&#39;, 5)[&#39;cat&#39;, &#39;dog&#39;, 5][&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]Comparing Dictionarie and List#spam = [&#39;cats&#39;, &#39;dogs&#39;, &#39;moose&#39;] bacon = [&#39;dogs&#39;, &#39;moose&#39;, &#39;cats&#39;] print(spam == bacon) # The order of list items mattersResult:
-Falseeggs = {&#39;name&#39;: &#39;Zophie&#39;, &#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;} ham = {&#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;, &#39;name&#39;: &#39;Zophie&#39;} print(eggs == ham) # The order of dictionary key-value pairs doesn&#39;t matterResult:
+<meta name="description" content="Comparision#List and Tuple Type Conversion#Input
+print(tuple([&#39;cat&#39;, &#39;dog&#39;, 5])) print(list((&#39;cat&#39;, &#39;dog&#39;, 5))) print(list(&#39;hello&#39;))Output
+(&#39;cat&#39;, &#39;dog&#39;, 5)[&#39;cat&#39;, &#39;dog&#39;, 5][&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;] Comparing Dictionarie and List#Input
+spam = [&#39;cats&#39;, &#39;dogs&#39;, &#39;moose&#39;] bacon = [&#39;dogs&#39;, &#39;moose&#39;, &#39;cats&#39;] print(spam == bacon) # The order of list items mattersOuput
+False
+Input
+eggs = {&#39;name&#39;: &#39;Zophie&#39;, &#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;} ham = {&#39;species&#39;: &#39; t&#39;, &#39;age&#39;: &#39;8&#39;, &#39;name&#39;: &#39;Zophie&#39;} print(eggs == ham) The order of dictionary key-value pairs doesn&#39;t matterOutput
 True">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/python/01_data-structures/06_comparision/">
   <meta property="og:site_name" content="My programming note">
   <meta property="og:title" content="Comparision">
-  <meta property="og:description" content="List and Tuple Type Conversion#print(tuple([&#39;cat&#39;, &#39;dog&#39;, 5])) print(list((&#39;cat&#39;, &#39;dog&#39;, 5))) print(list(&#39;hello&#39;))Result:
-(&#39;cat&#39;, &#39;dog&#39;, 5)[&#39;cat&#39;, &#39;dog&#39;, 5][&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]Comparing Dictionarie and List#spam = [&#39;cats&#39;, &#39;dogs&#39;, &#39;moose&#39;] bacon = [&#39;dogs&#39;, &#39;moose&#39;, &#39;cats&#39;] print(spam == bacon) # The order of list items mattersResult:
-Falseeggs = {&#39;name&#39;: &#39;Zophie&#39;, &#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;} ham = {&#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;, &#39;name&#39;: &#39;Zophie&#39;} print(eggs == ham) # The order of dictionary key-value pairs doesn&#39;t matterResult:
+  <meta property="og:description" content="Comparision#List and Tuple Type Conversion#Input
+print(tuple([&#39;cat&#39;, &#39;dog&#39;, 5])) print(list((&#39;cat&#39;, &#39;dog&#39;, 5))) print(list(&#39;hello&#39;))Output
+(&#39;cat&#39;, &#39;dog&#39;, 5)[&#39;cat&#39;, &#39;dog&#39;, 5][&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;] Comparing Dictionarie and List#Input
+spam = [&#39;cats&#39;, &#39;dogs&#39;, &#39;moose&#39;] bacon = [&#39;dogs&#39;, &#39;moose&#39;, &#39;cats&#39;] print(spam == bacon) # The order of list items mattersOuput
+False
+Input
+eggs = {&#39;name&#39;: &#39;Zophie&#39;, &#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;} ham = {&#39;species&#39;: &#39; t&#39;, &#39;age&#39;: &#39;8&#39;, &#39;name&#39;: &#39;Zophie&#39;} print(eggs == ham) The order of dictionary key-value pairs doesn&#39;t matterOutput
 True">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -27,11 +35,15 @@ True">
 
 
   <meta itemprop="name" content="Comparision">
-  <meta itemprop="description" content="List and Tuple Type Conversion#print(tuple([&#39;cat&#39;, &#39;dog&#39;, 5])) print(list((&#39;cat&#39;, &#39;dog&#39;, 5))) print(list(&#39;hello&#39;))Result:
-(&#39;cat&#39;, &#39;dog&#39;, 5)[&#39;cat&#39;, &#39;dog&#39;, 5][&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]Comparing Dictionarie and List#spam = [&#39;cats&#39;, &#39;dogs&#39;, &#39;moose&#39;] bacon = [&#39;dogs&#39;, &#39;moose&#39;, &#39;cats&#39;] print(spam == bacon) # The order of list items mattersResult:
-Falseeggs = {&#39;name&#39;: &#39;Zophie&#39;, &#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;} ham = {&#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;, &#39;name&#39;: &#39;Zophie&#39;} print(eggs == ham) # The order of dictionary key-value pairs doesn&#39;t matterResult:
+  <meta itemprop="description" content="Comparision#List and Tuple Type Conversion#Input
+print(tuple([&#39;cat&#39;, &#39;dog&#39;, 5])) print(list((&#39;cat&#39;, &#39;dog&#39;, 5))) print(list(&#39;hello&#39;))Output
+(&#39;cat&#39;, &#39;dog&#39;, 5)[&#39;cat&#39;, &#39;dog&#39;, 5][&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;] Comparing Dictionarie and List#Input
+spam = [&#39;cats&#39;, &#39;dogs&#39;, &#39;moose&#39;] bacon = [&#39;dogs&#39;, &#39;moose&#39;, &#39;cats&#39;] print(spam == bacon) # The order of list items mattersOuput
+False
+Input
+eggs = {&#39;name&#39;: &#39;Zophie&#39;, &#39;species&#39;: &#39;cat&#39;, &#39;age&#39;: &#39;8&#39;} ham = {&#39;species&#39;: &#39; t&#39;, &#39;age&#39;: &#39;8&#39;, &#39;name&#39;: &#39;Zophie&#39;} print(eggs == ham) The order of dictionary key-value pairs doesn&#39;t matterOutput
 True">
-  <meta itemprop="wordCount" content="75">
+  <meta itemprop="wordCount" content="81">
 
 <title>Comparision | My programming note</title>
 <link rel="icon" href="/favicon.png" >
@@ -41,7 +53,7 @@ True">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.3c8191f94d8f240d0b2b4bb6bcb78bb07255d53caf7091a1f9470093673a9de5.js" integrity="sha256-PIGR&#43;U2PJA0LK0u2vLeLsHJV1TyvcJGh&#43;UcAk2c6neU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.6dae63a2d7d5b28291dc3b333a46b2755f70f769187864a510dac05381033610.js" integrity="sha256-ba5jotfVsoKR3DszOkaydV9w92kYeGSlENrAU4EDNhA=" crossorigin="anonymous"></script>
 
 
 
@@ -100,6 +112,44 @@ True">
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Linux</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Ubuntu</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
     
       
         <li>
@@ -430,6 +480,13 @@ True">
       <header class="book-header hidden">
         
   <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
@@ -456,20 +513,27 @@ True">
 
       
       
-  <article class="markdown book-article"><h2 id="list-and-tuple-type-conversion">List and Tuple Type Conversion<a class="anchor" href="#list-and-tuple-type-conversion">#</a></h2>
+  <article class="markdown book-article"><h1 id="comparision">Comparision<a class="anchor" href="#comparision">#</a></h1>
+<h2 id="list-and-tuple-type-conversion">List and Tuple Type Conversion<a class="anchor" href="#list-and-tuple-type-conversion">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(tuple([<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#ae81ff">5</span>]))
 </span></span><span style="display:flex;"><span>print(list((<span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;dog&#39;</span>, <span style="color:#ae81ff">5</span>)))
-</span></span><span style="display:flex;"><span>print(list(<span style="color:#e6db74">&#39;hello&#39;</span>))</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(list(<span style="color:#e6db74">&#39;hello&#39;</span>))</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>(&#39;cat&#39;, &#39;dog&#39;, 5)
 [&#39;cat&#39;, &#39;dog&#39;, 5]
-[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]</code></pre><h2 id="comparing-dictionarie-and-list">Comparing Dictionarie and List<a class="anchor" href="#comparing-dictionarie-and-list">#</a></h2>
+[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]</code></pre><hr>
+<h2 id="comparing-dictionarie-and-list">Comparing Dictionarie and List<a class="anchor" href="#comparing-dictionarie-and-list">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;moose&#39;</span>]
 </span></span><span style="display:flex;"><span>bacon <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;moose&#39;</span>, <span style="color:#e6db74">&#39;cats&#39;</span>]
-</span></span><span style="display:flex;"><span>print(spam <span style="color:#f92672">==</span> bacon) <span style="color:#75715e"># The order of list items matters</span></span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>False</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>eggs <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Zophie&#39;</span>, <span style="color:#e6db74">&#39;species&#39;</span>: <span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#e6db74">&#39;8&#39;</span>}
-</span></span><span style="display:flex;"><span>ham <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;species&#39;</span>: <span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#e6db74">&#39;8&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Zophie&#39;</span>}
-</span></span><span style="display:flex;"><span>print(eggs <span style="color:#f92672">==</span> ham) <span style="color:#75715e"># The order of dictionary key-value pairs doesn&#39;t matter</span></span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>True</code></pre></article>
+</span></span><span style="display:flex;"><span>print(spam <span style="color:#f92672">==</span> bacon) <span style="color:#75715e"># The order of list items matters</span></span></span></code></pre></div><p>Ouput</p>
+<pre tabindex="0"><code>False</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>eggs <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Zophie&#39;</span>, <span style="color:#e6db74">&#39;species&#39;</span>: <span style="color:#e6db74">&#39;cat&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#e6db74">&#39;8&#39;</span>}
+</span></span><span style="display:flex;"><span>ham <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;species&#39;</span>: <span style="color:#e6db74">&#39; t&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#e6db74">&#39;8&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Zophie&#39;</span>}
+</span></span><span style="display:flex;"><span>print(eggs <span style="color:#f92672">==</span> ham)  The order of dictionary key<span style="color:#f92672">-</span>value pairs doesn<span style="color:#e6db74">&#39;t matter</span></span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>True</code></pre><hr>
+</article>
  
       
 

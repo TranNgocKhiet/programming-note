@@ -8,26 +8,26 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The global Statement#If you need to modify a global variable from within a function, use the global statement. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so don’t create a local variable with this name.
-def spam(): global eggs eggs = &#39;spam&#39; eggs = &#39;global&#39; spam() print(eggs)Result:
+<meta name="description" content="Statements#The global Statement#If you need to modify a global variable from within a function, use the global statement. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so don’t create a local variable with this name. Input
+def spam(): global eggs eggs = &#39;spam&#39; eggs = &#39;global&#39; spam() print(eggs)Output
 spam">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/python/03_statements/">
   <meta property="og:site_name" content="My programming note">
   <meta property="og:title" content="03_Statements">
-  <meta property="og:description" content="The global Statement#If you need to modify a global variable from within a function, use the global statement. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so don’t create a local variable with this name.
-def spam(): global eggs eggs = &#39;spam&#39; eggs = &#39;global&#39; spam() print(eggs)Result:
+  <meta property="og:description" content="Statements#The global Statement#If you need to modify a global variable from within a function, use the global statement. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so don’t create a local variable with this name. Input
+def spam(): global eggs eggs = &#39;spam&#39; eggs = &#39;global&#39; spam() print(eggs)Output
 spam">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta itemprop="name" content="03_Statements">
-  <meta itemprop="description" content="The global Statement#If you need to modify a global variable from within a function, use the global statement. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so don’t create a local variable with this name.
-def spam(): global eggs eggs = &#39;spam&#39; eggs = &#39;global&#39; spam() print(eggs)Result:
+  <meta itemprop="description" content="Statements#The global Statement#If you need to modify a global variable from within a function, use the global statement. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so don’t create a local variable with this name. Input
+def spam(): global eggs eggs = &#39;spam&#39; eggs = &#39;global&#39; spam() print(eggs)Output
 spam">
-  <meta itemprop="wordCount" content="65">
+  <meta itemprop="wordCount" content="67">
 
 <title>03_Statements | My programming note</title>
 <link rel="icon" href="/favicon.png" >
@@ -37,7 +37,7 @@ spam">
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.3c8191f94d8f240d0b2b4bb6bcb78bb07255d53caf7091a1f9470093673a9de5.js" integrity="sha256-PIGR&#43;U2PJA0LK0u2vLeLsHJV1TyvcJGh&#43;UcAk2c6neU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.6dae63a2d7d5b28291dc3b333a46b2755f70f769187864a510dac05381033610.js" integrity="sha256-ba5jotfVsoKR3DszOkaydV9w92kYeGSlENrAU4EDNhA=" crossorigin="anonymous"></script>
 
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/note/python/03_statements/index.xml" title="My programming note" />
@@ -97,6 +97,44 @@ spam">
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Linux</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Ubuntu</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
     
       
         <li>
@@ -427,6 +465,13 @@ spam">
       <header class="book-header hidden">
         
   <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
@@ -452,16 +497,21 @@ spam">
 
       
       
-  <article class="markdown book-article"><h2 id="the-global-statement">The global Statement<a class="anchor" href="#the-global-statement">#</a></h2>
-<p>If you need to modify a global variable from within a function, use the <strong>global statement</strong>. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so <strong>don’t create a local variable with this name</strong>.</p>
+  <article class="markdown book-article"><h1 id="statements">Statements<a class="anchor" href="#statements">#</a></h1>
+<h2 id="the-global-statement">The global Statement<a class="anchor" href="#the-global-statement">#</a></h2>
+<ul>
+<li>If you need to modify a global variable from within a function, use the <strong>global statement</strong>. Including a line such as global eggs at the top of a function tells Python, “In this function, eggs refers to the global variable, so <strong>don’t create a local variable with this name</strong>.</li>
+</ul>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>():
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">global</span> eggs
 </span></span><span style="display:flex;"><span>  eggs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;spam&#39;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>eggs <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;global&#39;</span>
 </span></span><span style="display:flex;"><span>spam()
-</span></span><span style="display:flex;"><span>print(eggs)</span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>spam</code></pre></article>
+</span></span><span style="display:flex;"><span>print(eggs)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>spam</code></pre><hr>
+</article>
  
       
 

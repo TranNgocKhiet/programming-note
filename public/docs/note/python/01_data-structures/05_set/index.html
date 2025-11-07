@@ -8,34 +8,46 @@ https://github.com/alex-shpak/hugo-book
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Syntax#my_set = {1, 2, 3} print(my_set)Result:
-{1, 2, 3}Add Values | add()#Data in set cannot be duplicated my_set = {1, 2, 3} my_set.add(4) my_set.add(2) print(my_set)Result:
-{1, 2, 3, 4}Remove Values | remove()#Data in set cannot be duplicated my_set = {1, 2, 3, 4} my_set.remove(4) print(my_set) try: my_set.remove(5) except KeyError as e: print(&#39;Error: &#39;, e) print(my_set)Result:
-{1, 2, 3}{1, 2, 3}Discard Values | discard()#my_set = {1, 2, 3, 4} my_set.discard(4) print(my_set) my_set.discard(5) print(my_set)Result:
-{1, 2, 3}{1, 2, 3}Set Union | union()#set1 = {1, 2, 3} set2 = {4, 5, 6} union_set = set1.union(set2) print(union_set)Result:
+<meta name="description" content="Set#Syntax#Input
+my_set = {1, 2, 3} print(my_set)Output
+{1, 2, 3} Add Values | add()#Data in set cannot be duplicated Input
+my_set = {1, 2, 3} my_set.add(4) my_set.add(2) print(my_set)Output
+{1, 2, 3, 4} Remove Values | remove()#Data in set cannot be duplicated Input
+my_set = {1, 2, 3, 4} my_set.remove(4) print(my_set) try: my_set.remove(5) except KeyError as e: print(&#39;Error: &#39;, e) print(my_set)Output
+{1, 2, 3}{1, 2, 3} Discard Values | discard()#Input
+my_set = {1, 2, 3, 4} my_set.discard(4) print(my_set) my_set.discard(5) print(my_set)Output
+{1, 2, 3}{1, 2, 3} Set Union | union()#Input
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/python/01_data-structures/05_set/">
   <meta property="og:site_name" content="My programming note">
   <meta property="og:title" content="Set">
-  <meta property="og:description" content="Syntax#my_set = {1, 2, 3} print(my_set)Result:
-{1, 2, 3}Add Values | add()#Data in set cannot be duplicated my_set = {1, 2, 3} my_set.add(4) my_set.add(2) print(my_set)Result:
-{1, 2, 3, 4}Remove Values | remove()#Data in set cannot be duplicated my_set = {1, 2, 3, 4} my_set.remove(4) print(my_set) try: my_set.remove(5) except KeyError as e: print(&#39;Error: &#39;, e) print(my_set)Result:
-{1, 2, 3}{1, 2, 3}Discard Values | discard()#my_set = {1, 2, 3, 4} my_set.discard(4) print(my_set) my_set.discard(5) print(my_set)Result:
-{1, 2, 3}{1, 2, 3}Set Union | union()#set1 = {1, 2, 3} set2 = {4, 5, 6} union_set = set1.union(set2) print(union_set)Result:">
+  <meta property="og:description" content="Set#Syntax#Input
+my_set = {1, 2, 3} print(my_set)Output
+{1, 2, 3} Add Values | add()#Data in set cannot be duplicated Input
+my_set = {1, 2, 3} my_set.add(4) my_set.add(2) print(my_set)Output
+{1, 2, 3, 4} Remove Values | remove()#Data in set cannot be duplicated Input
+my_set = {1, 2, 3, 4} my_set.remove(4) print(my_set) try: my_set.remove(5) except KeyError as e: print(&#39;Error: &#39;, e) print(my_set)Output
+{1, 2, 3}{1, 2, 3} Discard Values | discard()#Input
+my_set = {1, 2, 3, 4} my_set.discard(4) print(my_set) my_set.discard(5) print(my_set)Output
+{1, 2, 3}{1, 2, 3} Set Union | union()#Input">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
 
 
   <meta itemprop="name" content="Set">
-  <meta itemprop="description" content="Syntax#my_set = {1, 2, 3} print(my_set)Result:
-{1, 2, 3}Add Values | add()#Data in set cannot be duplicated my_set = {1, 2, 3} my_set.add(4) my_set.add(2) print(my_set)Result:
-{1, 2, 3, 4}Remove Values | remove()#Data in set cannot be duplicated my_set = {1, 2, 3, 4} my_set.remove(4) print(my_set) try: my_set.remove(5) except KeyError as e: print(&#39;Error: &#39;, e) print(my_set)Result:
-{1, 2, 3}{1, 2, 3}Discard Values | discard()#my_set = {1, 2, 3, 4} my_set.discard(4) print(my_set) my_set.discard(5) print(my_set)Result:
-{1, 2, 3}{1, 2, 3}Set Union | union()#set1 = {1, 2, 3} set2 = {4, 5, 6} union_set = set1.union(set2) print(union_set)Result:">
-  <meta itemprop="wordCount" content="124">
+  <meta itemprop="description" content="Set#Syntax#Input
+my_set = {1, 2, 3} print(my_set)Output
+{1, 2, 3} Add Values | add()#Data in set cannot be duplicated Input
+my_set = {1, 2, 3} my_set.add(4) my_set.add(2) print(my_set)Output
+{1, 2, 3, 4} Remove Values | remove()#Data in set cannot be duplicated Input
+my_set = {1, 2, 3, 4} my_set.remove(4) print(my_set) try: my_set.remove(5) except KeyError as e: print(&#39;Error: &#39;, e) print(my_set)Output
+{1, 2, 3}{1, 2, 3} Discard Values | discard()#Input
+my_set = {1, 2, 3, 4} my_set.discard(4) print(my_set) my_set.discard(5) print(my_set)Output
+{1, 2, 3}{1, 2, 3} Set Union | union()#Input">
+  <meta itemprop="wordCount" content="136">
 
 <title>Set | My programming note</title>
 <link rel="icon" href="/favicon.png" >
@@ -45,7 +57,7 @@ https://github.com/alex-shpak/hugo-book
 
 
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.3c8191f94d8f240d0b2b4bb6bcb78bb07255d53caf7091a1f9470093673a9de5.js" integrity="sha256-PIGR&#43;U2PJA0LK0u2vLeLsHJV1TyvcJGh&#43;UcAk2c6neU=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.6dae63a2d7d5b28291dc3b333a46b2755f70f769187864a510dac05381033610.js" integrity="sha256-ba5jotfVsoKR3DszOkaydV9w92kYeGSlENrAU4EDNhA=" crossorigin="anonymous"></script>
 
 
 
@@ -104,6 +116,44 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Linux</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a>
+      Ubuntu</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
     
       
         <li>
@@ -434,6 +484,13 @@ https://github.com/alex-shpak/hugo-book
       <header class="book-header hidden">
         
   <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
@@ -464,21 +521,27 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><h2 id="syntax">Syntax<a class="anchor" href="#syntax">#</a></h2>
+  <article class="markdown book-article"><h1 id="set">Set<a class="anchor" href="#set">#</a></h1>
+<h2 id="syntax">Syntax<a class="anchor" href="#syntax">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_set <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
-</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>{1, 2, 3}</code></pre><h2 id="add-values--add">Add Values | <code>add()</code><a class="anchor" href="#add-values--add">#</a></h2>
+</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>{1, 2, 3}</code></pre><hr>
+<h2 id="add-values--add">Add Values | <code>add()</code><a class="anchor" href="#add-values--add">#</a></h2>
 <ul>
 <li>Data in set cannot be duplicated</li>
 </ul>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_set <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
 </span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">4</span>)
 </span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">2</span>)
-</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>{1, 2, 3, 4}</code></pre><h2 id="remove-values--remove">Remove Values | <code>remove()</code><a class="anchor" href="#remove-values--remove">#</a></h2>
+</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>{1, 2, 3, 4}</code></pre><hr>
+<h2 id="remove-values--remove">Remove Values | <code>remove()</code><a class="anchor" href="#remove-values--remove">#</a></h2>
 <ul>
 <li>Data in set cannot be duplicated</li>
 </ul>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_set <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}
 </span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">4</span>)
 </span></span><span style="display:flex;"><span>print(my_set)
@@ -486,26 +549,33 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>  my_set<span style="color:#f92672">.</span>remove(<span style="color:#ae81ff">5</span>)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span> <span style="color:#66d9ef">as</span> e:
 </span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#39;Error: &#39;</span>, e)
-</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>{1, 2, 3}
-{1, 2, 3}</code></pre><h2 id="discard-values--discard">Discard Values | <code>discard()</code><a class="anchor" href="#discard-values--discard">#</a></h2>
+{1, 2, 3}</code></pre><hr>
+<h2 id="discard-values--discard">Discard Values | <code>discard()</code><a class="anchor" href="#discard-values--discard">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_set <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>}
 </span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>discard(<span style="color:#ae81ff">4</span>)
 </span></span><span style="display:flex;"><span>print(my_set)
 </span></span><span style="display:flex;"><span>my_set<span style="color:#f92672">.</span>discard(<span style="color:#ae81ff">5</span>)
-</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Result:</p>
+</span></span><span style="display:flex;"><span>print(my_set)</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>{1, 2, 3}
-{1, 2, 3}</code></pre><h2 id="set-union--union">Set Union | <code>union()</code><a class="anchor" href="#set-union--union">#</a></h2>
+{1, 2, 3}</code></pre><hr>
+<h2 id="set-union--union">Set Union | <code>union()</code><a class="anchor" href="#set-union--union">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>set1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
 </span></span><span style="display:flex;"><span>set2 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>}
 </span></span><span style="display:flex;"><span>union_set <span style="color:#f92672">=</span> set1<span style="color:#f92672">.</span>union(set2)
-</span></span><span style="display:flex;"><span>print(union_set)</span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>{1, 2, 3, 4, 5, 6}</code></pre><h2 id="set-intersection--intersection">Set Intersection | <code>intersection()</code><a class="anchor" href="#set-intersection--intersection">#</a></h2>
+</span></span><span style="display:flex;"><span>print(union_set)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>{1, 2, 3, 4, 5, 6}</code></pre><hr>
+<h2 id="set-intersection--intersection">Set Intersection | <code>intersection()</code><a class="anchor" href="#set-intersection--intersection">#</a></h2>
+<p>Input</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>set1 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
 </span></span><span style="display:flex;"><span>set2 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}
 </span></span><span style="display:flex;"><span>intersection_set <span style="color:#f92672">=</span> set1<span style="color:#f92672">.</span>intersection(set2)
-</span></span><span style="display:flex;"><span>print(intersection_set)</span></span></code></pre></div><p>Result:</p>
-<pre tabindex="0"><code>{3}</code></pre></article>
+</span></span><span style="display:flex;"><span>print(intersection_set)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>{3}</code></pre><hr>
+</article>
  
       
 
