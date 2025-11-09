@@ -17,6 +17,7 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with:
           # Check files in /content
+          fail: true
           args: --verbose ./content
         env:
           # GitHub Token for action to return result
