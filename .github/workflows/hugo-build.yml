@@ -1,4 +1,4 @@
-name: Test Hugo Build
+name: Hugo Build
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  hugo-build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
