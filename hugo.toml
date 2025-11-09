@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My programming note'
-theme = 'hugo-book'
+title = 'Programming Note'
+theme = 'hugo-book-main'
 
 [markup]
   [markup.goldmark]
@@ -10,3 +10,4 @@ theme = 'hugo-book'
 
 [markup.goldmark.parser.attribute]
   block = true # Allow to add attribute to block
+

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Files# Read and write# Input
+with open(&#39;example.txt&#39;, &#39;w&#39;) as file: file.write(&#39;Hello, world!\n&#39;) file.write(&#39;This is a test file\n&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: content = file.read() print(content) with open(&#39;example.txt&#39;, &#39;a&#39;) as file: file.write(&#39;\nAppending a new line.&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: for line in file: print(line, end=&#39;&#39;)Output
+Hello, world!This is a test fileHello, world!This is a test fileAppending a new line. Read line# Input
+with open(&#39;example.txt&#39;, &#39;w&#39;) as file: file.write(&#39;Line 1\nLine 2\nLine 3&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: content = file.read() print(content) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: line1 = file.readline() line2 = file.readline() print(&#39;\n&#39;, line1, line2)Output
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/note/programming-languages/python/08_files/">
+  <meta property="og:site_name" content="Programming Note">
+  <meta property="og:title" content="08. Files">
+  <meta property="og:description" content="Files# Read and write# Input
+with open(&#39;example.txt&#39;, &#39;w&#39;) as file: file.write(&#39;Hello, world!\n&#39;) file.write(&#39;This is a test file\n&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: content = file.read() print(content) with open(&#39;example.txt&#39;, &#39;a&#39;) as file: file.write(&#39;\nAppending a new line.&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: for line in file: print(line, end=&#39;&#39;)Output
+Hello, world!This is a test fileHello, world!This is a test fileAppending a new line. Read line# Input
+with open(&#39;example.txt&#39;, &#39;w&#39;) as file: file.write(&#39;Line 1\nLine 2\nLine 3&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: content = file.read() print(content) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: line1 = file.readline() line2 = file.readline() print(&#39;\n&#39;, line1, line2)Output">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="08. Files">
+  <meta itemprop="description" content="Files# Read and write# Input
+with open(&#39;example.txt&#39;, &#39;w&#39;) as file: file.write(&#39;Hello, world!\n&#39;) file.write(&#39;This is a test file\n&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: content = file.read() print(content) with open(&#39;example.txt&#39;, &#39;a&#39;) as file: file.write(&#39;\nAppending a new line.&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: for line in file: print(line, end=&#39;&#39;)Output
+Hello, world!This is a test fileHello, world!This is a test fileAppending a new line. Read line# Input
+with open(&#39;example.txt&#39;, &#39;w&#39;) as file: file.write(&#39;Line 1\nLine 2\nLine 3&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: content = file.read() print(content) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: line1 = file.readline() line2 = file.readline() print(&#39;\n&#39;, line1, line2)Output">
+  <meta itemprop="wordCount" content="154">
+
+<title>08. Files | Programming Note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/note/programming-languages/python/08_files/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.0efd43497518c3e8388c4470bfbafe42bf761fc93de6e66b0e169a5f86794286.js" integrity="sha256-Dv1DSXUYw&#43;g4jERwv7r&#43;Qr92H8k95uZrDhaaX4Z5QoY=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/note/programming-languages/python/08_files/index.xml" title="Programming Note" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Programming Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+   
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-cb6090434cb60ce6a79eeac682df7dd2"
+  class="toggle"
+  checked
+/>
+<label for="section-cb6090434cb60ce6a79eeac682df7dd2" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Note</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-7d8400eaecbbc1ce35c98bbf8fc5b62b"
+  class="toggle"
+  
+/>
+<label for="section-7d8400eaecbbc1ce35c98bbf8fc5b62b" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Operating Systems</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Bash</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-a57246db1ade909a08e01531c38e55c4"
+  class="toggle"
+  
+/>
+<label for="section-a57246db1ade909a08e01531c38e55c4" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Linux</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/operating-systems/linux/commands/" class="">
+  Commands</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a> Ubuntu</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-ef972ab5913afa6222743152c83dd0db"
+  class="toggle"
+  checked
+/>
+<label for="section-ef972ab5913afa6222743152c83dd0db" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Programming Languages</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-e4c50932455344c243329e188841d26f"
+  class="toggle"
+  checked
+/>
+<label for="section-e4c50932455344c243329e188841d26f" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Python</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/01_source-references/" class="">
+  01. Source References</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-8dbf8d69646e302a0d3a7f4b1433d16c"
+  class="toggle"
+  
+/>
+<label for="section-8dbf8d69646e302a0d3a7f4b1433d16c" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    02. Data Structures</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/01_overall/" class="">
+  Overall</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/02_list_data_type/" class="">
+  List Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/" class="">
+  Dictionary Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/04_string_data_type/" class="">
+  String Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/05_tuple_data_type/" class="">
+  Tuple Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/06_set_data_type/" class="">
+  Set Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/07_comparision/" class="">
+  Comparision</a>
+ 
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/03_operators/" class="">
+  03. Operators</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/04_statements/" class="">
+  04. Statements</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/05_functions/" class="">
+  05. Functions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/06_parameters/" class="">
+  06. Parameters</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/07_classes/" class="">
+  07. Classes</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/08_files/" class="active">
+  08. Files</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/09_libraries/" class="">
+  09. Libraries</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/10_regular-expressions/" class="">
+  10. Regular-Expressions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/11_debugging/" class="">
+  11. Debugging</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-9bcf92bdee7d76a7adefbf743dc39d88"
+  class="toggle"
+  
+/>
+<label for="section-9bcf92bdee7d76a7adefbf743dc39d88" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Repository Managers</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Gitlab</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-d6dc3fa115514f6d493f472b59cab518"
+  class="toggle"
+  
+/>
+<label for="section-d6dc3fa115514f6d493f472b59cab518" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Virtual Machines</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/virtual-machines/virtual-box/" class="">
+  Virtual Box</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+    
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#read-and-write">Read and write</a></li>
+    <li><a href="#read-line">Read line</a></li>
+    <li><a href="#write-lines">Write lines</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="files">Files<a class="anchor" href="#files">#</a></h1>
+<h2 id="read-and-write">Read and write<a class="anchor" href="#read-and-write">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Hello, world!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;This is a test file</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>    print(content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Appending a new line.&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> file:
+</span></span><span style="display:flex;"><span>        print(line, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Hello, world!
+This is a test file
+
+Hello, world!
+This is a test file
+
+Appending a new line.</code></pre><hr>
+<h2 id="read-line">Read line<a class="anchor" href="#read-line">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Line 1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Line 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Line 3&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>    print(content)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    line1 <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>readline()
+</span></span><span style="display:flex;"><span>    line2 <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>readline()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>, line1, line2)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Line 1
+Line 2
+Line 3
+
+ Line 1
+ Line 2</code></pre><hr>
+<h2 id="write-lines">Write lines<a class="anchor" href="#write-lines">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;Single line using write()</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lines <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;line 1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;line 2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;line 3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>writelines(lines)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;example.txt&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Using writelines():</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, content)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Using writelines():
+ line 1
+line 2
+line 3</code></pre><hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/07_classes/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>07. Classes</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/09_libraries/" class="flex align-center">
+        <span>09. Libraries</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#read-and-write">Read and write</a></li>
+    <li><a href="#read-line">Read line</a></li>
+    <li><a href="#write-lines">Write lines</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

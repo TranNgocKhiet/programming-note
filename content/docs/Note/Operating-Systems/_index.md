@@ -1,5 +1,5 @@
 ---
-title: "Operating-Systems"
+title: "Operating Systems"
 weight: 1
-chapter: false
+bookCollapseSection: true
 ---

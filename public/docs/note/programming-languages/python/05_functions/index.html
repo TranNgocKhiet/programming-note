@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Functions# The round() Function# For halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding. Input
+round(3.5)Output
+4
+Input
+round(2.5)Output
+2 The bool() Function# When used in conditions, 0, 0.0, and ’’ (the empty string) are considered False, while all other values are considered True. The print() Function# Input
+def greet(name=&#34;Guest&#34;): print(f&#39;Hello, {name}!&#39;) greet() greet(&#34;Bob&#34;)Output
+Hello, Guest!Hello, Bob! Named Parameters# Input
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/note/programming-languages/python/05_functions/">
+  <meta property="og:site_name" content="Programming Note">
+  <meta property="og:title" content="05. Functions">
+  <meta property="og:description" content="Functions# The round() Function# For halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding. Input
+round(3.5)Output
+4
+Input
+round(2.5)Output
+2 The bool() Function# When used in conditions, 0, 0.0, and ’’ (the empty string) are considered False, while all other values are considered True. The print() Function# Input
+def greet(name=&#34;Guest&#34;): print(f&#39;Hello, {name}!&#39;) greet() greet(&#34;Bob&#34;)Output
+Hello, Guest!Hello, Bob! Named Parameters# Input">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="05. Functions">
+  <meta itemprop="description" content="Functions# The round() Function# For halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding. Input
+round(3.5)Output
+4
+Input
+round(2.5)Output
+2 The bool() Function# When used in conditions, 0, 0.0, and ’’ (the empty string) are considered False, while all other values are considered True. The print() Function# Input
+def greet(name=&#34;Guest&#34;): print(f&#39;Hello, {name}!&#39;) greet() greet(&#34;Bob&#34;)Output
+Hello, Guest!Hello, Bob! Named Parameters# Input">
+  <meta itemprop="wordCount" content="438">
+
+<title>05. Functions | Programming Note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/note/programming-languages/python/05_functions/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.0efd43497518c3e8388c4470bfbafe42bf761fc93de6e66b0e169a5f86794286.js" integrity="sha256-Dv1DSXUYw&#43;g4jERwv7r&#43;Qr92H8k95uZrDhaaX4Z5QoY=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/note/programming-languages/python/05_functions/index.xml" title="Programming Note" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Programming Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+   
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-cb6090434cb60ce6a79eeac682df7dd2"
+  class="toggle"
+  checked
+/>
+<label for="section-cb6090434cb60ce6a79eeac682df7dd2" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Note</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-7d8400eaecbbc1ce35c98bbf8fc5b62b"
+  class="toggle"
+  
+/>
+<label for="section-7d8400eaecbbc1ce35c98bbf8fc5b62b" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Operating Systems</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Bash</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-a57246db1ade909a08e01531c38e55c4"
+  class="toggle"
+  
+/>
+<label for="section-a57246db1ade909a08e01531c38e55c4" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Linux</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/operating-systems/linux/commands/" class="">
+  Commands</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a> Ubuntu</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-ef972ab5913afa6222743152c83dd0db"
+  class="toggle"
+  checked
+/>
+<label for="section-ef972ab5913afa6222743152c83dd0db" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Programming Languages</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-e4c50932455344c243329e188841d26f"
+  class="toggle"
+  checked
+/>
+<label for="section-e4c50932455344c243329e188841d26f" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Python</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/01_source-references/" class="">
+  01. Source References</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-8dbf8d69646e302a0d3a7f4b1433d16c"
+  class="toggle"
+  
+/>
+<label for="section-8dbf8d69646e302a0d3a7f4b1433d16c" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    02. Data Structures</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/01_overall/" class="">
+  Overall</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/02_list_data_type/" class="">
+  List Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/" class="">
+  Dictionary Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/04_string_data_type/" class="">
+  String Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/05_tuple_data_type/" class="">
+  Tuple Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/06_set_data_type/" class="">
+  Set Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/07_comparision/" class="">
+  Comparision</a>
+ 
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/03_operators/" class="">
+  03. Operators</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/04_statements/" class="">
+  04. Statements</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/05_functions/" class="active">
+  05. Functions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/06_parameters/" class="">
+  06. Parameters</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/07_classes/" class="">
+  07. Classes</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/08_files/" class="">
+  08. Files</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/09_libraries/" class="">
+  09. Libraries</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/10_regular-expressions/" class="">
+  10. Regular-Expressions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/11_debugging/" class="">
+  11. Debugging</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-9bcf92bdee7d76a7adefbf743dc39d88"
+  class="toggle"
+  
+/>
+<label for="section-9bcf92bdee7d76a7adefbf743dc39d88" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Repository Managers</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Gitlab</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-d6dc3fa115514f6d493f472b59cab518"
+  class="toggle"
+  
+/>
+<label for="section-d6dc3fa115514f6d493f472b59cab518" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Virtual Machines</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/virtual-machines/virtual-box/" class="">
+  Virtual Box</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+    
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-round-function">The round() Function</a></li>
+    <li><a href="#the-bool-function">The bool() Function</a></li>
+    <li><a href="#the-print-function">The print() Function</a>
+      <ul>
+        <li><a href="#named-parameters">Named Parameters</a></li>
+        <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
+        <li><a href="#anonymous-function">Anonymous Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#generator-and-yield">Generator and yield</a></li>
+    <li><a href="#function-and-class-decorators">Function and class decorators</a></li>
+    <li><a href="#context-manager">Context manager</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="functions">Functions<a class="anchor" href="#functions">#</a></h1>
+<h2 id="the-round-function">The round() Function<a class="anchor" href="#the-round-function">#</a></h2>
+<ul>
+<li>For <strong>halfway numbers</strong> that <strong>end with .5</strong>, the number is <strong>rounded to the nearest even integer</strong>. This is called <strong>banker’s rounding</strong>.</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>round(<span style="color:#ae81ff">3.5</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>4</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>round(<span style="color:#ae81ff">2.5</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>2</code></pre><hr>
+<h2 id="the-bool-function">The bool() Function<a class="anchor" href="#the-bool-function">#</a></h2>
+<ul>
+<li>When used in conditions, <strong>0, 0.0, and &rsquo;&rsquo; (the empty string)</strong> are considered <strong>False</strong>, while <strong>all other values</strong> are considered <strong>True</strong>.</li>
+</ul>
+<h2 id="the-print-function">The print() Function<a class="anchor" href="#the-print-function">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Guest&#34;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Hello, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>greet()
+</span></span><span style="display:flex;"><span>greet(<span style="color:#e6db74">&#34;Bob&#34;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Hello, Guest!
+Hello, Bob!</code></pre><hr>
+<h3 id="named-parameters">Named Parameters<a class="anchor" href="#named-parameters">#</a></h3>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;World&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Hello
+World</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;World&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>HelloWorld</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;mice&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>cats dogs mice</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;mice&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>cats,dogs,mice</code></pre><hr>
+<h3 id="the-multiple-assignment-trick">The Multiple Assignment Trick<a class="anchor" href="#the-multiple-assignment-trick">#</a></h3>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_person_information</span>():
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Alice&#39;</span>
+</span></span><span style="display:flex;"><span>    age <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>    city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;New York&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> name, age, city
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name, age, city <span style="color:#f92672">=</span> get_person_information()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Name: </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">, Age: </span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74">, City: </span><span style="color:#e6db74">{</span>city<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Name: Alice, Age: 30, City: New York</code></pre><hr>
+<h3 id="anonymous-function">Anonymous Function<a class="anchor" href="#anonymous-function">#</a></h3>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>double <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>print(double(<span style="color:#ae81ff">5</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>10</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>)]
+</span></span><span style="display:flex;"><span>sorted_data <span style="color:#f92672">=</span> sorted(data, key <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>]) <span style="color:#75715e"># Sort by second value in tuples</span>
+</span></span><span style="display:flex;"><span>print(sorted_data)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>[(3, 2), (1, 5), (2, 7)]</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>even_number <span style="color:#f92672">=</span> list(filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, numbers))
+</span></span><span style="display:flex;"><span>print(even_number)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>[2, 4, 6]</code></pre><hr>
+<h2 id="generator-and-yield">Generator and yield<a class="anchor" href="#generator-and-yield">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">simple_generator</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> simple_generator()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> gen:
+</span></span><span style="display:flex;"><span>    print(value)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>1
+2
+3</code></pre><hr>
+<h2 id="function-and-class-decorators">Function and class decorators<a class="anchor" href="#function-and-class-decorators">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">timing_decorator</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        end_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Function </span><span style="color:#e6db74">{</span>func<span style="color:#f92672">.</span>__name__<span style="color:#e6db74">}</span><span style="color:#e6db74"> executed in </span><span style="color:#e6db74">{</span>end_time <span style="color:#f92672">-</span> start_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@timing_decorator</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">slow_function</span>():
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Function complete&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(slow_function())</span></span></code></pre></div><p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_method_decorator</span>(cls):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">new_method</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This is a new method&#34;</span>
+</span></span><span style="display:flex;"><span>    cls<span style="color:#f92672">.</span>new_method <span style="color:#f92672">=</span> new_method
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> cls
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@add_method_decorator</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">existing_method</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This is an existing method&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>obj <span style="color:#f92672">=</span> MyClass()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(obj<span style="color:#f92672">.</span>existing_method())
+</span></span><span style="display:flex;"><span>print(obj<span style="color:#f92672">.</span>new_method())</span></span></code></pre></div><hr>
+<h2 id="context-manager">Context manager<a class="anchor" href="#context-manager">#</a></h2>
+<p>Những hàm có dạng <code>__name__</code> được gọi là Phương thức Dunder (Dunder Methods) hoặc Phương thức Ma thuật (Magic Methods). &ldquo;Dunder&rdquo; là viết tắt của &ldquo;Double Underscore&rdquo; (hai dấu gạch dưới).</p>
+<p>Đây là một phương thức đặc biệt mà Python sẽ tự động gọi trong một hoàn cảnh cụ thể. Bạn (lập trình viên) không nên gọi trực tiếp các hàm này.</p>
+<p>Ví dụ đơn giản:</p>
+<ul>
+<li>Khi bạn viết a + b, Python sẽ bí mật gọi a.<strong>add</strong>(b).</li>
+<li>Khi bạn viết len(my_list), Python sẽ bí mật gọi my_list.<strong>len</strong>().</li>
+<li>Khi bạn viết with &hellip; as f:, Python sẽ bí mật gọi f.<strong>enter</strong>().</li>
+<li>Khi bạn viết obj = MyClass(), Python sẽ bí mật gọi obj.<strong>init</strong>() (sau khi đã gọi <strong>new</strong>).</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyContextManager</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__enter__</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Entering the context&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__exit__</span>(self, exc_type, exc_val, exc_tb):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Existing the context&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">do_something</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Doing something&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> MyContextManager() <span style="color:#66d9ef">as</span> manager:
+</span></span><span style="display:flex;"><span>    manager<span style="color:#f92672">.</span>do_something()</span></span></code></pre></div><hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/04_statements/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>04. Statements</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/06_parameters/" class="flex align-center">
+        <span>06. Parameters</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-round-function">The round() Function</a></li>
+    <li><a href="#the-bool-function">The bool() Function</a></li>
+    <li><a href="#the-print-function">The print() Function</a>
+      <ul>
+        <li><a href="#named-parameters">Named Parameters</a></li>
+        <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
+        <li><a href="#anonymous-function">Anonymous Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#generator-and-yield">Generator and yield</a></li>
+    <li><a href="#function-and-class-decorators">Function and class decorators</a></li>
+    <li><a href="#context-manager">Context manager</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

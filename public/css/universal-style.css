@@ -25,12 +25,6 @@
   font-family: "Roboto Mono", Inconsolata, monospace;
 }
 
-/* Remove # from link */
-.markdown .anchor {
-  content: none;
-  display: none;
-}
-
 .markdown .book-article {
   max-width: 80vw;
   margin: 0 auto;

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Linux Commands# echo# Input
+echo &#34;Hello&#34; Show User and Group Information | whoami and id# Input
+whoamiOutput
+yourusernameInput
+idOutput
+uid=5000(labex) gid=5000(labex) groups=5000(labex),27(sudo),121(ssl-cert),5002(public) uid: Your User ID (a unique numerical identifier). gid: Your primary Group ID. groups: All the groups you are a member of. Input
+id rootOutput
+uid=0(root) gid=0(root) groups=0(root) root is the superuser – like the administrator of the system! Download the latest list of all available software and updates from the software servers | apt update# sudo: Super User DO, do something with aministrator permission apt: Application Manager Tool on systems like Ubuntu update: Synchronize app packages on your computer with Internaet Repositpories Input
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/note/operating-systems/linux/commands/">
+  <meta property="og:site_name" content="Programming Note">
+  <meta property="og:title" content="Commands">
+  <meta property="og:description" content="Linux Commands# echo# Input
+echo &#34;Hello&#34; Show User and Group Information | whoami and id# Input
+whoamiOutput
+yourusernameInput
+idOutput
+uid=5000(labex) gid=5000(labex) groups=5000(labex),27(sudo),121(ssl-cert),5002(public) uid: Your User ID (a unique numerical identifier). gid: Your primary Group ID. groups: All the groups you are a member of. Input
+id rootOutput
+uid=0(root) gid=0(root) groups=0(root) root is the superuser – like the administrator of the system! Download the latest list of all available software and updates from the software servers | apt update# sudo: Super User DO, do something with aministrator permission apt: Application Manager Tool on systems like Ubuntu update: Synchronize app packages on your computer with Internaet Repositpories Input">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="Commands">
+  <meta itemprop="description" content="Linux Commands# echo# Input
+echo &#34;Hello&#34; Show User and Group Information | whoami and id# Input
+whoamiOutput
+yourusernameInput
+idOutput
+uid=5000(labex) gid=5000(labex) groups=5000(labex),27(sudo),121(ssl-cert),5002(public) uid: Your User ID (a unique numerical identifier). gid: Your primary Group ID. groups: All the groups you are a member of. Input
+id rootOutput
+uid=0(root) gid=0(root) groups=0(root) root is the superuser – like the administrator of the system! Download the latest list of all available software and updates from the software servers | apt update# sudo: Super User DO, do something with aministrator permission apt: Application Manager Tool on systems like Ubuntu update: Synchronize app packages on your computer with Internaet Repositpories Input">
+  <meta itemprop="wordCount" content="419">
+
+<title>Commands | Programming Note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/note/operating-systems/linux/commands/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.0efd43497518c3e8388c4470bfbafe42bf761fc93de6e66b0e169a5f86794286.js" integrity="sha256-Dv1DSXUYw&#43;g4jERwv7r&#43;Qr92H8k95uZrDhaaX4Z5QoY=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/note/operating-systems/linux/commands/index.xml" title="Programming Note" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Programming Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+   
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-cb6090434cb60ce6a79eeac682df7dd2"
+  class="toggle"
+  checked
+/>
+<label for="section-cb6090434cb60ce6a79eeac682df7dd2" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Note</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-7d8400eaecbbc1ce35c98bbf8fc5b62b"
+  class="toggle"
+  checked
+/>
+<label for="section-7d8400eaecbbc1ce35c98bbf8fc5b62b" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Operating Systems</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Bash</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-a57246db1ade909a08e01531c38e55c4"
+  class="toggle"
+  checked
+/>
+<label for="section-a57246db1ade909a08e01531c38e55c4" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Linux</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/operating-systems/linux/commands/" class="active">
+  Commands</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a> Ubuntu</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-ef972ab5913afa6222743152c83dd0db"
+  class="toggle"
+  
+/>
+<label for="section-ef972ab5913afa6222743152c83dd0db" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Programming Languages</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-e4c50932455344c243329e188841d26f"
+  class="toggle"
+  
+/>
+<label for="section-e4c50932455344c243329e188841d26f" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Python</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/01_source-references/" class="">
+  01. Source References</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-8dbf8d69646e302a0d3a7f4b1433d16c"
+  class="toggle"
+  
+/>
+<label for="section-8dbf8d69646e302a0d3a7f4b1433d16c" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    02. Data Structures</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/01_overall/" class="">
+  Overall</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/02_list_data_type/" class="">
+  List Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/" class="">
+  Dictionary Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/04_string_data_type/" class="">
+  String Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/05_tuple_data_type/" class="">
+  Tuple Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/06_set_data_type/" class="">
+  Set Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/07_comparision/" class="">
+  Comparision</a>
+ 
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/03_operators/" class="">
+  03. Operators</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/04_statements/" class="">
+  04. Statements</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/05_functions/" class="">
+  05. Functions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/06_parameters/" class="">
+  06. Parameters</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/07_classes/" class="">
+  07. Classes</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/08_files/" class="">
+  08. Files</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/09_libraries/" class="">
+  09. Libraries</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/10_regular-expressions/" class="">
+  10. Regular-Expressions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/11_debugging/" class="">
+  11. Debugging</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-9bcf92bdee7d76a7adefbf743dc39d88"
+  class="toggle"
+  
+/>
+<label for="section-9bcf92bdee7d76a7adefbf743dc39d88" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Repository Managers</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Gitlab</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-d6dc3fa115514f6d493f472b59cab518"
+  class="toggle"
+  
+/>
+<label for="section-d6dc3fa115514f6d493f472b59cab518" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Virtual Machines</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/virtual-machines/virtual-box/" class="">
+  Virtual Box</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+    
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#echo"><code>echo</code></a></li>
+    <li><a href="#show-user-and-group-information--whoami-and-id">Show User and Group Information | <code>whoami</code> and <code>id</code></a></li>
+    <li><a href="#download-the-latest-list-of-all-available-software-and-updates-from-the-software-servers--apt-update">Download the latest list of all available software and updates from the software servers | <code>apt update</code></a></li>
+    <li><a href="#interactive-process-viewer-for-unix-systems--htop">Interactive process viewer for Unix systems | <code>htop</code></a>
+      <ul>
+        <li><a href="#to-install">To install</a></li>
+        <li><a href="#to-run">To run</a></li>
+      </ul>
+    </li>
+    <li><a href="#displays-current-location-in-the-file-system--pwd">Displays current location in the file system | <code>pwd</code></a></li>
+    <li><a href="#display-relationship-between-the-current-directory-and-the-home-directory--echo-">Display relationship between the current directory and the home directory | <code>echo ~</code></a></li>
+    <li><a href="#show-contents-of-current-directory--ls">Show contents of current directory | <code>ls</code></a></li>
+    <li><a href="#show-contents-of-home-directory--ls-">Show contents of home directory | <code>ls ~</code></a></li>
+    <li><a href="#go-to-a-folder--cd">Go to a folder | <code>cd</code></a></li>
+    <li><a href="#go-to-an-above-folder--cd-">Go to an above folder | <code>cd ..</code></a></li>
+    <li><a href="#go-to-home-directory--cd-">Go to home directory | <code>cd ~</code></a></li>
+    <li><a href="#create-an-empty-file--touch">Create an empty file | <code>touch</code></a></li>
+    <li><a href="#write-to-a-file--">Write to a file | <code>&gt;</code></a></li>
+    <li><a href="#create-hidden-file--">Create hidden file | <code>.</code></a></li>
+    <li><a href="#create-a-directory--mkdir-testdir">Create a directory | <code>mkdir testdir</code></a></li>
+    <li><a href="#detailed-listing--ls--l">Detailed listing | <code>ls -l</code></a></li>
+    <li><a href="#show-hidden-files--ls--a">Show hidden files | <code>ls -a</code></a></li>
+    <li><a href="#combine-options--ls--la">Combine options | <code>ls -la</code></a></li>
+    <li><a href="#list-contents-of-a-specific-directory--ls--l-testdir">List contents of a specific directory | <code>ls -l testdir</code></a></li>
+    <li></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="linux-commands">Linux Commands<a class="anchor" href="#linux-commands">#</a></h1>
+<h2 id="echo"><code>echo</code><a class="anchor" href="#echo">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Hello&#34;</span></span></span></code></pre></div><hr>
+<h2 id="show-user-and-group-information--whoami-and-id">Show User and Group Information | <code>whoami</code> and <code>id</code><a class="anchor" href="#show-user-and-group-information--whoami-and-id">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whoami</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>yourusername</code></pre><p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>id</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>uid=5000(labex) gid=5000(labex) groups=5000(labex),27(sudo),121(ssl-cert),5002(public)</code></pre><ul>
+<li><code>uid</code>: Your User ID (a unique numerical identifier).</li>
+<li><code>gid</code>: Your primary Group ID.</li>
+<li><code>groups</code>: All the groups you are a member of.</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>id root</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>uid=0(root) gid=0(root) groups=0(root)</code></pre><ul>
+<li><code>root</code> is the superuser – like the administrator of the system!</li>
+</ul>
+<hr>
+<h2 id="download-the-latest-list-of-all-available-software-and-updates-from-the-software-servers--apt-update">Download the latest list of all available software and updates from the software servers | <code>apt update</code><a class="anchor" href="#download-the-latest-list-of-all-available-software-and-updates-from-the-software-servers--apt-update">#</a></h2>
+<ul>
+<li><code>sudo</code>: Super User DO, do something with aministrator permission</li>
+<li><code>apt</code>: Application Manager Tool on systems like Ubuntu</li>
+<li><code>update</code>: Synchronize app packages on your computer with Internaet Repositpories</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update</span></span></code></pre></div><hr>
+<h2 id="interactive-process-viewer-for-unix-systems--htop">Interactive process viewer for Unix systems | <code>htop</code><a class="anchor" href="#interactive-process-viewer-for-unix-systems--htop">#</a></h2>
+<h3 id="to-install">To install<a class="anchor" href="#to-install">#</a></h3>
+<ul>
+<li><code>htop</code> is like Task Manager on Windows</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install htop</span></span></code></pre></div><h3 id="to-run">To run<a class="anchor" href="#to-run">#</a></h3>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>htop</span></span></code></pre></div><hr>
+<h2 id="displays-current-location-in-the-file-system--pwd">Displays current location in the file system | <code>pwd</code><a class="anchor" href="#displays-current-location-in-the-file-system--pwd">#</a></h2>
+<ul>
+<li><code>pwd</code> stands for &ldquo;print working directory&rdquo;</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pwd</span></span></code></pre></div><hr>
+<h2 id="display-relationship-between-the-current-directory-and-the-home-directory--echo-">Display relationship between the current directory and the home directory | <code>echo ~</code><a class="anchor" href="#display-relationship-between-the-current-directory-and-the-home-directory--echo-">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo ~<span style="color:#e6db74">`</span></span></span></code></pre></div><hr>
+<h2 id="show-contents-of-current-directory--ls">Show contents of current directory | <code>ls</code><a class="anchor" href="#show-contents-of-current-directory--ls">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls</span></span></code></pre></div><hr>
+<h2 id="show-contents-of-home-directory--ls-">Show contents of home directory | <code>ls ~</code><a class="anchor" href="#show-contents-of-home-directory--ls-">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls ~</span></span></code></pre></div><hr>
+<h2 id="go-to-a-folder--cd">Go to a folder | <code>cd</code><a class="anchor" href="#go-to-a-folder--cd">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd foldername</span></span></code></pre></div><hr>
+<h2 id="go-to-an-above-folder--cd-">Go to an above folder | <code>cd ..</code><a class="anchor" href="#go-to-an-above-folder--cd-">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ..</span></span></code></pre></div><hr>
+<h2 id="go-to-home-directory--cd-">Go to home directory | <code>cd ~</code><a class="anchor" href="#go-to-home-directory--cd-">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~</span></span></code></pre></div><hr>
+<h2 id="create-an-empty-file--touch">Create an empty file | <code>touch</code><a class="anchor" href="#create-an-empty-file--touch">#</a></h2>
+<ul>
+<li>The <code>touch</code> command is used to create an empty file. If the file already exists, it updates the file&rsquo;s timestamp without changing its content. It&rsquo;s a simple way to create new, empty files.</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch file1.txt</span></span></code></pre></div><hr>
+<h2 id="write-to-a-file--">Write to a file | <code>&gt;</code><a class="anchor" href="#write-to-a-file--">#</a></h2>
+<ul>
+<li>```echo`` is a command that prints text.</li>
+<li>The <code>&gt;</code> symbol redirects the output of echo into a file named <code>file2.txt</code>. If the file doesn&rsquo;t exist, it&rsquo;s created. If it does exist, its content is replaced.</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Hello, Linux&#34;</span> &gt; file2.txt</span></span></code></pre></div><hr>
+<h2 id="create-hidden-file--">Create hidden file | <code>.</code><a class="anchor" href="#create-hidden-file--">#</a></h2>
+<ul>
+<li>This creates a hidden file. In Linux, any file or directory name that starts with a dot (<code>.</code>) is considered hidden.</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Hidden file&#34;</span> &gt; .hiddenfile</span></span></code></pre></div><hr>
+<h2 id="create-a-directory--mkdir-testdir">Create a directory | <code>mkdir testdir</code><a class="anchor" href="#create-a-directory--mkdir-testdir">#</a></h2>
+<ul>
+<li>The <code>mkdir</code> command (short for &ldquo;make directory&rdquo;) creates a new directory named <code>testdir</code></li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir testdir</span></span></code></pre></div><hr>
+<h2 id="detailed-listing--ls--l">Detailed listing | <code>ls -l</code><a class="anchor" href="#detailed-listing--ls--l">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l</span></span></code></pre></div><hr>
+<h2 id="show-hidden-files--ls--a">Show hidden files | <code>ls -a</code><a class="anchor" href="#show-hidden-files--ls--a">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -a</span></span></code></pre></div><hr>
+<h2 id="combine-options--ls--la">Combine options | <code>ls -la</code><a class="anchor" href="#combine-options--ls--la">#</a></h2>
+<ul>
+<li>This combines the long format (<code>-l</code>) with showing all files (<code>-a</code>).</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -la</span></span></code></pre></div><hr>
+<h2 id="list-contents-of-a-specific-directory--ls--l-testdir">List contents of a specific directory | <code>ls -l testdir</code><a class="anchor" href="#list-contents-of-a-specific-directory--ls--l-testdir">#</a></h2>
+<ul>
+<li>This lists the contents of the testdir directory</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l testdir</span></span></code></pre></div><hr>
+<h2 id=""><a class="anchor" href="#">#</a></h2>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/01_source-references/" class="flex align-center">
+        <span>01. Source References</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#echo"><code>echo</code></a></li>
+    <li><a href="#show-user-and-group-information--whoami-and-id">Show User and Group Information | <code>whoami</code> and <code>id</code></a></li>
+    <li><a href="#download-the-latest-list-of-all-available-software-and-updates-from-the-software-servers--apt-update">Download the latest list of all available software and updates from the software servers | <code>apt update</code></a></li>
+    <li><a href="#interactive-process-viewer-for-unix-systems--htop">Interactive process viewer for Unix systems | <code>htop</code></a>
+      <ul>
+        <li><a href="#to-install">To install</a></li>
+        <li><a href="#to-run">To run</a></li>
+      </ul>
+    </li>
+    <li><a href="#displays-current-location-in-the-file-system--pwd">Displays current location in the file system | <code>pwd</code></a></li>
+    <li><a href="#display-relationship-between-the-current-directory-and-the-home-directory--echo-">Display relationship between the current directory and the home directory | <code>echo ~</code></a></li>
+    <li><a href="#show-contents-of-current-directory--ls">Show contents of current directory | <code>ls</code></a></li>
+    <li><a href="#show-contents-of-home-directory--ls-">Show contents of home directory | <code>ls ~</code></a></li>
+    <li><a href="#go-to-a-folder--cd">Go to a folder | <code>cd</code></a></li>
+    <li><a href="#go-to-an-above-folder--cd-">Go to an above folder | <code>cd ..</code></a></li>
+    <li><a href="#go-to-home-directory--cd-">Go to home directory | <code>cd ~</code></a></li>
+    <li><a href="#create-an-empty-file--touch">Create an empty file | <code>touch</code></a></li>
+    <li><a href="#write-to-a-file--">Write to a file | <code>&gt;</code></a></li>
+    <li><a href="#create-hidden-file--">Create hidden file | <code>.</code></a></li>
+    <li><a href="#create-a-directory--mkdir-testdir">Create a directory | <code>mkdir testdir</code></a></li>
+    <li><a href="#detailed-listing--ls--l">Detailed listing | <code>ls -l</code></a></li>
+    <li><a href="#show-hidden-files--ls--a">Show hidden files | <code>ls -a</code></a></li>
+    <li><a href="#combine-options--ls--la">Combine options | <code>ls -la</code></a></li>
+    <li><a href="#list-contents-of-a-specific-directory--ls--l-testdir">List contents of a specific directory | <code>ls -l testdir</code></a></li>
+    <li></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

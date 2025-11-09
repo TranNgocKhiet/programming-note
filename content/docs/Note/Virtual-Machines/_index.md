@@ -1,5 +1,5 @@
 ---
-title: "Virtual-Machines"
+title: "Virtual Machines"
 weight: 1
-chapter: false
+bookCollapseSection: true
 ---

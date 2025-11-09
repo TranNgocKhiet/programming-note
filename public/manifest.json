@@ -1,6 +1,6 @@
 {
-  "name": "My programming note",
-  "short_name": "My programming note",
+  "name": "Programming Note",
+  "short_name": "Programming Note",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

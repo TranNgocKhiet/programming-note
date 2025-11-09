@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Classes# Syntax# Input
+class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.is_running = False def start(self): self.is_running = True print(&#34;Car started.&#34;) def drive(self): if self.is_running: print(&#34;Car is moving.&#34;) else: print(&#34;Car is not started yet.&#34;) my_car = Car(&#34;Toyota&#34;, &#34;Corolla&#34;, 2022) print(&#39;My car: &#39;, my_car.make, my_car.model, my_car.year) my_car.start() my_car.drive()Output
+My car: Toyota Corolla 2022Car started.Car is moving. Inheritance# Input
+class Animal: def speak(self): print(&#34;Animal speaks&#34;) class Dog(Animal): def bark(self): print(&#34;Dog barks&#34;) def wag_tail(self): print(&#34;Dog wags tail&#34;) dog = Dog() dog.speak() dog.bark()Output
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/note/programming-languages/python/07_classes/">
+  <meta property="og:site_name" content="Programming Note">
+  <meta property="og:title" content="07. Classes">
+  <meta property="og:description" content="Classes# Syntax# Input
+class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.is_running = False def start(self): self.is_running = True print(&#34;Car started.&#34;) def drive(self): if self.is_running: print(&#34;Car is moving.&#34;) else: print(&#34;Car is not started yet.&#34;) my_car = Car(&#34;Toyota&#34;, &#34;Corolla&#34;, 2022) print(&#39;My car: &#39;, my_car.make, my_car.model, my_car.year) my_car.start() my_car.drive()Output
+My car: Toyota Corolla 2022Car started.Car is moving. Inheritance# Input
+class Animal: def speak(self): print(&#34;Animal speaks&#34;) class Dog(Animal): def bark(self): print(&#34;Dog barks&#34;) def wag_tail(self): print(&#34;Dog wags tail&#34;) dog = Dog() dog.speak() dog.bark()Output">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta itemprop="name" content="07. Classes">
+  <meta itemprop="description" content="Classes# Syntax# Input
+class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.is_running = False def start(self): self.is_running = True print(&#34;Car started.&#34;) def drive(self): if self.is_running: print(&#34;Car is moving.&#34;) else: print(&#34;Car is not started yet.&#34;) my_car = Car(&#34;Toyota&#34;, &#34;Corolla&#34;, 2022) print(&#39;My car: &#39;, my_car.make, my_car.model, my_car.year) my_car.start() my_car.drive()Output
+My car: Toyota Corolla 2022Car started.Car is moving. Inheritance# Input
+class Animal: def speak(self): print(&#34;Animal speaks&#34;) class Dog(Animal): def bark(self): print(&#34;Dog barks&#34;) def wag_tail(self): print(&#34;Dog wags tail&#34;) dog = Dog() dog.speak() dog.bark()Output">
+  <meta itemprop="wordCount" content="93">
+
+<title>07. Classes | Programming Note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/note/programming-languages/python/07_classes/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.0efd43497518c3e8388c4470bfbafe42bf761fc93de6e66b0e169a5f86794286.js" integrity="sha256-Dv1DSXUYw&#43;g4jERwv7r&#43;Qr92H8k95uZrDhaaX4Z5QoY=" crossorigin="anonymous"></script>
+
+
+<link rel="alternate" type="application/rss+xml" href="https://example.org/docs/note/programming-languages/python/07_classes/index.xml" title="Programming Note" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Programming Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+   
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-cb6090434cb60ce6a79eeac682df7dd2"
+  class="toggle"
+  checked
+/>
+<label for="section-cb6090434cb60ce6a79eeac682df7dd2" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Note</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-7d8400eaecbbc1ce35c98bbf8fc5b62b"
+  class="toggle"
+  
+/>
+<label for="section-7d8400eaecbbc1ce35c98bbf8fc5b62b" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Operating Systems</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Bash</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-a57246db1ade909a08e01531c38e55c4"
+  class="toggle"
+  
+/>
+<label for="section-a57246db1ade909a08e01531c38e55c4" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Linux</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/operating-systems/linux/commands/" class="">
+  Commands</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a> Ubuntu</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-ef972ab5913afa6222743152c83dd0db"
+  class="toggle"
+  checked
+/>
+<label for="section-ef972ab5913afa6222743152c83dd0db" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Programming Languages</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-e4c50932455344c243329e188841d26f"
+  class="toggle"
+  checked
+/>
+<label for="section-e4c50932455344c243329e188841d26f" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Python</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/01_source-references/" class="">
+  01. Source References</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-8dbf8d69646e302a0d3a7f4b1433d16c"
+  class="toggle"
+  
+/>
+<label for="section-8dbf8d69646e302a0d3a7f4b1433d16c" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    02. Data Structures</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/01_overall/" class="">
+  Overall</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/02_list_data_type/" class="">
+  List Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/" class="">
+  Dictionary Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/04_string_data_type/" class="">
+  String Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/05_tuple_data_type/" class="">
+  Tuple Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/06_set_data_type/" class="">
+  Set Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/07_comparision/" class="">
+  Comparision</a>
+ 
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/03_operators/" class="">
+  03. Operators</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/04_statements/" class="">
+  04. Statements</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/05_functions/" class="">
+  05. Functions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/06_parameters/" class="">
+  06. Parameters</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/07_classes/" class="active">
+  07. Classes</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/08_files/" class="">
+  08. Files</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/09_libraries/" class="">
+  09. Libraries</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/10_regular-expressions/" class="">
+  10. Regular-Expressions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/11_debugging/" class="">
+  11. Debugging</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-9bcf92bdee7d76a7adefbf743dc39d88"
+  class="toggle"
+  
+/>
+<label for="section-9bcf92bdee7d76a7adefbf743dc39d88" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Repository Managers</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Gitlab</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-d6dc3fa115514f6d493f472b59cab518"
+  class="toggle"
+  
+/>
+<label for="section-d6dc3fa115514f6d493f472b59cab518" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Virtual Machines</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/virtual-machines/virtual-box/" class="">
+  Virtual Box</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+    
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#syntax">Syntax</a></li>
+    <li><a href="#inheritance">Inheritance</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="classes">Classes<a class="anchor" href="#classes">#</a></h1>
+<h2 id="syntax">Syntax<a class="anchor" href="#syntax">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, make, model, year):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>make <span style="color:#f92672">=</span> make
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>model <span style="color:#f92672">=</span> model
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>year <span style="color:#f92672">=</span> year
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>is_running <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>is_running <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Car started.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">drive</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>is_running:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Car is moving.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Car is not started yet.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_car <span style="color:#f92672">=</span> Car(<span style="color:#e6db74">&#34;Toyota&#34;</span>, <span style="color:#e6db74">&#34;Corolla&#34;</span>, <span style="color:#ae81ff">2022</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My car: &#39;</span>, my_car<span style="color:#f92672">.</span>make, my_car<span style="color:#f92672">.</span>model, my_car<span style="color:#f92672">.</span>year)
+</span></span><span style="display:flex;"><span>my_car<span style="color:#f92672">.</span>start()
+</span></span><span style="display:flex;"><span>my_car<span style="color:#f92672">.</span>drive()</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>My car:  Toyota Corolla 2022
+Car started.
+Car is moving.</code></pre><hr>
+<h2 id="inheritance">Inheritance<a class="anchor" href="#inheritance">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span>:
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">speak</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Animal speaks&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span>(Animal):
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bark</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Dog barks&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wag_tail</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Dog wags tail&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dog <span style="color:#f92672">=</span> Dog()
+</span></span><span style="display:flex;"><span>dog<span style="color:#f92672">.</span>speak()
+</span></span><span style="display:flex;"><span>dog<span style="color:#f92672">.</span>bark()</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Animal speaks
+Dog barks</code></pre><hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/06_parameters/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>06. Parameters</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/08_files/" class="flex align-center">
+        <span>08. Files</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#syntax">Syntax</a></li>
+    <li><a href="#inheritance">Inheritance</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

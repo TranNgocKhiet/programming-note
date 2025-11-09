@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="String# String is like a list of characters, so is inherits list attributes Escape Characters | \# Input
+print(&#39;Say hi to Bob\&#39;s mother.&#39;)Output
+Say hi to Bob&#39;s mother. Raw Strings | r# Input
+print(r&#39;The file is in C:\Users\Alice\Desktop&#39;)Output
+The file is in C:\Users\Alice\Desktop Multiline Strings | &#39;&#39;&#39; &#39;&#39;&#39;# Input
+print(&#39;&#39;&#39;Dear Alice, Can you feed Eve&#39;s cat this weekend? Sincerely, Bob&#39;&#39;&#39;)Output
+Dear Alice,Can you feed Eve&#39;s cat this weekend?Sincerely,Bob Multiline Comments | &#34;&#34;&#34;&#34; &#34;&#34;&#34;&#34;# Input
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/programming-languages/python/02_data-structures/04_string-data-type/">
+  <meta property="og:site_name" content="Programming Note">
+  <meta property="og:title" content="String">
+  <meta property="og:description" content="String# String is like a list of characters, so is inherits list attributes Escape Characters | \# Input
+print(&#39;Say hi to Bob\&#39;s mother.&#39;)Output
+Say hi to Bob&#39;s mother. Raw Strings | r# Input
+print(r&#39;The file is in C:\Users\Alice\Desktop&#39;)Output
+The file is in C:\Users\Alice\Desktop Multiline Strings | &#39;&#39;&#39; &#39;&#39;&#39;# Input
+print(&#39;&#39;&#39;Dear Alice, Can you feed Eve&#39;s cat this weekend? Sincerely, Bob&#39;&#39;&#39;)Output
+Dear Alice,Can you feed Eve&#39;s cat this weekend?Sincerely,Bob Multiline Comments | &#34;&#34;&#34;&#34; &#34;&#34;&#34;&#34;# Input">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="String">
+  <meta itemprop="description" content="String# String is like a list of characters, so is inherits list attributes Escape Characters | \# Input
+print(&#39;Say hi to Bob\&#39;s mother.&#39;)Output
+Say hi to Bob&#39;s mother. Raw Strings | r# Input
+print(r&#39;The file is in C:\Users\Alice\Desktop&#39;)Output
+The file is in C:\Users\Alice\Desktop Multiline Strings | &#39;&#39;&#39; &#39;&#39;&#39;# Input
+print(&#39;&#39;&#39;Dear Alice, Can you feed Eve&#39;s cat this weekend? Sincerely, Bob&#39;&#39;&#39;)Output
+Dear Alice,Can you feed Eve&#39;s cat this weekend?Sincerely,Bob Multiline Comments | &#34;&#34;&#34;&#34; &#34;&#34;&#34;&#34;# Input">
+  <meta itemprop="wordCount" content="531">
+
+<title>String | Programming Note</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/note/programming-languages/python/02_data-structures/04_string-data-type/">
+<link rel="stylesheet" href="/book.min.cc2c524ed250aac81b23d1f4af87344917b325208841feca0968fe450f570575.css" integrity="sha256-zCxSTtJQqsgbI9H0r4c0SRezJSCIQf7KCWj&#43;RQ9XBXU=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.77a5f6db28d711a1fd2b5f193d0c402887cbde6c81a337d67fa58a75cb8cf30b.js" integrity="sha256-d6X22yjXEaH9K18ZPQxAKIfL3myBozfWf6WKdcuM8ws=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Programming Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+   
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-cb6090434cb60ce6a79eeac682df7dd2"
+  class="toggle"
+  checked
+/>
+<label for="section-cb6090434cb60ce6a79eeac682df7dd2" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Note</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-7d8400eaecbbc1ce35c98bbf8fc5b62b"
+  class="toggle"
+  
+/>
+<label for="section-7d8400eaecbbc1ce35c98bbf8fc5b62b" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Operating-Systems</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Bash</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-a57246db1ade909a08e01531c38e55c4"
+  class="toggle"
+  
+/>
+<label for="section-a57246db1ade909a08e01531c38e55c4" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Linux</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/operating-systems/linux/commands/" class="">
+  Commands</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a> Ubuntu</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-ef972ab5913afa6222743152c83dd0db"
+  class="toggle"
+  checked
+/>
+<label for="section-ef972ab5913afa6222743152c83dd0db" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Programming-Languages</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-e4c50932455344c243329e188841d26f"
+  class="toggle"
+  checked
+/>
+<label for="section-e4c50932455344c243329e188841d26f" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Python</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/01_source-references/" class="">
+  01_Source-references</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-8dbf8d69646e302a0d3a7f4b1433d16c"
+  class="toggle"
+  checked
+/>
+<label for="section-8dbf8d69646e302a0d3a7f4b1433d16c" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    02_Data-structures</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/01_overall/" class="">
+  Overall</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/02_list_data_type/" class="">
+  List</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/" class="">
+  Dictionary</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/04_string-data-type/" class="active">
+  String</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/05_tuple-data-type/" class="">
+  Tuple</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/06_set-data-type/" class="">
+  Set</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/02_data-structures/07_comparision/" class="">
+  Comparision</a>
+ 
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/03_operators/" class="">
+  03_Operators</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/04_statements/" class="">
+  04_Statements</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/05_functions/" class="">
+  05_Functions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/06_parameters/" class="">
+  06_Parameters</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/07_classes/" class="">
+  07_Classes</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/08_files/" class="">
+  08_Files</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/09_libraries/" class="">
+  09_Libraries</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/10_regular-expressions/" class="">
+  10_Regular-Expressions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-languages/python/11_debugging/" class="">
+  11_Debugging</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-9bcf92bdee7d76a7adefbf743dc39d88"
+  class="toggle"
+  
+/>
+<label for="section-9bcf92bdee7d76a7adefbf743dc39d88" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Repository-Managers</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Gitlab</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-d6dc3fa115514f6d493f472b59cab518"
+  class="toggle"
+  
+/>
+<label for="section-d6dc3fa115514f6d493f472b59cab518" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Virtual-Machines</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/virtual-machines/virtual-box/" class="">
+  Virtual-Box</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+    
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#escape-characters--">Escape Characters | <code>\</code></a></li>
+    <li><a href="#raw-strings--r">Raw Strings | <code>r</code></a></li>
+    <li><a href="#multiline-strings---">Multiline Strings | <code>&#39;&#39;&#39; &#39;&#39;&#39;</code></a></li>
+    <li><a href="#multiline-comments---">Multiline Comments | <code>&#34;&#34;&#34;&#34; &#34;&#34;&#34;&#34;</code></a></li>
+    <li><a href="#f-strings--f">F-Strings | <code>f</code></a></li>
+    <li><a href="#f-string-alternatives--s-and-format">F-String Alternatives | <code>%s</code> and <code>format()</code></a></li>
+    <li><a href="#changing-the-case--upper-and-lower">Changing the Case | <code>upper()</code> and <code>lower()</code></a></li>
+    <li><a href="#checking-the-case--isupper-and-islower">Checking the Case | <code>isupper()</code> and ```islower()``</a></li>
+    <li><a href="#checking-string-characteristics--isalpha-isalnum-isdecimal-isspace-and-istitle">Checking String Characteristics | <code>isalpha()</code>, <code>isalnum()</code>, <code>isdecimal()</code>, <code>isspace()</code> and <code>istitle()</code></a></li>
+    <li><a href="#checking-the-start-or-end-of-a-string--startswith-and-endswith">Checking the Start or End of a String | <code>startswith()</code> and <code>endswith()</code></a></li>
+    <li><a href="#joining-strings--join">Joining Strings | <code>join()</code></a></li>
+    <li><a href="#splitting-strings--split">Splitting Strings | <code>split()</code></a></li>
+    <li><a href="#justifying-text--rjust-and-ljust">Justifying Text | <code>rjust</code> and <code>ljust</code></a></li>
+    <li><a href="#centering-text--center">Centering Text | <code>center()</code></a></li>
+    <li><a href="#removing-whitespace--strip-lstrip-and-rstrip">Removing Whitespace | <code>strip()</code>, <code>lstrip()</code> and <code>rstrip()</code></a></li>
+    <li><a href="#numeric-code-points-of-characters--ord-and-chr">Numeric Code Points of Characters | <code>ord()</code> and <code>chr()</code></a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="string">String<a class="anchor" href="#string">#</a></h1>
+<ul>
+<li>String is like a list of characters, so is inherits list attributes</li>
+</ul>
+<h2 id="escape-characters--">Escape Characters | <code>\</code><a class="anchor" href="#escape-characters--">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Say hi to Bob</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">s mother.&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Say hi to Bob&#39;s mother.</code></pre><hr>
+<h2 id="raw-strings--r">Raw Strings | <code>r</code><a class="anchor" href="#raw-strings--r">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;The file is in C:\Users\Alice\Desktop&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>The file is in C:\Users\Alice\Desktop</code></pre><hr>
+<h2 id="multiline-strings---">Multiline Strings | <code>''' '''</code><a class="anchor" href="#multiline-strings---">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;&#39;&#39;Dear Alice,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Can you feed Eve&#39;s cat this weekend?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Sincerely,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Bob&#39;&#39;&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Dear Alice,
+
+Can you feed Eve&#39;s cat this weekend?
+
+Sincerely,
+Bob</code></pre><hr>
+<h2 id="multiline-comments---">Multiline Comments | <code>&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;</code><a class="anchor" href="#multiline-comments---">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;This is a test Python program.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Written by Al Sweigart al@inventwithpython.com
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">This program was designed for Python 3, not Python 2.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">say_hello</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;This function prints hello.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    It does not return anything.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Hello!&#39;</span>)</span></span></code></pre></div><hr>
+<h2 id="f-strings--f">F-Strings | <code>f</code><a class="anchor" href="#f-strings--f">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74"> years old.&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;In ten years I will be </span><span style="color:#e6db74">{</span>age <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>My name is Al. I am 4000 years old.
+In ten years I will be 4010</code></pre><hr>
+<h2 id="f-string-alternatives--s-and-format">F-String Alternatives | <code>%s</code> and <code>format()</code><a class="anchor" href="#f-string-alternatives--s-and-format">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> years old.&#39;</span> <span style="color:#f92672">%</span> (name, age))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;In ten years I will be </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (age <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>My name is Al. I am 4000 years old.
+In ten years I will be 4010</code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> years old.&#39;</span><span style="color:#f92672">.</span>format(name, age))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>My name is Al. I am 4000 years old.</code></pre><ul>
+<li>You can put the index integer (starting at 0) inside the curly brackets to note which of the arguments to format() should be inserted</li>
+</ul>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{1}</span><span style="color:#e6db74"> years ago, </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74"> was born and named </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">.&#39;</span><span style="color:#f92672">.</span>format(name, age))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>4000 years ago, Al was born and named Al.</code></pre><hr>
+<h2 id="changing-the-case--upper-and-lower">Changing the Case | <code>upper()</code> and <code>lower()</code><a class="anchor" href="#changing-the-case--upper-and-lower">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello, world!&#39;</span>
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> spam<span style="color:#f92672">.</span>upper()
+</span></span><span style="display:flex;"><span>print(spam)
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> spam<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>HELLO, WORLD!
+hello, world!</code></pre><hr>
+<h2 id="checking-the-case--isupper-and-islower">Checking the Case | <code>isupper()</code> and ```islower()``<a class="anchor" href="#checking-the-case--isupper-and-islower">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello, world!&#39;</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>isupper())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;HELLO&#39;</span><span style="color:#f92672">.</span>isupper())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc12345&#39;</span><span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;12345&#39;</span><span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;12345&#39;</span><span style="color:#f92672">.</span>isupper())</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>False
+False
+True
+True
+False
+False</code></pre><hr>
+<h2 id="checking-string-characteristics--isalpha-isalnum-isdecimal-isspace-and-istitle">Checking String Characteristics | <code>isalpha()</code>, <code>isalnum()</code>, <code>isdecimal()</code>, <code>isspace()</code> and <code>istitle()</code><a class="anchor" href="#checking-string-characteristics--isalpha-isalnum-isdecimal-isspace-and-istitle">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">.</span>isalpha())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello123&#39;</span><span style="color:#f92672">.</span>isalpha())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello123&#39;</span><span style="color:#f92672">.</span>isalnum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">.</span>isalnum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;123&#39;</span><span style="color:#f92672">.</span>isdecimal())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;    &#39;</span><span style="color:#f92672">.</span>isspace())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;This Is Title Case&#39;</span><span style="color:#f92672">.</span>istitle())</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>True
+False
+True
+True
+True
+True
+True</code></pre><hr>
+<h2 id="checking-the-start-or-end-of-a-string--startswith-and-endswith">Checking the Start or End of a String | <code>startswith()</code> and <code>endswith()</code><a class="anchor" href="#checking-the-start-or-end-of-a-string--startswith-and-endswith">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;Hello&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;world!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc123&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;abcdef&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc123&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;12&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>True
+True
+False
+False
+True
+True</code></pre><hr>
+<h2 id="joining-strings--join">Joining Strings | <code>join()</code><a class="anchor" href="#joining-strings--join">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;, &#39;</span><span style="color:#f92672">.</span>join([<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;rats&#39;</span>, <span style="color:#e6db74">&#39;bats&#39;</span>]))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>cats, rats, bats</code></pre><hr>
+<h2 id="splitting-strings--split">Splitting Strings | <code>split()</code><a class="anchor" href="#splitting-strings--split">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is Simon&#39;</span><span style="color:#f92672">.</span>split())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is Simon&#39;</span><span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;m&#39;</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>[&#39;My&#39;, &#39;name&#39;, &#39;is&#39;, &#39;Simon&#39;]
+[&#39;My na&#39;, &#39;e is Si&#39;, &#39;on&#39;]</code></pre><hr>
+<h2 id="justifying-text--rjust-and-ljust">Justifying Text | <code>rjust</code> and <code>ljust</code><a class="anchor" href="#justifying-text--rjust-and-ljust">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, World&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>ljust(<span style="color:#ae81ff">10</span>)) </span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>     Hello
+               Hello
+        Hello, World
+Hello     </code></pre><br>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;*&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>ljust(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;-&#39;</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>***************Hello
+Hello---------------    </code></pre><hr>
+<h2 id="centering-text--center">Centering Text | <code>center()</code><a class="anchor" href="#centering-text--center">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>center(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>center(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;=&#39;</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>       Hello        
+=======Hello========    </code></pre><hr>
+<h2 id="removing-whitespace--strip-lstrip-and-rstrip">Removing Whitespace | <code>strip()</code>, <code>lstrip()</code> and <code>rstrip()</code><a class="anchor" href="#removing-whitespace--strip-lstrip-and-rstrip">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;    Hello, World    &#39;</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>lstrip())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>rstrip())
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SpamSpamBaconSpamEggsSpamSpam&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A string argument will specify which characters on the ends to strip</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;ampS&#39;</span>))
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;Spam&#39;</span>))  </span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>Hello, World
+Hello, World    
+    Hello, World
+BaconSpamEggs
+BaconSpamEggs</code></pre><hr>
+<h2 id="numeric-code-points-of-characters--ord-and-chr">Numeric Code Points of Characters | <code>ord()</code> and <code>chr()</code><a class="anchor" href="#numeric-code-points-of-characters--ord-and-chr">#</a></h2>
+<p>Input</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;A&#39;</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;4&#39;</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(chr(<span style="color:#ae81ff">65</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;A&#39;</span>) <span style="color:#f92672">&lt;</span> ord(<span style="color:#e6db74">&#39;B&#39;</span>))
+</span></span><span style="display:flex;"><span>print(chr(ord(<span style="color:#e6db74">&#39;A&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>))</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>65
+52
+33
+A
+True
+B</code></pre><hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Dictionary</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/programming-languages/python/02_data-structures/05_tuple-data-type/" class="flex align-center">
+        <span>Tuple</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#escape-characters--">Escape Characters | <code>\</code></a></li>
+    <li><a href="#raw-strings--r">Raw Strings | <code>r</code></a></li>
+    <li><a href="#multiline-strings---">Multiline Strings | <code>&#39;&#39;&#39; &#39;&#39;&#39;</code></a></li>
+    <li><a href="#multiline-comments---">Multiline Comments | <code>&#34;&#34;&#34;&#34; &#34;&#34;&#34;&#34;</code></a></li>
+    <li><a href="#f-strings--f">F-Strings | <code>f</code></a></li>
+    <li><a href="#f-string-alternatives--s-and-format">F-String Alternatives | <code>%s</code> and <code>format()</code></a></li>
+    <li><a href="#changing-the-case--upper-and-lower">Changing the Case | <code>upper()</code> and <code>lower()</code></a></li>
+    <li><a href="#checking-the-case--isupper-and-islower">Checking the Case | <code>isupper()</code> and ```islower()``</a></li>
+    <li><a href="#checking-string-characteristics--isalpha-isalnum-isdecimal-isspace-and-istitle">Checking String Characteristics | <code>isalpha()</code>, <code>isalnum()</code>, <code>isdecimal()</code>, <code>isspace()</code> and <code>istitle()</code></a></li>
+    <li><a href="#checking-the-start-or-end-of-a-string--startswith-and-endswith">Checking the Start or End of a String | <code>startswith()</code> and <code>endswith()</code></a></li>
+    <li><a href="#joining-strings--join">Joining Strings | <code>join()</code></a></li>
+    <li><a href="#splitting-strings--split">Splitting Strings | <code>split()</code></a></li>
+    <li><a href="#justifying-text--rjust-and-ljust">Justifying Text | <code>rjust</code> and <code>ljust</code></a></li>
+    <li><a href="#centering-text--center">Centering Text | <code>center()</code></a></li>
+    <li><a href="#removing-whitespace--strip-lstrip-and-rstrip">Removing Whitespace | <code>strip()</code>, <code>lstrip()</code> and <code>rstrip()</code></a></li>
+    <li><a href="#numeric-code-points-of-characters--ord-and-chr">Numeric Code Points of Characters | <code>ord()</code> and <code>chr()</code></a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
