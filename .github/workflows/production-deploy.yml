@@ -1,0 +1,43 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+
+      - name: Build with Production config
+        run: hugo
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: production
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

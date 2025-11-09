@@ -1,6 +1,5 @@
 name: Check Broken Links
 
-# Run when pull request on main
 on:
   pull_request:
     branches: ["main"]

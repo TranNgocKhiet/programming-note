@@ -1,0 +1,12 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Programming Note'
+theme = 'hugo-book-main'
+
+enableRobotsTXT = true
+buildDrafts = true
+buildFuture = true
+
+[params]
+  BookNotIndexed = true
+  BookShowDraftBadge = true
