@@ -14,6 +14,6 @@ theme = 'hugo-book-main'
 [params]
   BookTheme = 'auto'
   BookFavicon = '/img/avatar.png'
-  BookToC = tru
+  BookToC = true
   BookLogo = '/img/avatar.png'
   
