@@ -11,3 +11,9 @@ theme = 'hugo-book-main'
 [markup.goldmark.parser.attribute]
   block = true # Allow to add attribute to block
 
+[params]
+  BookTheme = 'auto'
+  BookFavicon = '/img/avatar.png'
+  BookToC = true
+  BookLogo = '/img/avatar.png'
+  

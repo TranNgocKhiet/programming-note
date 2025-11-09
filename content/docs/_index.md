@@ -1,4 +1,4 @@
 ---
-title: "Main page"
+title: "Docs"
 weight: 1
 ---

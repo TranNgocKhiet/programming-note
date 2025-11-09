@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Commands on Programming Note</title>
-    <link>https://example.org/docs/note/operating-systems/linux/commands/</link>
+    <link>http://localhost:1313/docs/note/operating-systems/linux/commands/</link>
     <description>Recent content in Commands on Programming Note</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/docs/note/operating-systems/linux/commands/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/note/operating-systems/linux/commands/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

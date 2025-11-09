@@ -2,72 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/docs/note/programming-languages/python/01_source-references/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/01_source-references/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/operating-systems/bash/</loc>
+    <loc>http://localhost:1313/docs/note/operating-systems/bash/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/operating-systems/linux/commands/</loc>
+    <loc>http://localhost:1313/docs/note/operating-systems/linux/commands/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/repository-managers/gitlab/</loc>
+    <loc>http://localhost:1313/docs/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/operating-systems/linux/</loc>
+    <loc>http://localhost:1313/docs/note/repository-managers/gitlab/</loc>
   </url><url>
-    <loc>https://example.org/docs/</loc>
+    <loc>http://localhost:1313/docs/note/operating-systems/linux/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/operating-systems/</loc>
+    <loc>http://localhost:1313/docs/note/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/01_overall/</loc>
+    <loc>http://localhost:1313/docs/note/operating-systems/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/01_overall/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/repository-managers/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/operating-systems/linux/ubuntu/</loc>
+    <loc>http://localhost:1313/docs/note/repository-managers/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/virtual-machines/virtual-box/</loc>
+    <loc>http://localhost:1313/docs/note/operating-systems/linux/ubuntu/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/virtual-machines/</loc>
+    <loc>http://localhost:1313/docs/note/virtual-machines/virtual-box/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/</loc>
+    <loc>http://localhost:1313/docs/note/virtual-machines/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/02_list_data_type/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/03_operators/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/02_list_data_type/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/03_operators/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/04_statements/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/04_string_data_type/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/04_statements/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/05_functions/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/04_string_data_type/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/05_tuple_data_type/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/05_functions/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/06_parameters/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/05_tuple_data_type/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/06_set_data_type/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/06_parameters/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/07_classes/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/06_set_data_type/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/02_data-structures/07_comparision/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/07_classes/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/08_files/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/07_comparision/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/09_libraries/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/08_files/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/10_regular-expressions/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/09_libraries/</loc>
   </url><url>
-    <loc>https://example.org/docs/note/programming-languages/python/11_debugging/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/10_regular-expressions/</loc>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>http://localhost:1313/docs/note/programming-languages/python/11_debugging/</loc>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
