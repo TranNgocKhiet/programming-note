@@ -21,7 +21,7 @@ jobs:
           fail: true
           # Add flag --verbose to view run detail
           # Add flag --exclude 403 (forbidden) since some websites may check for bot access
-          args: --verbose --excluded 403 ./content
+          args: --verbose --exclude-403 ./content
         env:
           # GitHub Token for action to return result
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
