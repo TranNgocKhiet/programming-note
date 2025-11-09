@@ -17,8 +17,11 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with:
           # Check files in /content
+          # Return fail if any error occur
           fail: true
-          args: --verbose ./content
+          # Add flag --verbose to view run detail
+          # Add flag --exclude 403 (forbidden) since some websites may check for bot access
+          args: --verbose --exclude 403 ./content
         env:
           # GitHub Token for action to return result
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
