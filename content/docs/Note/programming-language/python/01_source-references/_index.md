@@ -7,7 +7,7 @@ weight: 1
 
 ### Books
 
-[Automate the Boring Stuff with Python](https://automatetheboringstuff./) by Al Sweigart
+[Automate the Boring Stuff with Python](https://automatetheboringstuff.co/) by Al Sweigart
 
 ### Courses
 
