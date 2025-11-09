@@ -2,72 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/01_source-references/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/01_source-references/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/operating-systems/bash/</loc>
+    <loc>https://example.org/docs/note/operating-system/bash/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/operating-systems/linux/commands/</loc>
+    <loc>https://example.org/docs/note/source-control/gitlab/template/01_build_and_test_template/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/</loc>
+    <loc>https://example.org/docs/note/source-control/gitlab/template/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/repository-managers/gitlab/</loc>
+    <loc>https://example.org/docs/note/operating-system/linux/commands/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/operating-systems/linux/</loc>
+    <loc>https://example.org/docs/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/docs/note/source-control/gitlab/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/</loc>
+    <loc>https://example.org/docs/note/operating-system/linux/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/operating-systems/</loc>
+    <loc>https://example.org/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/01_overall/</loc>
+    <loc>https://example.org/docs/note/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/</loc>
+    <loc>https://example.org/docs/note/operating-system/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/01_overall/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/repository-managers/</loc>
+    <loc>https://example.org/docs/note/programming-language/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/operating-systems/linux/ubuntu/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/virtual-machines/virtual-box/</loc>
+    <loc>https://example.org/docs/note/source-control/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/virtual-machines/</loc>
+    <loc>https://example.org/docs/note/operating-system/linux/ubuntu/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/</loc>
+    <loc>https://example.org/docs/note/virtual-machine/virtual-box/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/02_list_data_type/</loc>
+    <loc>https://example.org/docs/note/virtual-machine/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/03_operators/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/03_dictionary_data_type/</loc>
+    <loc>https://example.org/docs/note/source-control/gitlab/template/02_deployment_template/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/04_statements/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/02_list_data_type/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/04_string_data_type/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/03_operators/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/05_functions/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/03_dictionary_data_type/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/05_tuple_data_type/</loc>
+    <loc>https://example.org/docs/note/source-control/gitlab/template/03_security_template/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/06_parameters/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/04_statements/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/06_set_data_type/</loc>
+    <loc>https://example.org/docs/note/source-control/gitlab/template/04_other_template/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/07_classes/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/04_string_data_type/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/02_data-structures/07_comparision/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/05_functions/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/08_files/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/05_tuple_data_type/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/09_libraries/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/06_parameters/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/10_regular-expressions/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/06_set_data_type/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/note/programming-languages/python/11_debugging/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/07_classes/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/02_data-structures/07_comparision/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/docs/note/programming-language/python/08_files/</loc>
+  </url><url>
+    <loc>https://example.org/docs/note/programming-language/python/09_libraries/</loc>
+  </url><url>
+    <loc>https://example.org/docs/note/programming-language/python/10_regular-expressions/</loc>
+  </url><url>
+    <loc>https://example.org/docs/note/programming-language/python/11_debugging/</loc>
+  </url><url>
+    <loc>https://example.org/categories/</loc>
+  </url><url>
+    <loc>https://example.org/tags/</loc>
   </url>
 </urlset>

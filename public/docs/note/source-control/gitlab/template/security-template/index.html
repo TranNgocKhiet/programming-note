@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Security Template on Gitlab# Static Application Security Testing (SAST)# Jobs/SAST.gitlab-ci.yml Template này thêm một job quét mã nguồn tĩnh Nó hoạt động như một người “soi” code tự động, đọc qua code (Java, Python, C#, Go…) ngay cả khi chúng chưa được build hay chạy Nó tìm kiếm các mẫu code “nguy hiểm” có thể dẫn đến lỗ hổng, như nguy cơ SQL Injection hoặc xử lý dữ liệu đầu vào (nguy cơ XSS) Dynamic Application Security Testing (DAST)# Jobs/DAST.gitlab-ci.yml Template này chạy một job “tấn công” ứng dụng web đang chạy Nó không đọc code. Thay vào đó, nó hoạt động như một hacker “mũ trắng” Sau khi đã build và deploy ứng dụng (ví dụ, deploy vào một “review environment”), job DAST sẽ cố gắng “tấn công” ứng dụng đó từ bên ngoài Nó gửi đi các payload độc hại để tìm các lỗ hổng mà chỉ có thể phát hiện được khi ứng dụng đang chạy (ví dụ: “Chuyện gì xảy ra nếu tôi nhập một đoạn script vào ô tìm kiếm?”) Infrastructure as Code (IaC) Scanning# Jobs/SAST-IaC.gitlab-ci.yml Quét các tệp cấu hình hạ tầng Thay vì quét code ứng dụng, nó quét các tệp định nghĩa hạ tầng như Terraform (.tf), AWS CloudFormation, hay Dockerfile Nó tìm các lỗi “cài đặt” bảo mật, ví dụ: “Bạn đã mở cổng 22 (SSH) cho toàn bộ internet” hoặc “Bạn đã tạo một S3 bucket cho phép truy cập công khai” Container Scanning# Jobs/Container-Scanning.gitlab-ci.yml Quét các ảnh (image) container (ví dụ: Docker image) Một Docker image được xây dựng từ nhiều “lớp” (layers), bao gồm một hệ điều hành cơ sở (như Ubuntu) và các thư viện khác Job này sẽ “mở” image của bạn ra và đối chiếu danh sách tất cả các phần mềm bên trong với một cơ sở dữ liệu về lỗ hổng đã biết (CVEs) Nó sẽ cảnh báo bạn nếu, ví dụ, “Image của bạn đang dùng một phiên bản OpenSSL đã lỗi thời và có lỗ hổng nghiêm trọng.” Secret Detection# Jobs/Secret-Detection.gitlab-ci.yml Quét code và lịch sử commit để tìm thông tin nhạy cảm (secrets) bị lộ Đây là một lỗi rất phổ biến. Lập trình viên đôi khi vô tình “commit” (đẩy) các thông tin nhạy cảm như API key, mật khẩu database, hoặc token truy cập vào Git Job này sẽ quét toàn bộ dự án của bạn (bao gồm cả lịch sử) để tìm các chuỗi văn bản trông giống như một “secret” và cảnh báo bạn ngay lập tức Dependency Scanning &#43; License Scanning# Jobs/Dependency-Scanning.gitlab-ci.yml
+Jobs/License-Scanning.gitlab-ci.yml Quét các thư viện bên ngoài (dependencies) mà dự án sử dụng
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/note/source-control/gitlab/template/security-template/">
+  <meta property="og:site_name" content="Programming Note">
+  <meta property="og:title" content="Security Template">
+  <meta property="og:description" content="Security Template on Gitlab# Static Application Security Testing (SAST)# Jobs/SAST.gitlab-ci.yml Template này thêm một job quét mã nguồn tĩnh Nó hoạt động như một người “soi” code tự động, đọc qua code (Java, Python, C#, Go…) ngay cả khi chúng chưa được build hay chạy Nó tìm kiếm các mẫu code “nguy hiểm” có thể dẫn đến lỗ hổng, như nguy cơ SQL Injection hoặc xử lý dữ liệu đầu vào (nguy cơ XSS) Dynamic Application Security Testing (DAST)# Jobs/DAST.gitlab-ci.yml Template này chạy một job “tấn công” ứng dụng web đang chạy Nó không đọc code. Thay vào đó, nó hoạt động như một hacker “mũ trắng” Sau khi đã build và deploy ứng dụng (ví dụ, deploy vào một “review environment”), job DAST sẽ cố gắng “tấn công” ứng dụng đó từ bên ngoài Nó gửi đi các payload độc hại để tìm các lỗ hổng mà chỉ có thể phát hiện được khi ứng dụng đang chạy (ví dụ: “Chuyện gì xảy ra nếu tôi nhập một đoạn script vào ô tìm kiếm?”) Infrastructure as Code (IaC) Scanning# Jobs/SAST-IaC.gitlab-ci.yml Quét các tệp cấu hình hạ tầng Thay vì quét code ứng dụng, nó quét các tệp định nghĩa hạ tầng như Terraform (.tf), AWS CloudFormation, hay Dockerfile Nó tìm các lỗi “cài đặt” bảo mật, ví dụ: “Bạn đã mở cổng 22 (SSH) cho toàn bộ internet” hoặc “Bạn đã tạo một S3 bucket cho phép truy cập công khai” Container Scanning# Jobs/Container-Scanning.gitlab-ci.yml Quét các ảnh (image) container (ví dụ: Docker image) Một Docker image được xây dựng từ nhiều “lớp” (layers), bao gồm một hệ điều hành cơ sở (như Ubuntu) và các thư viện khác Job này sẽ “mở” image của bạn ra và đối chiếu danh sách tất cả các phần mềm bên trong với một cơ sở dữ liệu về lỗ hổng đã biết (CVEs) Nó sẽ cảnh báo bạn nếu, ví dụ, “Image của bạn đang dùng một phiên bản OpenSSL đã lỗi thời và có lỗ hổng nghiêm trọng.” Secret Detection# Jobs/Secret-Detection.gitlab-ci.yml Quét code và lịch sử commit để tìm thông tin nhạy cảm (secrets) bị lộ Đây là một lỗi rất phổ biến. Lập trình viên đôi khi vô tình “commit” (đẩy) các thông tin nhạy cảm như API key, mật khẩu database, hoặc token truy cập vào Git Job này sẽ quét toàn bộ dự án của bạn (bao gồm cả lịch sử) để tìm các chuỗi văn bản trông giống như một “secret” và cảnh báo bạn ngay lập tức Dependency Scanning &#43; License Scanning# Jobs/Dependency-Scanning.gitlab-ci.yml
+Jobs/License-Scanning.gitlab-ci.yml Quét các thư viện bên ngoài (dependencies) mà dự án sử dụng">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="Security Template">
+  <meta itemprop="description" content="Security Template on Gitlab# Static Application Security Testing (SAST)# Jobs/SAST.gitlab-ci.yml Template này thêm một job quét mã nguồn tĩnh Nó hoạt động như một người “soi” code tự động, đọc qua code (Java, Python, C#, Go…) ngay cả khi chúng chưa được build hay chạy Nó tìm kiếm các mẫu code “nguy hiểm” có thể dẫn đến lỗ hổng, như nguy cơ SQL Injection hoặc xử lý dữ liệu đầu vào (nguy cơ XSS) Dynamic Application Security Testing (DAST)# Jobs/DAST.gitlab-ci.yml Template này chạy một job “tấn công” ứng dụng web đang chạy Nó không đọc code. Thay vào đó, nó hoạt động như một hacker “mũ trắng” Sau khi đã build và deploy ứng dụng (ví dụ, deploy vào một “review environment”), job DAST sẽ cố gắng “tấn công” ứng dụng đó từ bên ngoài Nó gửi đi các payload độc hại để tìm các lỗ hổng mà chỉ có thể phát hiện được khi ứng dụng đang chạy (ví dụ: “Chuyện gì xảy ra nếu tôi nhập một đoạn script vào ô tìm kiếm?”) Infrastructure as Code (IaC) Scanning# Jobs/SAST-IaC.gitlab-ci.yml Quét các tệp cấu hình hạ tầng Thay vì quét code ứng dụng, nó quét các tệp định nghĩa hạ tầng như Terraform (.tf), AWS CloudFormation, hay Dockerfile Nó tìm các lỗi “cài đặt” bảo mật, ví dụ: “Bạn đã mở cổng 22 (SSH) cho toàn bộ internet” hoặc “Bạn đã tạo một S3 bucket cho phép truy cập công khai” Container Scanning# Jobs/Container-Scanning.gitlab-ci.yml Quét các ảnh (image) container (ví dụ: Docker image) Một Docker image được xây dựng từ nhiều “lớp” (layers), bao gồm một hệ điều hành cơ sở (như Ubuntu) và các thư viện khác Job này sẽ “mở” image của bạn ra và đối chiếu danh sách tất cả các phần mềm bên trong với một cơ sở dữ liệu về lỗ hổng đã biết (CVEs) Nó sẽ cảnh báo bạn nếu, ví dụ, “Image của bạn đang dùng một phiên bản OpenSSL đã lỗi thời và có lỗ hổng nghiêm trọng.” Secret Detection# Jobs/Secret-Detection.gitlab-ci.yml Quét code và lịch sử commit để tìm thông tin nhạy cảm (secrets) bị lộ Đây là một lỗi rất phổ biến. Lập trình viên đôi khi vô tình “commit” (đẩy) các thông tin nhạy cảm như API key, mật khẩu database, hoặc token truy cập vào Git Job này sẽ quét toàn bộ dự án của bạn (bao gồm cả lịch sử) để tìm các chuỗi văn bản trông giống như một “secret” và cảnh báo bạn ngay lập tức Dependency Scanning &#43; License Scanning# Jobs/Dependency-Scanning.gitlab-ci.yml
+Jobs/License-Scanning.gitlab-ci.yml Quét các thư viện bên ngoài (dependencies) mà dự án sử dụng">
+  <meta itemprop="wordCount" content="728">
+
+<title>Security Template | Programming Note</title>
+<link rel="icon" href="/img/avatar.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/note/source-control/gitlab/template/security-template/">
+<link rel="stylesheet" href="/book.min.6970156cec683193d93c9c4edaf0d56574e4361df2e0c1be4f697ae81c3ba55f.css" integrity="sha256-aXAVbOxoMZPZPJxO2vDVZXTkNh3y4MG&#43;T2l66Bw7pV8=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.802110c064081f970f600a90c992435189243593520e3a82e4ed882eef66e36b.js" integrity="sha256-gCEQwGQIH5cPYAqQyZJDUYkkNZNSDjqC5O2ILu9m42s=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/img/avatar.png" alt="Logo" /><span>Programming Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+   
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-e5dbb31b0dea8c6dd2412f048aaca969"
+  class="toggle"
+  checked
+/>
+<label for="section-e5dbb31b0dea8c6dd2412f048aaca969" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Note</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-77c4adc1008ca794a2bb9a0b104f34c6"
+  class="toggle"
+  
+/>
+<label for="section-77c4adc1008ca794a2bb9a0b104f34c6" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Operating System</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a> Bash</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-dee8c6edffc2e022ff6e7ac43607bf60"
+  class="toggle"
+  
+/>
+<label for="section-dee8c6edffc2e022ff6e7ac43607bf60" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Linux</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/operating-system/linux/commands/" class="">
+  Commands</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a> Ubuntu</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-c15fc86e402790e0a9d38f2ce60a8292"
+  class="toggle"
+  
+/>
+<label for="section-c15fc86e402790e0a9d38f2ce60a8292" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Programming Language</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-f14f9aa7af4a7cf51960ef79bd1d330e"
+  class="toggle"
+  
+/>
+<label for="section-f14f9aa7af4a7cf51960ef79bd1d330e" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Python</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-language/python/01_source-references/" class="">
+  01. Source References</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-ef7a6b31270361c9c7944edda253ecbf"
+  class="toggle"
+  
+/>
+<label for="section-ef7a6b31270361c9c7944edda253ecbf" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    02. Data Structures</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/programming-language/python/02_data-structures/01_overall/" class="">
+  Overall</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/02_data-structures/02_list_data_type/" class="">
+  List Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/02_data-structures/03_dictionary_data_type/" class="">
+  Dictionary Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/02_data-structures/04_string_data_type/" class="">
+  String Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/02_data-structures/05_tuple_data_type/" class="">
+  Tuple Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/02_data-structures/06_set_data_type/" class="">
+  Set Data Type</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/02_data-structures/07_comparision/" class="">
+  Comparision</a>
+ 
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/03_operators/" class="">
+  03. Operators</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/04_statements/" class="">
+  04. Statements</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/05_functions/" class="">
+  05. Functions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/06_parameters/" class="">
+  06. Parameters</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/07_classes/" class="">
+  07. Classes</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/08_files/" class="">
+  08. Files</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/09_libraries/" class="">
+  09. Libraries</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/10_regular-expressions/" class="">
+  10. Regular-Expressions</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/programming-language/python/11_debugging/" class="">
+  11. Debugging</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-341ef49e9cf2f14c95da7a30de5a693f"
+  class="toggle"
+  checked
+/>
+<label for="section-341ef49e9cf2f14c95da7a30de5a693f" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Source Control</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-418d572d4f8e5617bebb9ac32b4979da"
+  class="toggle"
+  checked
+/>
+<label for="section-418d572d4f8e5617bebb9ac32b4979da" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Gitlab</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-2ac68e2034262e0d28b1606844644be3"
+  class="toggle"
+  checked
+/>
+<label for="section-2ac68e2034262e0d28b1606844644be3" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    CI/CD Template</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/source-control/gitlab/template/01_build_and_test_template/" class="">
+  Build &amp; Test Template</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/source-control/gitlab/template/02_deployment_template/" class="">
+  Deployment Template</a>
+ 
+  </li>
+    
+  <li>
+       
+<a href="/docs/note/source-control/gitlab/template/security-template/" class="active">
+  Security Template</a>
+ 
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+    
+  <li>
+       
+<input
+  type="checkbox"
+  id="section-20e3adf963c0da78f1d898a92027dfd2"
+  class="toggle"
+  
+/>
+<label for="section-20e3adf963c0da78f1d898a92027dfd2" class="flex">
+  <a
+    role="button"
+    
+    class=""
+  >
+    Virtual Machine</a>
+  <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+</label>
+ 
+    
+<ul>
+   
+  <li>
+       
+<a href="/docs/note/virtual-machine/virtual-box/" class="">
+  Virtual Box</a>
+ 
+    
+<ul>
+  
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+
+  </li>
+   
+</ul>
+    
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <link rel="stylesheet" href="/css/custom-copy.css" />
+<link rel="stylesheet" href="/css/universal-style.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+  rel="stylesheet"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<script defer src="/js/init-clipboard.js"></script>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#static-application-security-testing-sast">Static Application Security Testing (SAST)</a></li>
+    <li><a href="#dynamic-application-security-testing-dast">Dynamic Application Security Testing (DAST)</a></li>
+    <li><a href="#infrastructure-as-code-iac-scanning">Infrastructure as Code (IaC) Scanning</a></li>
+    <li><a href="#container-scanning">Container Scanning</a></li>
+    <li><a href="#secret-detection">Secret Detection</a></li>
+    <li><a href="#dependency-scanning--license-scanning">Dependency Scanning + License Scanning</a></li>
+    <li><a href="#web-api-fuzzing">Web-API Fuzzing</a></li>
+    <li><a href="#coverage-guided-fuzzing">Coverage-Guided Fuzzing</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="security-template-on-gitlab">Security Template on Gitlab<a class="anchor" href="#security-template-on-gitlab">#</a></h1>
+<h2 id="static-application-security-testing-sast">Static Application Security Testing (SAST)<a class="anchor" href="#static-application-security-testing-sast">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/SAST.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>Template này thêm một job quét mã nguồn tĩnh</li>
+<li>Nó hoạt động như một người &ldquo;soi&rdquo; code tự động, đọc qua code (Java, Python, C#, Go&hellip;) ngay cả khi chúng chưa được build hay chạy</li>
+<li>Nó tìm kiếm các mẫu code &ldquo;nguy hiểm&rdquo; có thể dẫn đến lỗ hổng, như nguy cơ SQL Injection hoặc xử lý dữ liệu đầu vào (nguy cơ XSS)</li>
+</ul>
+<h2 id="dynamic-application-security-testing-dast">Dynamic Application Security Testing (DAST)<a class="anchor" href="#dynamic-application-security-testing-dast">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/DAST.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>Template này chạy một job &ldquo;tấn công&rdquo; ứng dụng web đang chạy</li>
+<li>Nó không đọc code. Thay vào đó, nó hoạt động như một hacker &ldquo;mũ trắng&rdquo;</li>
+<li>Sau khi đã build và deploy ứng dụng (ví dụ, deploy vào một &ldquo;review environment&rdquo;), job DAST sẽ cố gắng &ldquo;tấn công&rdquo; ứng dụng đó từ bên ngoài</li>
+<li>Nó gửi đi các payload độc hại để tìm các lỗ hổng mà chỉ có thể phát hiện được khi ứng dụng đang chạy (ví dụ: &ldquo;Chuyện gì xảy ra nếu tôi nhập một đoạn script vào ô tìm kiếm?&rdquo;)</li>
+</ul>
+<h2 id="infrastructure-as-code-iac-scanning">Infrastructure as Code (IaC) Scanning<a class="anchor" href="#infrastructure-as-code-iac-scanning">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/SAST-IaC.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>Quét các tệp cấu hình hạ tầng</li>
+<li>Thay vì quét code ứng dụng, nó quét các tệp định nghĩa hạ tầng như Terraform (.tf), AWS CloudFormation, hay Dockerfile</li>
+<li>Nó tìm các lỗi &ldquo;cài đặt&rdquo; bảo mật, ví dụ: &ldquo;Bạn đã mở cổng 22 (SSH) cho toàn bộ internet&rdquo; hoặc &ldquo;Bạn đã tạo một S3 bucket cho phép truy cập công khai&rdquo;</li>
+</ul>
+<h2 id="container-scanning">Container Scanning<a class="anchor" href="#container-scanning">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/Container-Scanning.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>Quét các ảnh (image) container (ví dụ: Docker image)</li>
+<li>Một Docker image được xây dựng từ nhiều &ldquo;lớp&rdquo; (layers), bao gồm một hệ điều hành cơ sở (như Ubuntu) và các thư viện khác</li>
+<li>Job này sẽ &ldquo;mở&rdquo; image của bạn ra và đối chiếu danh sách tất cả các phần mềm bên trong với một cơ sở dữ liệu về lỗ hổng đã biết (CVEs)</li>
+<li>Nó sẽ cảnh báo bạn nếu, ví dụ, &ldquo;Image của bạn đang dùng một phiên bản OpenSSL đã lỗi thời và có lỗ hổng nghiêm trọng.&rdquo;</li>
+</ul>
+<h2 id="secret-detection">Secret Detection<a class="anchor" href="#secret-detection">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/Secret-Detection.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>Quét code và lịch sử commit để tìm thông tin nhạy cảm (secrets) bị lộ</li>
+<li>Đây là một lỗi rất phổ biến. Lập trình viên đôi khi vô tình &ldquo;commit&rdquo; (đẩy) các thông tin nhạy cảm như API key, mật khẩu database, hoặc token truy cập vào Git</li>
+<li>Job này sẽ quét toàn bộ dự án của bạn (bao gồm cả lịch sử) để tìm các chuỗi văn bản trông giống như một &ldquo;secret&rdquo; và cảnh báo bạn ngay lập tức</li>
+</ul>
+<h2 id="dependency-scanning--license-scanning">Dependency Scanning + License Scanning<a class="anchor" href="#dependency-scanning--license-scanning">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/Dependency-Scanning.gitlab-ci.yml</span></span></span></code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/License-Scanning.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>
+<p>Quét các thư viện bên ngoài (dependencies) mà dự án sử dụng</p>
+</li>
+<li>
+<p>Dependency Scanning:
+<br>$emsp; + Hầu hết các dự án đều dùng thư viện mã nguồn mở (ví dụ: từ npm, pip, maven).
+<br>$emsp; + Job này kiểm tra các file quản lý thư viện (như package.json, requirements.txt) và báo cho bạn biết nếu bạn đang &ldquo;dùng một thư viện X phiên bản 1.2, mà phiên bản đó vừa được phát hiện có lỗ hổng bảo mật.&rdquo;</p>
+</li>
+<li>
+<p>License Scanning:
+<br>$emsp; + Tương tự, job này kiểm tra &ldquo;giấy phép&rdquo; (license) của các thư viện đó để đảm bảo chúng tuân thủ chính sách của công ty bạn (ví dụ: &ldquo;Dự án này cấm sử dụng các thư viện có giấy phép GPL&rdquo;).</p>
+</li>
+</ul>
+<h2 id="web-api-fuzzing">Web-API Fuzzing<a class="anchor" href="#web-api-fuzzing">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/API-Fuzzing.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>Thử nghiệm mờ&quot; (Fuzz testing) cho các API (Web-API)</li>
+<li>Job này tự động tạo ra hàng ngàn yêu cầu (request) &ldquo;ngẫu nhiên&rdquo; hoặc &ldquo;dị dạng&rdquo; và gửi chúng tới các điểm cuối (endpoint) API của bạn</li>
+<li>Mục đích là để xem API của bạn có bị &ldquo;sập&rdquo; (crash) hoặc rò rỉ thông tin khi nhận được dữ liệu không mong muốn hay không</li>
+</ul>
+<h2 id="coverage-guided-fuzzing">Coverage-Guided Fuzzing<a class="anchor" href="#coverage-guided-fuzzing">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/Coverage-Fuzzing.gitlab-ci.yml</span></span></span></code></pre></div><ul>
+<li>Một loại &ldquo;thử nghiệm mờ&rdquo; thông minh hơn, dùng cho các hàm (function) trong code</li>
+<li>Khác với API Fuzzing (hộp đen), loại này là &ldquo;hộp trắng&rdquo;</li>
+<li>Nó &ldquo;biết&rdquo; code của bạn. Nó gửi dữ liệu ngẫu nhiên vào một hàm cụ thể (ví dụ: một hàm xử lý ảnh trong C++)</li>
+<li>Sau đó, nó &ldquo;quan sát&rdquo; xem dữ liệu đó đã chạy qua những nhánh code nào (gọi là &ldquo;coverage&rdquo;). Dựa trên đó, nó &ldquo;thông minh&rdquo; tạo ra dữ liệu mới để cố gắng &ldquo;chạm&rdquo; tới những nhánh code chưa được kiểm tra, nhằm mục đích tìm ra các lỗi nghiêm trọng như tràn bộ đệm (buffer overflow).</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/note/source-control/gitlab/template/02_deployment_template/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Deployment Template</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/note/virtual-machine/virtual-box/" class="flex align-center">
+        <span>Virtual Box</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#static-application-security-testing-sast">Static Application Security Testing (SAST)</a></li>
+    <li><a href="#dynamic-application-security-testing-dast">Dynamic Application Security Testing (DAST)</a></li>
+    <li><a href="#infrastructure-as-code-iac-scanning">Infrastructure as Code (IaC) Scanning</a></li>
+    <li><a href="#container-scanning">Container Scanning</a></li>
+    <li><a href="#secret-detection">Secret Detection</a></li>
+    <li><a href="#dependency-scanning--license-scanning">Dependency Scanning + License Scanning</a></li>
+    <li><a href="#web-api-fuzzing">Web-API Fuzzing</a></li>
+    <li><a href="#coverage-guided-fuzzing">Coverage-Guided Fuzzing</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

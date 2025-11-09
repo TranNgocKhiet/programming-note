@@ -1,0 +1,24 @@
+name: Check Broken Links
+
+# Run when pull request on main
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      # Get code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Run Action
+      - name: Run Lychee Link Checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          # Check files in /content
+          args: --verbose ./content
+        env:
+          # GitHub Token for action to return result
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
