@@ -5,4 +5,4 @@ weight: 1
 
 # This is a draft page
 
-Draft
+Draft 1
