@@ -1,5 +1,5 @@
 # Sử dụng image Docker chính thức của Hugo (bản extended để hỗ trợ SASS/SCSS)
-image: registry.gitlab.com/pages/hugo/hugo_extended:0.152.2
+image: klakegg/hugo:ext-alpine
 
 # Biến này RẤT QUAN TRỌNG nếu bạn dùng theme dạng git submodule
 variables:
