@@ -66,11 +66,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           # Đảm bảo tải về đúng tên artifact mới
-<<<<<<< HEAD
           name: vercel/output
-=======
-          name: vercel-output
->>>>>>> 173be2486471a472361bb470172e0aad0a8e3aef
           # Giải nén vào thư mục gốc, nó sẽ tạo ra thư mục .vercel
           path: .
 
