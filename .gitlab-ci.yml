@@ -2,6 +2,7 @@ image: klakegg/hugo:ext-alpine
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  entrypoint: [""]
 
 test:
   script:
