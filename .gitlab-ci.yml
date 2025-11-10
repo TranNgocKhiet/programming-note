@@ -1,4 +1,4 @@
-image: registry.gitlab.com/pages/hugo/hugo_extended:0.140.2
+image: klakegg/hugo:0.146.0-ext-alpine
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
