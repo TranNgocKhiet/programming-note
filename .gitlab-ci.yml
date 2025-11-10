@@ -1,20 +1,20 @@
-# Sử dụng image Docker chính thức của Hugo (bản extended để hỗ trợ SASS/SCSS)
-image: klakegg/hugo:ext-alpine
+# Sử dụng image Docker Hugo và ghi đè entrypoint
+image:
+  name: klakegg/hugo:ext-alpine
+  # Dòng này RẤT QUAN TRỌNG:
+  # Nó bảo GitLab CI bỏ qua ENTRYPOINT của image và chạy một shell bình thường.
+  entrypoint: [""]
 
-# Biến này RẤT QUAN TRỌNG nếu bạn dùng theme dạng git submodule
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-# Job này tên là 'pages', tên BẮT BUỘC để deploy lên GitLab Pages
 pages:
   script:
-    # Chạy lệnh 'hugo' để build website.
-    # Hugo sẽ tự động build site vào thư mục 'public'.
+    # Bây giờ lệnh 'hugo' sẽ chạy BÊN TRONG shell, chứ không phải bị coi là một shell.
     - hugo
   artifacts:
     paths:
-      # Chỉ định thư mục 'public' là nơi chứa website đã build
       - public
   rules:
-    # Chỉ chạy job này khi code được push lên nhánh 'main' (hoặc 'master')
+    # Chỉ chạy khi push lên nhánh 'main'
     - if: $CI_COMMIT_BRANCH == "main"
