@@ -32,28 +32,43 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.152.2"
+          hugo-version: "0.152.2" # Vẫn khuyên bạn nên ghim 1 phiên bản cụ thể
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify # Bước này vẫn tạo ra thư mục 'public'
+
+      # ---- THÊM CÁC BƯỚC MỚI DƯỚI ĐÂY ----
+      - name: Create Vercel Output Structure
+        run: |
+          # 1. Tạo cấu trúc thư mục mà Vercel --prebuilt yêu cầu
+          mkdir -p .vercel/output/static
+
+          # 2. Sao chép nội dung 'public' vào trong 'static'
+          cp -r public/* .vercel/output/static/
+
+          # 3. Tạo file config.json tối thiểu cho Vercel
+          echo '{"version": 3}' > .vercel/output/config.json
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: hugo-site
-          path: public
+          # Đổi tên artifact cho rõ ràng
+          name: vercel-output
+          # Tải lên thư mục .vercel/output mới tạo
+          path: .vercel/output
 
   deploy-production:
     needs: [link-check, hugo-build]
-
     if: github.ref == 'refs/heads/main'
-
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: hugo-site
+          # Đảm bảo tải về đúng tên artifact mới
+          name: vercel-output
+          # Giải nén vào thư mục gốc, nó sẽ tạo ra thư mục .vercel
+          path: .
 
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
@@ -62,5 +77,5 @@ jobs:
         env:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-
+        # Lệnh này bây giờ sẽ hoạt động
         run: vercel deploy --prebuilt --prod --token ${{ secrets.VERCEL_TOKEN }} --yes
