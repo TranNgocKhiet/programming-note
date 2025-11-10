@@ -39,6 +39,17 @@ jobs:
 
       - name: Create Vercel Output Structure
         run: |
+          # 1. Tạo cấu trúc thư mục mà Vercel --prebuilt yêu cầu
+          mkdir -p .vercel/output/static
+
+          # 2. Sao chép nội dung 'public' vào trong 'static'
+          cp -r public/* .vercel/output/static/
+
+          # 3. Tạo file config.json tối thiểu cho Vercel
+          echo '{"version": 3}' > .vercel/output/config.json
+
+      - name: Create Vercel Output Structure
+        run: |
           mkdir -p .vercel/output/static
 
           cp -r public/* .vercel/output/static/
@@ -48,7 +59,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
+          # Đổi tên artifact cho rõ ràng
           name: vercel-output
+          # Tải lên thư mục .vercel/output mới tạo
           path: .vercel/output
 
   deploy-production:
