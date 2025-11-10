@@ -1,0 +1,20 @@
+# Sử dụng image Docker chính thức của Hugo (bản extended để hỗ trợ SASS/SCSS)
+image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+
+# Biến này RẤT QUAN TRỌNG nếu bạn dùng theme dạng git submodule
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+# Job này tên là 'pages', tên BẮT BUỘC để deploy lên GitLab Pages
+pages:
+  script:
+    # Chạy lệnh 'hugo' để build website.
+    # Hugo sẽ tự động build site vào thư mục 'public'.
+    - hugo
+  artifacts:
+    paths:
+      # Chỉ định thư mục 'public' là nơi chứa website đã build
+      - public
+  rules:
+    # Chỉ chạy job này khi code được push lên nhánh 'main' (hoặc 'master')
+    - if: $CI_COMMIT_BRANCH == "main"
