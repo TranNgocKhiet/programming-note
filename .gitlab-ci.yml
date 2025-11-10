@@ -1,20 +1,19 @@
-# Sử dụng image Docker Hugo và ghi đè entrypoint
-image:
-  name: gohugoio/hugo:0.152.2-extended
-  # Dòng này RẤT QUAN TRỌNG:
-  # Nó bảo GitLab CI bỏ qua ENTRYPOINT của image và chạy một shell bình thường.
-  entrypoint: [""]
+image: registry.gitlab.com/pages/hugo/hugo_extended:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
+test:
+  script:
+    - hugo
+  except:
+    - master
+
 pages:
   script:
-    # Bây giờ lệnh 'hugo' sẽ chạy BÊN TRONG shell, chứ không phải bị coi là một shell.
     - hugo
   artifacts:
     paths:
       - public
-  rules:
-    # Chỉ chạy khi push lên nhánh 'main'
-    - if: $CI_COMMIT_BRANCH == "main"
+  only:
+    - master
