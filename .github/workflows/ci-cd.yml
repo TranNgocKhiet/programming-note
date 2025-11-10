@@ -78,7 +78,7 @@ jobs:
           path: .vercel/output
 =======
           # Đảm bảo tải về đúng tên artifact mới
-          name: vercel-output
+          name: vercel/output
           # Giải nén vào thư mục gốc, nó sẽ tạo ra thư mục .vercel
           path: .
 >>>>>>> b1ca340 (test auto deploy 2)
