@@ -1,8 +1,9 @@
-image: klakegg/hugo:ext-alpine
+image:
+  name: klakegg/hugo:ext-alpine
+  entrypoint: [""]
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  entrypoint: [""]
 
 test:
   script:
