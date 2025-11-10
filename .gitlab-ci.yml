@@ -1,6 +1,6 @@
 # Sử dụng image Docker Hugo và ghi đè entrypoint
 image:
-  name: klakegg/hugo:0.152.2-ext-alpine
+  name: klakegg/hugo:0.152.2-extended
   # Dòng này RẤT QUAN TRỌNG:
   # Nó bảo GitLab CI bỏ qua ENTRYPOINT của image và chạy một shell bình thường.
   entrypoint: [""]
