@@ -1,4 +1,4 @@
-image: klakegg/hugo:0.146.0-ext-alpine
+image: klakegg/hugo:ext-alpine
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
