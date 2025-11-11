@@ -1,23 +1,37 @@
+# Container Docker image
 image: debian:stable-slim
 
 variables:
   HUGO_VERSION: "0.152.0"
 
 before_script:
+  # Update Debian package
   - apt-get update && apt-get install -y curl git tar bash
+  # Install Hugo extended
   - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+  # Extract file Hugo
   - tar -xzf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+  # Give execute permission to file Hugo
   - chmod +x hugo
+  # Move Hugo to /usr/local/bin/ to create environment variable
   - mv hugo /usr/local/bin/
+  # Check Hugo version
   - hugo version
+  # Update submodules (hugo-book-main)
   - git submodule update --init --recursive
 
+# Job name
 pages:
   stage: deploy
   script:
+    # Build website to folder public/
+    # --minify: minify HTML/CSS/JS for storage optimization
     - hugo --minify
+
+  # Save artifact for deploying
   artifacts:
     paths:
       - public
+  # Only run on main
   only:
     - main

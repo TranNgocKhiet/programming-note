@@ -1,5 +1,6 @@
 name: Create Pull Request
 
+# Run on push to any branch except main
 on:
   push:
     branches-ignore:
@@ -9,6 +10,8 @@ jobs:
   create-pull-request:
     runs-on: ubuntu-latest
 
+    # Give permisson to create or edit pull request
+    # Give permisson to read and write repsitory content for running gh CLI
     permissions:
       pull-requests: write
       contents: write
@@ -17,6 +20,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+        # Check if pull request already exist
       - name: Check if PR already exists
         id: check_pr
         run: |
@@ -37,12 +41,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.MY_PAT }}
 
+      # If no pull request exist, create one
       - name: Create Pull Request
         if: steps.check_pr.outputs.exists == 'false'
         run: |
           gh pr create \
             --base main \
             --title "WIP: ${{ github.ref_name }}" \
-            --body "PR tự động tạo từ nhánh **${{ github.ref_name }}**. Vui lòng kiểm tra và cập nhật mô tả." \
+            --body "Auto create pull request from branch **${{ github.ref_name }}**." \
         env:
           GH_TOKEN: ${{ secrets.MY_PAT }}
