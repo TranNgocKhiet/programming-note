@@ -1,5 +1,6 @@
 name: CI/CD Pipeline
 
+# Run on push to main or pull request to main
 on:
   push:
     branches:
@@ -7,68 +8,79 @@ on:
   pull_request:
 
 jobs:
+  # Job name
   link-check:
+    # Virtual machine to run
     runs-on: ubuntu-latest
     steps:
+      # Download code from repository
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Check link in files
       - name: Run Lychee Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
+          # Stop if any link die
           fail: true
+          # --verbose: show detail when run
+          # --exclude: exclude links that include udemy.com
           args: --verbose --exclude udemy\.com ./content
+        # Give environment variable for private content
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   hugo-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Checkout code
         uses: actions/checkout@v4
+        # Install submodule Git
         with:
           submodules: recursive
 
       - name: Setup Hugo
+        # Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "0.152.2"
 
       - name: Build
+        # Build website to folder public/
+        # --minify: minify HTML/CSS/JS for storage optimization
         run: hugo --minify
 
+      #  .vercel/
+      #    └─ output/
+      #       ├─ static/
+      #       └─ config.json
+      # This is Vercel Output API
       - name: Create Vercel Output Structure
         run: |
-          # 1. Tạo cấu trúc thư mục mà Vercel --prebuilt yêu cầu
+          # Create a folder if it doesn't exist
           mkdir -p .vercel/output/static
 
-          # 2. Sao chép nội dung 'public' vào trong 'static'
+          # Copy website to that folder
           cp -r public/* .vercel/output/static/
 
-          # 3. Tạo file config.json tối thiểu cho Vercel
+          # Create config file to validate version output
           echo '{"version": 3}' > .vercel/output/config.json
 
-      - name: Create Vercel Output Structure
-        run: |
-          mkdir -p .vercel/output/static
-
-          cp -r public/* .vercel/output/static/
-
-          echo '{"version": 3}' > .vercel/output/config.json
-
+      # Upload artifact for Vercel build
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          # Đổi tên artifact cho rõ ràng
           name: vercel-output
-          # Tải lên thư mục .vercel/output mới tạo
           path: .vercel/output
 
   deploy-production:
+    # Require these jobs to succcess
     needs: [link-check, hugo-build]
+    # Only run on main
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      # Download artifact from job hugo-build
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -82,4 +94,8 @@ jobs:
         env:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        # --prebuilt: use build from artifact .vercel/output
+        # --prod: deploy to Production environment
+        # --token: use security token to validate
+        # --yes: skip confirm question
         run: vercel deploy --prebuilt --prod --token ${{ secrets.VERCEL_TOKEN }} --yes
