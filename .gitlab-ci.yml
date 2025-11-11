@@ -1,20 +1,23 @@
-# Sử dụng image Docker Hugo và ghi đè entrypoint
-image:
-  name: klakegg/hugo:ext-alpine
-  # Dòng này RẤT QUAN TRỌNG:
-  # Nó bảo GitLab CI bỏ qua ENTRYPOINT của image và chạy một shell bình thường.
-  entrypoint: [""]
+image: debian:stable-slim
 
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive
+  HUGO_VERSION: "0.152.0"
+
+before_script:
+  - apt-get update && apt-get install -y curl git tar bash
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+  - tar -xzf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+  - chmod +x hugo
+  - mv hugo /usr/local/bin/
+  - hugo version
+  - git submodule update --init --recursive
 
 pages:
+  stage: deploy
   script:
-    # Bây giờ lệnh 'hugo' sẽ chạy BÊN TRONG shell, chứ không phải bị coi là một shell.
-    - hugo
+    - hugo --minify
   artifacts:
     paths:
       - public
-  rules:
-    # Chỉ chạy khi push lên nhánh 'main'
-    - if: $CI_COMMIT_BRANCH == "main"
+  only:
+    - main
