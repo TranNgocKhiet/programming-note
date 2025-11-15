@@ -1,0 +1,47 @@
+baseURL = '/'
+relativeURLs = true
+languageCode = 'en-us'
+title = 'IT From Scratch'
+theme = 'relearn'
+images = ['img/avatar.png']
+
+[author]
+  email = 'tranngockhiet22062005@gamil.com'
+  name = 'Slayer'
+
+[menu]
+  [[menu.shortcuts]]
+    name = 'GitHub'
+    pre = '<i class="fab fa-github"></i> '
+    url = 'https://github.com/TranNgocKhiet'
+    weight = 1
+  [[menu.shortcuts]]
+    name = 'LinkedIn'
+    pre = '<i class="fab fa-linkedin"></i> '
+    url = 'https://www.linkedin.com/in/khiet-tran-61b163311/'
+    weight = 2
+  [[menu.shortcuts]]
+    name = 'slayersilver2005@gmail.com'
+    pre = '<i class="fas fa-envelope"></i> '
+    url = 'mailto:slayersilver2005@gmail.com'
+    weight = 3
+  
+    
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allow markdown compiler to prersent raw HTML
+
+[markup.goldmark.parser.attribute]
+  block = true # Allow to add attribute to block
+
+[params]
+  logo = ['img/avatar.png']
+  linkTitle = 'IT From Scratch'
+  disableLandingPageButton = true
+  alwaysopen = false
+  collapsibleMenu = false
+  disableLanguageSwitchingButton = true
+  themeVariant = ['blue-dark', 'relearn-dark', 'relearn-light']
+  showVisitedLinks = false
+  disableShortcutsTitle = false # Name by default is "MORE"

@@ -1,0 +1,8 @@
+@import 'theme-blue.css';
+
+:root {
+  --MAIN-TEXT-color: rgba(255, 255, 255, 1); /* text color of content and titles */
+  --MAIN-BG-color: rgba(32, 32, 32, 1); /* background color of content */
+  --MAIN-TITLES-TEXT-color: rgba(255, 255, 255, 1); /* text color of titles and transparent box titles */
+  --MAIN-TITLES-H1-TEXT-color: rgba(255, 255, 255, 1); /* text color of h1 titles */
+}

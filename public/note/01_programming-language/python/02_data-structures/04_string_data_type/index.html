@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
+    <meta name="description" content="String Data TypeString is like a list of characters, so is inherits list attributes Escape Characters | \Input
+print(&#39;Say hi to Bob\&#39;s mother.&#39;)Output
+Say hi to Bob&#39;s mother.Raw Strings | rInput">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="String Data Type :: IT From Scratch">
+    <meta name="twitter:description" content="String Data TypeString is like a list of characters, so is inherits list attributes Escape Characters | \Input
+print(&#39;Say hi to Bob\&#39;s mother.&#39;)Output
+Say hi to Bob&#39;s mother.Raw Strings | rInput">
+    <meta property="og:url" content="//localhost:1313/note/01_programming-language/python/02_data-structures/04_string_data_type/index.html">
+    <meta property="og:site_name" content="IT From Scratch">
+    <meta property="og:title" content="String Data Type :: IT From Scratch">
+    <meta property="og:description" content="String Data TypeString is like a list of characters, so is inherits list attributes Escape Characters | \Input
+print(&#39;Say hi to Bob\&#39;s mother.&#39;)Output
+Say hi to Bob&#39;s mother.Raw Strings | rInput">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="My Programming Note">
+    <meta itemprop="name" content="String Data Type :: IT From Scratch">
+    <meta itemprop="description" content="String Data TypeString is like a list of characters, so is inherits list attributes Escape Characters | \Input
+print(&#39;Say hi to Bob\&#39;s mother.&#39;)Output
+Say hi to Bob&#39;s mother.Raw Strings | rInput">
+    <meta itemprop="wordCount" content="549">
+    <title>String Data Type :: IT From Scratch</title>
+    <link href="../../../../../images/favicon.png?1763232037" rel="icon" type="image/png">
+    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763232037" rel="stylesheet">
+    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763232037" defer></script>
+    <script src="../../../../../js/search-lunr.js?1763232037" defer></script>
+    <script src="../../../../../js/search.js?1763232037" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="../../../../../searchindex.en.js?1763232037";
+    </script>
+    <script src="../../../../../js/lunr/lunr.min.js?1763232037" defer></script>
+    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763232037" defer></script>
+    <script src="../../../../../js/lunr/lunr.multi.min.js?1763232037" defer></script>
+    <script src="../../../../../js/lunr/lunr.en.min.js?1763232037" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763232037" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763232037" rel="stylesheet"></noscript>
+    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763232037" rel="stylesheet">
+    <link href="../../../../../css/theme.css?1763232037" rel="stylesheet">
+    <link href="../../../../../css/format-html.css?1763232037" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/note\/01_programming-language\/python\/02_data-structures\/04_string_data_type\/index.html';
+      window.relearn.relBasePath='..\/..\/..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..\/..';
+      window.relearn.absBaseUri='\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue-dark', 'relearn-dark', 'relearn-light' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="../../../../../note/01_programming-language/python/02_data-structures/04_string_data_type/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#escape-characters--">Escape Characters | <code>\</code></a></li>
+    <li><a href="#raw-strings--r">Raw Strings | <code>r</code></a></li>
+    <li><a href="#multiline-strings---">Multiline Strings | <code>&#39;&#39;&#39; &#39;&#39;&#39;</code></a></li>
+    <li><a href="#multiline-comments---">Multiline Comments | <code>&#34;&#34;&#34;&#34; &#34;&#34;&#34;&#34;</code></a></li>
+    <li><a href="#f-strings--f">F-Strings | <code>f</code></a></li>
+    <li><a href="#f-string-alternatives--s-and-format">F-String Alternatives | <code>%s</code> and <code>format()</code></a></li>
+    <li><a href="#changing-the-case--upper-and-lower">Changing the Case | <code>upper()</code> and <code>lower()</code></a></li>
+    <li><a href="#checking-the-case--isupper-and-islower">Checking the Case | <code>isupper()</code> and ```islower()``</a></li>
+    <li><a href="#checking-string-characteristics--isalpha-isalnum-isdecimal-isspace-and-istitle">Checking String Characteristics | <code>isalpha()</code>, <code>isalnum()</code>, <code>isdecimal()</code>, <code>isspace()</code> and <code>istitle()</code></a></li>
+    <li><a href="#checking-the-start-or-end-of-a-string--startswith-and-endswith">Checking the Start or End of a String | <code>startswith()</code> and <code>endswith()</code></a></li>
+    <li><a href="#joining-strings--join">Joining Strings | <code>join()</code></a></li>
+    <li><a href="#splitting-strings--split">Splitting Strings | <code>split()</code></a></li>
+    <li><a href="#justifying-text--rjust-and-ljust">Justifying Text | <code>rjust</code> and <code>ljust</code></a></li>
+    <li><a href="#centering-text--center">Centering Text | <code>center()</code></a></li>
+    <li><a href="#removing-whitespace--strip-lstrip-and-rstrip">Removing Whitespace | <code>strip()</code>, <code>lstrip()</code> and <code>rstrip()</code></a></li>
+    <li><a href="#numeric-code-points-of-characters--ord-and-chr">Numeric Code Points of Characters | <code>ord()</code> and <code>chr()</code></a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../index.html"><span itemprop="name">Home Page</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/index.html"><span itemprop="name">My Programming Note</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/01_programming-language/index.html"><span itemprop="name">Programming Language</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/01_programming-language/python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/01_programming-language/python/02_data-structures/index.html"><span itemprop="name">Data Structures</span></a><meta itemprop="position" content="5">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">String Data Type</span><meta itemprop="position" content="6"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../../note/01_programming-language/python/02_data-structures/02_dictionary_data_type/index.html" title="Dictionary Data Type (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../../note/01_programming-language/python/02_data-structures/05_tuple_data_type/index.html" title="Tuple Data Type (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable note" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="string-data-type">String Data Type</h1>
+
+<h1 id="string-data-type">String Data Type<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<ul>
+<li>String is like a list of characters, so is inherits list attributes</li>
+</ul>
+<h2 id="escape-characters--">Escape Characters | <code>\</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Say hi to Bob</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">s mother.&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Say hi to Bob&#39;s mother.</code></pre></div>
+<hr>
+<h2 id="raw-strings--r">Raw Strings | <code>r</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;The file is in C:\Users\Alice\Desktop&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>The file is in C:\Users\Alice\Desktop</code></pre></div>
+<hr>
+<h2 id="multiline-strings---">Multiline Strings | <code>''' '''</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;&#39;&#39;Dear Alice,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Can you feed Eve&#39;s cat this weekend?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Sincerely,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Bob&#39;&#39;&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Dear Alice,
+
+Can you feed Eve&#39;s cat this weekend?
+
+Sincerely,
+Bob</code></pre></div>
+<hr>
+<h2 id="multiline-comments---">Multiline Comments | <code>&quot;&quot;&quot;&quot; &quot;&quot;&quot;&quot;</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;This is a test Python program.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Written by Al Sweigart al@inventwithpython.com
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">This program was designed for Python 3, not Python 2.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">say_hello</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;This function prints hello.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    It does not return anything.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Hello!&#39;</span>)</span></span></code></pre></div>
+<hr>
+<h2 id="f-strings--f">F-Strings | <code>f</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74"> years old.&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;In ten years I will be </span><span style="color:#e6db74">{</span>age <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>My name is Al. I am 4000 years old.
+In ten years I will be 4010</code></pre></div>
+<hr>
+<h2 id="f-string-alternatives--s-and-format">F-String Alternatives | <code>%s</code> and <code>format()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> years old.&#39;</span> <span style="color:#f92672">%</span> (name, age))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;In ten years I will be </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (age <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span>))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>My name is Al. I am 4000 years old.
+In ten years I will be 4010</code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">. I am </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> years old.&#39;</span><span style="color:#f92672">.</span>format(name, age))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>My name is Al. I am 4000 years old.</code></pre></div>
+<ul>
+<li>You can put the index integer (starting at 0) inside the curly brackets to note which of the arguments to format() should be inserted</li>
+</ul>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Al&#39;</span>
+</span></span><span style="display:flex;"><span>age <span style="color:#f92672">=</span> <span style="color:#ae81ff">4000</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{1}</span><span style="color:#e6db74"> years ago, </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74"> was born and named </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">.&#39;</span><span style="color:#f92672">.</span>format(name, age))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>4000 years ago, Al was born and named Al.</code></pre></div>
+<hr>
+<h2 id="changing-the-case--upper-and-lower">Changing the Case | <code>upper()</code> and <code>lower()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello, world!&#39;</span>
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> spam<span style="color:#f92672">.</span>upper()
+</span></span><span style="display:flex;"><span>print(spam)
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> spam<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>print(spam)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>HELLO, WORLD!
+hello, world!</code></pre></div>
+<hr>
+<h2 id="checking-the-case--isupper-and-islower">Checking the Case | <code>isupper()</code> and ```islower()``<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello, world!&#39;</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>isupper())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;HELLO&#39;</span><span style="color:#f92672">.</span>isupper())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc12345&#39;</span><span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;12345&#39;</span><span style="color:#f92672">.</span>islower())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;12345&#39;</span><span style="color:#f92672">.</span>isupper())</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>False
+False
+True
+True
+False
+False</code></pre></div>
+<hr>
+<h2 id="checking-string-characteristics--isalpha-isalnum-isdecimal-isspace-and-istitle">Checking String Characteristics | <code>isalpha()</code>, <code>isalnum()</code>, <code>isdecimal()</code>, <code>isspace()</code> and <code>istitle()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">.</span>isalpha())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello123&#39;</span><span style="color:#f92672">.</span>isalpha())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello123&#39;</span><span style="color:#f92672">.</span>isalnum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;hello&#39;</span><span style="color:#f92672">.</span>isalnum())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;123&#39;</span><span style="color:#f92672">.</span>isdecimal())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;    &#39;</span><span style="color:#f92672">.</span>isspace())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;This Is Title Case&#39;</span><span style="color:#f92672">.</span>istitle())</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>True
+False
+True
+True
+True
+True
+True</code></pre></div>
+<hr>
+<h2 id="checking-the-start-or-end-of-a-string--startswith-and-endswith">Checking the Start or End of a String | <code>startswith()</code> and <code>endswith()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;Hello&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;world!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc123&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;abcdef&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;abc123&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;12&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, world!&#39;</span><span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>True
+True
+False
+False
+True
+True</code></pre></div>
+<hr>
+<h2 id="joining-strings--join">Joining Strings | <code>join()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;, &#39;</span><span style="color:#f92672">.</span>join([<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;rats&#39;</span>, <span style="color:#e6db74">&#39;bats&#39;</span>]))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>cats, rats, bats</code></pre></div>
+<hr>
+<h2 id="splitting-strings--split">Splitting Strings | <code>split()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is Simon&#39;</span><span style="color:#f92672">.</span>split())
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My name is Simon&#39;</span><span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;m&#39;</span>))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[&#39;My&#39;, &#39;name&#39;, &#39;is&#39;, &#39;Simon&#39;]
+[&#39;My na&#39;, &#39;e is Si&#39;, &#39;on&#39;]</code></pre></div>
+<hr>
+<h2 id="justifying-text--rjust-and-ljust">Justifying Text | <code>rjust</code> and <code>ljust</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello, World&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>ljust(<span style="color:#ae81ff">10</span>)) </span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>     Hello
+               Hello
+        Hello, World
+Hello     </code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>rjust(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;*&#39;</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>ljust(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;-&#39;</span>))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>***************Hello
+Hello---------------    </code></pre></div>
+<hr>
+<h2 id="centering-text--center">Centering Text | <code>center()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>center(<span style="color:#ae81ff">20</span>))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span><span style="color:#f92672">.</span>center(<span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;=&#39;</span>))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>       Hello        
+=======Hello========    </code></pre></div>
+<hr>
+<h2 id="removing-whitespace--strip-lstrip-and-rstrip">Removing Whitespace | <code>strip()</code>, <code>lstrip()</code> and <code>rstrip()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;    Hello, World    &#39;</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>lstrip())
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>rstrip())
+</span></span><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SpamSpamBaconSpamEggsSpamSpam&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A string argument will specify which characters on the ends to strip</span>
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;ampS&#39;</span>))
+</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;Spam&#39;</span>))  </span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Hello, World
+Hello, World    
+    Hello, World
+BaconSpamEggs
+BaconSpamEggs</code></pre></div>
+<hr>
+<h2 id="numeric-code-points-of-characters--ord-and-chr">Numeric Code Points of Characters | <code>ord()</code> and <code>chr()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;A&#39;</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;4&#39;</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;!&#39;</span>))
+</span></span><span style="display:flex;"><span>print(chr(<span style="color:#ae81ff">65</span>))
+</span></span><span style="display:flex;"><span>print(ord(<span style="color:#e6db74">&#39;A&#39;</span>) <span style="color:#f92672">&lt;</span> ord(<span style="color:#e6db74">&#39;B&#39;</span>))
+</span></span><span style="display:flex;"><span>print(chr(ord(<span style="color:#e6db74">&#39;A&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>65
+52
+33
+A
+True
+B</code></pre></div>
+<hr>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="../../../../../index.html" style="display:flex; gap: 1rem; ">
+  <img src="../../../../../images/logo.png" alt="brand logo">
+  <div class="logo-title" style="display: flex; justify-content: center; align-items: center; font-size: 1.5rem;">IT From Scratch</div>
+</a>
+        </div>
+        <search><form action="../../../../../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent alwaysopen " data-nav-url="../../../../../note/index.html"><a class="padding" href="../../../../../note/index.html"><i class="far fa-sticky-note"></i> My Programming Note</a><ul id="R-subsections-81b0aa1fb369232a7bc48846a5daf4d9" class="collapsible-menu">
+            <li class="parent " data-nav-url="../../../../../note/01_programming-language/index.html"><input type="checkbox" id="R-section-c5aff2076aa8144a9a6847b47ae59b1d" aria-controls="R-subsections-c5aff2076aa8144a9a6847b47ae59b1d" checked><label for="R-section-c5aff2076aa8144a9a6847b47ae59b1d"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Programming Language</span></label><a class="padding" href="../../../../../note/01_programming-language/index.html"><i class="fas fa-code"></i> Programming Language</a><ul id="R-subsections-c5aff2076aa8144a9a6847b47ae59b1d" class="collapsible-menu">
+            <li class="parent " data-nav-url="../../../../../note/01_programming-language/python/index.html"><input type="checkbox" id="R-section-c69d871f3e00ad3b63d34e3e5635cd17" aria-controls="R-subsections-c69d871f3e00ad3b63d34e3e5635cd17" checked><label for="R-section-c69d871f3e00ad3b63d34e3e5635cd17"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="../../../../../note/01_programming-language/python/index.html">Python</a><ul id="R-subsections-c69d871f3e00ad3b63d34e3e5635cd17" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/01_source-references/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_source-references/index.html">01. Source References</a></li>
+            <li class="parent " data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/index.html"><input type="checkbox" id="R-section-2457555632dc770731e5d7cb02876ce9" aria-controls="R-subsections-2457555632dc770731e5d7cb02876ce9" checked><label for="R-section-2457555632dc770731e5d7cb02876ce9"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Data Structures</span></label><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/index.html">02. Data Structures</a><ul id="R-subsections-2457555632dc770731e5d7cb02876ce9" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/02_dictionary_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/02_dictionary_data_type/index.html">Dictionary Data Type</a></li>
+            <li class="active " data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/04_string_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/04_string_data_type/index.html">String Data Type</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/05_tuple_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/05_tuple_data_type/index.html">Tuple Data Type</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/06_set_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/06_set_data_type/index.html">Set Data Type</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/07_comparision/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/07_comparision/index.html">Comparision</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/01_list_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/01_list_data_type/index.html">List Data Type</a></li></ul></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/03_operators/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/03_operators/index.html">03. Operator</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/04_statements/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/04_statements/index.html">04. Statements</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/05_functions/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/05_functions/index.html">05. Functions</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/06_parameters/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/06_parameters/index.html">06. Parameters</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/07_classes/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/07_classes/index.html">07. Classes</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/08_files/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/08_files/index.html">08. Files</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/09_libraries/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/09_libraries/index.html">09. Libraries</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/10_regular-expressions/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/10_regular-expressions/index.html">10. Regular Expressions</a></li>
+            <li class="" data-nav-url="../../../../../note/01_programming-language/python/11_debugging/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/11_debugging/index.html">11. Debugging</a></li></ul></li></ul></li>
+            <li class="" data-nav-url="../../../../../note/02_operating-system/index.html"><input type="checkbox" id="R-section-72cabb372e9ddfd0ca9d90024a3ef5a5" aria-controls="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5"><label for="R-section-72cabb372e9ddfd0ca9d90024a3ef5a5"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Operating System</span></label><a class="padding" href="../../../../../note/02_operating-system/index.html">Operating System</a><ul id="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/02_operating-system/bash/index.html"><a class="padding" href="../../../../../note/02_operating-system/bash/index.html">Bash</a></li>
+            <li class="" data-nav-url="../../../../../note/02_operating-system/linux/index.html"><input type="checkbox" id="R-section-1a0607c277123ef8a772efb392324e5d" aria-controls="R-subsections-1a0607c277123ef8a772efb392324e5d"><label for="R-section-1a0607c277123ef8a772efb392324e5d"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Linux</span></label><a class="padding" href="../../../../../note/02_operating-system/linux/index.html">Linux</a><ul id="R-subsections-1a0607c277123ef8a772efb392324e5d" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/02_operating-system/linux/commands/index.html"><a class="padding" href="../../../../../note/02_operating-system/linux/commands/index.html">Commands</a></li>
+            <li class="" data-nav-url="../../../../../note/02_operating-system/linux/ubuntu/index.html"><a class="padding" href="../../../../../note/02_operating-system/linux/ubuntu/index.html">Ubuntu</a></li></ul></li></ul></li>
+            <li class="" data-nav-url="../../../../../note/03_source-control/index.html"><input type="checkbox" id="R-section-ac1d6927bbe9ff8c128e19c91ced14f0" aria-controls="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0"><label for="R-section-ac1d6927bbe9ff8c128e19c91ced14f0"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Source Control</span></label><a class="padding" href="../../../../../note/03_source-control/index.html">Source Control</a><ul id="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/03_source-control/github/index.html"><a class="padding" href="../../../../../note/03_source-control/github/index.html">GitHub</a></li>
+            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/index.html"><input type="checkbox" id="R-section-2c0cae0df36b0d16e42a4840ec6c366f" aria-controls="R-subsections-2c0cae0df36b0d16e42a4840ec6c366f"><label for="R-section-2c0cae0df36b0d16e42a4840ec6c366f"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Gitlab</span></label><a class="padding" href="../../../../../note/03_source-control/gitlab/index.html">Gitlab</a><ul id="R-subsections-2c0cae0df36b0d16e42a4840ec6c366f" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/index.html"><input type="checkbox" id="R-section-3b8d79f55959d68b6474ff07bc27d263" aria-controls="R-subsections-3b8d79f55959d68b6474ff07bc27d263"><label for="R-section-3b8d79f55959d68b6474ff07bc27d263"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CI/CD Template</span></label><a class="padding" href="../../../../../note/03_source-control/gitlab/template/index.html">CI/CD Template</a><ul id="R-subsections-3b8d79f55959d68b6474ff07bc27d263" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/01_build_and_test_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/01_build_and_test_template/index.html">Build &amp; Test Template</a></li>
+            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/02_deployment_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/02_deployment_template/index.html">Deployment Template</a></li>
+            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/03_security_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/03_security_template/index.html">Security Template</a></li>
+            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/04_other_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/04_other_template/index.html">Other Template</a></li></ul></li>
+            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/create-connection/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/create-connection/index.html">Create Connection</a></li></ul></li></ul></li>
+            <li class="" data-nav-url="../../../../../note/04_virtual-machine/index.html"><input type="checkbox" id="R-section-174921e347b3c11effb7c9f708890ddf" aria-controls="R-subsections-174921e347b3c11effb7c9f708890ddf"><label for="R-section-174921e347b3c11effb7c9f708890ddf"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Virtual Machine</span></label><a class="padding" href="../../../../../note/04_virtual-machine/index.html">Virtual Machine</a><ul id="R-subsections-174921e347b3c11effb7c9f708890ddf" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/04_virtual-machine/virtual-box/index.html"><a class="padding" href="../../../../../note/04_virtual-machine/virtual-box/index.html">Virtual Box</a></li></ul></li>
+            <li class="" data-nav-url="../../../../../note/05_cloud/index.html"><input type="checkbox" id="R-section-e5ca58342a8124a4e97c89f37782db22" aria-controls="R-subsections-e5ca58342a8124a4e97c89f37782db22"><label for="R-section-e5ca58342a8124a4e97c89f37782db22"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Cloud</span></label><a class="padding" href="../../../../../note/05_cloud/index.html"><i class="fas fa-cloud"></i> Cloud</a><ul id="R-subsections-e5ca58342a8124a4e97c89f37782db22" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/05_cloud/aws/index.html"><input type="checkbox" id="R-section-22950c00d752d377cb55ee167f374578" aria-controls="R-subsections-22950c00d752d377cb55ee167f374578"><label for="R-section-22950c00d752d377cb55ee167f374578"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu AWS</span></label><a class="padding" href="../../../../../note/05_cloud/aws/index.html">AWS</a><ul id="R-subsections-22950c00d752d377cb55ee167f374578" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/05_cloud/aws/lambda/index.html"><input type="checkbox" id="R-section-036e12aebdbb7d09e458800ed7507fef" aria-controls="R-subsections-036e12aebdbb7d09e458800ed7507fef"><label for="R-section-036e12aebdbb7d09e458800ed7507fef"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu AWS Lambda</span></label><a class="padding" href="../../../../../note/05_cloud/aws/lambda/index.html">AWS Lambda</a><ul id="R-subsections-036e12aebdbb7d09e458800ed7507fef" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../../note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html"><a class="padding" href="../../../../../note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html">Example</a></li></ul></li></ul></li></ul></li>
+            <li class="" data-nav-url="../../../../../note/06_office/index.html"><a class="padding" href="../../../../../note/06_office/index.html">Office</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005@gmail.com</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-blue-dark" value="blue-dark" selected>Blue Dark</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763232037" defer></script>
+    <script src="../../../../../js/theme.js?1763232037" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

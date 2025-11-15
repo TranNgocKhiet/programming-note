@@ -4,3 +4,9 @@
 [submodule "themes/hugo-book-main"]
 	path = themes/hugo-book-main
 	url = https://github.com/alex-shpak/hugo-book.git
+[submodule "themes/relearn"]
+	path = themes/relearn
+	url = https://github.com/McShelby/hugo-theme-relearn.git
+[submodule "themes/learn"]
+	path = themes/learn
+	url = https://github.com/matcornic/hugo-theme-learn.git
