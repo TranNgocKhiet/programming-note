@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CI/CD Template :: IT From Scratch</title>
-    <link>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/index.html</link>
+    <link>/note/03_source-control/gitlab/02_ci-cd-template/index.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/note/03_source-control/gitlab/02_ci-cd-template/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build &amp; Test Template</title>
-      <link>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/a_build_and_test_template/index.html</link>
+      <link>/note/03_source-control/gitlab/02_ci-cd-template/a_build_and_test_template/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/a_build_and_test_template/index.html</guid>
+      <guid>/note/03_source-control/gitlab/02_ci-cd-template/a_build_and_test_template/index.html</guid>
       <description>Android.gitlab-ci.yml Bash.gitlab-ci.yml C++.gitlab-ci.yml Clojure.gitlab-ci.yml Composer.gitlab-ci.yml Crystal.gitlab-ci.yml Dart.gitlab-ci.yml&#xD;Django.gitlab-ci.yml dotNET.gitlab-ci.yml Elixir.gitlab-ci.yml Flutter.gitlab-ci.yml Go.gitlab-ci.yml Gradle.gitlab-ci.yml Grails.gitlab-ci.yml iOS-Fastlane.gitlab-ci.yml Java.gitlab-ci.yml Jekyll.gitlab-ci.yml Julia.gitlab-ci.yml Laravel.gitlab-ci.yml LaTeX.gitlab-ci.yml Maven.gitlab-ci.yml Mono.gitlab-ci.yml Nodejs.gitlab-ci.yml OCaml.gitlab-ci.yml Packer.gitlab-ci.yml PHP.gitlab-ci.yml Python.gitlab-ci.yml Rails.gitlab-ci.yml Ruby.gitlab-ci.yml Rust.gitlab-ci.yml Scala.gitlab-ci.yml Swift.gitlab-ci.yml Symfony.gitlab-ci.yml Wordpress.gitlab-ci.yml Docker.gitlab-ci.yml&#xD;Kaniko.gitlab-ci.yml&#xD;Buildah.gitlab-ci.yml&#xD;Godot.gitlab-ci.yml&#xD;KiCad.gitlab-ci.yml&#xD;Auto-DevOps.gitlab-ci.yml</description>
     </item>
     <item>
       <title>Deployment Template</title>
-      <link>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/b_deployment_template/index.html</link>
+      <link>/note/03_source-control/gitlab/02_ci-cd-template/b_deployment_template/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/b_deployment_template/index.html</guid>
+      <guid>/note/03_source-control/gitlab/02_ci-cd-template/b_deployment_template/index.html</guid>
       <description>Cloud and Virtual Machine&#xD;AWS/CF-Provision-and-Deploy-EC2.gitlab-ci.yml&#xD;Dùng CloudFormation để tạo hạ tầng và deploy lên EC2 AWS/Deploy-EC2.gitlab-ci.yml&#xD;Deploy một ứng dụng lên EC2 AWS/ECS.gitlab-ci.yml&#xD;Deploy lên Dịch vụ AWS ECS Jobs/Deploy/ECS.gitlab-ci.yml&#xD;Một template công việc (job) để deploy lên ECS, thường được dùng bởi Auto DevOps Jobs/Deploy.gitlab-ci.yml&#xD;Template công việc deploy cơ bản GCP.gitlab-ci.yml&#xD;Template chung cho Google Cloud Platform Heroku.gitlab-ci.yml&#xD;Deploy lên Heroku Serverless.gitlab-ci.yml&#xD;Template chung cho framework Serverless AWS/EKS.gitlab-ci.yml&#xD;Deploy lên Amazon EKS - Kubernetes AWS/lambda-deploy.gitlab-ci.yml&#xD;Deploy hàm AWS Lambda Container &amp; Kubernetes&#xD;OpenShift.gitlab-ci.yml&#xD;Dành cho việc triển khai lên nền tảng OpenShift Packer.gitlab-ci.yml&#xD;Dùng để build và đẩy (push) Docker image Infrastructure as Code (IaC) Deploying&#xD;Terraform.gitlab-ci.yml&#xD;Template chính cho Terraform để quản lý hạ tầng Terraform.latest.gitlab-ci.yml&#xD;Luôn dùng phiên bản Terraform mới nhất Terraform.gitlab-ci.yml&#xD;Dùng để tạo các machine image PaaS Platform &amp; Static Website&#xD;Pages/Auto-DevOps.gitlab-ci.yml&#xD;Dùng cho GitLab Pages Pages/Hugo.gitlab-ci.yml&#xD;Dùng cho trang tĩnh Hugo Pages/Jekyll.gitlab-ci.yml&#xD;Dùng cho trang tĩnh Jekyll Pages/HTML.gitlab-ci.yml&#xD;Template cơ bản nhất, nó không “build” gì cả, chỉ đơn giản là lấy một thư mục (thường là public) chứa các tệp HTML/CSS/JS tĩnh của bạn và deploy chúng Pages/Gatsby.gitlab-ci.yml&#xD;Dùng cho Gatsby để build các trang web tĩnh hiệu suất cao bằng React và GraphQL Pages/Docusaurus.gitlab-ci.yml&#xD;Dùng để build và deploy các trang web làm bằng Docusaurus. Đây là SSG do Meta (Facebook) tạo ra, rất mạnh mẽ để xây dựng các trang tài liệu (documentation), đặc biệt là cho các dự án React Pages/Eleventy.gitlab-ci.yml&#xD;Dùng cho Eleventy (11ty). Đây là một SSG hiện đại, linh hoạt và rất nhẹ, không phụ thuộc vào một framework JavaScript cụ thể (như React hay Vue) Pages/GitBook.gitlab-ci.yml&#xD;Dùng cho GitBook, một công cụ chuyên dụng để xây dựng các cuốn sách trực tuyến, tài liệu kỹ thuật, hoặc cơ sở tri thức (knowledge base) đẹp mắt Pages/MkDocs.gitlab-ci.yml&#xD;Dùng cho MkDocs, một SSG viết bằng Python, được thiết kế đặc biệt để tạo các trang tài liệu (docs) từ các tệp Markdown một cách nhanh chóng và đơn giản. Pages/Pelican.gitlab-ci.yml&#xD;Dùng cho Pelican, một SSG khác cũng được viết bằng Python, thường được dùng để tạo blog và các trang web cá nhân. Pages/VuePress.gitlab-ci.yml&#xD;Dùng cho VuePress, một SSG được phát triển bởi nhóm Vue.js, tối ưu hóa cho việc viết tài liệu kỹ thuật, với các tính năng tích hợp sẵn cho việc này.</description>
     </item>
     <item>
       <title>Security Template</title>
-      <link>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/c_security_template/index.html</link>
+      <link>/note/03_source-control/gitlab/02_ci-cd-template/c_security_template/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/c_security_template/index.html</guid>
+      <guid>/note/03_source-control/gitlab/02_ci-cd-template/c_security_template/index.html</guid>
       <description>Static Application Security Testing (SAST)&#xD;Jobs/SAST.gitlab-ci.yml&#xD;Template này thêm một job quét mã nguồn tĩnh Nó hoạt động như một người “soi” code tự động, đọc qua code (Java, Python, C#, Go…) ngay cả khi chúng chưa được build hay chạy Nó tìm kiếm các mẫu code “nguy hiểm” có thể dẫn đến lỗ hổng, như nguy cơ SQL Injection hoặc xử lý dữ liệu đầu vào (nguy cơ XSS) Dynamic Application Security Testing (DAST)&#xD;Jobs/DAST.gitlab-ci.yml&#xD;Template này chạy một job “tấn công” ứng dụng web đang chạy Nó không đọc code. Thay vào đó, nó hoạt động như một hacker “mũ trắng” Sau khi đã build và deploy ứng dụng (ví dụ, deploy vào một “review environment”), job DAST sẽ cố gắng “tấn công” ứng dụng đó từ bên ngoài Nó gửi đi các payload độc hại để tìm các lỗ hổng mà chỉ có thể phát hiện được khi ứng dụng đang chạy (ví dụ: “Chuyện gì xảy ra nếu tôi nhập một đoạn script vào ô tìm kiếm?”) Infrastructure as Code (IaC) Scanning&#xD;Jobs/SAST-IaC.gitlab-ci.yml&#xD;Quét các tệp cấu hình hạ tầng Thay vì quét code ứng dụng, nó quét các tệp định nghĩa hạ tầng như Terraform (.tf), AWS CloudFormation, hay Dockerfile Nó tìm các lỗi “cài đặt” bảo mật, ví dụ: “Bạn đã mở cổng 22 (SSH) cho toàn bộ internet” hoặc “Bạn đã tạo một S3 bucket cho phép truy cập công khai” Container Scanning&#xD;Jobs/Container-Scanning.gitlab-ci.yml&#xD;Quét các ảnh (image) container (ví dụ: Docker image) Một Docker image được xây dựng từ nhiều “lớp” (layers), bao gồm một hệ điều hành cơ sở (như Ubuntu) và các thư viện khác Job này sẽ “mở” image của bạn ra và đối chiếu danh sách tất cả các phần mềm bên trong với một cơ sở dữ liệu về lỗ hổng đã biết (CVEs) Nó sẽ cảnh báo bạn nếu, ví dụ, “Image của bạn đang dùng một phiên bản OpenSSL đã lỗi thời và có lỗ hổng nghiêm trọng.” Secret Detection&#xD;Jobs/Secret-Detection.gitlab-ci.yml&#xD;Quét code và lịch sử commit để tìm thông tin nhạy cảm (secrets) bị lộ Đây là một lỗi rất phổ biến. Lập trình viên đôi khi vô tình “commit” (đẩy) các thông tin nhạy cảm như API key, mật khẩu database, hoặc token truy cập vào Git Job này sẽ quét toàn bộ dự án của bạn (bao gồm cả lịch sử) để tìm các chuỗi văn bản trông giống như một “secret” và cảnh báo bạn ngay lập tức Dependency Scanning + License Scanning&#xD;Jobs/Dependency-Scanning.gitlab-ci.yml&#xD;Jobs/License-Scanning.gitlab-ci.yml&#xD;Quét các thư viện bên ngoài (dependencies) mà dự án sử dụng</description>
     </item>
     <item>
       <title>Other Template</title>
-      <link>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/d_other_template/index.html</link>
+      <link>/note/03_source-control/gitlab/02_ci-cd-template/d_other_template/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/d_other_template/index.html</guid>
+      <guid>/note/03_source-control/gitlab/02_ci-cd-template/d_other_template/index.html</guid>
       <description>Other Template&#xD;Jobs/Code-Quality.gitlab-ci.yml&#xD;Quét code để tìm các vấn đề về “chất lượng” (độ phức tạp, code trùng lặp, lỗi cú pháp) thay vì lỗ hổng bảo mật Jobs/Browser-Performance.gitlab-ci.yml&#xD;Kiểm tra hiệu suất (tốc độ tải) của trang web sau khi deploy</description>
     </item>
   </channel>

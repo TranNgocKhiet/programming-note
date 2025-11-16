@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Office :: IT From Scratch</title>
-    <link>//localhost:1313/note/06_office/index.html</link>
+    <link>/note/06_office/index.html</link>
     <description>Install guide&#xD;Go to this website https://config.office.com/deploymentsettings For Office Suites, choose Office LTSC Standard 20XX - Volume License Check Apps you want to install Click Next Select primary language Click Next twice For Upgrade options, turn off Uninstall any MSI versions of Office, including Visio and Project Click Next three times Click Finish Click Export Choose Office Open XML Formats Click OK Check I accept the terms in the license agreement Click Export Go to this website https://www.microsoft.com/en-us/download/details.aspx?id=49117 Download Office Deployment Tool Copy two downloaded files to a new folder name office in disk C Open CMD as administrator Run this command cd c:\office Then run this setup.exe /configure configuration.xml</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/note/06_office/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/note/06_office/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
