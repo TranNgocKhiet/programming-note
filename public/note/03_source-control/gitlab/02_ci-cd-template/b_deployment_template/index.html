@@ -21,27 +21,27 @@
     <meta itemprop="description" content="Cloud and Virtual MachineAWS/CF-Provision-and-Deploy-EC2.gitlab-ci.ymlDùng CloudFormation để tạo hạ tầng và deploy lên EC2 AWS/Deploy-EC2.gitlab-ci.ymlDeploy một ứng dụng lên EC2 AWS/ECS.gitlab-ci.ymlDeploy lên Dịch vụ AWS ECS Jobs/Deploy/ECS.gitlab-ci.ymlMột template công việc (job) để deploy lên ECS, thường được dùng bởi Auto DevOps Jobs/Deploy.gitlab-ci.ymlTemplate công việc deploy cơ bản GCP.gitlab-ci.ymlTemplate chung cho Google Cloud Platform Heroku.gitlab-ci.ymlDeploy lên Heroku Serverless.gitlab-ci.ymlTemplate chung cho framework Serverless AWS/EKS.gitlab-ci.ymlDeploy lên Amazon EKS - Kubernetes AWS/lambda-deploy.gitlab-ci.ymlDeploy hàm AWS Lambda Container &amp; KubernetesOpenShift.gitlab-ci.ymlDành cho việc triển khai lên nền tảng OpenShift Packer.gitlab-ci.ymlDùng để build và đẩy (push) Docker image Infrastructure as Code (IaC) DeployingTerraform.gitlab-ci.ymlTemplate chính cho Terraform để quản lý hạ tầng Terraform.latest.gitlab-ci.ymlLuôn dùng phiên bản Terraform mới nhất Terraform.gitlab-ci.ymlDùng để tạo các machine image PaaS Platform &amp; Static WebsitePages/Auto-DevOps.gitlab-ci.ymlDùng cho GitLab Pages Pages/Hugo.gitlab-ci.ymlDùng cho trang tĩnh Hugo Pages/Jekyll.gitlab-ci.ymlDùng cho trang tĩnh Jekyll Pages/HTML.gitlab-ci.ymlTemplate cơ bản nhất, nó không “build” gì cả, chỉ đơn giản là lấy một thư mục (thường là public) chứa các tệp HTML/CSS/JS tĩnh của bạn và deploy chúng Pages/Gatsby.gitlab-ci.ymlDùng cho Gatsby để build các trang web tĩnh hiệu suất cao bằng React và GraphQL Pages/Docusaurus.gitlab-ci.ymlDùng để build và deploy các trang web làm bằng Docusaurus. Đây là SSG do Meta (Facebook) tạo ra, rất mạnh mẽ để xây dựng các trang tài liệu (documentation), đặc biệt là cho các dự án React Pages/Eleventy.gitlab-ci.ymlDùng cho Eleventy (11ty). Đây là một SSG hiện đại, linh hoạt và rất nhẹ, không phụ thuộc vào một framework JavaScript cụ thể (như React hay Vue) Pages/GitBook.gitlab-ci.ymlDùng cho GitBook, một công cụ chuyên dụng để xây dựng các cuốn sách trực tuyến, tài liệu kỹ thuật, hoặc cơ sở tri thức (knowledge base) đẹp mắt Pages/MkDocs.gitlab-ci.ymlDùng cho MkDocs, một SSG viết bằng Python, được thiết kế đặc biệt để tạo các trang tài liệu (docs) từ các tệp Markdown một cách nhanh chóng và đơn giản. Pages/Pelican.gitlab-ci.ymlDùng cho Pelican, một SSG khác cũng được viết bằng Python, thường được dùng để tạo blog và các trang web cá nhân. Pages/VuePress.gitlab-ci.ymlDùng cho VuePress, một SSG được phát triển bởi nhóm Vue.js, tối ưu hóa cho việc viết tài liệu kỹ thuật, với các tính năng tích hợp sẵn cho việc này.">
     <meta itemprop="wordCount" content="389">
     <title>Deployment Template :: IT From Scratch</title>
-    <link href="../../../../../images/favicon.png?1763234821" rel="icon" type="image/png">
-    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763234821" rel="stylesheet">
-    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763234821" defer></script>
-    <script src="../../../../../js/search-lunr.js?1763234821" defer></script>
-    <script src="../../../../../js/search.js?1763234821" defer></script>
+    <link href="../../../../../images/favicon.png?1763298241" rel="icon" type="image/png">
+    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763298241" rel="stylesheet">
+    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763298241" defer></script>
+    <script src="../../../../../js/search-lunr.js?1763298241" defer></script>
+    <script src="../../../../../js/search.js?1763298241" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../../../searchindex.en.js?1763234821";
+      window.relearn.index_js_url="../../../../../searchindex.en.js?1763298241";
     </script>
-    <script src="../../../../../js/lunr/lunr.min.js?1763234821" defer></script>
-    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763234821" defer></script>
-    <script src="../../../../../js/lunr/lunr.multi.min.js?1763234821" defer></script>
-    <script src="../../../../../js/lunr/lunr.en.min.js?1763234821" defer></script>
+    <script src="../../../../../js/lunr/lunr.min.js?1763298241" defer></script>
+    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763298241" defer></script>
+    <script src="../../../../../js/lunr/lunr.multi.min.js?1763298241" defer></script>
+    <script src="../../../../../js/lunr/lunr.en.min.js?1763298241" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763234821" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763234821" rel="stylesheet"></noscript>
-    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763234821" rel="stylesheet">
-    <link href="../../../../../css/theme.css?1763234821" rel="stylesheet">
-    <link href="../../../../../css/format-html.css?1763234821" rel="stylesheet" id="R-format-style">
+    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763298241" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763298241" rel="stylesheet"></noscript>
+    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763298241" rel="stylesheet">
+    <link href="../../../../../css/theme.css?1763298241" rel="stylesheet">
+    <link href="../../../../../css/format-html.css?1763298241" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -331,7 +331,7 @@
           <ul class="space collapsible-menu">
             <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
             <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005@gmail.com</a></li>
+            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005</a></li>
           </ul>
         </div>
         <div id="R-footer-margin"></div>
@@ -361,8 +361,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763234821" defer></script>
-    <script src="../../../../../js/theme.js?1763234821" defer></script>
+    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763298241" defer></script>
+    <script src="../../../../../js/theme.js?1763298241" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

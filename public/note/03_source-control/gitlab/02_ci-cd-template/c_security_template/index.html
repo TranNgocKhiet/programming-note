@@ -21,27 +21,27 @@
     <meta itemprop="description" content="Static Application Security Testing (SAST)Jobs/SAST.gitlab-ci.ymlTemplate này thêm một job quét mã nguồn tĩnh Nó hoạt động như một người “soi” code tự động, đọc qua code (Java, Python, C#, Go…) ngay cả khi chúng chưa được build hay chạy Nó tìm kiếm các mẫu code “nguy hiểm” có thể dẫn đến lỗ hổng, như nguy cơ SQL Injection hoặc xử lý dữ liệu đầu vào (nguy cơ XSS) Dynamic Application Security Testing (DAST)Jobs/DAST.gitlab-ci.ymlTemplate này chạy một job “tấn công” ứng dụng web đang chạy Nó không đọc code. Thay vào đó, nó hoạt động như một hacker “mũ trắng” Sau khi đã build và deploy ứng dụng (ví dụ, deploy vào một “review environment”), job DAST sẽ cố gắng “tấn công” ứng dụng đó từ bên ngoài Nó gửi đi các payload độc hại để tìm các lỗ hổng mà chỉ có thể phát hiện được khi ứng dụng đang chạy (ví dụ: “Chuyện gì xảy ra nếu tôi nhập một đoạn script vào ô tìm kiếm?”) Infrastructure as Code (IaC) ScanningJobs/SAST-IaC.gitlab-ci.ymlQuét các tệp cấu hình hạ tầng Thay vì quét code ứng dụng, nó quét các tệp định nghĩa hạ tầng như Terraform (.tf), AWS CloudFormation, hay Dockerfile Nó tìm các lỗi “cài đặt” bảo mật, ví dụ: “Bạn đã mở cổng 22 (SSH) cho toàn bộ internet” hoặc “Bạn đã tạo một S3 bucket cho phép truy cập công khai” Container ScanningJobs/Container-Scanning.gitlab-ci.ymlQuét các ảnh (image) container (ví dụ: Docker image) Một Docker image được xây dựng từ nhiều “lớp” (layers), bao gồm một hệ điều hành cơ sở (như Ubuntu) và các thư viện khác Job này sẽ “mở” image của bạn ra và đối chiếu danh sách tất cả các phần mềm bên trong với một cơ sở dữ liệu về lỗ hổng đã biết (CVEs) Nó sẽ cảnh báo bạn nếu, ví dụ, “Image của bạn đang dùng một phiên bản OpenSSL đã lỗi thời và có lỗ hổng nghiêm trọng.” Secret DetectionJobs/Secret-Detection.gitlab-ci.ymlQuét code và lịch sử commit để tìm thông tin nhạy cảm (secrets) bị lộ Đây là một lỗi rất phổ biến. Lập trình viên đôi khi vô tình “commit” (đẩy) các thông tin nhạy cảm như API key, mật khẩu database, hoặc token truy cập vào Git Job này sẽ quét toàn bộ dự án của bạn (bao gồm cả lịch sử) để tìm các chuỗi văn bản trông giống như một “secret” và cảnh báo bạn ngay lập tức Dependency Scanning &#43; License ScanningJobs/Dependency-Scanning.gitlab-ci.ymlJobs/License-Scanning.gitlab-ci.ymlQuét các thư viện bên ngoài (dependencies) mà dự án sử dụng">
     <meta itemprop="wordCount" content="749">
     <title>Security Template :: IT From Scratch</title>
-    <link href="../../../../../images/favicon.png?1763234821" rel="icon" type="image/png">
-    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763234821" rel="stylesheet">
-    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763234821" defer></script>
-    <script src="../../../../../js/search-lunr.js?1763234821" defer></script>
-    <script src="../../../../../js/search.js?1763234821" defer></script>
+    <link href="../../../../../images/favicon.png?1763298241" rel="icon" type="image/png">
+    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763298241" rel="stylesheet">
+    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763298241" defer></script>
+    <script src="../../../../../js/search-lunr.js?1763298241" defer></script>
+    <script src="../../../../../js/search.js?1763298241" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../../../searchindex.en.js?1763234821";
+      window.relearn.index_js_url="../../../../../searchindex.en.js?1763298241";
     </script>
-    <script src="../../../../../js/lunr/lunr.min.js?1763234821" defer></script>
-    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763234821" defer></script>
-    <script src="../../../../../js/lunr/lunr.multi.min.js?1763234821" defer></script>
-    <script src="../../../../../js/lunr/lunr.en.min.js?1763234821" defer></script>
+    <script src="../../../../../js/lunr/lunr.min.js?1763298241" defer></script>
+    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763298241" defer></script>
+    <script src="../../../../../js/lunr/lunr.multi.min.js?1763298241" defer></script>
+    <script src="../../../../../js/lunr/lunr.en.min.js?1763298241" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763234821" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763234821" rel="stylesheet"></noscript>
-    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763234821" rel="stylesheet">
-    <link href="../../../../../css/theme.css?1763234821" rel="stylesheet">
-    <link href="../../../../../css/format-html.css?1763234821" rel="stylesheet" id="R-format-style">
+    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763298241" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763298241" rel="stylesheet"></noscript>
+    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763298241" rel="stylesheet">
+    <link href="../../../../../css/theme.css?1763298241" rel="stylesheet">
+    <link href="../../../../../css/format-html.css?1763298241" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -308,7 +308,7 @@
           <ul class="space collapsible-menu">
             <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
             <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005@gmail.com</a></li>
+            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005</a></li>
           </ul>
         </div>
         <div id="R-footer-margin"></div>
@@ -338,8 +338,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763234821" defer></script>
-    <script src="../../../../../js/theme.js?1763234821" defer></script>
+    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763298241" defer></script>
+    <script src="../../../../../js/theme.js?1763298241" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

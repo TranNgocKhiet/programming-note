@@ -1,16 +1,16 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Cloud",
-    "content": "",
-    "description": "",
+    "content": "AWS Lambda",
+    "description": "AWS Lambda",
     "tags": [],
     "title": "AWS",
     "uri": "/note/05_cloud/aws/index.html"
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Cloud \u003e AWS",
-    "content": "",
-    "description": "",
+    "content": "With Dynamo and Cognito",
+    "description": "With Dynamo and Cognito",
     "tags": [],
     "title": "AWS Lambda",
     "uri": "/note/05_cloud/aws/lambda/index.html"
@@ -41,19 +41,11 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Programming Language \u003e Python",
-    "content": "NoneType\rIn Python, a value called None represents the absence of a value. The None value is the only value of the NoneType data type. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N. Input\nspam = print('Hello!') None == spam\rOuput\nTrue\rSequence Data Types\rThe Python sequence data types include lists, strings, range objects returned by range(), and tuples. Mutable and Immutable Data types\rA list value is a mutable data type: you can add, remove, or change its values; however, a string is immutable: it cannot be changed Input\nname = 'Zophie a cat' name[7] = 'the'\rOutput\nTraceback (most recent call last):\rFile \"\u003cpython-input-0\u003e\", line 1, in \u003cmodule\u003e\rname[7] = 'the'\rTypeError: 'str' object does not support item assignment\rThe proper way to “mutate” a string is to use slicing and concatenation to build a new string by copying from parts of the old string print(new_name) Input\nname = 'Zophie a cat' new_name = name[0:7] + 'the' + name[8:12]\rOutput\nZophie the cat",
+    "content": "NoneType\rIn Python, a value called None represents the absence of a value. The None value is the only value of the NoneType data type. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N. Input\nspam = print('Hello!') None == spam\rOuput\nTrue\rSequence Data Types\rThe Python sequence data types include lists, strings, range objects returned by range(), and tuples. Mutable and Immutable Data types\rA list value is a mutable data type: you can add, remove, or change its values; however, a string is immutable: it cannot be changed Input\nname = 'Zophie a cat' name[7] = 'the'\rOutput\nTraceback (most recent call last):\rFile \"\u003cpython-input-0\u003e\", line 1, in \u003cmodule\u003e\rname[7] = 'the'\rTypeError: 'str' object does not support item assignment\rThe proper way to “mutate” a string is to use slicing and concatenation to build a new string by copying from parts of the old string print(new_name) Input\nname = 'Zophie a cat' new_name = name[0:7] + 'the' + name[8:12]\rOutput\nZophie the cat\rList Data Type\rDictionary Data Type\rString Data Type\rTuple Data Type\rSet Data Type\rData Type Comparision",
     "description": "NoneType\rIn Python, a value called None represents the absence of a value. The None value is the only value of the NoneType data type. (Other programming languages might call this value null, nil, or undefined). Just like the Boolean True and False values, you must always write None with a capital N. Input\nspam = print('Hello!') None == spam\rOuput",
     "tags": [],
     "title": "Data Structures",
     "uri": "/note/01_programming-language/python/01_data-structures/index.html"
-  },
-  {
-    "breadcrumb": "Home Page \u003e Programming Note \u003e Cloud \u003e AWS \u003e AWS Lambda",
-    "content": "a",
-    "description": "a",
-    "tags": [],
-    "title": "Example with Dynamo and Cognito using Python",
-    "uri": "/note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html"
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Source Control",
@@ -65,16 +57,16 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "Hello, my name is Tran Ngoc Khiet\nThis is my programming note page\nHope is useful for you\nThank for viewing this page\n\u003c3",
-    "description": "Hello, my name is Tran Ngoc Khiet\nThis is my programming note page\nHope is useful for you\nThank for viewing this page\n\u003c3",
+    "content": "Hello, my name is Tran Ngoc Khiet I am student at FPT University HCM Campus I am on the job training at AWS This is my programming note page Hope it is useful for you Thank you for viewing this page \u003c3\nProgramming Note",
+    "description": "Hello, my name is Tran Ngoc Khiet I am student at FPT University HCM Campus I am on the job training at AWS This is my programming note page Hope it is useful for you Thank you for viewing this page \u003c3\nProgramming Note",
     "tags": [],
     "title": "Home Page",
     "uri": "/index.html"
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Operating System",
-    "content": "",
-    "description": "",
+    "content": "Bash\rCommands\rUbuntu",
+    "description": "Bash\rCommands\rUbuntu",
     "tags": [],
     "title": "Linux",
     "uri": "/note/02_operating-system/linux/index.html"
@@ -89,8 +81,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note",
-    "content": "",
-    "description": "",
+    "content": "Python",
+    "description": "Python",
     "tags": [],
     "title": "Programming Language",
     "uri": "/note/01_programming-language/index.html"
@@ -105,8 +97,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Programming Language",
-    "content": "Source References\rBooks\rAutomate the Boring Stuff with Python by Al Sweigart\nCourses\rPython Mastery: The Complete Web Programming Course by Knowledge Nest on Udemy",
-    "description": "Source References\rBooks\rAutomate the Boring Stuff with Python by Al Sweigart\nCourses\rPython Mastery: The Complete Web Programming Course by Knowledge Nest on Udemy",
+    "content": "Source References\rBooks\rAutomate the Boring Stuff with Python by Al Sweigart\nCourses\rPython Mastery: The Complete Web Programming Course by Knowledge Nest on Udemy\nData Structures\rOperators\rStatements\rFunctions\rParameters\rClasses\rFiles\rLibraries\rDebugging\rRegular Expressions",
+    "description": "Source References\rBooks\rAutomate the Boring Stuff with Python by Al Sweigart\nCourses\rPython Mastery: The Complete Web Programming Course by Knowledge Nest on Udemy\nData Structures\rOperators\rStatements\rFunctions\rParameters\rClasses\rFiles\rLibraries\rDebugging\rRegular Expressions",
     "tags": [],
     "title": "Python",
     "uri": "/note/01_programming-language/python/index.html"
@@ -118,6 +110,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Virtual Box",
     "uri": "/note/04_virtual-machine/virtual-box/index.html"
+  },
+  {
+    "breadcrumb": "Home Page \u003e Programming Note \u003e Cloud \u003e AWS \u003e AWS Lambda",
+    "content": "import boto3 import json import os # Create client and handler dynamodb = boto3.resource('dynamodb') cognito_client = boto3.client('cognito-idp') # Get environment variables TABLE_NAME = os.environ.get('TABLE_NAME') USER_POOL_ID = os.environ.get('USER_POOL_ID') table = dynamodb.Table(TABLE_NAME) def build_update_params(updates): update_expression = \"SET \" expression_names = {} expression_values = {} # Use #name and #email to avoid reserved words attribute_map = { \"name\": \"#name\", \"email\": \"#email\", } for key, value in updates.items(): if key in attribute_map: placeholder = f\":{key}\" attr_name = attribute_map[key] update_expression += f\"{attr_name} = {placeholder}, \" expression_values[placeholder] = value expression_names[attr_name] = key update_expression = update_expression.rstrip(\", \") return update_expression, expression_names, expression_values def lambda_handler(event, context): try: if \"body\" in event: body = json.loads(event[\"body\"]) else: body = event user_id = body.get('userId') updates = body.get('updates') if not user_id or not updates: return {'statusCode': 400, 'body': 'Lỗi: Thiếu \"userId\" hoặc \"updates\"'} update_expr, attr_names, attr_values = build_update_params(updates) if not attr_values: return {'statusCode': 400, 'body': 'Không có trường hợp lệ nào để cập nhật'} dynamo_response = table.update_item( Key={'userId': user_id}, UpdateExpression=update_expr, ExpressionAttributeNames=attr_names, ExpressionAttributeValues=attr_values, ReturnValues=\"UPDATED_NEW\" ) if 'email' in updates: new_email = updates['email'] try: cognito_client.admin_update_user_attributes( UserPoolId=USER_POOL_ID, Username=user_id, UserAttributes=[ { 'Name': 'email', 'Value': new_email }, { 'Name': 'email_verified', 'Value': 'true' } ] ) except Exception as e: print(f\"Cognito Error: {e}\") return { 'statusCode': 500, 'body': f'Update DynamoDB success, but failed to update Cognito: {str(e)}' } success_body = { \"message\": \"Update success\", \"updatedAttributes\": dynamo_response.get('Attributes') } return { 'statusCode': 200, 'body': json.dumps(success_body) } except Exception as e: print(f\"Unknow error: {e}\") return { 'statusCode': 500, 'body': f'Error when handle request: {str(e)}' }\rDeclare and initialize\rimport boto3 import json import os dynamodb = boto3.resource('dynamodb') cognito_client = boto3.client('cognito-idp') TABLE_NAME = os.environ.get('TABLE_NAME') USER_POOL_ID = os.environ.get('USER_POOL_ID') table = dynamodb.Table(TABLE_NAME)\rimport boto3: Thư viện (SDK) chính thức của AWS cho Python, dùng để tương tác với các AWS Service import json: Dùng để xử lý dữ liệu JSON (ví dụ: event[\"body\"]) import os: Dùng để đọc các Environment variables trong Configuration của Lambda dynamodb = boto3.resource('dynamodb'): Sử dụng giao diện “resource” (cấp cao, dễ dùng hơn) của boto3 cho DynamoDB cognito_client = boto3.client('cognito-idp'): Sử dụng giao diện “client” (cấp thấp, chi tiết hơn) cho Cognito Identity Provider TABLE_NAME = os.environ.get('TABLE_NAME'): Tên của bảng DynamoDB chứa thông tin người dùng USER_POOL_ID = os.environ.get('USER_POOL_ID'): ID của Cognito User Pool nơi người dùng được quản lý table = dynamodb.Table(TABLE_NAME): Tạo một đối tượng Table cụ thể từ dynamodb resource, trỏ đến bảng có tên là TABLE_NAME. Điều này giúp thực hiện các thao tác (như update_item) trực tiếp trên bảng đó build_update_params Function\rdef build_update_params(updates):: Khai báo tên hàm, tên tham số update_expression = \"SET \": Chuỗi lệnh SET cho DynamoDB (ví dụ: SET #name = :name, #email = :email) expression_names = {}: Một dictionary để map tên giữ chỗ (placeholder) với tên thuộc tính thật. Ví dụ: {\"#name\": \"name\"}. Điều này rất quan trọng để tránh lỗi với các từ khóa dự trữ (reserved words) của DynamoDB (như name) expression_values = {}: Một dictionary để map tên giữ chỗ với giá trị thật. Ví dụ: {\":name\": \"John Doe\"}. Điều này giúp ngăn ngừa lỗi SQL injection (mặc dù đây là NoSQL, nguyên tắc tương tự) attribute_map = { \"name\": \"#name\", \"email\": \"#email\", }\rĐịnh nghĩa một attribute_map. Nó chỉ định rằng nếu updates có chứa “name” hoặc “email”, chúng ta sẽ sử dụng tên giữ chỗ là #name và #email trong UpdateExpression for key, value in updates.items(): if key in attribute_map: placeholder = f\":{key}\" attr_name = attribute_map[key] update_expression += f\"{attr_name} = {placeholder}, \" expression_values[placeholder] = value expression_names[attr_name] = key\rfor key, value in updates.items():: Lặp qua từng cặp key (tên trường) và value (giá trị mới) trong dictionary updates mà người dùng gửi lên\nif key in attribute_map:: (Quan trọng) Chỉ xử lý nếu key (ví dụ: “name”) có trong attribute_map. Nếu người dùng gửi một trường không có trong map (ví dụ: {\"age\": 30}), nó sẽ bị bỏ qua\nNếu trường hợp lệ: + placeholder = f\":{key}\": Tạo tên giữ chỗ cho giá trị (ví dụ: :name) + attr_name = attribute_map[key]1: Lấy tên giữ chỗ cho thuộc tính (ví dụ: #name) + update_expression += f\"{attr_name} = {placeholder}, \": Thêm vào chuỗi update_expression (ví dụ: SET #name = :name, ) + expression_values[placeholder] = value: Thêm giá trị vào expression_values (ví dụ: {\":name\": \"John Doe\"}) + expression_names[attr_name] = key: Thêm tên vào expression_names (ví dụ: {\"#name\": \"name\"})\nupdate_expression = update_expression.rstrip(\", \"): Xóa dấu phẩy và khoảng trắng thừa ở cuối chuỗi update_expression\nreturn update_expression, expression_names, expression_values: Trả về 3 thành phần đã được xây dựng\nlambda_handler Function\rUpdate DynamoDB\rdef lambda_handler(event, context):: Khai báo tên hàm, tên tham số try:: Bắt đầu một khối try...except lớn để bắt bất kỳ lỗi không mong muốn nào if \"body\" in event: body = json.loads(event[\"body\"]) else: body = event\rXử lý event. Nếu Lambda này được kích hoạt bởi API Gateway, dữ liệu POST/PUT sẽ nằm trong event[\"body\"] dưới dạng một chuỗi JSON. Cần json.loads để biến nó thành dictionary. Nếu không, (ví dụ: chạy test trực tiếp trong Lambda), event chính là body\nuser_id = body.get('userId'): Lấy userId\nupdates = body.get('updates'): Lấy dictionary updates\nif not user_id or not updates: return {'statusCode': 400, 'body': 'Lỗi: Thiếu \"userId\" hoặc \"updates\"'}\rKiểm tra xem userId và updates có tồn tại không. Nếu thiếu, trả về lỗi 400 Bad Request\nupdate_expr, attr_names, attr_values = build_update_params(updates): Gọi hàm build_update_params đã giải thích ở trên\nif not attr_values: return {'statusCode': 400, 'body': 'Không có trường hợp lệ nào để cập nhật'}\rNếu attr_values rỗng (nghĩa là người dùng đã gửi updates nhưng không chứa “name” hay “email”), trả về lỗi 400 dynamo_response = table.update_item( Key={'userId': user_id}, UpdateExpression=update_expr, ExpressionAttributeNames=attr_names, ExpressionAttributeValues=attr_values, ReturnValues=\"UPDATED_NEW\" )\rdynamo_response = table.update_item(): Đây là lệnh chính thức cập nhật DynamoDB Key={'userId': user_id}: Chỉ định item nào cần cập nhật (dựa trên Primary Key) Cung cấp 3 tham số đã được tạo ra bởi hàm build_update_params ReturnValues=\"UPDATED_NEW\": Yêu cầu DynamoDB trả về giá trị mới của các thuộc tính vừa được cập nhật Update Cognito\rif 'email' in updates: new_email = updates['email'] try: cognito_client.admin_update_user_attributes( UserPoolId=USER_POOL_ID, Username=user_id, UserAttributes=[ { 'Name': 'email', 'Value': new_email }, { 'Name': 'email_verified', 'Value': 'true' } ] )\rif 'email' in updates:: Chỉ thực hiện khối này nếu email là một trong các trường được yêu cầu cập nhật new_email = updates['email']: Lấy địa chỉ email mới try:: Bắt đầu một khối ```try…except`` lồng nhau. Điều này rất quan trọng: nó cho phép bắt lỗi Cognito một cách riêng biệt cognito_client.admin_update_user_attributes(): Gọi hàm admin_update_user_attributes của Cognito UserPoolId=USER_POOL_ID,: Chỉ định UserPoolId Username=user_id,: Chỉ định Username (trong Cognito, Username thường chính là userId hoặc sub của người dùng) Cập nhật thuộc tính email thành giá trị mới, và đồng thời đánh dấu email_verified là true. Đây là một hành động “admin”, giả định rằng email do admin cập nhật là đã được xác thực except Exception as e: print(f\"Cognito Error: {e}\") return { 'statusCode': 500, 'body': f'Update DynamoDB success, but failed to update Cognito: {str(e)}' }\rNếu có lỗi xảy ra chỉ với Cognito (ví dụ: email không hợp lệ, người dùng không tồn tại trong Cognito), hàm sẽ dừng và trả về lỗi 500, nó nói rõ: “Update DynamoDB success, but failed to update Cognito” Return Successs and catch general Exception\rsuccess_body = { \"message\": \"Update success\", \"updatedAttributes\": dynamo_response.get('Attributes') } return { 'statusCode': 200, 'body': json.dumps(success_body) }\rNếu mọi thứ chạy suôn sẻ (cả DynamoDB và Cognito (nếu có)), tạo một body phản hồi thành công. Nó bao gồm các thuộc tính đã được cập nhật lấy từ dynamo_response (nhờ ReturnValues=\"UPDATED_NEW\") Trả về phản hồi 200 OK với body đã được chuyển thành chuỗi JSON except Exception as e: print(f\"Unknow error: {e}\") return { 'statusCode': 500, 'body': f'Error when handle request: {str(e)}' }\rexcept Exception as e:: Đây là khối except của try lớn bên ngoài Nếu có bất kỳ lỗi nào khác xảy ra (ví dụ: lỗi parse JSON, lỗi DynamoDB, lỗi Evironment variables bị thiếu…), nó sẽ bị bắt ở đây và trả về lỗi 500 Internal Server Error",
+    "description": "import boto3 import json import os # Create client and handler dynamodb = boto3.resource('dynamodb') cognito_client = boto3.client('cognito-idp') # Get environment variables TABLE_NAME = os.environ.get('TABLE_NAME') USER_POOL_ID = os.environ.get('USER_POOL_ID') table = dynamodb.Table(TABLE_NAME) def build_update_params(updates): update_expression = \"SET \" expression_names = {} expression_values = {} # Use #name and #email to avoid reserved words attribute_map = { \"name\": \"#name\", \"email\": \"#email\", } for key, value in updates.items(): if key in attribute_map: placeholder = f\":{key}\" attr_name = attribute_map[key] update_expression += f\"{attr_name} = {placeholder}, \" expression_values[placeholder] = value expression_names[attr_name] = key update_expression = update_expression.rstrip(\", \") return update_expression, expression_names, expression_values def lambda_handler(event, context): try: if \"body\" in event: body = json.loads(event[\"body\"]) else: body = event user_id = body.get('userId') updates = body.get('updates') if not user_id or not updates: return {'statusCode': 400, 'body': 'Lỗi: Thiếu \"userId\" hoặc \"updates\"'} update_expr, attr_names, attr_values = build_update_params(updates) if not attr_values: return {'statusCode': 400, 'body': 'Không có trường hợp lệ nào để cập nhật'} dynamo_response = table.update_item( Key={'userId': user_id}, UpdateExpression=update_expr, ExpressionAttributeNames=attr_names, ExpressionAttributeValues=attr_values, ReturnValues=\"UPDATED_NEW\" ) if 'email' in updates: new_email = updates['email'] try: cognito_client.admin_update_user_attributes( UserPoolId=USER_POOL_ID, Username=user_id, UserAttributes=[ { 'Name': 'email', 'Value': new_email }, { 'Name': 'email_verified', 'Value': 'true' } ] ) except Exception as e: print(f\"Cognito Error: {e}\") return { 'statusCode': 500, 'body': f'Update DynamoDB success, but failed to update Cognito: {str(e)}' } success_body = { \"message\": \"Update success\", \"updatedAttributes\": dynamo_response.get('Attributes') } return { 'statusCode': 200, 'body': json.dumps(success_body) } except Exception as e: print(f\"Unknow error: {e}\") return { 'statusCode': 500, 'body': f'Error when handle request: {str(e)}' }\rDeclare and initialize\rimport boto3 import json import os dynamodb = boto3.resource('dynamodb') cognito_client = boto3.client('cognito-idp') TABLE_NAME = os.environ.get('TABLE_NAME') USER_POOL_ID = os.environ.get('USER_POOL_ID') table = dynamodb.Table(TABLE_NAME)\rimport boto3: Thư viện (SDK) chính thức của AWS cho Python, dùng để tương tác với các AWS Service import json: Dùng để xử lý dữ liệu JSON (ví dụ: event[\"body\"]) import os: Dùng để đọc các Environment variables trong Configuration của Lambda dynamodb = boto3.resource('dynamodb'): Sử dụng giao diện “resource” (cấp cao, dễ dùng hơn) của boto3 cho DynamoDB cognito_client = boto3.client('cognito-idp'): Sử dụng giao diện “client” (cấp thấp, chi tiết hơn) cho Cognito Identity Provider TABLE_NAME = os.environ.get('TABLE_NAME'): Tên của bảng DynamoDB chứa thông tin người dùng USER_POOL_ID = os.environ.get('USER_POOL_ID'): ID của Cognito User Pool nơi người dùng được quản lý table = dynamodb.Table(TABLE_NAME): Tạo một đối tượng Table cụ thể từ dynamodb resource, trỏ đến bảng có tên là TABLE_NAME. Điều này giúp thực hiện các thao tác (như update_item) trực tiếp trên bảng đó build_update_params Function\rdef build_update_params(updates):: Khai báo tên hàm, tên tham số update_expression = \"SET \": Chuỗi lệnh SET cho DynamoDB (ví dụ: SET #name = :name, #email = :email) expression_names = {}: Một dictionary để map tên giữ chỗ (placeholder) với tên thuộc tính thật. Ví dụ: {\"#name\": \"name\"}. Điều này rất quan trọng để tránh lỗi với các từ khóa dự trữ (reserved words) của DynamoDB (như name) expression_values = {}: Một dictionary để map tên giữ chỗ với giá trị thật. Ví dụ: {\":name\": \"John Doe\"}. Điều này giúp ngăn ngừa lỗi SQL injection (mặc dù đây là NoSQL, nguyên tắc tương tự) attribute_map = { \"name\": \"#name\", \"email\": \"#email\", }\rĐịnh nghĩa một attribute_map. Nó chỉ định rằng nếu updates có chứa “name” hoặc “email”, chúng ta sẽ sử dụng tên giữ chỗ là #name và #email trong UpdateExpression for key, value in updates.items(): if key in attribute_map: placeholder = f\":{key}\" attr_name = attribute_map[key] update_expression += f\"{attr_name} = {placeholder}, \" expression_values[placeholder] = value expression_names[attr_name] = key\rfor key, value in updates.items():: Lặp qua từng cặp key (tên trường) và value (giá trị mới) trong dictionary updates mà người dùng gửi lên",
+    "tags": [],
+    "title": "Example with Dynamo and Cognito using Python",
+    "uri": "/note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html"
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Source Control \u003e Gitlab",
@@ -153,16 +153,16 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note \u003e Source Control",
-    "content": "",
-    "description": "",
+    "content": "Create Connection\rCI/CD Template",
+    "description": "Create Connection\rCI/CD Template",
     "tags": [],
     "title": "Gitlab",
     "uri": "/note/03_source-control/gitlab/index.html"
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note",
-    "content": "",
-    "description": "",
+    "content": "Linux",
+    "description": "Linux",
     "tags": [],
     "title": "Operating System",
     "uri": "/note/02_operating-system/index.html"
@@ -185,8 +185,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note",
-    "content": "",
-    "description": "",
+    "content": "GitHub\rGitlab",
+    "description": "GitHub\rGitlab",
     "tags": [],
     "title": "Source Control",
     "uri": "/note/03_source-control/index.html"
@@ -241,16 +241,16 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note",
-    "content": "",
-    "description": "",
+    "content": "Virtual Box",
+    "description": "Virtual Box",
     "tags": [],
     "title": "Virtual Machine",
     "uri": "/note/04_virtual-machine/index.html"
   },
   {
     "breadcrumb": "Home Page \u003e Programming Note",
-    "content": "",
-    "description": "",
+    "content": "AWS",
+    "description": "AWS",
     "tags": [],
     "title": "Cloud",
     "uri": "/note/05_cloud/index.html"

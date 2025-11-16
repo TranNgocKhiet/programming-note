@@ -21,7 +21,7 @@ images = ['img/avatar.png']
     url = 'https://www.linkedin.com/in/khiet-tran-61b163311/'
     weight = 2
   [[menu.shortcuts]]
-    name = 'slayersilver2005@gmail.com'
+    name = 'slayersilver2005'
     pre = '<i class="fas fa-envelope"></i> '
     url = 'mailto:slayersilver2005@gmail.com'
     weight = 3
