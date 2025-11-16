@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Classes :: IT From Scratch</title>
+    <link>//localhost:1313/note/01_programming-language/python/07_classes/index.html</link>
+    <description>Syntax&#xD;Input&#xA;class Car: def __init__(self, make, model, year): self.make = make self.model = model self.year = year self.is_running = False def start(self): self.is_running = True print(&#34;Car started.&#34;) def drive(self): if self.is_running: print(&#34;Car is moving.&#34;) else: print(&#34;Car is not started yet.&#34;) my_car = Car(&#34;Toyota&#34;, &#34;Corolla&#34;, 2022) print(&#39;My car: &#39;, my_car.make, my_car.model, my_car.year) my_car.start() my_car.drive()&#xD;Output&#xA;My car: Toyota Corolla 2022&#xD;Car started.&#xD;Car is moving.&#xD;Inheritance&#xD;Input</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/01_programming-language/python/07_classes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

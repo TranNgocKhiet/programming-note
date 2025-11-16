@@ -1,0 +1,4 @@
+<a id="R-logo" href="{{ partial "permalink.gotmpl" (dict "to" .Site.Home) }}" style="display:flex; gap: 1rem; ">
+  <img src="{{"images/logo.png" | relURL}}" alt="brand logo">
+  <div class="logo-title" style="display: flex; justify-content: center; align-items: center; font-size: 1.5rem;">{{ .Site.Params.linkTitle | default .Site.Title }}</div>
+</a>

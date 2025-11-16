@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>10. Regular-Expressions :: IT From Scratch</title>
+    <link>//localhost:1313/note/programming-language/python/10_regular-expressions/index.html</link>
+    <description>Regular Expressions&#xD;Finding Text Patterns with Regular Expressions&#xD;Input&#xA;import re phone_num_pattern_obj = re.compile(r&#39;\d{3}-\d{3}-\d{4}&#39;) match_obj = phone_num_pattern_obj.search(&#39;My number is 415-555-4242.&#39;) print(match_obj.group())&#xD;Output&#xA;415-555-4242&#xD;Grouping with Parentheses&#xD;Input</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/programming-language/python/10_regular-expressions/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
