@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux :: IT From Scratch</title>
-    <link>//localhost:1313/note/02_operating-system/linux/index.html</link>
+    <link>/note/02_operating-system/linux/index.html</link>
     <description>Bash&#xD;Commands&#xD;Ubuntu</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/note/02_operating-system/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/note/02_operating-system/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash</title>
-      <link>//localhost:1313/note/02_operating-system/linux/bash/index.html</link>
+      <link>/note/02_operating-system/linux/bash/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/02_operating-system/linux/bash/index.html</guid>
+      <guid>/note/02_operating-system/linux/bash/index.html</guid>
       <description></description>
     </item>
     <item>
       <title>Commands</title>
-      <link>//localhost:1313/note/02_operating-system/linux/commands/index.html</link>
+      <link>/note/02_operating-system/linux/commands/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/02_operating-system/linux/commands/index.html</guid>
+      <guid>/note/02_operating-system/linux/commands/index.html</guid>
       <description>echo&#xD;Input&#xA;echo &#34;Hello&#34;&#xD;Show User and Group Information | whoami and id&#xD;Input&#xA;whoami&#xD;Output&#xA;yourusername&#xD;Input&#xA;id&#xD;Output&#xA;uid=5000(labex) gid=5000(labex) groups=5000(labex),27(sudo),121(ssl-cert),5002(public)&#xD;uid: Your User ID (a unique numerical identifier). gid: Your primary Group ID. groups: All the groups you are a member of. Input</description>
     </item>
     <item>
       <title>Ubuntu</title>
-      <link>//localhost:1313/note/02_operating-system/linux/ubuntu/index.html</link>
+      <link>/note/02_operating-system/linux/ubuntu/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/02_operating-system/linux/ubuntu/index.html</guid>
+      <guid>/note/02_operating-system/linux/ubuntu/index.html</guid>
       <description></description>
     </item>
   </channel>

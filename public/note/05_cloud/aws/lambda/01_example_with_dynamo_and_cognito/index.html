@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
-    <meta name="description" content="">
+    <meta name="description" content="import boto3 import json import os # Create client and handler dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) # Get environment variables TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME) def build_update_params(updates): update_expression = &#34;SET &#34; expression_names = {} expression_values = {} # Use #name and #email to avoid reserved words attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, } for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = key update_expression = update_expression.rstrip(&#34;, &#34;) return update_expression, expression_names, expression_values def lambda_handler(event, context): try: if &#34;body&#34; in event: body = json.loads(event[&#34;body&#34;]) else: body = event user_id = body.get(&#39;userId&#39;) updates = body.get(&#39;updates&#39;) if not user_id or not updates: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Lỗi: Thiếu &#34;userId&#34; hoặc &#34;updates&#34;&#39;} update_expr, attr_names, attr_values = build_update_params(updates) if not attr_values: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Không có trường hợp lệ nào để cập nhật&#39;} dynamo_response = table.update_item( Key={&#39;userId&#39;: user_id}, UpdateExpression=update_expr, ExpressionAttributeNames=attr_names, ExpressionAttributeValues=attr_values, ReturnValues=&#34;UPDATED_NEW&#34; ) if &#39;email&#39; in updates: new_email = updates[&#39;email&#39;] try: cognito_client.admin_update_user_attributes( UserPoolId=USER_POOL_ID, Username=user_id, UserAttributes=[ { &#39;Name&#39;: &#39;email&#39;, &#39;Value&#39;: new_email }, { &#39;Name&#39;: &#39;email_verified&#39;, &#39;Value&#39;: &#39;true&#39; } ] ) except Exception as e: print(f&#34;Cognito Error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Update DynamoDB success, but failed to update Cognito: {str(e)}&#39; } success_body = { &#34;message&#34;: &#34;Update success&#34;, &#34;updatedAttributes&#34;: dynamo_response.get(&#39;Attributes&#39;) } return { &#39;statusCode&#39;: 200, &#39;body&#39;: json.dumps(success_body) } except Exception as e: print(f&#34;Unknow error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Error when handle request: {str(e)}&#39; }Declare and initializeimport boto3 import json import os dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME)import boto3: Thư viện (SDK) chính thức của AWS cho Python, dùng để tương tác với các AWS Service import json: Dùng để xử lý dữ liệu JSON (ví dụ: event[&#34;body&#34;]) import os: Dùng để đọc các Environment variables trong Configuration của Lambda dynamodb = boto3.resource(&#39;dynamodb&#39;): Sử dụng giao diện “resource” (cấp cao, dễ dùng hơn) của boto3 cho DynamoDB cognito_client = boto3.client(&#39;cognito-idp&#39;): Sử dụng giao diện “client” (cấp thấp, chi tiết hơn) cho Cognito Identity Provider TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;): Tên của bảng DynamoDB chứa thông tin người dùng USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;): ID của Cognito User Pool nơi người dùng được quản lý table = dynamodb.Table(TABLE_NAME): Tạo một đối tượng Table cụ thể từ dynamodb resource, trỏ đến bảng có tên là TABLE_NAME. Điều này giúp thực hiện các thao tác (như update_item) trực tiếp trên bảng đó build_update_params Functiondef build_update_params(updates):: Khai báo tên hàm, tên tham số update_expression = &#34;SET &#34;: Chuỗi lệnh SET cho DynamoDB (ví dụ: SET #name = :name, #email = :email) expression_names = {}: Một dictionary để map tên giữ chỗ (placeholder) với tên thuộc tính thật. Ví dụ: {&#34;#name&#34;: &#34;name&#34;}. Điều này rất quan trọng để tránh lỗi với các từ khóa dự trữ (reserved words) của DynamoDB (như name) expression_values = {}: Một dictionary để map tên giữ chỗ với giá trị thật. Ví dụ: {&#34;:name&#34;: &#34;John Doe&#34;}. Điều này giúp ngăn ngừa lỗi SQL injection (mặc dù đây là NoSQL, nguyên tắc tương tự) attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, }Định nghĩa một attribute_map. Nó chỉ định rằng nếu updates có chứa “name” hoặc “email”, chúng ta sẽ sử dụng tên giữ chỗ là #name và #email trong UpdateExpression for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = keyfor key, value in updates.items():: Lặp qua từng cặp key (tên trường) và value (giá trị mới) trong dictionary updates mà người dùng gửi lên">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Example with Dynamo and Cognito using Python :: IT From Scratch">
-    <meta property="og:url" content="//localhost:1313/note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html">
+    <meta name="twitter:description" content="import boto3 import json import os # Create client and handler dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) # Get environment variables TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME) def build_update_params(updates): update_expression = &#34;SET &#34; expression_names = {} expression_values = {} # Use #name and #email to avoid reserved words attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, } for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = key update_expression = update_expression.rstrip(&#34;, &#34;) return update_expression, expression_names, expression_values def lambda_handler(event, context): try: if &#34;body&#34; in event: body = json.loads(event[&#34;body&#34;]) else: body = event user_id = body.get(&#39;userId&#39;) updates = body.get(&#39;updates&#39;) if not user_id or not updates: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Lỗi: Thiếu &#34;userId&#34; hoặc &#34;updates&#34;&#39;} update_expr, attr_names, attr_values = build_update_params(updates) if not attr_values: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Không có trường hợp lệ nào để cập nhật&#39;} dynamo_response = table.update_item( Key={&#39;userId&#39;: user_id}, UpdateExpression=update_expr, ExpressionAttributeNames=attr_names, ExpressionAttributeValues=attr_values, ReturnValues=&#34;UPDATED_NEW&#34; ) if &#39;email&#39; in updates: new_email = updates[&#39;email&#39;] try: cognito_client.admin_update_user_attributes( UserPoolId=USER_POOL_ID, Username=user_id, UserAttributes=[ { &#39;Name&#39;: &#39;email&#39;, &#39;Value&#39;: new_email }, { &#39;Name&#39;: &#39;email_verified&#39;, &#39;Value&#39;: &#39;true&#39; } ] ) except Exception as e: print(f&#34;Cognito Error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Update DynamoDB success, but failed to update Cognito: {str(e)}&#39; } success_body = { &#34;message&#34;: &#34;Update success&#34;, &#34;updatedAttributes&#34;: dynamo_response.get(&#39;Attributes&#39;) } return { &#39;statusCode&#39;: 200, &#39;body&#39;: json.dumps(success_body) } except Exception as e: print(f&#34;Unknow error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Error when handle request: {str(e)}&#39; }Declare and initializeimport boto3 import json import os dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME)import boto3: Thư viện (SDK) chính thức của AWS cho Python, dùng để tương tác với các AWS Service import json: Dùng để xử lý dữ liệu JSON (ví dụ: event[&#34;body&#34;]) import os: Dùng để đọc các Environment variables trong Configuration của Lambda dynamodb = boto3.resource(&#39;dynamodb&#39;): Sử dụng giao diện “resource” (cấp cao, dễ dùng hơn) của boto3 cho DynamoDB cognito_client = boto3.client(&#39;cognito-idp&#39;): Sử dụng giao diện “client” (cấp thấp, chi tiết hơn) cho Cognito Identity Provider TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;): Tên của bảng DynamoDB chứa thông tin người dùng USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;): ID của Cognito User Pool nơi người dùng được quản lý table = dynamodb.Table(TABLE_NAME): Tạo một đối tượng Table cụ thể từ dynamodb resource, trỏ đến bảng có tên là TABLE_NAME. Điều này giúp thực hiện các thao tác (như update_item) trực tiếp trên bảng đó build_update_params Functiondef build_update_params(updates):: Khai báo tên hàm, tên tham số update_expression = &#34;SET &#34;: Chuỗi lệnh SET cho DynamoDB (ví dụ: SET #name = :name, #email = :email) expression_names = {}: Một dictionary để map tên giữ chỗ (placeholder) với tên thuộc tính thật. Ví dụ: {&#34;#name&#34;: &#34;name&#34;}. Điều này rất quan trọng để tránh lỗi với các từ khóa dự trữ (reserved words) của DynamoDB (như name) expression_values = {}: Một dictionary để map tên giữ chỗ với giá trị thật. Ví dụ: {&#34;:name&#34;: &#34;John Doe&#34;}. Điều này giúp ngăn ngừa lỗi SQL injection (mặc dù đây là NoSQL, nguyên tắc tương tự) attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, }Định nghĩa một attribute_map. Nó chỉ định rằng nếu updates có chứa “name” hoặc “email”, chúng ta sẽ sử dụng tên giữ chỗ là #name và #email trong UpdateExpression for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = keyfor key, value in updates.items():: Lặp qua từng cặp key (tên trường) và value (giá trị mới) trong dictionary updates mà người dùng gửi lên">
+    <meta property="og:url" content="/note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html">
     <meta property="og:site_name" content="IT From Scratch">
     <meta property="og:title" content="Example with Dynamo and Cognito using Python :: IT From Scratch">
+    <meta property="og:description" content="import boto3 import json import os # Create client and handler dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) # Get environment variables TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME) def build_update_params(updates): update_expression = &#34;SET &#34; expression_names = {} expression_values = {} # Use #name and #email to avoid reserved words attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, } for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = key update_expression = update_expression.rstrip(&#34;, &#34;) return update_expression, expression_names, expression_values def lambda_handler(event, context): try: if &#34;body&#34; in event: body = json.loads(event[&#34;body&#34;]) else: body = event user_id = body.get(&#39;userId&#39;) updates = body.get(&#39;updates&#39;) if not user_id or not updates: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Lỗi: Thiếu &#34;userId&#34; hoặc &#34;updates&#34;&#39;} update_expr, attr_names, attr_values = build_update_params(updates) if not attr_values: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Không có trường hợp lệ nào để cập nhật&#39;} dynamo_response = table.update_item( Key={&#39;userId&#39;: user_id}, UpdateExpression=update_expr, ExpressionAttributeNames=attr_names, ExpressionAttributeValues=attr_values, ReturnValues=&#34;UPDATED_NEW&#34; ) if &#39;email&#39; in updates: new_email = updates[&#39;email&#39;] try: cognito_client.admin_update_user_attributes( UserPoolId=USER_POOL_ID, Username=user_id, UserAttributes=[ { &#39;Name&#39;: &#39;email&#39;, &#39;Value&#39;: new_email }, { &#39;Name&#39;: &#39;email_verified&#39;, &#39;Value&#39;: &#39;true&#39; } ] ) except Exception as e: print(f&#34;Cognito Error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Update DynamoDB success, but failed to update Cognito: {str(e)}&#39; } success_body = { &#34;message&#34;: &#34;Update success&#34;, &#34;updatedAttributes&#34;: dynamo_response.get(&#39;Attributes&#39;) } return { &#39;statusCode&#39;: 200, &#39;body&#39;: json.dumps(success_body) } except Exception as e: print(f&#34;Unknow error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Error when handle request: {str(e)}&#39; }Declare and initializeimport boto3 import json import os dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME)import boto3: Thư viện (SDK) chính thức của AWS cho Python, dùng để tương tác với các AWS Service import json: Dùng để xử lý dữ liệu JSON (ví dụ: event[&#34;body&#34;]) import os: Dùng để đọc các Environment variables trong Configuration của Lambda dynamodb = boto3.resource(&#39;dynamodb&#39;): Sử dụng giao diện “resource” (cấp cao, dễ dùng hơn) của boto3 cho DynamoDB cognito_client = boto3.client(&#39;cognito-idp&#39;): Sử dụng giao diện “client” (cấp thấp, chi tiết hơn) cho Cognito Identity Provider TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;): Tên của bảng DynamoDB chứa thông tin người dùng USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;): ID của Cognito User Pool nơi người dùng được quản lý table = dynamodb.Table(TABLE_NAME): Tạo một đối tượng Table cụ thể từ dynamodb resource, trỏ đến bảng có tên là TABLE_NAME. Điều này giúp thực hiện các thao tác (như update_item) trực tiếp trên bảng đó build_update_params Functiondef build_update_params(updates):: Khai báo tên hàm, tên tham số update_expression = &#34;SET &#34;: Chuỗi lệnh SET cho DynamoDB (ví dụ: SET #name = :name, #email = :email) expression_names = {}: Một dictionary để map tên giữ chỗ (placeholder) với tên thuộc tính thật. Ví dụ: {&#34;#name&#34;: &#34;name&#34;}. Điều này rất quan trọng để tránh lỗi với các từ khóa dự trữ (reserved words) của DynamoDB (như name) expression_values = {}: Một dictionary để map tên giữ chỗ với giá trị thật. Ví dụ: {&#34;:name&#34;: &#34;John Doe&#34;}. Điều này giúp ngăn ngừa lỗi SQL injection (mặc dù đây là NoSQL, nguyên tắc tương tự) attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, }Định nghĩa một attribute_map. Nó chỉ định rằng nếu updates có chứa “name” hoặc “email”, chúng ta sẽ sử dụng tên giữ chỗ là #name và #email trong UpdateExpression for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = keyfor key, value in updates.items():: Lặp qua từng cặp key (tên trường) và value (giá trị mới) trong dictionary updates mà người dùng gửi lên">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Programming Note">
     <meta itemprop="name" content="Example with Dynamo and Cognito using Python :: IT From Scratch">
+    <meta itemprop="description" content="import boto3 import json import os # Create client and handler dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) # Get environment variables TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME) def build_update_params(updates): update_expression = &#34;SET &#34; expression_names = {} expression_values = {} # Use #name and #email to avoid reserved words attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, } for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = key update_expression = update_expression.rstrip(&#34;, &#34;) return update_expression, expression_names, expression_values def lambda_handler(event, context): try: if &#34;body&#34; in event: body = json.loads(event[&#34;body&#34;]) else: body = event user_id = body.get(&#39;userId&#39;) updates = body.get(&#39;updates&#39;) if not user_id or not updates: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Lỗi: Thiếu &#34;userId&#34; hoặc &#34;updates&#34;&#39;} update_expr, attr_names, attr_values = build_update_params(updates) if not attr_values: return {&#39;statusCode&#39;: 400, &#39;body&#39;: &#39;Không có trường hợp lệ nào để cập nhật&#39;} dynamo_response = table.update_item( Key={&#39;userId&#39;: user_id}, UpdateExpression=update_expr, ExpressionAttributeNames=attr_names, ExpressionAttributeValues=attr_values, ReturnValues=&#34;UPDATED_NEW&#34; ) if &#39;email&#39; in updates: new_email = updates[&#39;email&#39;] try: cognito_client.admin_update_user_attributes( UserPoolId=USER_POOL_ID, Username=user_id, UserAttributes=[ { &#39;Name&#39;: &#39;email&#39;, &#39;Value&#39;: new_email }, { &#39;Name&#39;: &#39;email_verified&#39;, &#39;Value&#39;: &#39;true&#39; } ] ) except Exception as e: print(f&#34;Cognito Error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Update DynamoDB success, but failed to update Cognito: {str(e)}&#39; } success_body = { &#34;message&#34;: &#34;Update success&#34;, &#34;updatedAttributes&#34;: dynamo_response.get(&#39;Attributes&#39;) } return { &#39;statusCode&#39;: 200, &#39;body&#39;: json.dumps(success_body) } except Exception as e: print(f&#34;Unknow error: {e}&#34;) return { &#39;statusCode&#39;: 500, &#39;body&#39;: f&#39;Error when handle request: {str(e)}&#39; }Declare and initializeimport boto3 import json import os dynamodb = boto3.resource(&#39;dynamodb&#39;) cognito_client = boto3.client(&#39;cognito-idp&#39;) TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;) USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;) table = dynamodb.Table(TABLE_NAME)import boto3: Thư viện (SDK) chính thức của AWS cho Python, dùng để tương tác với các AWS Service import json: Dùng để xử lý dữ liệu JSON (ví dụ: event[&#34;body&#34;]) import os: Dùng để đọc các Environment variables trong Configuration của Lambda dynamodb = boto3.resource(&#39;dynamodb&#39;): Sử dụng giao diện “resource” (cấp cao, dễ dùng hơn) của boto3 cho DynamoDB cognito_client = boto3.client(&#39;cognito-idp&#39;): Sử dụng giao diện “client” (cấp thấp, chi tiết hơn) cho Cognito Identity Provider TABLE_NAME = os.environ.get(&#39;TABLE_NAME&#39;): Tên của bảng DynamoDB chứa thông tin người dùng USER_POOL_ID = os.environ.get(&#39;USER_POOL_ID&#39;): ID của Cognito User Pool nơi người dùng được quản lý table = dynamodb.Table(TABLE_NAME): Tạo một đối tượng Table cụ thể từ dynamodb resource, trỏ đến bảng có tên là TABLE_NAME. Điều này giúp thực hiện các thao tác (như update_item) trực tiếp trên bảng đó build_update_params Functiondef build_update_params(updates):: Khai báo tên hàm, tên tham số update_expression = &#34;SET &#34;: Chuỗi lệnh SET cho DynamoDB (ví dụ: SET #name = :name, #email = :email) expression_names = {}: Một dictionary để map tên giữ chỗ (placeholder) với tên thuộc tính thật. Ví dụ: {&#34;#name&#34;: &#34;name&#34;}. Điều này rất quan trọng để tránh lỗi với các từ khóa dự trữ (reserved words) của DynamoDB (như name) expression_values = {}: Một dictionary để map tên giữ chỗ với giá trị thật. Ví dụ: {&#34;:name&#34;: &#34;John Doe&#34;}. Điều này giúp ngăn ngừa lỗi SQL injection (mặc dù đây là NoSQL, nguyên tắc tương tự) attribute_map = { &#34;name&#34;: &#34;#name&#34;, &#34;email&#34;: &#34;#email&#34;, }Định nghĩa một attribute_map. Nó chỉ định rằng nếu updates có chứa “name” hoặc “email”, chúng ta sẽ sử dụng tên giữ chỗ là #name và #email trong UpdateExpression for key, value in updates.items(): if key in attribute_map: placeholder = f&#34;:{key}&#34; attr_name = attribute_map[key] update_expression &#43;= f&#34;{attr_name} = {placeholder}, &#34; expression_values[placeholder] = value expression_names[attr_name] = keyfor key, value in updates.items():: Lặp qua từng cặp key (tên trường) và value (giá trị mới) trong dictionary updates mà người dùng gửi lên">
+    <meta itemprop="wordCount" content="1321">
     <title>Example with Dynamo and Cognito using Python :: IT From Scratch</title>
-    <link href="../../../../../images/favicon.png?1763235415" rel="icon" type="image/png">
-    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763235415" rel="stylesheet">
-    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763235415" defer></script>
-    <script src="../../../../../js/search-lunr.js?1763235415" defer></script>
-    <script src="../../../../../js/search.js?1763235415" defer></script>
+    <link href="../../../../../images/favicon.png?1763299274" rel="icon" type="image/png">
+    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763299274" rel="stylesheet">
+    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763299274" defer></script>
+    <script src="../../../../../js/search-lunr.min.js?1763299274" defer></script>
+    <script src="../../../../../js/search.min.js?1763299274" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../../../searchindex.en.js?1763235415";
+      window.relearn.index_js_url="../../../../../searchindex.en.js?1763299274";
     </script>
-    <script src="../../../../../js/lunr/lunr.min.js?1763235415" defer></script>
-    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763235415" defer></script>
-    <script src="../../../../../js/lunr/lunr.multi.min.js?1763235415" defer></script>
-    <script src="../../../../../js/lunr/lunr.en.min.js?1763235415" defer></script>
+    <script src="../../../../../js/lunr/lunr.min.js?1763299274" defer></script>
+    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763299274" defer></script>
+    <script src="../../../../../js/lunr/lunr.multi.min.js?1763299274" defer></script>
+    <script src="../../../../../js/lunr/lunr.en.min.js?1763299274" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763235415" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763235415" rel="stylesheet"></noscript>
-    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763235415" rel="stylesheet">
-    <link href="../../../../../css/theme.css?1763235415" rel="stylesheet">
-    <link href="../../../../../css/format-html.css?1763235415" rel="stylesheet" id="R-format-style">
+    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763299274" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763299274" rel="stylesheet"></noscript>
+    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763299274" rel="stylesheet">
+    <link href="../../../../../css/theme.min.css?1763299274" rel="stylesheet">
+    <link href="../../../../../css/format-html.min.css?1763299274" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = ``;
+      window.relearn.min = `.min`;
       window.relearn.path='\/note\/05_cloud\/aws\/lambda\/01_example_with_dynamo_and_cognito\/index.html';
       window.relearn.relBasePath='..\/..\/..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..\/..';
-      window.relearn.absBaseUri='\/\/localhost:1313';
+      window.relearn.absBaseUri='';
       window.relearn.disableInlineCopyToClipboard=false;
       window.relearn.enableBlockCodeWrap=true;
       // legal
@@ -103,7 +107,20 @@
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#declare-and-initialize">Declare and initialize</a></li>
+    <li><a href="#build_update_params-function">build_update_params Function</a></li>
+    <li><a href="#lambda_handler-function">lambda_handler Function</a>
+      <ul>
+        <li><a href="#update-dynamodb">Update DynamoDB</a></li>
+        <li><a href="#update-cognito">Update Cognito</a></li>
+        <li><a href="#return-successs-and-catch-general-exception">Return Successs and catch general Exception</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
@@ -138,6 +155,284 @@
 
 <h1 id="example-with-dynamo-and-cognito-using-python">Example with Dynamo and Cognito using Python</h1>
 
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create client and handler</span>
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+</span></span><span style="display:flex;"><span>cognito_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;cognito-idp&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get environment variables</span>
+</span></span><span style="display:flex;"><span>TABLE_NAME <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;TABLE_NAME&#39;</span>)
+</span></span><span style="display:flex;"><span>USER_POOL_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;USER_POOL_ID&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(TABLE_NAME)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build_update_params</span>(updates):
+</span></span><span style="display:flex;"><span>    update_expression <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SET &#34;</span>
+</span></span><span style="display:flex;"><span>    expression_names <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    expression_values <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Use #name and #email to avoid reserved words</span>
+</span></span><span style="display:flex;"><span>    attribute_map <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;#name&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;#email&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> updates<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> attribute_map:
+</span></span><span style="display:flex;"><span>            placeholder <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;:</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>            attr_name <span style="color:#f92672">=</span> attribute_map[key]
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            update_expression <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>attr_name<span style="color:#e6db74">}</span><span style="color:#e6db74"> = </span><span style="color:#e6db74">{</span>placeholder<span style="color:#e6db74">}</span><span style="color:#e6db74">, &#34;</span>
+</span></span><span style="display:flex;"><span>            expression_values[placeholder] <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>            expression_names[attr_name] <span style="color:#f92672">=</span> key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    update_expression <span style="color:#f92672">=</span> update_expression<span style="color:#f92672">.</span>rstrip(<span style="color:#e6db74">&#34;, &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> update_expression, expression_names, expression_values
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;body&#34;</span> <span style="color:#f92672">in</span> event:
+</span></span><span style="display:flex;"><span>            body <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(event[<span style="color:#e6db74">&#34;body&#34;</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            body <span style="color:#f92672">=</span> event
+</span></span><span style="display:flex;"><span>                        
+</span></span><span style="display:flex;"><span>        user_id <span style="color:#f92672">=</span> body<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;userId&#39;</span>)
+</span></span><span style="display:flex;"><span>        updates <span style="color:#f92672">=</span> body<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;updates&#39;</span>) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> user_id <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> updates:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">400</span>, <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">&#39;Lỗi: Thiếu &#34;userId&#34; hoặc &#34;updates&#34;&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        update_expr, attr_names, attr_values <span style="color:#f92672">=</span> build_update_params(updates)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> attr_values:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">400</span>, <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">&#39;Không có trường hợp lệ nào để cập nhật&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        dynamo_response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>update_item(
+</span></span><span style="display:flex;"><span>            Key<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;userId&#39;</span>: user_id},
+</span></span><span style="display:flex;"><span>            UpdateExpression<span style="color:#f92672">=</span>update_expr,
+</span></span><span style="display:flex;"><span>            ExpressionAttributeNames<span style="color:#f92672">=</span>attr_names,
+</span></span><span style="display:flex;"><span>            ExpressionAttributeValues<span style="color:#f92672">=</span>attr_values,
+</span></span><span style="display:flex;"><span>            ReturnValues<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UPDATED_NEW&#34;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;email&#39;</span> <span style="color:#f92672">in</span> updates:
+</span></span><span style="display:flex;"><span>            new_email <span style="color:#f92672">=</span> updates[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                cognito_client<span style="color:#f92672">.</span>admin_update_user_attributes(
+</span></span><span style="display:flex;"><span>                    UserPoolId<span style="color:#f92672">=</span>USER_POOL_ID,
+</span></span><span style="display:flex;"><span>                    Username<span style="color:#f92672">=</span>user_id, 
+</span></span><span style="display:flex;"><span>                    UserAttributes<span style="color:#f92672">=</span>[
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#39;Name&#39;</span>: <span style="color:#e6db74">&#39;email&#39;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#39;Value&#39;</span>: new_email
+</span></span><span style="display:flex;"><span>                        },
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#39;Name&#39;</span>: <span style="color:#e6db74">&#39;email_verified&#39;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#39;Value&#39;</span>: <span style="color:#e6db74">&#39;true&#39;</span>
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    ]
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Cognito Error: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Update DynamoDB success, but failed to update Cognito: </span><span style="color:#e6db74">{</span>str(e)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        success_body <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Update success&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;updatedAttributes&#34;</span>: dynamo_response<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Attributes&#39;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps(success_body)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Unknow error: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Error when handle request: </span><span style="color:#e6db74">{</span>str(e)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>        }</span></span></code></pre></div>
+<hr>
+<h2 id="declare-and-initialize">Declare and initialize<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+</span></span><span style="display:flex;"><span>cognito_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;cognito-idp&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TABLE_NAME <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;TABLE_NAME&#39;</span>)
+</span></span><span style="display:flex;"><span>USER_POOL_ID <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;USER_POOL_ID&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(TABLE_NAME)</span></span></code></pre></div>
+<ul>
+<li><code>import boto3</code>: Thư viện (<strong>SDK</strong>) chính thức của <strong>AWS</strong> cho <strong>Python</strong>, dùng để tương tác với các <strong>AWS Service</strong></li>
+<li><code>import json</code>: Dùng để xử lý dữ liệu <strong>JSON</strong> (ví dụ: <code>event[&quot;body&quot;]</code>)</li>
+<li><code>import os</code>: Dùng để đọc các <strong>Environment variables</strong> trong <strong>Configuration</strong> của <strong>Lambda</strong></li>
+<li><code>dynamodb = boto3.resource('dynamodb')</code>: Sử dụng giao diện &ldquo;resource&rdquo; (cấp cao, dễ dùng hơn) của <code>boto3</code> cho <strong>DynamoDB</strong></li>
+<li><code>cognito_client = boto3.client('cognito-idp')</code>: Sử dụng giao diện &ldquo;client&rdquo; (cấp thấp, chi tiết hơn) cho <strong>Cognito Identity Provider</strong></li>
+<li><code>TABLE_NAME = os.environ.get('TABLE_NAME')</code>: Tên của bảng <strong>DynamoDB</strong> chứa thông tin người dùng</li>
+<li><code>USER_POOL_ID = os.environ.get('USER_POOL_ID')</code>: ID của <strong>Cognito User Pool</strong> nơi người dùng được quản lý</li>
+<li><code>table = dynamodb.Table(TABLE_NAME)</code>: Tạo một đối tượng <strong>Table</strong> cụ thể từ dynamodb resource, trỏ đến bảng có tên là <code>TABLE_NAME</code>. Điều này giúp thực hiện các thao tác (như <code>update_item</code>) trực tiếp trên bảng đó</li>
+</ul>
+<hr>
+<h2 id="build_update_params-function">build_update_params Function<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li><code>def build_update_params(updates):</code>: Khai báo tên hàm, tên tham số</li>
+<li><code>update_expression = &quot;SET &quot;</code>: Chuỗi lệnh <code>SET</code> cho <strong>DynamoDB</strong> (ví dụ: <code>SET #name = :name, #email = :email</code>)</li>
+<li><code>expression_names = {}</code>: Một dictionary để map tên giữ chỗ (placeholder) với tên thuộc tính thật. Ví dụ: <code>{&quot;#name&quot;: &quot;name&quot;}</code>. Điều này rất quan trọng để tránh lỗi với các từ khóa dự trữ (reserved words) của <strong>DynamoDB</strong> (như <code>name</code>)</li>
+<li><code>expression_values = {}</code>: Một dictionary để map tên giữ chỗ với giá trị thật. Ví dụ: <code>{&quot;:name&quot;: &quot;John Doe&quot;}</code>. Điều này giúp ngăn ngừa lỗi SQL injection (mặc dù đây là <strong>NoSQL</strong>, nguyên tắc tương tự)</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>attribute_map <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;#name&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;#email&#34;</span>,
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<ul>
+<li>Định nghĩa một <code>attribute_map</code>. Nó chỉ định rằng nếu <code>updates</code> có chứa &ldquo;name&rdquo; hoặc &ldquo;email&rdquo;, chúng ta sẽ sử dụng tên giữ chỗ là <code>#name</code> và <code>#email</code> trong <code>UpdateExpression</code></li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> updates<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> attribute_map:
+</span></span><span style="display:flex;"><span>        placeholder <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;:</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        attr_name <span style="color:#f92672">=</span> attribute_map[key]
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        update_expression <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>attr_name<span style="color:#e6db74">}</span><span style="color:#e6db74"> = </span><span style="color:#e6db74">{</span>placeholder<span style="color:#e6db74">}</span><span style="color:#e6db74">, &#34;</span>
+</span></span><span style="display:flex;"><span>        expression_values[placeholder] <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>        expression_names[attr_name] <span style="color:#f92672">=</span> key</span></span></code></pre></div>
+<ul>
+<li>
+<p><code>for key, value in updates.items():</code>: Lặp qua từng cặp <code>key</code> (tên trường) và <code>value</code> (giá trị mới) trong dictionary <code>updates</code> mà người dùng gửi lên</p>
+</li>
+<li>
+<p><code>if key in attribute_map:</code>: (<strong>Quan trọng</strong>) Chỉ xử lý nếu <code>key</code> (ví dụ: &ldquo;name&rdquo;) có trong <code>attribute_map</code>. Nếu người dùng gửi một trường không có trong map (ví dụ: <code>{&quot;age&quot;: 30}</code>), nó sẽ bị bỏ qua</p>
+</li>
+<li>
+<p>Nếu trường hợp lệ:
+<br>  + <code>placeholder = f&quot;:{key}&quot;</code>: Tạo tên giữ chỗ cho giá trị (ví dụ: <code>:name</code>)
+<br>  + <code>attr_name = attribute_map[key]1</code>: Lấy tên giữ chỗ cho thuộc tính (ví dụ: <code>#name</code>)
+<br>  + <code>update_expression += f&quot;{attr_name} = {placeholder}, &quot;</code>: Thêm vào chuỗi <code>update_expression</code> (ví dụ: <code>SET #name = :name, </code> )
+<br>  + <code>expression_values[placeholder] = value</code>: Thêm giá trị vào <code>expression_values</code> (ví dụ: <code>{&quot;:name&quot;: &quot;John Doe&quot;}</code>)
+<br>  + <code>expression_names[attr_name] = key</code>: Thêm tên vào <code>expression_names</code> (ví dụ: <code>{&quot;#name&quot;: &quot;name&quot;}</code>)</p>
+</li>
+<li>
+<p><code>update_expression = update_expression.rstrip(&quot;, &quot;)</code>: Xóa dấu phẩy và khoảng trắng thừa ở cuối chuỗi <code>update_expression</code></p>
+</li>
+<li>
+<p><code>return update_expression, expression_names, expression_values</code>: Trả về 3 thành phần đã được xây dựng</p>
+</li>
+</ul>
+<hr>
+<h2 id="lambda_handler-function">lambda_handler Function<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="update-dynamodb">Update DynamoDB<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>def lambda_handler(event, context):</code>: Khai báo tên hàm, tên tham số</li>
+<li><code>try:</code>: Bắt đầu một khối <code>try...except</code> lớn để bắt bất kỳ lỗi không mong muốn nào</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;body&#34;</span> <span style="color:#f92672">in</span> event:
+</span></span><span style="display:flex;"><span>    body <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(event[<span style="color:#e6db74">&#34;body&#34;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    body <span style="color:#f92672">=</span> event</span></span></code></pre></div>
+<ul>
+<li>
+<p>Xử lý <code>event</code>. Nếu <strong>Lambda</strong> này được kích hoạt bởi <strong>API Gateway</strong>, dữ liệu POST/PUT sẽ nằm trong <code>event[&quot;body&quot;]</code> dưới dạng một chuỗi JSON. Cần <code>json.loads</code> để biến nó thành dictionary. Nếu không, (ví dụ: chạy test trực tiếp trong <strong>Lambda</strong>), event chính là <code>body</code></p>
+</li>
+<li>
+<p><code>user_id = body.get('userId')</code>: Lấy <code>userId</code></p>
+</li>
+<li>
+<p><code>updates = body.get('updates')</code>: Lấy dictionary <code>updates</code></p>
+</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> user_id <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> updates:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">400</span>, <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">&#39;Lỗi: Thiếu &#34;userId&#34; hoặc &#34;updates&#34;&#39;</span>}</span></span></code></pre></div>
+<ul>
+<li>
+<p>Kiểm tra xem <code>userId</code> và <code> updates</code> có tồn tại không. Nếu thiếu, trả về lỗi <code>400 Bad Request</code></p>
+</li>
+<li>
+<p><code>update_expr, attr_names, attr_values = build_update_params(updates)</code>: Gọi hàm <code>build_update_params</code> đã giải thích ở trên</p>
+</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> attr_values:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">400</span>, <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">&#39;Không có trường hợp lệ nào để cập nhật&#39;</span>}</span></span></code></pre></div>
+<ul>
+<li>Nếu <code>attr_values</code> rỗng (nghĩa là người dùng đã gửi <code>updates</code> nhưng không chứa &ldquo;name&rdquo; hay &ldquo;email&rdquo;), trả về lỗi <code>400</code></li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>dynamo_response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>update_item(
+</span></span><span style="display:flex;"><span>    Key<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;userId&#39;</span>: user_id},
+</span></span><span style="display:flex;"><span>    UpdateExpression<span style="color:#f92672">=</span>update_expr,
+</span></span><span style="display:flex;"><span>    ExpressionAttributeNames<span style="color:#f92672">=</span>attr_names,
+</span></span><span style="display:flex;"><span>    ExpressionAttributeValues<span style="color:#f92672">=</span>attr_values,
+</span></span><span style="display:flex;"><span>    ReturnValues<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UPDATED_NEW&#34;</span>
+</span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
+<ul>
+<li><code>dynamo_response = table.update_item()</code>: Đây là lệnh chính thức cập nhật <strong>DynamoDB</strong></li>
+<li><code>Key={'userId': user_id}</code>: Chỉ định item nào cần cập nhật (dựa trên <strong>Primary Key</strong>)</li>
+<li>Cung cấp 3 tham số đã được tạo ra bởi hàm <code>build_update_params</code></li>
+<li><code>ReturnValues=&quot;UPDATED_NEW&quot;</code>: Yêu cầu DynamoDB trả về giá trị mới của các thuộc tính vừa được cập nhật</li>
+</ul>
+<hr>
+<h3 id="update-cognito">Update Cognito<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;email&#39;</span> <span style="color:#f92672">in</span> updates:
+</span></span><span style="display:flex;"><span>    new_email <span style="color:#f92672">=</span> updates[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        cognito_client<span style="color:#f92672">.</span>admin_update_user_attributes(
+</span></span><span style="display:flex;"><span>            UserPoolId<span style="color:#f92672">=</span>USER_POOL_ID,
+</span></span><span style="display:flex;"><span>            Username<span style="color:#f92672">=</span>user_id, 
+</span></span><span style="display:flex;"><span>            UserAttributes<span style="color:#f92672">=</span>[
+</span></span><span style="display:flex;"><span>                { <span style="color:#e6db74">&#39;Name&#39;</span>: <span style="color:#e6db74">&#39;email&#39;</span>, <span style="color:#e6db74">&#39;Value&#39;</span>: new_email },
+</span></span><span style="display:flex;"><span>                { <span style="color:#e6db74">&#39;Name&#39;</span>: <span style="color:#e6db74">&#39;email_verified&#39;</span>, <span style="color:#e6db74">&#39;Value&#39;</span>: <span style="color:#e6db74">&#39;true&#39;</span> }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        )</span></span></code></pre></div>
+<ul>
+<li><code>if 'email' in updates:</code>: Chỉ thực hiện khối này nếu email là một trong các trường được yêu cầu cập nhật</li>
+<li><code>new_email = updates['email']</code>: Lấy địa chỉ email mới</li>
+<li><code>try:</code>: Bắt đầu một khối ```try&hellip;except`` lồng nhau. Điều này rất quan trọng: nó cho phép bắt lỗi <strong>Cognito</strong> một cách riêng biệt</li>
+<li><code>cognito_client.admin_update_user_attributes()</code>: Gọi hàm <code>admin_update_user_attributes</code> của <strong>Cognito</strong></li>
+<li><code>UserPoolId=USER_POOL_ID,</code>: Chỉ định <strong>UserPoolId</strong></li>
+<li><code>Username=user_id,</code>: Chỉ định Username (trong Cognito, Username thường chính là userId hoặc sub của người dùng)</li>
+<li>Cập nhật thuộc tính <code>email</code> thành giá trị mới, và đồng thời đánh dấu <code>email_verified</code> là <code>true</code>. Đây là một hành động &ldquo;admin&rdquo;, giả định rằng email do admin cập nhật là đã được xác thực</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Cognito Error: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Update DynamoDB success, but failed to update Cognito: </span><span style="color:#e6db74">{</span>str(e)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<ul>
+<li>Nếu có lỗi xảy ra chỉ với <strong>Cognito</strong> (ví dụ: <code>email</code> không hợp lệ, người dùng không tồn tại trong <strong>Cognito</strong>), hàm sẽ dừng và trả về lỗi <strong>500</strong>, nó nói rõ: &ldquo;Update DynamoDB success, but failed to update Cognito&rdquo;</li>
+</ul>
+<hr>
+<h3 id="return-successs-and-catch-general-exception">Return Successs and catch general Exception<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>success_body <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Update success&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;updatedAttributes&#34;</span>: dynamo_response<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Attributes&#39;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;body&#39;</span>: json<span style="color:#f92672">.</span>dumps(success_body)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<ul>
+<li>Nếu mọi thứ chạy suôn sẻ (cả <strong>DynamoDB</strong> và <strong>Cognito</strong> (nếu có)), tạo một <code>body</code> phản hồi thành công. Nó bao gồm các thuộc tính đã được cập nhật lấy từ <code>dynamo_response</code> (nhờ <code>ReturnValues=&quot;UPDATED_NEW&quot;</code>)</li>
+<li>Trả về phản hồi <code>200 OK</code> với body đã được chuyển thành chuỗi <strong>JSON</strong></li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Unknow error: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;statusCode&#39;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;body&#39;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Error when handle request: </span><span style="color:#e6db74">{</span>str(e)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<ul>
+<li><code>except Exception as e:</code>: Đây là khối <code>except</code> của <code>try</code> lớn bên ngoài</li>
+<li>Nếu có bất kỳ lỗi nào khác xảy ra (ví dụ: lỗi parse <strong>JSON</strong>, lỗi <strong>DynamoDB</strong>, lỗi <strong>Evironment variables</strong> bị thiếu&hellip;), nó sẽ bị bắt ở đây và trả về lỗi <code>500 Internal Server Error</code></li>
+</ul>
+<hr>
 
   <footer class="footline">
   </footer>
@@ -202,7 +497,7 @@
           <ul class="space collapsible-menu">
             <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
             <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005@gmail.com</a></li>
+            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005</a></li>
           </ul>
         </div>
         <div id="R-footer-margin"></div>
@@ -232,8 +527,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763235415" defer></script>
-    <script src="../../../../../js/theme.js?1763235415" defer></script>
+    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763299274" defer></script>
+    <script src="../../../../../js/theme.min.js?1763299274" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

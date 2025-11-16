@@ -1,132 +1,132 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/note/05_cloud/aws/index.html</loc>
+    <loc>/note/05_cloud/aws/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/05_cloud/aws/lambda/index.html</loc>
+    <loc>/note/05_cloud/aws/lambda/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/02_operating-system/linux/bash/index.html</loc>
+    <loc>/note/02_operating-system/linux/bash/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/a_build_and_test_template/index.html</loc>
+    <loc>/note/03_source-control/gitlab/02_ci-cd-template/a_build_and_test_template/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/gitlab/01_create-connection/index.html</loc>
+    <loc>/note/03_source-control/gitlab/01_create-connection/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/01_data-structures/index.html</loc>
+    <loc>/note/01_programming-language/python/01_data-structures/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html</loc>
+    <loc>/note/03_source-control/github/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/github/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/index.html</loc>
+    <loc>/note/02_operating-system/linux/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/02_operating-system/linux/index.html</loc>
+    <loc>/note/01_programming-language/python/01_data-structures/a_list_data_type/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/01_data-structures/a_list_data_type/index.html</loc>
+    <loc>/note/01_programming-language/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/index.html</loc>
+    <loc>/note/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/index.html</loc>
+    <loc>/note/01_programming-language/python/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/index.html</loc>
+    <loc>/note/04_virtual-machine/virtual-box/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/04_virtual-machine/virtual-box/index.html</loc>
+    <loc>/note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/index.html</loc>
+    <loc>/note/03_source-control/gitlab/02_ci-cd-template/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/02_operating-system/linux/commands/index.html</loc>
+    <loc>/note/02_operating-system/linux/commands/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/b_deployment_template/index.html</loc>
+    <loc>/note/03_source-control/gitlab/02_ci-cd-template/b_deployment_template/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/01_data-structures/b_dictionary_data_type/index.html</loc>
+    <loc>/note/01_programming-language/python/01_data-structures/b_dictionary_data_type/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/gitlab/index.html</loc>
+    <loc>/note/03_source-control/gitlab/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/02_operating-system/index.html</loc>
+    <loc>/note/02_operating-system/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/02_operators/index.html</loc>
+    <loc>/note/01_programming-language/python/02_operators/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/c_security_template/index.html</loc>
+    <loc>/note/03_source-control/gitlab/02_ci-cd-template/c_security_template/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/index.html</loc>
+    <loc>/note/03_source-control/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/03_statements/index.html</loc>
+    <loc>/note/01_programming-language/python/03_statements/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/01_data-structures/c_string_data_type/index.html</loc>
+    <loc>/note/01_programming-language/python/01_data-structures/c_string_data_type/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/02_operating-system/linux/ubuntu/index.html</loc>
+    <loc>/note/02_operating-system/linux/ubuntu/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/04_functions/index.html</loc>
+    <loc>/note/01_programming-language/python/04_functions/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/03_source-control/gitlab/02_ci-cd-template/d_other_template/index.html</loc>
+    <loc>/note/03_source-control/gitlab/02_ci-cd-template/d_other_template/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/01_data-structures/d_tuple_data_type/index.html</loc>
+    <loc>/note/01_programming-language/python/01_data-structures/d_tuple_data_type/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/04_virtual-machine/index.html</loc>
+    <loc>/note/04_virtual-machine/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/05_cloud/index.html</loc>
+    <loc>/note/05_cloud/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/05_parameters/index.html</loc>
+    <loc>/note/01_programming-language/python/05_parameters/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/01_data-structures/e_set_data_type/index.html</loc>
+    <loc>/note/01_programming-language/python/01_data-structures/e_set_data_type/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/06_classes/index.html</loc>
+    <loc>/note/01_programming-language/python/06_classes/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/01_data-structures/f_data_type_comparision/index.html</loc>
+    <loc>/note/01_programming-language/python/01_data-structures/f_data_type_comparision/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/07_files/index.html</loc>
+    <loc>/note/01_programming-language/python/07_files/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/06_office/index.html</loc>
+    <loc>/note/06_office/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/08_libraries/index.html</loc>
+    <loc>/note/01_programming-language/python/08_libraries/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/10_debugging/index.html</loc>
+    <loc>/note/01_programming-language/python/10_debugging/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/categories/index.html</loc>
+    <loc>/categories/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/note/01_programming-language/python/09_regular-expressions/index.html</loc>
+    <loc>/note/01_programming-language/python/09_regular-expressions/index.html</loc>
   </url>
   <url>
-    <loc>//localhost:1313/tags/index.html</loc>
+    <loc>/tags/index.html</loc>
   </url>
 </urlset>

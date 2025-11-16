@@ -1,396 +1,0 @@
-<!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.152.2">
-    <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
-    <meta name="description" content="Deployment Template on GitlabCloud and Virtual MachineAWS/CF-Provision-and-Deploy-EC2.gitlab-ci.ymlDùng CloudFormation để tạo hạ tầng và deploy lên EC2 AWS/Deploy-EC2.gitlab-ci.ymlDeploy một ứng dụng lên EC2 AWS/ECS.gitlab-ci.ymlDeploy lên Dịch vụ AWS ECS Jobs/Deploy/ECS.gitlab-ci.ymlMột template công việc (job) để deploy lên ECS, thường được dùng bởi Auto DevOps Jobs/Deploy.gitlab-ci.ymlTemplate công việc deploy cơ bản GCP.gitlab-ci.ymlTemplate chung cho Google Cloud Platform Heroku.gitlab-ci.ymlDeploy lên Heroku Serverless.gitlab-ci.ymlTemplate chung cho framework Serverless AWS/EKS.gitlab-ci.ymlDeploy lên Amazon EKS - Kubernetes AWS/lambda-deploy.gitlab-ci.ymlDeploy hàm AWS Lambda Container &amp; KubernetesOpenShift.gitlab-ci.ymlDành cho việc triển khai lên nền tảng OpenShift Packer.gitlab-ci.ymlDùng để build và đẩy (push) Docker image Infrastructure as Code (IaC) DeployingTerraform.gitlab-ci.ymlTemplate chính cho Terraform để quản lý hạ tầng Terraform.latest.gitlab-ci.ymlLuôn dùng phiên bản Terraform mới nhất Terraform.gitlab-ci.ymlDùng để tạo các machine image PaaS Platform &amp; Static WebsitePages/Auto-DevOps.gitlab-ci.ymlDùng cho GitLab Pages Pages/Hugo.gitlab-ci.ymlDùng cho trang tĩnh Hugo Pages/Jekyll.gitlab-ci.ymlDùng cho trang tĩnh Jekyll Pages/HTML.gitlab-ci.ymlTemplate cơ bản nhất, nó không “build” gì cả, chỉ đơn giản là lấy một thư mục (thường là public) chứa các tệp HTML/CSS/JS tĩnh của bạn và deploy chúng Pages/Gatsby.gitlab-ci.ymlDùng cho Gatsby để build các trang web tĩnh hiệu suất cao bằng React và GraphQL Pages/Docusaurus.gitlab-ci.ymlDùng để build và deploy các trang web làm bằng Docusaurus. Đây là SSG do Meta (Facebook) tạo ra, rất mạnh mẽ để xây dựng các trang tài liệu (documentation), đặc biệt là cho các dự án React Pages/Eleventy.gitlab-ci.ymlDùng cho Eleventy (11ty). Đây là một SSG hiện đại, linh hoạt và rất nhẹ, không phụ thuộc vào một framework JavaScript cụ thể (như React hay Vue) Pages/GitBook.gitlab-ci.ymlDùng cho GitBook, một công cụ chuyên dụng để xây dựng các cuốn sách trực tuyến, tài liệu kỹ thuật, hoặc cơ sở tri thức (knowledge base) đẹp mắt Pages/MkDocs.gitlab-ci.ymlDùng cho MkDocs, một SSG viết bằng Python, được thiết kế đặc biệt để tạo các trang tài liệu (docs) từ các tệp Markdown một cách nhanh chóng và đơn giản. Pages/Pelican.gitlab-ci.ymlDùng cho Pelican, một SSG khác cũng được viết bằng Python, thường được dùng để tạo blog và các trang web cá nhân. Pages/VuePress.gitlab-ci.ymlDùng cho VuePress, một SSG được phát triển bởi nhóm Vue.js, tối ưu hóa cho việc viết tài liệu kỹ thuật, với các tính năng tích hợp sẵn cho việc này.">
-    <meta name="author" content="">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Deployment Template :: IT From Scratch">
-    <meta name="twitter:description" content="Deployment Template on GitlabCloud and Virtual MachineAWS/CF-Provision-and-Deploy-EC2.gitlab-ci.ymlDùng CloudFormation để tạo hạ tầng và deploy lên EC2 AWS/Deploy-EC2.gitlab-ci.ymlDeploy một ứng dụng lên EC2 AWS/ECS.gitlab-ci.ymlDeploy lên Dịch vụ AWS ECS Jobs/Deploy/ECS.gitlab-ci.ymlMột template công việc (job) để deploy lên ECS, thường được dùng bởi Auto DevOps Jobs/Deploy.gitlab-ci.ymlTemplate công việc deploy cơ bản GCP.gitlab-ci.ymlTemplate chung cho Google Cloud Platform Heroku.gitlab-ci.ymlDeploy lên Heroku Serverless.gitlab-ci.ymlTemplate chung cho framework Serverless AWS/EKS.gitlab-ci.ymlDeploy lên Amazon EKS - Kubernetes AWS/lambda-deploy.gitlab-ci.ymlDeploy hàm AWS Lambda Container &amp; KubernetesOpenShift.gitlab-ci.ymlDành cho việc triển khai lên nền tảng OpenShift Packer.gitlab-ci.ymlDùng để build và đẩy (push) Docker image Infrastructure as Code (IaC) DeployingTerraform.gitlab-ci.ymlTemplate chính cho Terraform để quản lý hạ tầng Terraform.latest.gitlab-ci.ymlLuôn dùng phiên bản Terraform mới nhất Terraform.gitlab-ci.ymlDùng để tạo các machine image PaaS Platform &amp; Static WebsitePages/Auto-DevOps.gitlab-ci.ymlDùng cho GitLab Pages Pages/Hugo.gitlab-ci.ymlDùng cho trang tĩnh Hugo Pages/Jekyll.gitlab-ci.ymlDùng cho trang tĩnh Jekyll Pages/HTML.gitlab-ci.ymlTemplate cơ bản nhất, nó không “build” gì cả, chỉ đơn giản là lấy một thư mục (thường là public) chứa các tệp HTML/CSS/JS tĩnh của bạn và deploy chúng Pages/Gatsby.gitlab-ci.ymlDùng cho Gatsby để build các trang web tĩnh hiệu suất cao bằng React và GraphQL Pages/Docusaurus.gitlab-ci.ymlDùng để build và deploy các trang web làm bằng Docusaurus. Đây là SSG do Meta (Facebook) tạo ra, rất mạnh mẽ để xây dựng các trang tài liệu (documentation), đặc biệt là cho các dự án React Pages/Eleventy.gitlab-ci.ymlDùng cho Eleventy (11ty). Đây là một SSG hiện đại, linh hoạt và rất nhẹ, không phụ thuộc vào một framework JavaScript cụ thể (như React hay Vue) Pages/GitBook.gitlab-ci.ymlDùng cho GitBook, một công cụ chuyên dụng để xây dựng các cuốn sách trực tuyến, tài liệu kỹ thuật, hoặc cơ sở tri thức (knowledge base) đẹp mắt Pages/MkDocs.gitlab-ci.ymlDùng cho MkDocs, một SSG viết bằng Python, được thiết kế đặc biệt để tạo các trang tài liệu (docs) từ các tệp Markdown một cách nhanh chóng và đơn giản. Pages/Pelican.gitlab-ci.ymlDùng cho Pelican, một SSG khác cũng được viết bằng Python, thường được dùng để tạo blog và các trang web cá nhân. Pages/VuePress.gitlab-ci.ymlDùng cho VuePress, một SSG được phát triển bởi nhóm Vue.js, tối ưu hóa cho việc viết tài liệu kỹ thuật, với các tính năng tích hợp sẵn cho việc này.">
-    <meta property="og:url" content="//localhost:1313/note/03_source-control/gitlab/template/02_deployment_template/index.html">
-    <meta property="og:site_name" content="IT From Scratch">
-    <meta property="og:title" content="Deployment Template :: IT From Scratch">
-    <meta property="og:description" content="Deployment Template on GitlabCloud and Virtual MachineAWS/CF-Provision-and-Deploy-EC2.gitlab-ci.ymlDùng CloudFormation để tạo hạ tầng và deploy lên EC2 AWS/Deploy-EC2.gitlab-ci.ymlDeploy một ứng dụng lên EC2 AWS/ECS.gitlab-ci.ymlDeploy lên Dịch vụ AWS ECS Jobs/Deploy/ECS.gitlab-ci.ymlMột template công việc (job) để deploy lên ECS, thường được dùng bởi Auto DevOps Jobs/Deploy.gitlab-ci.ymlTemplate công việc deploy cơ bản GCP.gitlab-ci.ymlTemplate chung cho Google Cloud Platform Heroku.gitlab-ci.ymlDeploy lên Heroku Serverless.gitlab-ci.ymlTemplate chung cho framework Serverless AWS/EKS.gitlab-ci.ymlDeploy lên Amazon EKS - Kubernetes AWS/lambda-deploy.gitlab-ci.ymlDeploy hàm AWS Lambda Container &amp; KubernetesOpenShift.gitlab-ci.ymlDành cho việc triển khai lên nền tảng OpenShift Packer.gitlab-ci.ymlDùng để build và đẩy (push) Docker image Infrastructure as Code (IaC) DeployingTerraform.gitlab-ci.ymlTemplate chính cho Terraform để quản lý hạ tầng Terraform.latest.gitlab-ci.ymlLuôn dùng phiên bản Terraform mới nhất Terraform.gitlab-ci.ymlDùng để tạo các machine image PaaS Platform &amp; Static WebsitePages/Auto-DevOps.gitlab-ci.ymlDùng cho GitLab Pages Pages/Hugo.gitlab-ci.ymlDùng cho trang tĩnh Hugo Pages/Jekyll.gitlab-ci.ymlDùng cho trang tĩnh Jekyll Pages/HTML.gitlab-ci.ymlTemplate cơ bản nhất, nó không “build” gì cả, chỉ đơn giản là lấy một thư mục (thường là public) chứa các tệp HTML/CSS/JS tĩnh của bạn và deploy chúng Pages/Gatsby.gitlab-ci.ymlDùng cho Gatsby để build các trang web tĩnh hiệu suất cao bằng React và GraphQL Pages/Docusaurus.gitlab-ci.ymlDùng để build và deploy các trang web làm bằng Docusaurus. Đây là SSG do Meta (Facebook) tạo ra, rất mạnh mẽ để xây dựng các trang tài liệu (documentation), đặc biệt là cho các dự án React Pages/Eleventy.gitlab-ci.ymlDùng cho Eleventy (11ty). Đây là một SSG hiện đại, linh hoạt và rất nhẹ, không phụ thuộc vào một framework JavaScript cụ thể (như React hay Vue) Pages/GitBook.gitlab-ci.ymlDùng cho GitBook, một công cụ chuyên dụng để xây dựng các cuốn sách trực tuyến, tài liệu kỹ thuật, hoặc cơ sở tri thức (knowledge base) đẹp mắt Pages/MkDocs.gitlab-ci.ymlDùng cho MkDocs, một SSG viết bằng Python, được thiết kế đặc biệt để tạo các trang tài liệu (docs) từ các tệp Markdown một cách nhanh chóng và đơn giản. Pages/Pelican.gitlab-ci.ymlDùng cho Pelican, một SSG khác cũng được viết bằng Python, thường được dùng để tạo blog và các trang web cá nhân. Pages/VuePress.gitlab-ci.ymlDùng cho VuePress, một SSG được phát triển bởi nhóm Vue.js, tối ưu hóa cho việc viết tài liệu kỹ thuật, với các tính năng tích hợp sẵn cho việc này.">
-    <meta property="og:locale" content="en_us">
-    <meta property="og:type" content="article">
-    <meta property="article:section" content="My Programming Note">
-    <meta itemprop="name" content="Deployment Template :: IT From Scratch">
-    <meta itemprop="description" content="Deployment Template on GitlabCloud and Virtual MachineAWS/CF-Provision-and-Deploy-EC2.gitlab-ci.ymlDùng CloudFormation để tạo hạ tầng và deploy lên EC2 AWS/Deploy-EC2.gitlab-ci.ymlDeploy một ứng dụng lên EC2 AWS/ECS.gitlab-ci.ymlDeploy lên Dịch vụ AWS ECS Jobs/Deploy/ECS.gitlab-ci.ymlMột template công việc (job) để deploy lên ECS, thường được dùng bởi Auto DevOps Jobs/Deploy.gitlab-ci.ymlTemplate công việc deploy cơ bản GCP.gitlab-ci.ymlTemplate chung cho Google Cloud Platform Heroku.gitlab-ci.ymlDeploy lên Heroku Serverless.gitlab-ci.ymlTemplate chung cho framework Serverless AWS/EKS.gitlab-ci.ymlDeploy lên Amazon EKS - Kubernetes AWS/lambda-deploy.gitlab-ci.ymlDeploy hàm AWS Lambda Container &amp; KubernetesOpenShift.gitlab-ci.ymlDành cho việc triển khai lên nền tảng OpenShift Packer.gitlab-ci.ymlDùng để build và đẩy (push) Docker image Infrastructure as Code (IaC) DeployingTerraform.gitlab-ci.ymlTemplate chính cho Terraform để quản lý hạ tầng Terraform.latest.gitlab-ci.ymlLuôn dùng phiên bản Terraform mới nhất Terraform.gitlab-ci.ymlDùng để tạo các machine image PaaS Platform &amp; Static WebsitePages/Auto-DevOps.gitlab-ci.ymlDùng cho GitLab Pages Pages/Hugo.gitlab-ci.ymlDùng cho trang tĩnh Hugo Pages/Jekyll.gitlab-ci.ymlDùng cho trang tĩnh Jekyll Pages/HTML.gitlab-ci.ymlTemplate cơ bản nhất, nó không “build” gì cả, chỉ đơn giản là lấy một thư mục (thường là public) chứa các tệp HTML/CSS/JS tĩnh của bạn và deploy chúng Pages/Gatsby.gitlab-ci.ymlDùng cho Gatsby để build các trang web tĩnh hiệu suất cao bằng React và GraphQL Pages/Docusaurus.gitlab-ci.ymlDùng để build và deploy các trang web làm bằng Docusaurus. Đây là SSG do Meta (Facebook) tạo ra, rất mạnh mẽ để xây dựng các trang tài liệu (documentation), đặc biệt là cho các dự án React Pages/Eleventy.gitlab-ci.ymlDùng cho Eleventy (11ty). Đây là một SSG hiện đại, linh hoạt và rất nhẹ, không phụ thuộc vào một framework JavaScript cụ thể (như React hay Vue) Pages/GitBook.gitlab-ci.ymlDùng cho GitBook, một công cụ chuyên dụng để xây dựng các cuốn sách trực tuyến, tài liệu kỹ thuật, hoặc cơ sở tri thức (knowledge base) đẹp mắt Pages/MkDocs.gitlab-ci.ymlDùng cho MkDocs, một SSG viết bằng Python, được thiết kế đặc biệt để tạo các trang tài liệu (docs) từ các tệp Markdown một cách nhanh chóng và đơn giản. Pages/Pelican.gitlab-ci.ymlDùng cho Pelican, một SSG khác cũng được viết bằng Python, thường được dùng để tạo blog và các trang web cá nhân. Pages/VuePress.gitlab-ci.ymlDùng cho VuePress, một SSG được phát triển bởi nhóm Vue.js, tối ưu hóa cho việc viết tài liệu kỹ thuật, với các tính năng tích hợp sẵn cho việc này.">
-    <meta itemprop="wordCount" content="393">
-    <title>Deployment Template :: IT From Scratch</title>
-    <link href="../../../../../images/favicon.png?1763230920" rel="icon" type="image/png">
-    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763230920" rel="stylesheet">
-    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763230920" defer></script>
-    <script src="../../../../../js/search-lunr.js?1763230920" defer></script>
-    <script src="../../../../../js/search.js?1763230920" defer></script>
-    <script>
-      window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../../../searchindex.en.js?1763230920";
-    </script>
-    <script src="../../../../../js/lunr/lunr.min.js?1763230920" defer></script>
-    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763230920" defer></script>
-    <script src="../../../../../js/lunr/lunr.multi.min.js?1763230920" defer></script>
-    <script src="../../../../../js/lunr/lunr.en.min.js?1763230920" defer></script>
-    <script>
-      window.relearn = window.relearn || {};
-      window.relearn.contentLangs=['en'];
-    </script>
-    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763230920" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763230920" rel="stylesheet"></noscript>
-    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763230920" rel="stylesheet">
-    <link href="../../../../../css/theme.css?1763230920" rel="stylesheet">
-    <link href="../../../../../css/format-html.css?1763230920" rel="stylesheet" id="R-format-style">
-    <script>
-      window.relearn = window.relearn || {};
-      // configuration
-      window.relearn.min = ``;
-      window.relearn.path='\/note\/03_source-control\/gitlab\/template\/02_deployment_template\/index.html';
-      window.relearn.relBasePath='..\/..\/..\/..\/..';
-      window.relearn.relBaseUri='..\/..\/..\/..\/..';
-      window.relearn.absBaseUri='\/\/localhost:1313';
-      window.relearn.disableInlineCopyToClipboard=false;
-      window.relearn.enableBlockCodeWrap=true;
-      // legal
-      window.relearn.getItem = (s,n) => {return s.getItem(n)};
-      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
-      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
-      // translations
-      window.T_Copy_to_clipboard = `Copy text to clipboard`;
-      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
-      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
-      window.T_Reset_view = `Reset view`;
-      window.T_View_reset = `View reset!`;
-      window.T_No_results_found = `No results found for "{0}"`;
-      window.T_N_results_found = `{1} results found for "{0}"`;
-      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
-      // variant stuff
-      window.relearn.themevariants = [ 'blue-dark', 'relearn-dark', 'relearn-light' ];
-      window.relearn.customvariantname = "my-custom-variant";
-      window.relearn.changeVariant = function(variant) {
-        var oldVariant = document.documentElement.dataset.rThemeVariant;
-        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
-        document.documentElement.dataset.rThemeVariant = variant;
-        if (oldVariant != variant) {
-          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
-          window.relearn.markVariant();
-        }
-      }
-      window.relearn.markVariant = function() {
-        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
-        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
-      }
-      window.relearn.initVariant = function() {
-        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
-        if( variant == window.relearn.customvariantname ){
-        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
-          variant = window.relearn.themevariants[0];
-          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
-        }
-        document.documentElement.dataset.rThemeVariant = variant;
-      }
-      window.relearn.initVariant();
-      window.relearn.markVariant();
-    </script>
-  </head>
-  <body class="mobile-support html" data-url="../../../../../note/03_source-control/gitlab/template/02_deployment_template/index.html">
-    <div id="R-body" class="default-animation">
-      <div id="R-body-overlay"></div>
-      <nav id="R-topbar">
-        <div class="topbar-wrapper">
-          <div class="topbar-sidebar-divider"></div>
-          <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
-            </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
-              <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-<nav class="TableOfContents">
-  <ul>
-    <li><a href="#cloud-and-virtual-machine">Cloud and Virtual Machine</a></li>
-    <li><a href="#container--kubernetes">Container &amp; Kubernetes</a></li>
-    <li><a href="#infrastructure-as-code-iac-deploying">Infrastructure as Code (IaC) Deploying</a></li>
-    <li><a href="#paas-platform--static-website">PaaS Platform &amp; Static Website</a></li>
-  </ul>
-</nav>
-                </div>
-              </div>
-            </div>
-          </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../index.html"><span itemprop="name">Main page</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/index.html"><span itemprop="name">My Programming Note</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/03_source-control/index.html"><span itemprop="name">Source Control</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/03_source-control/gitlab/index.html"><span itemprop="name">Gitlab</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/03_source-control/gitlab/template/index.html"><span itemprop="name">CI/CD Template</span></a><meta itemprop="position" content="5">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Deployment Template</span><meta itemprop="position" content="6"></li>
-          </ol>
-          <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../../note/03_source-control/gitlab/template/01_build_and_test_template/index.html" title="Build & Test Template (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
-            </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../../note/03_source-control/gitlab/template/03_security_template/index.html" title="Security Template (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
-            </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
-              <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-                  <div class="topbar-area topbar-area-more" data-area="more">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable note" tabindex="-1">
-        <div class="flex-block-wrapper">
-<article class="default">
-  <header class="headline">
-  </header>
-
-<h1 id="deployment-template">Deployment Template</h1>
-
-<h1 id="deployment-template-on-gitlab">Deployment Template on Gitlab<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
-<h2 id="cloud-and-virtual-machine">Cloud and Virtual Machine<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">AWS/CF-Provision-and-Deploy-EC2.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng CloudFormation để tạo hạ tầng và deploy lên EC2</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">AWS/Deploy-EC2.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Deploy một ứng dụng lên EC2</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">AWS/ECS.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Deploy lên Dịch vụ AWS ECS</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/Deploy/ECS.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Một template công việc (job) để deploy lên ECS, thường được dùng bởi Auto DevOps</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Jobs/Deploy.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Template công việc deploy cơ bản</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">GCP.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Template chung cho Google Cloud Platform</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Heroku.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Deploy lên Heroku</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Serverless.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Template chung cho framework Serverless</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">AWS/EKS.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Deploy lên Amazon EKS - Kubernetes</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">AWS/lambda-deploy.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Deploy hàm AWS Lambda</li>
-</ul>
-<hr>
-<h2 id="container--kubernetes">Container &amp; Kubernetes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">OpenShift.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dành cho việc triển khai lên nền tảng OpenShift</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Packer.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng để build và đẩy (push) Docker image</li>
-</ul>
-<hr>
-<h2 id="infrastructure-as-code-iac-deploying">Infrastructure as Code (IaC) Deploying<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Terraform.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Template chính cho Terraform để quản lý hạ tầng</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Terraform.latest.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Luôn dùng phiên bản Terraform mới nhất</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Terraform.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng để tạo các machine image</li>
-</ul>
-<hr>
-<h2 id="paas-platform--static-website">PaaS Platform &amp; Static Website<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/Auto-DevOps.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho GitLab Pages</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/Hugo.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho trang tĩnh Hugo</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/Jekyll.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho trang tĩnh Jekyll</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/HTML.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Template cơ bản nhất, nó không &ldquo;build&rdquo; gì cả, chỉ đơn giản là lấy một thư mục (thường là public) chứa các tệp HTML/CSS/JS tĩnh của bạn và deploy chúng</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/Gatsby.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho Gatsby để build các trang web tĩnh hiệu suất cao bằng React và GraphQL</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/Docusaurus.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng để build và deploy các trang web làm bằng Docusaurus. Đây là SSG do Meta (Facebook) tạo ra, rất mạnh mẽ để xây dựng các trang tài liệu (documentation), đặc biệt là cho các dự án React</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/Eleventy.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho Eleventy (11ty). Đây là một SSG hiện đại, linh hoạt và rất nhẹ, không phụ thuộc vào một framework JavaScript cụ thể (như React hay Vue)</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/GitBook.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho GitBook, một công cụ chuyên dụng để xây dựng các cuốn sách trực tuyến, tài liệu kỹ thuật, hoặc cơ sở tri thức (knowledge base) đẹp mắt</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/MkDocs.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho MkDocs, một SSG viết bằng Python, được thiết kế đặc biệt để tạo các trang tài liệu (docs) từ các tệp Markdown một cách nhanh chóng và đơn giản.</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/Pelican.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho Pelican, một SSG khác cũng được viết bằng Python, thường được dùng để tạo blog và các trang web cá nhân.</li>
-</ul>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">Pages/VuePress.gitlab-ci.yml</span></span></span></code></pre></div>
-<ul>
-<li>Dùng cho VuePress, một SSG được phát triển bởi nhóm Vue.js, tối ưu hóa cho việc viết tài liệu kỹ thuật, với các tính năng tích hợp sẵn cho việc này.</li>
-</ul>
-<hr>
-
-  <footer class="footline">
-  </footer>
-</article>
-        </div>
-      </main>
-    </div>
-    <aside id="R-sidebar" class="default-animation">
-      <div id="R-header-topbar" class="default-animation"></div>
-      <div id="R-header-wrapper" class="default-animation">
-        <div id="R-header" class="default-animation">
-<a id="R-logo" href="../../../../../index.html" style="display:flex; gap: 1rem; ">
-  <img src="../../../../../images/logo.png" alt="brand logo">
-  <div class="logo-title" style="display: flex; justify-content: center; align-items: center; font-size: 1.5rem;">IT From Scratch</div>
-</a>
-        </div>
-        <search><form action="../../../../../search/index.html" method="get">
-          <div class="searchbox default-animation">
-            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-            <label class="a11y-only" for="R-search-by">Search</label>
-            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
-            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
-          </div>
-        </form></search>
-      </div>
-      <div id="R-homelinks" class="default-animation">
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
-          <ul class="space collapsible-menu">
-          </ul>
-        </div>
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
-          <ul class="">
-          </ul>
-        </div>
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-      </div>
-      <div id="R-content-wrapper" class="highlightable">
-        <div class="R-sidebarmenu R-shortcutmenu-main">
-          <ul class="enlarge morespace collapsible-menu">
-            <li class="parent alwaysopen " data-nav-url="../../../../../note/index.html"><a class="padding" href="../../../../../note/index.html"><i class="far fa-sticky-note"></i> My Programming Note</a><ul id="R-subsections-81b0aa1fb369232a7bc48846a5daf4d9" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/01_programming-language/index.html"><input type="checkbox" id="R-section-c5aff2076aa8144a9a6847b47ae59b1d" aria-controls="R-subsections-c5aff2076aa8144a9a6847b47ae59b1d"><label for="R-section-c5aff2076aa8144a9a6847b47ae59b1d"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Programming Language</span></label><a class="padding" href="../../../../../note/01_programming-language/index.html">Programming Language</a><ul id="R-subsections-c5aff2076aa8144a9a6847b47ae59b1d" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/index.html"><input type="checkbox" id="R-section-c69d871f3e00ad3b63d34e3e5635cd17" aria-controls="R-subsections-c69d871f3e00ad3b63d34e3e5635cd17"><label for="R-section-c69d871f3e00ad3b63d34e3e5635cd17"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Python</span></label><a class="padding" href="../../../../../note/01_programming-language/python/index.html">Python</a><ul id="R-subsections-c69d871f3e00ad3b63d34e3e5635cd17" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/01_source-references/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_source-references/index.html">01. Source References</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/index.html"><input type="checkbox" id="R-section-2457555632dc770731e5d7cb02876ce9" aria-controls="R-subsections-2457555632dc770731e5d7cb02876ce9"><label for="R-section-2457555632dc770731e5d7cb02876ce9"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu 02. Data Structures</span></label><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/index.html">02. Data Structures</a><ul id="R-subsections-2457555632dc770731e5d7cb02876ce9" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/01_overall/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/01_overall/index.html">Overall</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/02_list_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/02_list_data_type/index.html">List Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/03_dictionary_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/03_dictionary_data_type/index.html">Dictionary Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/04_string_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/04_string_data_type/index.html">String Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/05_tuple_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/05_tuple_data_type/index.html">Tuple Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/06_set_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/06_set_data_type/index.html">Set Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_data-structures/07_comparision/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_data-structures/07_comparision/index.html">Comparision</a></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/03_operators/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/03_operators/index.html">03. Operators</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/04_statements/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/04_statements/index.html">04. Statements</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/05_functions/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/05_functions/index.html">05. Functions</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/06_parameters/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/06_parameters/index.html">06. Parameters</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/07_classes/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/07_classes/index.html">07. Classes</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/08_files/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/08_files/index.html">08. Files</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/09_libraries/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/09_libraries/index.html">09. Libraries</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/10_regular-expressions/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/10_regular-expressions/index.html">10. Regular-Expressions</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/11_debugging/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/11_debugging/index.html">11. Debugging</a></li></ul></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/02_operating-system/index.html"><input type="checkbox" id="R-section-72cabb372e9ddfd0ca9d90024a3ef5a5" aria-controls="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5"><label for="R-section-72cabb372e9ddfd0ca9d90024a3ef5a5"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Operating System</span></label><a class="padding" href="../../../../../note/02_operating-system/index.html">Operating System</a><ul id="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/02_operating-system/bash/index.html"><a class="padding" href="../../../../../note/02_operating-system/bash/index.html">Bash</a></li>
-            <li class="" data-nav-url="../../../../../note/02_operating-system/linux/index.html"><input type="checkbox" id="R-section-1a0607c277123ef8a772efb392324e5d" aria-controls="R-subsections-1a0607c277123ef8a772efb392324e5d"><label for="R-section-1a0607c277123ef8a772efb392324e5d"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Linux</span></label><a class="padding" href="../../../../../note/02_operating-system/linux/index.html">Linux</a><ul id="R-subsections-1a0607c277123ef8a772efb392324e5d" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/02_operating-system/linux/commands/index.html"><a class="padding" href="../../../../../note/02_operating-system/linux/commands/index.html">Commands</a></li>
-            <li class="" data-nav-url="../../../../../note/02_operating-system/linux/ubuntu/index.html"><a class="padding" href="../../../../../note/02_operating-system/linux/ubuntu/index.html">Ubuntu</a></li></ul></li></ul></li>
-            <li class="parent " data-nav-url="../../../../../note/03_source-control/index.html"><input type="checkbox" id="R-section-ac1d6927bbe9ff8c128e19c91ced14f0" aria-controls="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" checked><label for="R-section-ac1d6927bbe9ff8c128e19c91ced14f0"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Source Control</span></label><a class="padding" href="../../../../../note/03_source-control/index.html">Source Control</a><ul id="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/03_source-control/github/index.html"><a class="padding" href="../../../../../note/03_source-control/github/index.html">GitHub</a></li>
-            <li class="parent " data-nav-url="../../../../../note/03_source-control/gitlab/index.html"><input type="checkbox" id="R-section-2c0cae0df36b0d16e42a4840ec6c366f" aria-controls="R-subsections-2c0cae0df36b0d16e42a4840ec6c366f" checked><label for="R-section-2c0cae0df36b0d16e42a4840ec6c366f"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Gitlab</span></label><a class="padding" href="../../../../../note/03_source-control/gitlab/index.html">Gitlab</a><ul id="R-subsections-2c0cae0df36b0d16e42a4840ec6c366f" class="collapsible-menu">
-            <li class="parent " data-nav-url="../../../../../note/03_source-control/gitlab/template/index.html"><input type="checkbox" id="R-section-3b8d79f55959d68b6474ff07bc27d263" aria-controls="R-subsections-3b8d79f55959d68b6474ff07bc27d263" checked><label for="R-section-3b8d79f55959d68b6474ff07bc27d263"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CI/CD Template</span></label><a class="padding" href="../../../../../note/03_source-control/gitlab/template/index.html">CI/CD Template</a><ul id="R-subsections-3b8d79f55959d68b6474ff07bc27d263" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/01_build_and_test_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/01_build_and_test_template/index.html">Build &amp; Test Template</a></li>
-            <li class="active " data-nav-url="../../../../../note/03_source-control/gitlab/template/02_deployment_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/02_deployment_template/index.html">Deployment Template</a></li>
-            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/03_security_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/03_security_template/index.html">Security Template</a></li>
-            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/template/04_other_template/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/template/04_other_template/index.html">Other Template</a></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/03_source-control/gitlab/create-connection/index.html"><a class="padding" href="../../../../../note/03_source-control/gitlab/create-connection/index.html">Create Connection</a></li></ul></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/04_virtual-machine/index.html"><input type="checkbox" id="R-section-174921e347b3c11effb7c9f708890ddf" aria-controls="R-subsections-174921e347b3c11effb7c9f708890ddf"><label for="R-section-174921e347b3c11effb7c9f708890ddf"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Virtual Machine</span></label><a class="padding" href="../../../../../note/04_virtual-machine/index.html">Virtual Machine</a><ul id="R-subsections-174921e347b3c11effb7c9f708890ddf" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/04_virtual-machine/virtual-box/index.html"><a class="padding" href="../../../../../note/04_virtual-machine/virtual-box/index.html">Virtual Box</a></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/05_cloud/index.html"><input type="checkbox" id="R-section-e5ca58342a8124a4e97c89f37782db22" aria-controls="R-subsections-e5ca58342a8124a4e97c89f37782db22"><label for="R-section-e5ca58342a8124a4e97c89f37782db22"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Cloud</span></label><a class="padding" href="../../../../../note/05_cloud/index.html"><i class="fas fa-cloud"></i> Cloud</a><ul id="R-subsections-e5ca58342a8124a4e97c89f37782db22" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/05_cloud/aws/index.html"><input type="checkbox" id="R-section-22950c00d752d377cb55ee167f374578" aria-controls="R-subsections-22950c00d752d377cb55ee167f374578"><label for="R-section-22950c00d752d377cb55ee167f374578"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu AWS</span></label><a class="padding" href="../../../../../note/05_cloud/aws/index.html">AWS</a><ul id="R-subsections-22950c00d752d377cb55ee167f374578" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/05_cloud/aws/lambda/index.html"><input type="checkbox" id="R-section-036e12aebdbb7d09e458800ed7507fef" aria-controls="R-subsections-036e12aebdbb7d09e458800ed7507fef"><label for="R-section-036e12aebdbb7d09e458800ed7507fef"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu AWS Lambda</span></label><a class="padding" href="../../../../../note/05_cloud/aws/lambda/index.html">AWS Lambda</a><ul id="R-subsections-036e12aebdbb7d09e458800ed7507fef" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html"><a class="padding" href="../../../../../note/05_cloud/aws/lambda/01_example_with_dynamo_and_cognito/index.html">Example</a></li></ul></li></ul></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/06_office/index.html"><a class="padding" href="../../../../../note/06_office/index.html">Office</a></li></ul></li>
-          </ul>
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
-          <div class="nav-title padding">More</div>
-          <ul class="space collapsible-menu">
-            <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
-            <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005@gmail.com</a></li>
-          </ul>
-        </div>
-        <div id="R-footer-margin"></div>
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
-          <ul class="">
-            <li class="R-variantswitcher">
-              <div class="padding menu-control">
-                <i class="fa-fw fas fa-paint-brush"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <label class="a11y-only" for="R-select-variant">Theme</label>
-                  <select id="R-select-variant">
-                    <option id="R-select-variant-blue-dark" value="blue-dark" selected>Blue Dark</option>
-                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
-                    <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
-                  </select>
-                </div>
-                <div class="clear"></div>
-              </div>
-              <script>window.relearn.markVariant();</script>
-            </li>
-          </ul>
-        </div>
-<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
-      </div>
-    </aside>
-    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763230920" defer></script>
-    <script src="../../../../../js/theme.js?1763230920" defer></script>
-    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
-  </body>
-</html>
