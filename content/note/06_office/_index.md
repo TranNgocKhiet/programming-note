@@ -1,7 +1,7 @@
 ---
 title: "Office"
 menuPre: '<i class="fab fa-microsoft"></i> ' 
-weight: 7
+weight: 6
 ---
 
 ## Install guide

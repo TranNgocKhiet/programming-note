@@ -1,374 +1,0 @@
-<!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.152.2">
-    <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
-    <meta name="description" content="SyntaxInput
-my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Output
-fatMy cat has gray furInput
-spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Output
-Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0Returning Values | values()Input">
-    <meta name="author" content="">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Dictionary Data Type :: IT From Scratch">
-    <meta name="twitter:description" content="SyntaxInput
-my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Output
-fatMy cat has gray furInput
-spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Output
-Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0Returning Values | values()Input">
-    <meta property="og:url" content="/note/01_programming-language/python/01_data-structures/b_dictionary_data_type/index.html">
-    <meta property="og:site_name" content="IT From Scratch">
-    <meta property="og:title" content="Dictionary Data Type :: IT From Scratch">
-    <meta property="og:description" content="SyntaxInput
-my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Output
-fatMy cat has gray furInput
-spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Output
-Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0Returning Values | values()Input">
-    <meta property="og:locale" content="en_us">
-    <meta property="og:type" content="article">
-    <meta property="article:section" content="Programming Note">
-    <meta itemprop="name" content="Dictionary Data Type :: IT From Scratch">
-    <meta itemprop="description" content="SyntaxInput
-my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; &#43; my_cat[&#39;color&#39;] &#43; &#39; fur.&#39;)Output
-fatMy cat has gray furInput
-spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])Output
-Luggage CombinationThe AnswerTraceback (most recent call last):File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;KeyError: 0Returning Values | values()Input">
-    <meta itemprop="wordCount" content="311">
-    <title>Dictionary Data Type :: IT From Scratch</title>
-    <link href="../../../../../images/favicon.png?1763300029" rel="icon" type="image/png">
-    <link href="../../../../../css/auto-complete/auto-complete.min.css?1763300029" rel="stylesheet">
-    <script src="../../../../../js/auto-complete/auto-complete.min.js?1763300029" defer></script>
-    <script src="../../../../../js/search-lunr.min.js?1763300029" defer></script>
-    <script src="../../../../../js/search.min.js?1763300029" defer></script>
-    <script>
-      window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../../../searchindex.en.js?1763300029";
-    </script>
-    <script src="../../../../../js/lunr/lunr.min.js?1763300029" defer></script>
-    <script src="../../../../../js/lunr/lunr.stemmer.support.min.js?1763300029" defer></script>
-    <script src="../../../../../js/lunr/lunr.multi.min.js?1763300029" defer></script>
-    <script src="../../../../../js/lunr/lunr.en.min.js?1763300029" defer></script>
-    <script>
-      window.relearn = window.relearn || {};
-      window.relearn.contentLangs=['en'];
-    </script>
-    <link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763300029" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763300029" rel="stylesheet"></noscript>
-    <link href="../../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763300029" rel="stylesheet">
-    <link href="../../../../../css/theme.min.css?1763300029" rel="stylesheet">
-    <link href="../../../../../css/format-html.min.css?1763300029" rel="stylesheet" id="R-format-style">
-    <script>
-      window.relearn = window.relearn || {};
-      // configuration
-      window.relearn.min = `.min`;
-      window.relearn.path='\/note\/01_programming-language\/python\/01_data-structures\/b_dictionary_data_type\/index.html';
-      window.relearn.relBasePath='..\/..\/..\/..\/..';
-      window.relearn.relBaseUri='..\/..\/..\/..\/..';
-      window.relearn.absBaseUri='';
-      window.relearn.disableInlineCopyToClipboard=false;
-      window.relearn.enableBlockCodeWrap=true;
-      // legal
-      window.relearn.getItem = (s,n) => {return s.getItem(n)};
-      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
-      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
-      // translations
-      window.T_Copy_to_clipboard = `Copy text to clipboard`;
-      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
-      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
-      window.T_Reset_view = `Reset view`;
-      window.T_View_reset = `View reset!`;
-      window.T_No_results_found = `No results found for "{0}"`;
-      window.T_N_results_found = `{1} results found for "{0}"`;
-      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
-      // variant stuff
-      window.relearn.themevariants = [ 'blue-dark', 'relearn-dark', 'relearn-light' ];
-      window.relearn.customvariantname = "my-custom-variant";
-      window.relearn.changeVariant = function(variant) {
-        var oldVariant = document.documentElement.dataset.rThemeVariant;
-        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
-        document.documentElement.dataset.rThemeVariant = variant;
-        if (oldVariant != variant) {
-          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
-          window.relearn.markVariant();
-        }
-      }
-      window.relearn.markVariant = function() {
-        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
-        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
-      }
-      window.relearn.initVariant = function() {
-        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
-        if( variant == window.relearn.customvariantname ){
-        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
-          variant = window.relearn.themevariants[0];
-          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
-        }
-        document.documentElement.dataset.rThemeVariant = variant;
-      }
-      window.relearn.initVariant();
-      window.relearn.markVariant();
-    </script>
-  </head>
-  <body class="mobile-support html" data-url="../../../../../note/01_programming-language/python/01_data-structures/b_dictionary_data_type/index.html">
-    <div id="R-body" class="default-animation">
-      <div id="R-body-overlay"></div>
-      <nav id="R-topbar">
-        <div class="topbar-wrapper">
-          <div class="topbar-sidebar-divider"></div>
-          <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
-<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
-            </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
-              <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-<nav class="TableOfContents">
-  <ul>
-    <li><a href="#syntax">Syntax</a></li>
-    <li><a href="#returning-values--values">Returning Values | <code>values()</code></a></li>
-    <li><a href="#returning-keys--keys">Returning Keys | <code>keys()</code></a></li>
-    <li><a href="#returning-keys-and-values--items">Returning Keys and Values | <code>items()</code></a></li>
-    <li><a href="#checking-whether-a-key-exists--get">Checking Whether a Key Exists | <code>get()</code></a></li>
-    <li><a href="#setting-default-values--setdefault">Setting Default Values | <code>setdefault()</code></a></li>
-    <li><a href="#view-object">View object</a></li>
-    <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
-  </ul>
-</nav>
-                </div>
-              </div>
-            </div>
-          </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../index.html"><span itemprop="name">Home Page</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/index.html"><span itemprop="name">Programming Note</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/01_programming-language/index.html"><span itemprop="name">Programming Language</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/01_programming-language/python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../../note/01_programming-language/python/01_data-structures/index.html"><span itemprop="name">Data Structures</span></a><meta itemprop="position" content="5">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Dictionary Data Type</span><meta itemprop="position" content="6"></li>
-          </ol>
-          <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../../note/01_programming-language/python/01_data-structures/a_list_data_type/index.html" title="List Data Type (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
-            </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../../note/01_programming-language/python/01_data-structures/c_string_data_type/index.html" title="String Data Type (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
-            </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
-              <div class="topbar-content">
-                <div class="topbar-content-wrapper">
-                  <div class="topbar-area topbar-area-more" data-area="more">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable note" tabindex="-1">
-        <div class="flex-block-wrapper">
-<article class="default">
-  <header class="headline">
-  </header>
-
-<h1 id="dictionary-data-type">Dictionary Data Type</h1>
-
-<h2 id="syntax">Syntax<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>my_cat <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;size&#39;</span>: <span style="color:#e6db74">&#39;fat&#39;</span>, <span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;gray&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">17</span>}
-</span></span><span style="display:flex;"><span>print(my_cat[<span style="color:#e6db74">&#39;size&#39;</span>])
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;My cat has &#39;</span> <span style="color:#f92672">+</span> my_cat[<span style="color:#e6db74">&#39;color&#39;</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; fur.&#39;</span>)</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>fat
-My cat has gray fur</code></pre></div>
-<br>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#ae81ff">12345</span>: <span style="color:#e6db74">&#39;Luggage Combination&#39;</span>, <span style="color:#ae81ff">42</span>: <span style="color:#e6db74">&#39;The Answer&#39;</span>}
-</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">12345</span>])
-</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">42</span>])
-</span></span><span style="display:flex;"><span>print(spam[<span style="color:#ae81ff">0</span>])</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Luggage Combination
-The Answer
-Traceback (most recent call last):
-  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
-KeyError: 0</code></pre></div>
-<hr>
-<h2 id="returning-values--values">Returning Values | <code>values()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>values():
-</span></span><span style="display:flex;"><span>  print(v)</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>red
-42</code></pre></div>
-<hr>
-<h2 id="returning-keys--keys">Returning Keys | <code>keys()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>keys():
-</span></span><span style="display:flex;"><span>  print(k)</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>color
-age</code></pre></div>
-<hr>
-<h2 id="returning-keys-and-values--items">Returning Keys and Values | <code>items()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>items():
-</span></span><span style="display:flex;"><span>  print(i)</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>(&#39;color&#39;, &#39;red&#39;)
-(&#39;age&#39;, 42)</code></pre></div>
-<hr>
-<h2 id="checking-whether-a-key-exists--get">Checking Whether a Key Exists | <code>get()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<ul>
-<li>Dictionaries have a get() method that takes two arguments: the key of the value to retrieve and a fallback value to return if that key doesn’t exis</li>
-</ul>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>picnic_items <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;apples&#39;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;cups&#39;</span>: <span style="color:#ae81ff">2</span>}
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I am bringing &#39;</span> <span style="color:#f92672">+</span> str(picnic_items<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;cups&#39;</span>, <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; cups.&#39;</span>) 
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;I am bringing &#39;</span> <span style="color:#f92672">+</span> str(picnic_items<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;eggs&#39;</span>, <span style="color:#ae81ff">0</span>)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; eggs.&#39;</span>)</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>I am bringing 2 cups.
-I am bringing 0 eggs.</code></pre></div>
-<hr>
-<h2 id="setting-default-values--setdefault">Setting Default Values | <code>setdefault()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<ul>
-<li>The first argument passed to the method is the key to check for, and the second argument is the value to set at that key if the key doesn’t exist; if the key does exist, the setdefault() method returns the key’s value</li>
-</ul>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Pooka&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">5</span>}
-</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>))  <span style="color:#75715e"># Sets &#39;color&#39; key to &#39;black&#39;</span>
-</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>setdefault(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#e6db74">&#39;white&#39;</span>))  <span style="color:#75715e"># Does nothing</span></span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>black
-black</code></pre></div>
-<h2 id="view-object">View object<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
-</span></span><span style="display:flex;"><span>print(spam<span style="color:#f92672">.</span>keys())
-</span></span><span style="display:flex;"><span>print(list(spam<span style="color:#f92672">.</span>keys()))</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>dict_keys([&#39;color&#39;, &#39;age&#39;])
-[&#39;color&#39;, &#39;age&#39;]</code></pre></div>
-<hr>
-<h2 id="the-multiple-assignment-trick">The Multiple Assignment Trick<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
-<p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>spam <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: <span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">42</span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> spam<span style="color:#f92672">.</span>items():
-</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#39;Key: &#39;</span> <span style="color:#f92672">+</span> str(k) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; Value: &#39;</span> <span style="color:#f92672">+</span> str(v))</span></span></code></pre></div>
-<p>Output</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Key: color Value: red
-Key: age Value: 42</code></pre></div>
-<hr>
-
-  <footer class="footline">
-  </footer>
-</article>
-        </div>
-      </main>
-    </div>
-    <aside id="R-sidebar" class="default-animation">
-      <div id="R-header-topbar" class="default-animation"></div>
-      <div id="R-header-wrapper" class="default-animation">
-        <div id="R-header" class="default-animation">
-<a id="R-logo" href="../../../../../index.html" style="display:flex; gap: 1rem; ">
-  <img src="../../../../../images/logo.png" alt="brand logo">
-  <div class="logo-title" style="display: flex; justify-content: center; align-items: center; font-size: 1.5rem;">IT From Scratch</div>
-</a>
-        </div>
-        <search><form action="../../../../../search/index.html" method="get">
-          <div class="searchbox default-animation">
-            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-            <label class="a11y-only" for="R-search-by">Search</label>
-            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
-            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
-          </div>
-        </form></search>
-      </div>
-      <div id="R-homelinks" class="default-animation">
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
-          <ul class="space collapsible-menu">
-          </ul>
-        </div>
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
-          <ul class="">
-          </ul>
-        </div>
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-      </div>
-      <div id="R-content-wrapper" class="highlightable">
-        <div class="R-sidebarmenu R-shortcutmenu-main">
-          <ul class="enlarge morespace collapsible-menu">
-            <li class="parent alwaysopen " data-nav-url="../../../../../note/index.html"><a class="padding" href="../../../../../note/index.html"><i class="far fa-sticky-note"></i> Programming Note</a><ul id="R-subsections-81b0aa1fb369232a7bc48846a5daf4d9" class="collapsible-menu">
-            <li class="parent " data-nav-url="../../../../../note/01_programming-language/index.html"><a class="padding" href="../../../../../note/01_programming-language/index.html"><i class="fas fa-code"></i> Programming Language</a><ul id="R-subsections-c5aff2076aa8144a9a6847b47ae59b1d" class="collapsible-menu">
-            <li class="parent " data-nav-url="../../../../../note/01_programming-language/python/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/index.html"><i class="fab fa-python"></i> Python</a><ul id="R-subsections-c69d871f3e00ad3b63d34e3e5635cd17" class="collapsible-menu">
-            <li class="parent " data-nav-url="../../../../../note/01_programming-language/python/01_data-structures/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_data-structures/index.html">01. Data Structures</a><ul id="R-subsections-cbe122f211afae2e353e98a6fbae9947" class="collapsible-menu">
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/01_data-structures/a_list_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_data-structures/a_list_data_type/index.html">List Data Type</a></li>
-            <li class="active " data-nav-url="../../../../../note/01_programming-language/python/01_data-structures/b_dictionary_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_data-structures/b_dictionary_data_type/index.html">Dictionary Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/01_data-structures/c_string_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_data-structures/c_string_data_type/index.html">String Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/01_data-structures/d_tuple_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_data-structures/d_tuple_data_type/index.html">Tuple Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/01_data-structures/e_set_data_type/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_data-structures/e_set_data_type/index.html">Set Data Type</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/01_data-structures/f_data_type_comparision/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/01_data-structures/f_data_type_comparision/index.html">Data Type Comparision</a></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/02_operators/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/02_operators/index.html">02. Operators</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/03_statements/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/03_statements/index.html">03. Statements</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/04_functions/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/04_functions/index.html">04. Functions</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/05_parameters/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/05_parameters/index.html">05. Parameters</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/06_classes/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/06_classes/index.html">06. Classes</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/07_files/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/07_files/index.html">07. Files</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/08_libraries/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/08_libraries/index.html">08. Libraries</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/10_debugging/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/10_debugging/index.html">10. Debugging</a></li>
-            <li class="" data-nav-url="../../../../../note/01_programming-language/python/09_regular-expressions/index.html"><a class="padding" href="../../../../../note/01_programming-language/python/09_regular-expressions/index.html">09. Regular Expressions</a></li></ul></li></ul></li>
-            <li class="" data-nav-url="../../../../../note/02_operating-system/index.html"><a class="padding" href="../../../../../note/02_operating-system/index.html"><i class="fas fa-compact-disc"></i> Operating System</a><ul id="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="../../../../../note/03_source-control/index.html"><a class="padding" href="../../../../../note/03_source-control/index.html"><i class="fas fa-code-branch"></i> Source Control</a><ul id="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="../../../../../note/04_virtual-machine/index.html"><a class="padding" href="../../../../../note/04_virtual-machine/index.html"><i class="fas fa-vr-cardboard"></i> Virtual Machine</a><ul id="R-subsections-174921e347b3c11effb7c9f708890ddf" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="../../../../../note/05_cloud/index.html"><a class="padding" href="../../../../../note/05_cloud/index.html"><i class="fas fa-cloud"></i> Cloud</a><ul id="R-subsections-e5ca58342a8124a4e97c89f37782db22" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="../../../../../note/06_office/index.html"><a class="padding" href="../../../../../note/06_office/index.html"><i class="fab fa-microsoft"></i> Office</a></li></ul></li>
-          </ul>
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
-          <div class="nav-title padding">More</div>
-          <ul class="space collapsible-menu">
-            <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
-            <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005</a></li>
-          </ul>
-        </div>
-        <div id="R-footer-margin"></div>
-        <div class="R-menu-divider default-animation">
-          <hr class="padding">
-        </div>
-        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
-          <ul class="">
-            <li class="R-variantswitcher">
-              <div class="padding menu-control">
-                <i class="fa-fw fas fa-paint-brush"></i>
-                <span>&nbsp;</span>
-                <div class="control-style">
-                  <label class="a11y-only" for="R-select-variant">Theme</label>
-                  <select id="R-select-variant">
-                    <option id="R-select-variant-blue-dark" value="blue-dark" selected>Blue Dark</option>
-                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
-                    <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
-                  </select>
-                </div>
-                <div class="clear"></div>
-              </div>
-              <script>window.relearn.markVariant();</script>
-            </li>
-          </ul>
-        </div>
-<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
-      </div>
-    </aside>
-    <script src="../../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763300029" defer></script>
-    <script src="../../../../../js/theme.min.js?1763300029" defer></script>
-    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
-  </body>
-</html>

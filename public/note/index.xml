@@ -3,7 +3,7 @@
   <channel>
     <title>Programming Note :: IT From Scratch</title>
     <link>/note/index.html</link>
-    <description>Programming Language&#xD;Operating System&#xD;Source Control&#xD;Virtual Machine&#xD;Cloud&#xD;Office</description>
+    <description>Programming Language&#xD;Operating System&#xD;Source Control&#xD;Virtual Machine&#xD;Cloud&#xD;Office&#xD;Container</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="/note/index.xml" rel="self" type="application/rss+xml" />
@@ -12,7 +12,7 @@
       <link>/note/01_programming-language/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/note/01_programming-language/index.html</guid>
-      <description>Python</description>
+      <description>Python&#xD;JavaScript&#xD;TypeScript</description>
     </item>
     <item>
       <title>Operating System</title>
@@ -48,6 +48,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/note/06_office/index.html</guid>
       <description>Install guide&#xD;Go to this website https://config.office.com/deploymentsettings For Office Suites, choose Office LTSC Standard 20XX - Volume License Check Apps you want to install Click Next Select primary language Click Next twice For Upgrade options, turn off Uninstall any MSI versions of Office, including Visio and Project Click Next three times Click Finish Click Export Choose Office Open XML Formats Click OK Check I accept the terms in the license agreement Click Export Go to this website https://www.microsoft.com/en-us/download/details.aspx?id=49117 Download Office Deployment Tool Copy two downloaded files to a new folder name office in disk C Open CMD as administrator Run this command cd c:\office Then run this setup.exe /configure configuration.xml</description>
+    </item>
+    <item>
+      <title>Container</title>
+      <link>/note/07_container/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/note/07_container/index.html</guid>
+      <description>Docker</description>
     </item>
   </channel>
 </rss>

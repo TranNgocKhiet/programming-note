@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
+    <meta name="description" content="The round() FunctionFor halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding. Input
+round(3.5)Output
+4Input
+round(2.5)Output
+2The bool() FunctionWhen used in conditions, 0, 0.0, and ’’ (the empty string) are considered False, while all other values are considered True. The print() FunctionInput">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Functions :: IT From Scratch">
+    <meta name="twitter:description" content="The round() FunctionFor halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding. Input
+round(3.5)Output
+4Input
+round(2.5)Output
+2The bool() FunctionWhen used in conditions, 0, 0.0, and ’’ (the empty string) are considered False, while all other values are considered True. The print() FunctionInput">
+    <meta property="og:url" content="/note/01_programming-language/01_python/04_functions/index.html">
+    <meta property="og:site_name" content="IT From Scratch">
+    <meta property="og:title" content="Functions :: IT From Scratch">
+    <meta property="og:description" content="The round() FunctionFor halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding. Input
+round(3.5)Output
+4Input
+round(2.5)Output
+2The bool() FunctionWhen used in conditions, 0, 0.0, and ’’ (the empty string) are considered False, while all other values are considered True. The print() FunctionInput">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Functions :: IT From Scratch">
+    <meta itemprop="description" content="The round() FunctionFor halfway numbers that end with .5, the number is rounded to the nearest even integer. This is called banker’s rounding. Input
+round(3.5)Output
+4Input
+round(2.5)Output
+2The bool() FunctionWhen used in conditions, 0, 0.0, and ’’ (the empty string) are considered False, while all other values are considered True. The print() FunctionInput">
+    <meta itemprop="wordCount" content="450">
+    <title>Functions :: IT From Scratch</title>
+    <link href="../../../../note/01_programming-language/01_python/04_functions/index.xml" rel="alternate" type="application/rss+xml" title="Functions :: IT From Scratch">
+    <link href="../../../../images/favicon.png?1763823253" rel="icon" type="image/png">
+    <link href="../../../../css/auto-complete/auto-complete.min.css?1763823253" rel="stylesheet">
+    <script src="../../../../js/auto-complete/auto-complete.min.js?1763823253" defer></script>
+    <script src="../../../../js/search-lunr.min.js?1763823253" defer></script>
+    <script src="../../../../js/search.min.js?1763823253" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="../../../../searchindex.en.js?1763823253";
+    </script>
+    <script src="../../../../js/lunr/lunr.min.js?1763823253" defer></script>
+    <script src="../../../../js/lunr/lunr.stemmer.support.min.js?1763823253" defer></script>
+    <script src="../../../../js/lunr/lunr.multi.min.js?1763823253" defer></script>
+    <script src="../../../../js/lunr/lunr.en.min.js?1763823253" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763823253" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763823253" rel="stylesheet"></noscript>
+    <link href="../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763823253" rel="stylesheet">
+    <link href="../../../../css/theme.min.css?1763823253" rel="stylesheet">
+    <link href="../../../../css/format-html.min.css?1763823253" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/note\/01_programming-language\/01_python\/04_functions\/index.html';
+      window.relearn.relBasePath='..\/..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue-dark', 'relearn-dark', 'relearn-light' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="../../../../note/01_programming-language/01_python/04_functions/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#the-round-function">The round() Function</a></li>
+    <li><a href="#the-bool-function">The bool() Function</a></li>
+    <li><a href="#the-print-function">The print() Function</a>
+      <ul>
+        <li><a href="#named-parameters">Named Parameters</a></li>
+        <li><a href="#the-multiple-assignment-trick">The Multiple Assignment Trick</a></li>
+        <li><a href="#anonymous-function">Anonymous Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#generator-and-yield">Generator and yield</a></li>
+    <li><a href="#function-and-class-decorators">Function and class decorators</a></li>
+    <li><a href="#context-manager">Context manager</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../index.html"><span itemprop="name">Home Page</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../note/index.html"><span itemprop="name">Programming Note</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../note/01_programming-language/index.html"><span itemprop="name">Programming Language</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../note/01_programming-language/01_python/index.html"><span itemprop="name">Python</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Functions</span><meta itemprop="position" content="5"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../note/01_programming-language/01_python/03_statements/index.html" title="Statements (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../note/01_programming-language/01_python/05_parameters/index.html" title="Parameters (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable note" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="functions">Functions</h1>
+
+<h2 id="the-round-function">The round() Function<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>For <strong>halfway numbers</strong> that <strong>end with .5</strong>, the number is <strong>rounded to the nearest even integer</strong>. This is called <strong>banker’s rounding</strong>.</li>
+</ul>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>round(<span style="color:#ae81ff">3.5</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>4</code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>round(<span style="color:#ae81ff">2.5</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>2</code></pre></div>
+<hr>
+<h2 id="the-bool-function">The bool() Function<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>When used in conditions, <strong>0, 0.0, and &rsquo;&rsquo; (the empty string)</strong> are considered <strong>False</strong>, while <strong>all other values</strong> are considered <strong>True</strong>.</li>
+</ul>
+<h2 id="the-print-function">The print() Function<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">greet</span>(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Guest&#34;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Hello, </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>greet()
+</span></span><span style="display:flex;"><span>greet(<span style="color:#e6db74">&#34;Bob&#34;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Hello, Guest!
+Hello, Bob!</code></pre></div>
+<hr>
+<h3 id="named-parameters">Named Parameters<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;World&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Hello
+World</code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Hello&#39;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;World&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>HelloWorld</code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;mice&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>cats dogs mice</code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;cats&#39;</span>, <span style="color:#e6db74">&#39;dogs&#39;</span>, <span style="color:#e6db74">&#39;mice&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>cats,dogs,mice</code></pre></div>
+<hr>
+<h3 id="the-multiple-assignment-trick">The Multiple Assignment Trick<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_person_information</span>():
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Alice&#39;</span>
+</span></span><span style="display:flex;"><span>    age <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>    city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;New York&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> name, age, city
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>name, age, city <span style="color:#f92672">=</span> get_person_information()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;Name: </span><span style="color:#e6db74">{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">, Age: </span><span style="color:#e6db74">{</span>age<span style="color:#e6db74">}</span><span style="color:#e6db74">, City: </span><span style="color:#e6db74">{</span>city<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Name: Alice, Age: 30, City: New York</code></pre></div>
+<hr>
+<h3 id="anonymous-function">Anonymous Function<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>double <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>print(double(<span style="color:#ae81ff">5</span>))</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>10</code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>)]
+</span></span><span style="display:flex;"><span>sorted_data <span style="color:#f92672">=</span> sorted(data, key <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>]) <span style="color:#75715e"># Sort by second value in tuples</span>
+</span></span><span style="display:flex;"><span>print(sorted_data)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[(3, 2), (1, 5), (2, 7)]</code></pre></div>
+<br>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>even_number <span style="color:#f92672">=</span> list(filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, numbers))
+</span></span><span style="display:flex;"><span>print(even_number)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[2, 4, 6]</code></pre></div>
+<hr>
+<h2 id="generator-and-yield">Generator and yield<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">simple_generator</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gen <span style="color:#f92672">=</span> simple_generator()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> gen:
+</span></span><span style="display:flex;"><span>    print(value)</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>1
+2
+3</code></pre></div>
+<hr>
+<h2 id="function-and-class-decorators">Function and class decorators<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">timing_decorator</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+</span></span><span style="display:flex;"><span>        start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+</span></span><span style="display:flex;"><span>        end_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Function </span><span style="color:#e6db74">{</span>func<span style="color:#f92672">.</span>__name__<span style="color:#e6db74">}</span><span style="color:#e6db74"> executed in </span><span style="color:#e6db74">{</span>end_time <span style="color:#f92672">-</span> start_time<span style="color:#e6db74">:</span><span style="color:#e6db74">.4f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">s&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wrapper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@timing_decorator</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">slow_function</span>():
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Function complete&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(slow_function())</span></span></code></pre></div>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_method_decorator</span>(cls):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">new_method</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This is a new method&#34;</span>
+</span></span><span style="display:flex;"><span>    cls<span style="color:#f92672">.</span>new_method <span style="color:#f92672">=</span> new_method
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> cls
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@add_method_decorator</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">existing_method</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This is an existing method&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>obj <span style="color:#f92672">=</span> MyClass()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(obj<span style="color:#f92672">.</span>existing_method())
+</span></span><span style="display:flex;"><span>print(obj<span style="color:#f92672">.</span>new_method())</span></span></code></pre></div>
+<hr>
+<h2 id="context-manager">Context manager<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Những hàm có dạng <code>__name__</code> được gọi là Phương thức Dunder (Dunder Methods) hoặc Phương thức Ma thuật (Magic Methods). &ldquo;Dunder&rdquo; là viết tắt của &ldquo;Double Underscore&rdquo; (hai dấu gạch dưới).</p>
+<p>Đây là một phương thức đặc biệt mà Python sẽ tự động gọi trong một hoàn cảnh cụ thể. Bạn (lập trình viên) không nên gọi trực tiếp các hàm này.</p>
+<p>Ví dụ đơn giản:</p>
+<ul>
+<li>Khi bạn viết a + b, Python sẽ bí mật gọi a.<strong>add</strong>(b).</li>
+<li>Khi bạn viết len(my_list), Python sẽ bí mật gọi my_list.<strong>len</strong>().</li>
+<li>Khi bạn viết with &hellip; as f:, Python sẽ bí mật gọi f.<strong>enter</strong>().</li>
+<li>Khi bạn viết obj = MyClass(), Python sẽ bí mật gọi obj.<strong>init</strong>() (sau khi đã gọi <strong>new</strong>).</li>
+</ul>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyContextManager</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__enter__</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Entering the context&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__exit__</span>(self, exc_type, exc_val, exc_tb):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Existing the context&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">do_something</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Doing something&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> MyContextManager() <span style="color:#66d9ef">as</span> manager:
+</span></span><span style="display:flex;"><span>    manager<span style="color:#f92672">.</span>do_something()</span></span></code></pre></div>
+<hr>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="../../../../index.html" style="display:flex; gap: 1rem; ">
+  <img src="../../../../images/logo.png" alt="brand logo">
+  <div class="logo-title" style="display: flex; justify-content: center; align-items: center; font-size: 1.5rem;">IT From Scratch</div>
+</a>
+        </div>
+        <search><form action="../../../../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent alwaysopen " data-nav-url="../../../../note/index.html"><a class="padding" href="../../../../note/index.html"><i class="far fa-sticky-note"></i> Programming Note</a><ul id="R-subsections-81b0aa1fb369232a7bc48846a5daf4d9" class="collapsible-menu">
+            <li class="parent " data-nav-url="../../../../note/01_programming-language/index.html"><a class="padding" href="../../../../note/01_programming-language/index.html"><i class="fas fa-code"></i> Programming Language</a><ul id="R-subsections-c5aff2076aa8144a9a6847b47ae59b1d" class="collapsible-menu">
+            <li class="parent " data-nav-url="../../../../note/01_programming-language/01_python/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/index.html"><i class="fab fa-python"></i> Python</a><ul id="R-subsections-773ab673973d59cbf3d707feb05ac9d0" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/01_data-structures/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/01_data-structures/index.html">01. Data Structures</a><ul id="R-subsections-bb0708af4b1453b227c8395f65dbaee9" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/02_operators/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/02_operators/index.html">02. Operators</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/03_statements/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/03_statements/index.html">03. Statements</a></li>
+            <li class="active " data-nav-url="../../../../note/01_programming-language/01_python/04_functions/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/04_functions/index.html">04. Functions</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/05_parameters/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/05_parameters/index.html">05. Parameters</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/06_classes/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/06_classes/index.html">06. Classes</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/07_files/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/07_files/index.html">07. Files</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/08_libraries/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/08_libraries/index.html">08. Libraries</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/10_debugging/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/10_debugging/index.html">10. Debugging</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/01_python/09_regular-expressions/index.html"><a class="padding" href="../../../../note/01_programming-language/01_python/09_regular-expressions/index.html">09. Regular Expressions</a></li></ul></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/02_javascript/index.html"><a class="padding" href="../../../../note/01_programming-language/02_javascript/index.html"><i class="fab fa-js-square"></i> JavaScript</a><ul id="R-subsections-879b46c1c5575b635e884b7cbe5f6f9e" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/03_typescript/index.html"><a class="padding" href="../../../../note/01_programming-language/03_typescript/index.html">TypeScript</a></li></ul></li>
+            <li class="" data-nav-url="../../../../note/02_operating-system/index.html"><a class="padding" href="../../../../note/02_operating-system/index.html"><i class="fas fa-compact-disc"></i> Operating System</a><ul id="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/03_source-control/index.html"><a class="padding" href="../../../../note/03_source-control/index.html"><i class="fas fa-code-branch"></i> Source Control</a><ul id="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/04_virtual-machine/index.html"><a class="padding" href="../../../../note/04_virtual-machine/index.html"><i class="fas fa-vr-cardboard"></i> Virtual Machine</a><ul id="R-subsections-174921e347b3c11effb7c9f708890ddf" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/05_cloud/index.html"><a class="padding" href="../../../../note/05_cloud/index.html"><i class="fas fa-cloud"></i> Cloud</a><ul id="R-subsections-e5ca58342a8124a4e97c89f37782db22" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/06_office/index.html"><a class="padding" href="../../../../note/06_office/index.html"><i class="fab fa-microsoft"></i> Office</a></li>
+            <li class="" data-nav-url="../../../../note/07_container/index.html"><a class="padding" href="../../../../note/07_container/index.html"><i class="fa-solid fa-box-open"></i> Container</a><ul id="R-subsections-946516cc3b5fc2d43b55e650009bee4e" class="collapsible-menu"></ul></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-blue-dark" value="blue-dark" selected>Blue Dark</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763823253" defer></script>
+    <script src="../../../../js/theme.min.js?1763823253" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
