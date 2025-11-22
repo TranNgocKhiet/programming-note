@@ -84,8 +84,15 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
+<<<<<<< HEAD
           name: vercel-output
           path: .vercel/output
+=======
+          # Đảm bảo tải về đúng tên artifact mới
+          name: vercel-output
+          # Giải nén vào thư mục gốc, nó sẽ tạo ra thư mục .vercel
+          path: .
+>>>>>>> a76a9ff (test auto deploy 3)
 
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
