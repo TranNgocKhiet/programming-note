@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
+    <meta name="description" content="Arrow FunctionsOld style function add(a, b) { return a &#43; b; }New style const add = (a, b) =&gt; { return a &#43; b; };Nếu hàm chỉ có 1 dòng return, bạn có thể viết siêu ngắn const addShort = (a, b) =&gt; a &#43; b;Nếu chỉ có 1 tham số const sayHello = name =&gt; `Hello, ${name}`;map()Input">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Functions :: IT From Scratch">
+    <meta name="twitter:description" content="Arrow FunctionsOld style function add(a, b) { return a &#43; b; }New style const add = (a, b) =&gt; { return a &#43; b; };Nếu hàm chỉ có 1 dòng return, bạn có thể viết siêu ngắn const addShort = (a, b) =&gt; a &#43; b;Nếu chỉ có 1 tham số const sayHello = name =&gt; `Hello, ${name}`;map()Input">
+    <meta property="og:url" content="//localhost:1313/note/01_programming-language/javascript/02_functions/index.html">
+    <meta property="og:site_name" content="IT From Scratch">
+    <meta property="og:title" content="Functions :: IT From Scratch">
+    <meta property="og:description" content="Arrow FunctionsOld style function add(a, b) { return a &#43; b; }New style const add = (a, b) =&gt; { return a &#43; b; };Nếu hàm chỉ có 1 dòng return, bạn có thể viết siêu ngắn const addShort = (a, b) =&gt; a &#43; b;Nếu chỉ có 1 tham số const sayHello = name =&gt; `Hello, ${name}`;map()Input">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Functions :: IT From Scratch">
+    <meta itemprop="description" content="Arrow FunctionsOld style function add(a, b) { return a &#43; b; }New style const add = (a, b) =&gt; { return a &#43; b; };Nếu hàm chỉ có 1 dòng return, bạn có thể viết siêu ngắn const addShort = (a, b) =&gt; a &#43; b;Nếu chỉ có 1 tham số const sayHello = name =&gt; `Hello, ${name}`;map()Input">
+    <meta itemprop="wordCount" content="623">
+    <title>Functions :: IT From Scratch</title>
+    <link href="../../../../note/01_programming-language/javascript/02_functions/index.xml" rel="alternate" type="application/rss+xml" title="Functions :: IT From Scratch">
+    <link href="../../../../images/favicon.png?1763464353" rel="icon" type="image/png">
+    <link href="../../../../css/auto-complete/auto-complete.min.css?1763464353" rel="stylesheet">
+    <script src="../../../../js/auto-complete/auto-complete.min.js?1763464353" defer></script>
+    <script src="../../../../js/search-lunr.js?1763464353" defer></script>
+    <script src="../../../../js/search.js?1763464353" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="../../../../searchindex.en.js?1763464353";
+    </script>
+    <script src="../../../../js/lunr/lunr.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.stemmer.support.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.multi.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.en.min.js?1763464353" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763464353" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763464353" rel="stylesheet"></noscript>
+    <link href="../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763464353" rel="stylesheet">
+    <link href="../../../../css/theme.css?1763464353" rel="stylesheet">
+    <link href="../../../../css/format-html.css?1763464353" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/note\/01_programming-language\/javascript\/02_functions\/index.html';
+      window.relearn.relBasePath='..\/..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'blue-dark', 'relearn-dark', 'relearn-light' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="../../../../note/01_programming-language/javascript/02_functions/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#arrow-functions">Arrow Functions</a></li>
+    <li><a href="#map"><code>map()</code></a></li>
+    <li><a href="#filter"><code>filter()</code></a></li>
+    <li><a href="#asynchronous--promise-async-and-await">Asynchronous | <code>Promise</code>, <code>async</code> and <code>await</code></a>
+      <ul>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#solution">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#modules--import-and-export">Modules | <code>import</code> and <code>export</code></a></li>
+    <li><a href="#destructuring">Destructuring</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../index.html"><span itemprop="name">Home Page</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../note/index.html"><span itemprop="name">Programming Note</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../note/01_programming-language/index.html"><span itemprop="name">Programming Language</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../../../note/01_programming-language/javascript/index.html"><span itemprop="name">JavaScript</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Functions</span><meta itemprop="position" content="5"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../note/01_programming-language/javascript/01_data-structures/index.html" title="Data Structures (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../note/01_programming-language/javascript/03_libraries/index.html" title="Libraries (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable note" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="functions">Functions</h1>
+
+<h2 id="arrow-functions">Arrow Functions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>Old style</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<ul>
+<li>New style</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>};</span></span></code></pre></div>
+<ul>
+<li>Nếu hàm chỉ có 1 dòng return, bạn có thể viết siêu ngắn</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addShort</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;</span></span></code></pre></div>
+<ul>
+<li>Nếu chỉ có 1 tham số</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sayHello</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span> =&gt; <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;</span></span></code></pre></div>
+<h2 id="map"><code>map()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">photoList</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ảnh hoàng hôn&#34;</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;456&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ảnh bình minh&#34;</span> }
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">photoTitles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">photoList</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">photo</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">photo</span>.<span style="color:#a6e22e">title</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Dùng cú pháp ngắn gọn hơn:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">photoTitles2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">photoList</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">photo</span> =&gt; <span style="color:#a6e22e">photo</span>.<span style="color:#a6e22e">title</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">photoTitles</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">photoTitles2</span>);</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[&#34;Ảnh hoàng hôn&#34;, &#34;Ảnh bình minh&#34;]
+[&#34;Ảnh hoàng hôn&#34;, &#34;Ảnh bình minh&#34;]</code></pre></div>
+<h2 id="filter"><code>filter()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">photoList</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;sunset&#34;</span>, <span style="color:#e6db74">&#34;beach&#34;</span>] },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;456&#34;</span>, <span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;morning&#34;</span>, <span style="color:#e6db74">&#34;coffee&#34;</span>] },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;789&#34;</span>, <span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;travel&#34;</span>, <span style="color:#e6db74">&#34;sunset&#34;</span>] }
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sunsetPhotos</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">photoList</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">photo</span> =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">photo</span>.<span style="color:#a6e22e">tags</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;sunset&#34;</span>); <span style="color:#75715e">// .includes() là hàm check mảng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Dùng cú pháp ngắn gọn hơn:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sunsetPhotos2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">photoList</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">photo</span> =&gt; <span style="color:#a6e22e">photo</span>.<span style="color:#a6e22e">tags</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;sunset&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sunsetPhotos</span>); <span style="color:#75715e">// Trả về 2 object có id &#34;123&#34; và &#34;789&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sunsetPhotos2</span>);</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[{
+  id: &#34;123&#34;,
+  tags: [&#34;sunset&#34;, &#34;beach&#34;]
+}, {
+  id: &#34;789&#34;,
+  tags: [&#34;travel&#34;, &#34;sunset&#34;]
+}]
+[{
+  id: &#34;123&#34;,
+  tags: [&#34;sunset&#34;, &#34;beach&#34;]
+}, {
+  id: &#34;789&#34;,
+  tags: [&#34;travel&#34;, &#34;sunset&#34;]
+}]</code></pre></div>
+<h2 id="asynchronous--promise-async-and-await">Asynchronous | <code>Promise</code>, <code>async</code> and <code>await</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="problem">Problem<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>JavaScript không &ldquo;đợi&rdquo;</li>
+</ul>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fakeApiCall</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resolve</span>({ <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ảnh hoàng hôn&#34;</span> });
+</span></span><span style="display:flex;"><span>    }, <span style="color:#ae81ff">2000</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;1. Bắt đầu lấy dữ liệu...&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fakeApiCall</span>()<span style="color:#75715e">// gọi API (việc này mất 2 giây)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">title</span>); <span style="color:#75715e">// In ra &#34;undefined&#34; ngay lập tức
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;3. Đã lấy xong&#34;</span>);</span></span></code></pre></div>
+<p>Ouput</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#34;1. Bắt đầu lấy dữ liệu...&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">undefined</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;3. Đã lấy xong&#34;</span></span></span></code></pre></div>
+<ul>
+<li>Code trên sẽ in ra &ldquo;1&rdquo;, &ldquo;undefined&rdquo;, &ldquo;3&rdquo; vì nó không đợi API trả về kết quả.</li>
+</ul>
+<h3 id="solution">Solution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>Promise</code>: Tưởng tượng nó là một &ldquo;lời hứa&rdquo; (giống như giấy hẹn) rằng &ldquo;tôi sẽ trả về giá trị cho bạn trong tương lai&rdquo;.</li>
+<li><code>async</code>/<code>await</code>: Là cú pháp hiện đại để làm việc với Promise.
+<br>  + <code>async</code>: Đặt trước một hàm để báo cho JS biết hàm này sẽ làm việc bất đồng bộ.
+<br>  + <code>await</code>: Đặt trước một <code>Promise</code> (như gọi API) để &ldquo;tạm dừng&rdquo; hàm và chờ cho đến khi có kết quả.</li>
+</ul>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fakeApiCall</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resolve</span>({ <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ảnh hoàng hôn&#34;</span> });
+</span></span><span style="display:flex;"><span>    }, <span style="color:#ae81ff">2000</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Bắt buộc khai báo &#34;async&#34; nếu muốn dùng &#34;await&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fetchData</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;1. Bắt đầu lấy dữ liệu...&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Dùng await để &#34;chờ&#34; lời hứa được thực hiện
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fakeApiCall</span>(); 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code ở đây chỉ chạy SAU KHI await hoàn thành (sau 2 giây)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;2. Dữ liệu đã về:&#34;</span>, <span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;3. Đã lấy xong&#34;</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fetchData</span>();</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#e6db74">&#34;1. Bắt đầu lấy dữ liệu...&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;2. Dữ liệu đã về:&#34;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;123&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ảnh hoàng hôn&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;3. Đã lấy xong&#34;</span></span></span></code></pre></div>
+<h2 id="modules--import-and-export">Modules | <code>import</code> and <code>export</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>
+<p>Bạn có 2 file: <code>utils.js</code> (công cụ) và <code>main.js</code> (chính).</p>
+</li>
+<li>
+<p><code>utils.js</code> (Dùng <code>export</code> để &ldquo;xuất&rdquo; hàm ra ngoài):</p>
+</li>
+</ul>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">subtract</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>;</span></span></code></pre></div>
+<ul>
+<li><code>main.js</code> (Dùng <code>import</code> để &ldquo;nhập&rdquo; hàm về dùng):</li>
+</ul>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">add</span>, <span style="color:#a6e22e">subtract</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./utils.js&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>));
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">subtract</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">4</span>));</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>8
+6</code></pre></div>
+<h2 id="destructuring">Destructuring<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Input</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">photo</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;123&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ảnh hoàng hôn&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;sunset&#34;</span>, <span style="color:#e6db74">&#34;beach&#34;</span>]
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách viết cũ:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// const title = photo.title;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// const tags = photo.tags;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách viết mới (Destructuring):
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">tags</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">photo</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">title</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">tags</span>);</span></span></code></pre></div>
+<p>Output</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>&#34;Ảnh hoàng hôn&#34;
+[&#34;sunset&#34;, &#34;beach&#34;]
+``</code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="R-logo" href="../../../../index.html" style="display:flex; gap: 1rem; ">
+  <img src="../../../../images/logo.png" alt="brand logo">
+  <div class="logo-title" style="display: flex; justify-content: center; align-items: center; font-size: 1.5rem;">IT From Scratch</div>
+</a>
+        </div>
+        <search><form action="../../../../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent alwaysopen " data-nav-url="../../../../note/index.html"><a class="padding" href="../../../../note/index.html"><i class="far fa-sticky-note"></i> Programming Note</a><ul id="R-subsections-81b0aa1fb369232a7bc48846a5daf4d9" class="collapsible-menu">
+            <li class="parent " data-nav-url="../../../../note/01_programming-language/index.html"><a class="padding" href="../../../../note/01_programming-language/index.html"><i class="fas fa-code"></i> Programming Language</a><ul id="R-subsections-c5aff2076aa8144a9a6847b47ae59b1d" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../note/01_programming-language/python/index.html"><a class="padding" href="../../../../note/01_programming-language/python/index.html"><i class="fab fa-python"></i> Python</a><ul id="R-subsections-c69d871f3e00ad3b63d34e3e5635cd17" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-url="../../../../note/01_programming-language/javascript/index.html"><a class="padding" href="../../../../note/01_programming-language/javascript/index.html"><i class="fab fa-js-square"></i> JavaScript</a><ul id="R-subsections-4287eecde1958031608521f399318728" class="collapsible-menu">
+            <li class="" data-nav-url="../../../../note/01_programming-language/javascript/01_data-structures/index.html"><a class="padding" href="../../../../note/01_programming-language/javascript/01_data-structures/index.html">02. Data Structures</a></li>
+            <li class="active " data-nav-url="../../../../note/01_programming-language/javascript/02_functions/index.html"><a class="padding" href="../../../../note/01_programming-language/javascript/02_functions/index.html">02. Functions</a></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/javascript/03_libraries/index.html"><a class="padding" href="../../../../note/01_programming-language/javascript/03_libraries/index.html">03. Libraries</a><ul id="R-subsections-ff77e2a25b967ee121959207cede336d" class="collapsible-menu"></ul></li></ul></li></ul></li>
+            <li class="" data-nav-url="../../../../note/02_operating-system/index.html"><a class="padding" href="../../../../note/02_operating-system/index.html"><i class="fas fa-compact-disc"></i> Operating System</a><ul id="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/03_source-control/index.html"><a class="padding" href="../../../../note/03_source-control/index.html"><i class="fas fa-code-branch"></i> Source Control</a><ul id="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/04_virtual-machine/index.html"><a class="padding" href="../../../../note/04_virtual-machine/index.html"><i class="fas fa-vr-cardboard"></i> Virtual Machine</a><ul id="R-subsections-174921e347b3c11effb7c9f708890ddf" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/05_cloud/index.html"><a class="padding" href="../../../../note/05_cloud/index.html"><i class="fas fa-cloud"></i> Cloud</a><ul id="R-subsections-e5ca58342a8124a4e97c89f37782db22" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="../../../../note/06_office/index.html"><a class="padding" href="../../../../note/06_office/index.html"><i class="fab fa-microsoft"></i> Office</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="https://github.com/TranNgocKhiet"><a class="padding" href="https://github.com/TranNgocKhiet" rel="external"><i class="fab fa-github"></i> GitHub</a></li>
+            <li class="" data-nav-url="https://www.linkedin.com/in/khiet-tran-61b163311/"><a class="padding" href="https://www.linkedin.com/in/khiet-tran-61b163311/" rel="external"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li class="" data-nav-url="mailto:slayersilver2005@gmail.com"><a class="padding" href="mailto:slayersilver2005@gmail.com" rel="external"><i class="fas fa-envelope"></i> slayersilver2005</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-blue-dark" value="blue-dark" selected>Blue Dark</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                    <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763464353" defer></script>
+    <script src="../../../../js/theme.js?1763464353" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

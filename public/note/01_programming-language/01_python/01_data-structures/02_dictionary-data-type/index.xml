@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dictionary Data Type :: IT From Scratch</title>
+    <link>//localhost:1313/note/01_programming-language/01_python/01_data-structures/02_dictionary-data-type/index.html</link>
+    <description>Syntax&#xD;Input&#xA;my_cat = {&#39;size&#39;: &#39;fat&#39;, &#39;color&#39;: &#39;gray&#39;, &#39;age&#39;: 17} print(my_cat[&#39;size&#39;]) print(&#39;My cat has &#39; + my_cat[&#39;color&#39;] + &#39; fur.&#39;)&#xD;Output&#xA;fat&#xD;My cat has gray fur&#xD;Input&#xA;spam = {12345: &#39;Luggage Combination&#39;, 42: &#39;The Answer&#39;} print(spam[12345]) print(spam[42]) print(spam[0])&#xD;Output&#xA;Luggage Combination&#xD;The Answer&#xD;Traceback (most recent call last):&#xD;File &#34;&lt;py-input-0&gt;&#34;, line 1, in &lt;module&gt;&#xD;KeyError: 0&#xD;Returning Values | values()&#xD;Input</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/01_programming-language/01_python/01_data-structures/02_dictionary-data-type/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

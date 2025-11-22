@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Regular Expressions :: IT From Scratch</title>
-    <link>/note/01_programming-language/python/09_regular-expressions/index.html</link>
+    <link>//localhost:1313/note/01_programming-language/python/09_regular-expressions/index.html</link>
     <description>Finding Text Patterns with Regular Expressions&#xD;Input&#xA;import re phone_num_pattern_obj = re.compile(r&#39;\d{3}-\d{3}-\d{4}&#39;) match_obj = phone_num_pattern_obj.search(&#39;My number is 415-555-4242.&#39;) print(match_obj.group())&#xD;Output&#xA;415-555-4242&#xD;Grouping with Parentheses&#xD;Input&#xA;import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phone_re.search(&#39;My number is 415-555-4242.&#39;) print(mo.group(1)) print(mo.group(2)) print(mo.group(0)) print(mo.group()) print(mo.groups()) area_code, main_number = mo.groups() print(area_code) print(main_number)&#xD;Output</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/note/01_programming-language/python/09_regular-expressions/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/note/01_programming-language/python/09_regular-expressions/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

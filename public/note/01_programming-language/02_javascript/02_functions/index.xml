@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Functions :: IT From Scratch</title>
+    <link>//localhost:1313/note/01_programming-language/02_javascript/02_functions/index.html</link>
+    <description>Arrow Functions&#xD;Old style function add(a, b) { return a + b; }&#xD;New style const add = (a, b) =&gt; { return a + b; };&#xD;Nếu hàm chỉ có 1 dòng return, bạn có thể viết siêu ngắn const addShort = (a, b) =&gt; a + b;&#xD;Nếu chỉ có 1 tham số const sayHello = name =&gt; `Hello, ${name}`;&#xD;map()&#xD;Input</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/01_programming-language/02_javascript/02_functions/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

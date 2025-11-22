@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create Connection :: IT From Scratch</title>
-    <link>/note/03_source-control/gitlab/01_create-connection/index.html</link>
+    <link>//localhost:1313/note/03_source-control/gitlab/01_create-connection/index.html</link>
     <description>Create SSH Key&#xD;ssh-keygen -t ed25519 -C &#34;email-gitlab-cua-ban@example.com&#34;&#xD;Can skip the key password if not necessary Show Key&#xD;cat ~/.ssh/id_ed25519.pub&#xD;Add key to Gitlab&#xD;Đăng nhập vào GitLab.com. Click vào ảnh đại diện (avatar) của bạn ở góc trên bên phải, chọn Preferences. Trong menu điều hướng bên trái, chọn SSH Keys. Paste (dán) key từ terminal vào ô “Key”. Đặt tên cho key Nhấn nút Add key. Check connection&#xD;ssh -T git@gitlab.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/note/03_source-control/gitlab/01_create-connection/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/note/03_source-control/gitlab/01_create-connection/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

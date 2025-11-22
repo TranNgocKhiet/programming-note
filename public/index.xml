@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home Page :: IT From Scratch</title>
-    <link>/index.html</link>
+    <link>//localhost:1313/index.html</link>
     <description>Hello, my name is Tran Ngoc Khiet I am student at FPT University HCM Campus I am on the job training at AWS This is my programming note page Hope it is useful for you Thank you for viewing this page &lt;3&#xA;Programming Note</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming Note</title>
-      <link>/note/index.html</link>
+      <link>//localhost:1313/note/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/note/index.html</guid>
-      <description>Programming Language&#xD;Operating System&#xD;Source Control&#xD;Virtual Machine&#xD;Cloud&#xD;Office</description>
+      <guid>//localhost:1313/note/index.html</guid>
+      <description>Programming Language&#xD;Operating System&#xD;Source Control&#xD;Virtual Machine&#xD;Cloud&#xD;Office&#xD;Container</description>
     </item>
   </channel>
 </rss>

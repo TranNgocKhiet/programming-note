@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Other Template :: IT From Scratch</title>
+    <link>//localhost:1313/note/03_source-control/01_gitlab/02_ci-cd-template/04_other_template/index.html</link>
+    <description>Other Template&#xD;Jobs/Code-Quality.gitlab-ci.yml&#xD;Quét code để tìm các vấn đề về “chất lượng” (độ phức tạp, code trùng lặp, lỗi cú pháp) thay vì lỗ hổng bảo mật Jobs/Browser-Performance.gitlab-ci.yml&#xD;Kiểm tra hiệu suất (tốc độ tải) của trang web sau khi deploy</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/03_source-control/01_gitlab/02_ci-cd-template/04_other_template/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

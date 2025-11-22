@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>List Data Type :: IT From Scratch</title>
+    <link>//localhost:1313/note/01_programming-language/python/01_data-structures/a_list_data_type/index.html</link>
+    <description>Syntax&#xD;Input&#xA;squares = [x**2 for x in range(10)] print(squares)&#xD;Output&#xA;[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]&#xD;Input&#xA;products = [i * j for j in range(3) for i in range(3)] print(products)&#xD;Output&#xA;[0, 0, 0, 0, 1, 2, 0, 2, 4]&#xD;Input&#xA;words = [&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;] lengths = [len(word) for word in words] print(lengths)&#xD;Output&#xA;[5, 6, 6]&#xD;Finding Index | index()&#xD;Input</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/01_programming-language/python/01_data-structures/a_list_data_type/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

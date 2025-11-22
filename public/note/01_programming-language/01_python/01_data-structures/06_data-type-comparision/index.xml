@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Type Comparision :: IT From Scratch</title>
+    <link>//localhost:1313/note/01_programming-language/01_python/01_data-structures/06_data-type-comparision/index.html</link>
+    <description>List and Tuple Type Conversion&#xD;Input&#xA;print(tuple([&#39;cat&#39;, &#39;dog&#39;, 5])) print(list((&#39;cat&#39;, &#39;dog&#39;, 5))) print(list(&#39;hello&#39;))&#xD;Output&#xA;(&#39;cat&#39;, &#39;dog&#39;, 5)&#xD;[&#39;cat&#39;, &#39;dog&#39;, 5]&#xD;[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]&#xD;Comparing Dictionarie and List&#xD;Input&#xA;spam = [&#39;cats&#39;, &#39;dogs&#39;, &#39;moose&#39;] bacon = [&#39;dogs&#39;, &#39;moose&#39;, &#39;cats&#39;] print(spam == bacon) # The order of list items matters&#xD;Ouput</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/01_programming-language/01_python/01_data-structures/06_data-type-comparision/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

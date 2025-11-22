@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
@@ -16,7 +16,7 @@ import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phon
 import re phone_num_pattern_obj = re.compile(r&#39;\d{3}-\d{3}-\d{4}&#39;) match_obj = phone_num_pattern_obj.search(&#39;My number is 415-555-4242.&#39;) print(match_obj.group())Output
 415-555-4242Grouping with ParenthesesInput
 import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phone_re.search(&#39;My number is 415-555-4242.&#39;) print(mo.group(1)) print(mo.group(2)) print(mo.group(0)) print(mo.group()) print(mo.groups()) area_code, main_number = mo.groups() print(area_code) print(main_number)Output">
-    <meta property="og:url" content="/note/01_programming-language/python/09_regular-expressions/index.html">
+    <meta property="og:url" content="//localhost:1313/note/01_programming-language/python/09_regular-expressions/index.html">
     <meta property="og:site_name" content="IT From Scratch">
     <meta property="og:title" content="Regular Expressions :: IT From Scratch">
     <meta property="og:description" content="Finding Text Patterns with Regular ExpressionsInput
@@ -33,35 +33,35 @@ import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phon
     <meta itemprop="wordCount" content="1309">
     <title>Regular Expressions :: IT From Scratch</title>
     <link href="../../../../note/01_programming-language/python/09_regular-expressions/index.xml" rel="alternate" type="application/rss+xml" title="Regular Expressions :: IT From Scratch">
-    <link href="../../../../images/favicon.png?1763300029" rel="icon" type="image/png">
-    <link href="../../../../css/auto-complete/auto-complete.min.css?1763300029" rel="stylesheet">
-    <script src="../../../../js/auto-complete/auto-complete.min.js?1763300029" defer></script>
-    <script src="../../../../js/search-lunr.min.js?1763300029" defer></script>
-    <script src="../../../../js/search.min.js?1763300029" defer></script>
+    <link href="../../../../images/favicon.png?1763464353" rel="icon" type="image/png">
+    <link href="../../../../css/auto-complete/auto-complete.min.css?1763464353" rel="stylesheet">
+    <script src="../../../../js/auto-complete/auto-complete.min.js?1763464353" defer></script>
+    <script src="../../../../js/search-lunr.js?1763464353" defer></script>
+    <script src="../../../../js/search.js?1763464353" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../../searchindex.en.js?1763300029";
+      window.relearn.index_js_url="../../../../searchindex.en.js?1763464353";
     </script>
-    <script src="../../../../js/lunr/lunr.min.js?1763300029" defer></script>
-    <script src="../../../../js/lunr/lunr.stemmer.support.min.js?1763300029" defer></script>
-    <script src="../../../../js/lunr/lunr.multi.min.js?1763300029" defer></script>
-    <script src="../../../../js/lunr/lunr.en.min.js?1763300029" defer></script>
+    <script src="../../../../js/lunr/lunr.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.stemmer.support.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.multi.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.en.min.js?1763464353" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763300029" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763300029" rel="stylesheet"></noscript>
-    <link href="../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763300029" rel="stylesheet">
-    <link href="../../../../css/theme.min.css?1763300029" rel="stylesheet">
-    <link href="../../../../css/format-html.min.css?1763300029" rel="stylesheet" id="R-format-style">
+    <link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763464353" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763464353" rel="stylesheet"></noscript>
+    <link href="../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763464353" rel="stylesheet">
+    <link href="../../../../css/theme.css?1763464353" rel="stylesheet">
+    <link href="../../../../css/format-html.css?1763464353" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/note\/01_programming-language\/python\/09_regular-expressions\/index.html';
       window.relearn.relBasePath='..\/..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..';
-      window.relearn.absBaseUri='';
+      window.relearn.absBaseUri='\/\/localhost:1313';
       window.relearn.disableInlineCopyToClipboard=false;
       window.relearn.enableBlockCodeWrap=true;
       // legal
@@ -155,7 +155,7 @@ import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phon
 <span class="btn cstyle button link noborder notitle interactive"><a href="../../../../note/01_programming-language/python/10_debugging/index.html" title="Debugging (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../note/02_operating-system/index.html" title="Operating System (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="../../../../note/01_programming-language/javascript/index.html" title="JavaScript (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -180,7 +180,7 @@ import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phon
 
 <h2 id="finding-text-patterns-with-regular-expressions">Finding Text Patterns with Regular Expressions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>phone_num_pattern_obj <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>match_obj <span style="color:#f92672">=</span> phone_num_pattern_obj<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;My number is 415-555-4242.&#39;</span>)
 </span></span><span style="display:flex;"><span>print(match_obj<span style="color:#f92672">.</span>group())</span></span></code></pre></div>
@@ -189,7 +189,7 @@ import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phon
 <hr>
 <h2 id="grouping-with-parentheses">Grouping with Parentheses<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>phone_re <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;</span>)
 </span></span><span style="display:flex;"><span>mo <span style="color:#f92672">=</span> phone_re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;My number is 415-555-4242.&#39;</span>)
 </span></span><span style="display:flex;"><span>print(mo<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>))
@@ -211,7 +211,7 @@ import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phon
 <hr>
 <h2 id="using-escape-characters">Using Escape Characters<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\(\d\d\d\)) (\d\d\d-\d\d\d\d)&#39;</span>)\
 </span></span><span style="display:flex;"><span>mo <span style="color:#f92672">=</span> pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;My phone number is (415) 555-4242.&#39;</span>)
 </span></span><span style="display:flex;"><span>print(mo<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>))
@@ -222,7 +222,7 @@ import re phone_re = re.compile(r&#39;(\d\d\d)-(\d\d\d-\d\d\d\d)&#39;) mo = phon
 <hr>
 <h2 id="matching-characters-from-alternate-groups--">Matching Characters from Alternate Groups | <code>|</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;Cat(erpillar|astrophe|ch|egory)&#39;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Catch me if you can.&#39;</span>)
 </span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group())
@@ -233,21 +233,21 @@ ch</code></pre></div>
 <hr>
 <h2 id="returning-all-matches--findall">Returning All Matches | <code>findall()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">&#39;</span>)  <span style="color:#75715e"># This regex has no groups</span>
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;Cell: 415-555-9999 Work: 212-555-0000&#39;</span>))</span></span></code></pre></div>
 <p>Output</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[&#39;415-555-9999&#39;, &#39;212-555-0000&#39;]</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">)-(\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">)-(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">)&#39;</span>)  <span style="color:#75715e"># This regex has groups.</span>
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;Cell: 415-555-9999 Work: 212-555-0000&#39;</span>))</span></span></code></pre></div>
 <p>Output</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[(&#39;415&#39;, &#39;555&#39;, &#39;9999&#39;), (&#39;212&#39;, &#39;555&#39;, &#39;0000&#39;)]</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;1234&#39;</span>))
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;12345&#39;</span>))
@@ -261,14 +261,14 @@ ch</code></pre></div>
 <hr>
 <h2 id="using-character-classes-and-negative-character-classes">Using Character Classes and Negative Character Classes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>vowel_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[aeiouAEIOU]&#39;</span>)
 </span></span><span style="display:flex;"><span>print(vowel_pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;RoboCop eats BABY FOOD.&#39;</span>))</span></span></code></pre></div>
 <p>Output</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>[&#39;o&#39;, &#39;o&#39;, &#39;o&#39;, &#39;e&#39;, &#39;a&#39;, &#39;A&#39;, &#39;O&#39;, &#39;O&#39;]</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>consonant_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^aeiouAEIOU]&#39;</span>) <span style="color:#75715e"># By placing a caret character (^) just after the character class’s opening bracket, you can make a negative character class</span>
 </span></span><span style="display:flex;"><span>print(consonant_pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;RoboCop eats BABY FOOD.&#39;</span>))</span></span></code></pre></div>
 <p>Output</p>
@@ -310,7 +310,7 @@ ch</code></pre></div>
   </tbody>
 </table>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+\s\w+&#39;</span>) <span style="color:#75715e"># The regular expression \d+\s\w+ will match text that has one or more numeric digits (\d+), followed by a whitespace character (\s), followed by one or more letter/digit/underscore characters (\w+)</span>
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;12 drummers, 11 pipers, 10 lords, 9 ladies, 8 maids, 7 swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 partridge&#39;</span>))</span></span></code></pre></div>
 <p>Output</p>
@@ -318,7 +318,7 @@ ch</code></pre></div>
 <hr>
 <h2 id="matching-everything-with-the-dot-character--">Matching Everything with the Dot Character | <code>.</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>at_re <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;.at&#39;</span>)
 </span></span><span style="display:flex;"><span>print(at_re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;The cat in the hat sat on the flat mat.&#39;</span>))</span></span></code></pre></div>
 <p>Output</p>
@@ -335,7 +335,7 @@ ch</code></pre></div>
 </ul>
 <h2 id="matching-an-optional-pattern--">Matching an Optional Pattern | <code>?</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># The ? part of the regular expression means that the pattern is optional</span>
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;42?!&#39;</span>)
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;42!&#39;</span>))
@@ -347,7 +347,7 @@ ch</code></pre></div>
 True</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-)?\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>match1 <span style="color:#f92672">=</span> pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;My number is 415-555-4242&#39;</span>)
 </span></span><span style="display:flex;"><span>print(match1<span style="color:#f92672">.</span>group())
@@ -359,7 +359,7 @@ True</code></pre></div>
 <hr>
 <h2 id="matching-zero-or-more-qualifiers--">Matching Zero or More Qualifiers | <code>*</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;Eggs( and spam)*&#39;</span>)
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Eggs&#39;</span>))
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Eggs and spam&#39;</span>))
@@ -373,7 +373,7 @@ True</code></pre></div>
 <hr>
 <h2 id="matching-one-or-more-qualifiers--">Matching One or More Qualifiers | <code>+</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;Eggs( and spam)+&#39;</span>)
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Eggs and spam&#39;</span>))
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Eggs and spam and spam&#39;</span>))
@@ -386,7 +386,7 @@ True</code></pre></div>
 <hr>
 <h2 id="matching-a-specific-number-of-qualifiers">Matching a Specific Number of Qualifiers<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>haRegex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(Ha)</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>match1 <span style="color:#f92672">=</span> haRegex<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;HaHaHa&#39;</span>)
 </span></span><span style="display:flex;"><span>print(match1<span style="color:#f92672">.</span>group())
@@ -403,7 +403,7 @@ True</code></pre></div>
 <li>The + quantifier is the same as {1,}.</li>
 </ul>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>greedy_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(Ha){3,5}&#39;</span>)
 </span></span><span style="display:flex;"><span>match1 <span style="color:#f92672">=</span> greedy_pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;HaHaHaHaHa&#39;</span>)
 </span></span><span style="display:flex;"><span>print(match1<span style="color:#f92672">.</span>group())
@@ -416,7 +416,7 @@ HaHaHa</code></pre></div>
 <hr>
 <h2 id="matching-everything---and-">Matching Everything | <code>.*</code> and <code>.*?</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>name_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;First Name: (.*) Last Name: (.*)&#39;</span>)
 </span></span><span style="display:flex;"><span>name_match <span style="color:#f92672">=</span> name_pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;First Name: Al Last Name: Sweigart&#39;</span>)
 </span></span><span style="display:flex;"><span>print(name_match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>))
@@ -428,7 +428,7 @@ Sweigart</code></pre></div>
 <li>The dot-star uses greedy mode: it will always try to match as much text as possible. To match any and all text in a non-greedy or lazy fashion, use the dot, star, and question mark (.*?). As when it’s used with curly brackets, the question mark tells Python to match in a non-greedy way.</li>
 </ul>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>lazy_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;.*?&gt;&#39;</span>)
 </span></span><span style="display:flex;"><span>match1 <span style="color:#f92672">=</span> lazy_pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;&lt;To serve man&gt; for dinner.&gt;&#39;</span>)
 </span></span><span style="display:flex;"><span>print(match1<span style="color:#f92672">.</span>group())
@@ -441,7 +441,7 @@ Sweigart</code></pre></div>
 <hr>
 <h2 id="matching-newline-characters--redotall">Matching Newline Characters | <code>re.DOTALL</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>no_newline_re <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#39;.*&#39;</span>)
 </span></span><span style="display:flex;"><span>print(no_newline_re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Serve the public trust.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Protect the innocent. </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Uphold the law.&#39;</span>)<span style="color:#f92672">.</span>group())
 </span></span><span style="display:flex;"><span>print()
@@ -456,7 +456,7 @@ Uphold the law.</code></pre></div>
 <hr>
 <h2 id="matching-at-the-start-and-end-of-a-string----and-b">Matching at the Start and End of a String | <code>^</code>, <code>$</code> and <code>/b</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>begins_with_hello <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^Hello&#39;</span>)
 </span></span><span style="display:flex;"><span>print(begins_with_hello<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Hello, world!&#39;</span>))
 </span></span><span style="display:flex;"><span>print(begins_with_hello<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;He said &#34;Hello.&#34;&#39;</span>) <span style="color:#f92672">==</span> <span style="color:#66d9ef">None</span>)</span></span></code></pre></div>
@@ -465,7 +465,7 @@ Uphold the law.</code></pre></div>
 True</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>ends_with_number <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d$&#39;</span>)
 </span></span><span style="display:flex;"><span>print(ends_with_number<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Your number is 42&#39;</span>))
 </span></span><span style="display:flex;"><span>print(ends_with_number<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;Your number is forty two.&#39;</span>) <span style="color:#f92672">==</span> <span style="color:#66d9ef">None</span>)</span></span></code></pre></div>
@@ -474,7 +474,7 @@ True</code></pre></div>
 True</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>whole_string_is_num <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^\d+$&#39;</span>)
 </span></span><span style="display:flex;"><span>print(whole_string_is_num<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;1234567890&#39;</span>))
 </span></span><span style="display:flex;"><span>print(whole_string_is_num<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;12345xyz67890&#39;</span>) <span style="color:#f92672">==</span> <span style="color:#66d9ef">None</span>)</span></span></code></pre></div>
@@ -483,7 +483,7 @@ True</code></pre></div>
 True</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\bcat.*?\b&#39;</span>)
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">&#39;The cat found a catapult catalog in the catacombs.&#39;</span>))
 </span></span><span style="display:flex;"><span>print()
@@ -498,7 +498,7 @@ True</code></pre></div>
 <hr>
 <h2 id="case-insensitive-matching--rei">Case-Insensitive Matching | <code>re.I</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;robocop&#39;</span>, re<span style="color:#f92672">.</span>I)
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;RoboCop is part man, part machine, all cop.&#39;</span>)<span style="color:#f92672">.</span>group())
 </span></span><span style="display:flex;"><span>print(pattern<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;ROBOCOP protects the innocent.&#39;</span>)<span style="color:#f92672">.</span>group())
@@ -510,7 +510,7 @@ robocop</code></pre></div>
 <hr>
 <h2 id="substituting-strings--sub">Substituting Strings | <code>sub()</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;robocop&#39;</span>, re<span style="color:#f92672">.</span>I)
 </span></span><span style="display:flex;"><span>agent_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;Agent \w+&#39;</span>)
 </span></span><span style="display:flex;"><span>print(agent_pattern<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#39;CENSORED&#39;</span>, <span style="color:#e6db74">&#39;Agent Alice contacted Agent Bob.&#39;</span>))</span></span></code></pre></div>
@@ -518,7 +518,7 @@ robocop</code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>CENSORED contacted CENSORED.</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>agent_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;Agent (\w)\w*&#39;</span>)
 </span></span><span style="display:flex;"><span>print(agent_pattern<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\1****&#39;</span>, <span style="color:#e6db74">&#39;Agent Alice contacted Agent Bob.&#39;</span>))</span></span></code></pre></div>
 <p>Output</p>
@@ -526,7 +526,7 @@ robocop</code></pre></div>
 <hr>
 <h2 id="managing-complex-regexes-with-verbose-mode--reverbose">Managing Complex Regexes with Verbose Mode | <code>re.VERBOSE</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;(
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;(
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    (\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">|\(\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">\))?  # Area code
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    (\s|-|\.)?  # Separator
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    \d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">  # First three digits
@@ -594,7 +594,8 @@ robocop</code></pre></div>
             <li class="" data-nav-url="../../../../note/01_programming-language/python/07_files/index.html"><a class="padding" href="../../../../note/01_programming-language/python/07_files/index.html">07. Files</a></li>
             <li class="" data-nav-url="../../../../note/01_programming-language/python/08_libraries/index.html"><a class="padding" href="../../../../note/01_programming-language/python/08_libraries/index.html">08. Libraries</a></li>
             <li class="" data-nav-url="../../../../note/01_programming-language/python/10_debugging/index.html"><a class="padding" href="../../../../note/01_programming-language/python/10_debugging/index.html">10. Debugging</a></li>
-            <li class="active " data-nav-url="../../../../note/01_programming-language/python/09_regular-expressions/index.html"><a class="padding" href="../../../../note/01_programming-language/python/09_regular-expressions/index.html">09. Regular Expressions</a></li></ul></li></ul></li>
+            <li class="active " data-nav-url="../../../../note/01_programming-language/python/09_regular-expressions/index.html"><a class="padding" href="../../../../note/01_programming-language/python/09_regular-expressions/index.html">09. Regular Expressions</a></li></ul></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/javascript/index.html"><a class="padding" href="../../../../note/01_programming-language/javascript/index.html"><i class="fab fa-js-square"></i> JavaScript</a><ul id="R-subsections-4287eecde1958031608521f399318728" class="collapsible-menu"></ul></li></ul></li>
             <li class="" data-nav-url="../../../../note/02_operating-system/index.html"><a class="padding" href="../../../../note/02_operating-system/index.html"><i class="fas fa-compact-disc"></i> Operating System</a><ul id="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="../../../../note/03_source-control/index.html"><a class="padding" href="../../../../note/03_source-control/index.html"><i class="fas fa-code-branch"></i> Source Control</a><ul id="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="../../../../note/04_virtual-machine/index.html"><a class="padding" href="../../../../note/04_virtual-machine/index.html"><i class="fas fa-vr-cardboard"></i> Virtual Machine</a><ul id="R-subsections-174921e347b3c11effb7c9f708890ddf" class="collapsible-menu"></ul></li>
@@ -637,8 +638,8 @@ robocop</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763300029" defer></script>
-    <script src="../../../../js/theme.min.js?1763300029" defer></script>
+    <script src="../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763464353" defer></script>
+    <script src="../../../../js/theme.js?1763464353" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

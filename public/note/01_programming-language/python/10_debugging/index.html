@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
@@ -18,7 +18,7 @@ def spam(divide_by): try: return 42 / divide_by except ZeroDivisionError: print(
 21.03.5Error: Invalid argument.None42.0Input
 def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) print(spam(0)) print(spam(1)) except ZeroDivisionError: print(&#39;Error: Invalid argument.&#39;)Output
 21.03.5Error: Invalid argument.Raising ExceptionsInput">
-    <meta property="og:url" content="/note/01_programming-language/python/10_debugging/index.html">
+    <meta property="og:url" content="//localhost:1313/note/01_programming-language/python/10_debugging/index.html">
     <meta property="og:site_name" content="IT From Scratch">
     <meta property="og:title" content="Debugging :: IT From Scratch">
     <meta property="og:description" content="Exception HandlingInput
@@ -37,35 +37,35 @@ def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) p
     <meta itemprop="wordCount" content="748">
     <title>Debugging :: IT From Scratch</title>
     <link href="../../../../note/01_programming-language/python/10_debugging/index.xml" rel="alternate" type="application/rss+xml" title="Debugging :: IT From Scratch">
-    <link href="../../../../images/favicon.png?1763300029" rel="icon" type="image/png">
-    <link href="../../../../css/auto-complete/auto-complete.min.css?1763300029" rel="stylesheet">
-    <script src="../../../../js/auto-complete/auto-complete.min.js?1763300029" defer></script>
-    <script src="../../../../js/search-lunr.min.js?1763300029" defer></script>
-    <script src="../../../../js/search.min.js?1763300029" defer></script>
+    <link href="../../../../images/favicon.png?1763464353" rel="icon" type="image/png">
+    <link href="../../../../css/auto-complete/auto-complete.min.css?1763464353" rel="stylesheet">
+    <script src="../../../../js/auto-complete/auto-complete.min.js?1763464353" defer></script>
+    <script src="../../../../js/search-lunr.js?1763464353" defer></script>
+    <script src="../../../../js/search.js?1763464353" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../../searchindex.en.js?1763300029";
+      window.relearn.index_js_url="../../../../searchindex.en.js?1763464353";
     </script>
-    <script src="../../../../js/lunr/lunr.min.js?1763300029" defer></script>
-    <script src="../../../../js/lunr/lunr.stemmer.support.min.js?1763300029" defer></script>
-    <script src="../../../../js/lunr/lunr.multi.min.js?1763300029" defer></script>
-    <script src="../../../../js/lunr/lunr.en.min.js?1763300029" defer></script>
+    <script src="../../../../js/lunr/lunr.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.stemmer.support.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.multi.min.js?1763464353" defer></script>
+    <script src="../../../../js/lunr/lunr.en.min.js?1763464353" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763300029" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763300029" rel="stylesheet"></noscript>
-    <link href="../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763300029" rel="stylesheet">
-    <link href="../../../../css/theme.min.css?1763300029" rel="stylesheet">
-    <link href="../../../../css/format-html.min.css?1763300029" rel="stylesheet" id="R-format-style">
+    <link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763464353" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../../fonts/fontawesome/css/fontawesome-all.min.css?1763464353" rel="stylesheet"></noscript>
+    <link href="../../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763464353" rel="stylesheet">
+    <link href="../../../../css/theme.css?1763464353" rel="stylesheet">
+    <link href="../../../../css/format-html.css?1763464353" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/note\/01_programming-language\/python\/10_debugging\/index.html';
       window.relearn.relBasePath='..\/..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..';
-      window.relearn.absBaseUri='';
+      window.relearn.absBaseUri='\/\/localhost:1313';
       window.relearn.disableInlineCopyToClipboard=false;
       window.relearn.enableBlockCodeWrap=true;
       // legal
@@ -172,7 +172,7 @@ def spam(divide_by): return 42 / divide_by try: print(spam(2)) print(spam(12)) p
 
 <h2 id="exception-handling">Exception Handling<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span> <span style="color:#f92672">/</span> divide_by
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ZeroDivisionError</span>:
@@ -190,7 +190,7 @@ None
 42.0</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spam</span>(divide_by):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">42</span> <span style="color:#f92672">/</span> divide_by
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
@@ -207,7 +207,7 @@ Error: Invalid argument.</code></pre></div>
 <hr>
 <h2 id="raising-exceptions">Raising Exceptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#39;This is the error message.&#39;</span>)</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#39;This is the error message.&#39;</span>)</span></span></code></pre></div>
 <p>Output</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Traceback (most recent call last):
   File &#34;&lt;pyshell#191&gt;&#34;, line 1, in &lt;module&gt;
@@ -215,7 +215,7 @@ Error: Invalid argument.</code></pre></div>
 Exception: This is the error message.</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">box_print</span>(symbol, width, height):
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">box_print</span>(symbol, width, height):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(symbol) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#39;Symbol must be a single character string.&#39;</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> width <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>:
@@ -254,24 +254,24 @@ An exception happened: Symbol must be a single character string.</code></pre></d
 <hr>
 <h2 id="assertions">Assertions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
 </span></span><span style="display:flex;"><span>ages<span style="color:#f92672">.</span>sort()
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> ages[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> ages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># Assert that the first age is &lt;= the last age</span></span></span></code></pre></div>
 <p>Output</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code></code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>ages <span style="color:#f92672">=</span> [<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">92</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">73</span>]
 </span></span><span style="display:flex;"><span>ages<span style="color:#f92672">.</span>reverse()
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> ages[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;=</span> ages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># Assert that the first age is &lt;= the last age</span></span></span></code></pre></div>
 <p>Output</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Traceback (most recent call last):
-  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
+  File &#34;&lt;py-input-0&gt;&#34;, line 1, in &lt;module&gt;
 AssertionError</code></pre></div>
 <hr>
 <h2 id="the-logging-module">The logging Module<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>DEBUG, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Start of program&#39;</span>)
 </span></span><span style="display:flex;"><span>
@@ -301,7 +301,7 @@ AssertionError</code></pre></div>
 <hr>
 <h2 id="logfiles">Logfiles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;myProgramLog.txt&#39;</span>, level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>DEBUG,
 </span></span><span style="display:flex;"><span>format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)</span></span></code></pre></div>
 <hr>
@@ -347,7 +347,7 @@ AssertionError</code></pre></div>
 </ul>
 <h2 id="disabled-logging">Disabled Logging<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>critical(<span style="color:#e6db74">&#39;Critical error! Critical error!&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>disable(logging<span style="color:#f92672">.</span>CRITICAL)
@@ -357,7 +357,7 @@ AssertionError</code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>2025-11-02 22:39:52,251 - CRITICAL -  Critical error! Critical error!</code></pre></div>
 <br>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> logging
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; </span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> -  </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>critical(<span style="color:#e6db74">&#39;Critical error! Critical error!&#39;</span>)
 </span></span><span style="display:flex;"><span>logging<span style="color:#f92672">.</span>disable(logging<span style="color:#f92672">.</span>ERROR)
@@ -369,7 +369,7 @@ AssertionError</code></pre></div>
 <hr>
 <h2 id="finally">Finally<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Input</p>
-<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ZeroDivisionError</span>:
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;error: division by zero is not allowed.&#34;</span>)
@@ -440,7 +440,8 @@ This block always executes</code></pre></div>
             <li class="" data-nav-url="../../../../note/01_programming-language/python/07_files/index.html"><a class="padding" href="../../../../note/01_programming-language/python/07_files/index.html">07. Files</a></li>
             <li class="" data-nav-url="../../../../note/01_programming-language/python/08_libraries/index.html"><a class="padding" href="../../../../note/01_programming-language/python/08_libraries/index.html">08. Libraries</a></li>
             <li class="active " data-nav-url="../../../../note/01_programming-language/python/10_debugging/index.html"><a class="padding" href="../../../../note/01_programming-language/python/10_debugging/index.html">10. Debugging</a></li>
-            <li class="" data-nav-url="../../../../note/01_programming-language/python/09_regular-expressions/index.html"><a class="padding" href="../../../../note/01_programming-language/python/09_regular-expressions/index.html">09. Regular Expressions</a></li></ul></li></ul></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/python/09_regular-expressions/index.html"><a class="padding" href="../../../../note/01_programming-language/python/09_regular-expressions/index.html">09. Regular Expressions</a></li></ul></li>
+            <li class="" data-nav-url="../../../../note/01_programming-language/javascript/index.html"><a class="padding" href="../../../../note/01_programming-language/javascript/index.html"><i class="fab fa-js-square"></i> JavaScript</a><ul id="R-subsections-4287eecde1958031608521f399318728" class="collapsible-menu"></ul></li></ul></li>
             <li class="" data-nav-url="../../../../note/02_operating-system/index.html"><a class="padding" href="../../../../note/02_operating-system/index.html"><i class="fas fa-compact-disc"></i> Operating System</a><ul id="R-subsections-72cabb372e9ddfd0ca9d90024a3ef5a5" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="../../../../note/03_source-control/index.html"><a class="padding" href="../../../../note/03_source-control/index.html"><i class="fas fa-code-branch"></i> Source Control</a><ul id="R-subsections-ac1d6927bbe9ff8c128e19c91ced14f0" class="collapsible-menu"></ul></li>
             <li class="" data-nav-url="../../../../note/04_virtual-machine/index.html"><a class="padding" href="../../../../note/04_virtual-machine/index.html"><i class="fas fa-vr-cardboard"></i> Virtual Machine</a><ul id="R-subsections-174921e347b3c11effb7c9f708890ddf" class="collapsible-menu"></ul></li>
@@ -483,8 +484,8 @@ This block always executes</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763300029" defer></script>
-    <script src="../../../../js/theme.min.js?1763300029" defer></script>
+    <script src="../../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763464353" defer></script>
+    <script src="../../../../js/theme.js?1763464353" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
