@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Build &amp; Test Template :: IT From Scratch</title>
-    <link>//localhost:1313/note/03_source-control/01_gitlab/02_ci-cd-template/01_build-and-test-template/index.html</link>
+    <link>/note/03_source-control/01_gitlab/02_ci-cd-template/01_build-and-test-template/index.html</link>
     <description>Android.gitlab-ci.yml Bash.gitlab-ci.yml C++.gitlab-ci.yml Clojure.gitlab-ci.yml Composer.gitlab-ci.yml Crystal.gitlab-ci.yml Dart.gitlab-ci.yml&#xD;Django.gitlab-ci.yml dotNET.gitlab-ci.yml Elixir.gitlab-ci.yml Flutter.gitlab-ci.yml Go.gitlab-ci.yml Gradle.gitlab-ci.yml Grails.gitlab-ci.yml iOS-Fastlane.gitlab-ci.yml Java.gitlab-ci.yml Jekyll.gitlab-ci.yml Julia.gitlab-ci.yml Laravel.gitlab-ci.yml LaTeX.gitlab-ci.yml Maven.gitlab-ci.yml Mono.gitlab-ci.yml Nodejs.gitlab-ci.yml OCaml.gitlab-ci.yml Packer.gitlab-ci.yml PHP.gitlab-ci.yml Python.gitlab-ci.yml Rails.gitlab-ci.yml Ruby.gitlab-ci.yml Rust.gitlab-ci.yml Scala.gitlab-ci.yml Swift.gitlab-ci.yml Symfony.gitlab-ci.yml Wordpress.gitlab-ci.yml Docker.gitlab-ci.yml&#xD;Kaniko.gitlab-ci.yml&#xD;Buildah.gitlab-ci.yml&#xD;Godot.gitlab-ci.yml&#xD;KiCad.gitlab-ci.yml&#xD;Auto-DevOps.gitlab-ci.yml</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/note/03_source-control/01_gitlab/02_ci-cd-template/01_build-and-test-template/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/note/03_source-control/01_gitlab/02_ci-cd-template/01_build-and-test-template/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

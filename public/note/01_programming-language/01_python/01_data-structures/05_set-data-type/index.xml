@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Set Data Type :: IT From Scratch</title>
-    <link>//localhost:1313/note/01_programming-language/01_python/01_data-structures/05_set-data-type/index.html</link>
+    <link>/note/01_programming-language/01_python/01_data-structures/05_set-data-type/index.html</link>
     <description>Syntax&#xD;Input&#xA;my_set = {1, 2, 3} print(my_set)&#xD;Output&#xA;{1, 2, 3}&#xD;Add Values | add()&#xD;Data in set cannot be duplicated Input&#xA;my_set = {1, 2, 3} my_set.add(4) my_set.add(2) print(my_set)&#xD;Output&#xA;{1, 2, 3, 4}&#xD;Remove Values | remove()&#xD;Data in set cannot be duplicated Input</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/note/01_programming-language/01_python/01_data-structures/05_set-data-type/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/note/01_programming-language/01_python/01_data-structures/05_set-data-type/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

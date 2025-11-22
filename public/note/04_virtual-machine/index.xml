@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virtual Machine :: IT From Scratch</title>
-    <link>//localhost:1313/note/04_virtual-machine/index.html</link>
+    <link>/note/04_virtual-machine/index.html</link>
     <description>Virtual Box</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/note/04_virtual-machine/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/note/04_virtual-machine/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Virtual Box</title>
-      <link>//localhost:1313/note/04_virtual-machine/01_virtual-box/index.html</link>
+      <link>/note/04_virtual-machine/01_virtual-box/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/04_virtual-machine/01_virtual-box/index.html</guid>
+      <guid>/note/04_virtual-machine/01_virtual-box/index.html</guid>
       <description>Link download&#xD;https://www.virtualbox.org/wiki/Downloads&#xA;Video reference&#xD;https://www.youtube.com/watch?v=lmeDvSgN6zY</description>
     </item>
   </channel>

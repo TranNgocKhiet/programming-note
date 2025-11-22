@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming Language :: IT From Scratch</title>
-    <link>//localhost:1313/note/01_programming-language/index.html</link>
+    <link>/note/01_programming-language/index.html</link>
     <description>Python&#xD;JavaScript&#xD;TypeScript</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/note/01_programming-language/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/note/01_programming-language/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python</title>
-      <link>//localhost:1313/note/01_programming-language/01_python/index.html</link>
+      <link>/note/01_programming-language/01_python/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/01_programming-language/01_python/index.html</guid>
+      <guid>/note/01_programming-language/01_python/index.html</guid>
       <description>Source References&#xD;Books&#xD;Automate the Boring Stuff with Python by Al Sweigart&#xA;Courses&#xD;Python Mastery: The Complete Web Programming Course by Knowledge Nest on Udemy&#xA;Data Structures&#xD;Operators&#xD;Statements&#xD;Functions&#xD;Parameters&#xD;Classes&#xD;Files&#xD;Libraries&#xD;Debugging&#xD;Regular Expressions</description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>//localhost:1313/note/01_programming-language/02_javascript/index.html</link>
+      <link>/note/01_programming-language/02_javascript/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/01_programming-language/02_javascript/index.html</guid>
+      <guid>/note/01_programming-language/02_javascript/index.html</guid>
       <description>Data Structures&#xD;Functions&#xD;Libraries&#xD;Runtime Environment&#xD;Object-Relational Mapping</description>
     </item>
     <item>
       <title>TypeScript</title>
-      <link>//localhost:1313/note/01_programming-language/03_typescript/index.html</link>
+      <link>/note/01_programming-language/03_typescript/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/note/01_programming-language/03_typescript/index.html</guid>
+      <guid>/note/01_programming-language/03_typescript/index.html</guid>
       <description></description>
     </item>
   </channel>
