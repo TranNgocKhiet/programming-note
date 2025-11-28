@@ -7,7 +7,7 @@ weight: 4
 
 [smart_office_api_gateway](smart_office_api_gateway.yaml)
 
-[smart_office_lambda_authenticate](smart_office_lambda_authenticate.yaml.yaml)
+[smart_office_lambda_authenticate](smart_office_lambda_authenticate.yaml)
 
 [smart_office_budget](smart_office_budget.yaml)
 
