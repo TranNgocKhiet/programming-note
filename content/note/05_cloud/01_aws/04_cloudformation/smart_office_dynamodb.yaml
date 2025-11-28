@@ -69,8 +69,8 @@ Resources:
           KeyType: "RANGE"
       # For auto delete old log
       TimeToLiveSpecification:
-        - AttributeName: "expireAt"
-          Enabled: true
+        AttributeName: "expireAt"
+        Enabled: true
 
   # --- SmartOffice-Manager Table---
   ManagerTable:
@@ -127,7 +127,7 @@ Outputs:
   ManagerTableName:
     Value: !Ref ManagerTable
     Export:
-      Name: !Sub "${AWS::StackName}-ManagerTableName"
+      Name: !Sub "${AWS::StackName}-ManagerTableName1"
   ManagerTableArn:
     Value: !GetAtt ManagerTable.Arn
     Export:
