@@ -12,3 +12,6 @@ weight: 1
 - Step to init a new repo
 1. ```git init```
 2. ```git remote add origin <NEW_URL>```
+
+- Remove remote
+```git remote remove <ORIGIN>```

@@ -39,8 +39,8 @@ Resources:
                   - dynamodb:Scan
                 Resource:
                   - Fn::ImportValue: !Sub "${DatabaseStackName}-RoomConfigTableArn"
-                  - Fn::ImportValue: !Sub "${DatabaseStackName}-UserTableArn"
-
+                  - Fn::ImportValue: !Sub "${DatabaseStackName}-ManagerTableArn"
+                  - Fn::ImportValue: !Sub "${DatabaseStackName}-OfficeTableArn"
                 # For debugging
               - Effect: Allow
                 Action:
@@ -85,7 +85,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       FunctionName: !Sub "${AWS::StackName}-ProfileUpdate"
-      Description: "Handle User Profile Update"
+      Description: "Handle Manager Profile Update"
       Runtime: python3.14
       Handler: ProfileUpdate.lambda_handler
       MemorySize: 128
@@ -94,8 +94,8 @@ Resources:
 
       Environment:
         Variables:
-          USER_TABLE:
-            Fn::ImportValue: !Sub "${DatabaseStackName}-UserTableName"
+          MANAGER_TABLE:
+            Fn::ImportValue: !Sub "${DatabaseStackName}-ManagerTableName"
 
       Code:
         ZipFile: |
