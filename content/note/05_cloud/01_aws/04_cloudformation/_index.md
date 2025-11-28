@@ -7,17 +7,17 @@ weight: 4
 
 [smart_office_api_gateway](smart_office_api_gateway.yaml)
 
-[smart_office_authenticate_lambda](smart_office_authenticate_lambda.yaml)
+[smart_office_lambda_authenticate](smart_office_lambda_authenticate.yaml.yaml)
 
 [smart_office_budget](smart_office_budget.yaml)
 
 [smart_office_cognito](smart_office_cognito.yaml)
 
-[smart_office_crud_lambda](smart_office_crud_lambda.yaml)
+[smart_office_lambda_crud](smart_office_lambda_crud.yaml)
 
 [smart_office_dynamodb](smart_office_dynamodb.yaml)
 
-[smart_office_readonly_lambda](smart_office_readonly_lambda.yaml)
+[smart_office_lambda_readonly](smart_office_lambda_readonly.yaml)
 
 [smart_office_s3_cloudfront](smart_office_s3_cloudfront.yaml)
 
