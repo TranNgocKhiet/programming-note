@@ -15,11 +15,11 @@ weight: 4
 
 [smart_office_crud_lambda](smart_office_crud_lambda.yaml)
 
-[smart_officesmart_office_dynamodb_api_gateway](smart_officesmart_office_dynamodb_api_gateway.yaml)
+[smart_office_dynamodb](smart_office_dynamodb.yaml)
 
-[smart_office_readonly_lambda](smart_office_api_gateway.yaml)
+[smart_office_readonly_lambda](smart_office_readonly_lambda.yaml)
 
-[smart_office_s3_cloudfront](smart_office_api_gateway.yaml)
+[smart_office_s3_cloudfront](smart_office_s3_cloudfront.yaml)
 
 ## Note
 
