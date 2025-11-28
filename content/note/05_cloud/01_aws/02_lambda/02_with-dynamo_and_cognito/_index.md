@@ -1,11 +1,7 @@
 ---
 linkTitle: 'With Dynamo and Cognito'
 title: "Lambda Funtion to update Dynamo and Cognito using Python"
-<<<<<<<< HEAD:content/note/05_cloud/01_aws/02_lambda/02_with-dynamo_and_cognito/_index.md
 weight: 2
-========
-weight: 1
->>>>>>>> 8b17006269396c49f617707010661f97de79c048:content/note/05_cloud/01_aws/01_lambda/01_with-dynamo_and_cognito/_index.md
 ---
 
 ```python
