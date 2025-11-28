@@ -56,6 +56,7 @@ Resources:
                   - cognito-idp:ForgotPassword
                   - cognito-idp:ConfirmForgotPassword
                   - cognito-idp:GetUser
+                  - cognito-idp:SignUp
                 Resource:
                   - Fn::ImportValue: !Sub "${AuthStackName}-UserPoolArn"
 
@@ -174,6 +175,34 @@ Resources:
       LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-ConfirmPassword"
       RetentionInDays: 3
 
+  # --- Admin Registration ---
+  AdminRegisterFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-AdminRegister"
+      Description: "Register new Organization and Admin Account"
+      Runtime: python3.14
+      Handler: index.lambda_handler
+      MemorySize: 128
+      Timeout: 15
+      Role: !GetAtt SmartOfficeAuthRole.Arn
+      Environment:
+        Variables:
+          OFFICE_TABLE:
+            Fn::ImportValue: !Sub "${DatabaseStackName}-OfficeTableName"
+          COGNITO_CLIENT_ID:
+            Fn::ImportValue: !Sub "${AuthStackName}-WebClientId"
+      Code:
+        ZipFile: |
+          def lambda_handler(event, context):
+              return "AdminRegisterFunction Infrastructure created..."
+
+  AdminRegisterLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-AdminRegister"
+      RetentionInDays: 3
+
 Outputs:
   LoginFunctionArn:
     Value: !GetAtt LoginFunction.Arn
@@ -194,3 +223,8 @@ Outputs:
     Value: !GetAtt ConfirmPasswordFunction.Arn
     Export:
       Name: !Sub "${AWS::StackName}-ConfirmPasswordFunctionArn"
+
+  AdminRegisterFunctionArn:
+    Value: !GetAtt AdminRegisterFunction.Arn
+    Export:
+      Name: !Sub "${AWS::StackName}-AdminRegisterFunctionArn"

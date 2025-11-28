@@ -15,3 +15,6 @@ weight: 1
 
 - Remove remote
 ```git remote remove <ORIGIN>```
+
+- Compare two branches
+- ```git diff branch-1 branch-2```
