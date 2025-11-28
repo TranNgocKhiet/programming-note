@@ -69,6 +69,16 @@ Resources:
           KeyType: "RANGE"
       # For auto delete old log
       TimeToLiveSpecification:
+<<<<<<< HEAD
+        AttributeName: "expireAt"
+        Enabled: true
+
+  # --- SmartOffice-Manager Table---
+  ManagerTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub "${AWS::StackName}-Manager"
+=======
         AttributeName: "ttl_expiration"
         Enabled: true
 
@@ -77,16 +87,25 @@ Resources:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: !Sub "${AWS::StackName}-User"
+>>>>>>> 52f4e108d543479b12b48491cad13bb698f3c7ac
       BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
         - AttributeName: "orgAlias"
           AttributeType: "S"
+<<<<<<< HEAD
+        - AttributeName: "email"
+=======
         - AttributeName: "userId"
+>>>>>>> 52f4e108d543479b12b48491cad13bb698f3c7ac
           AttributeType: "S"
       KeySchema:
         - AttributeName: "orgAlias"
           KeyType: "HASH"
+<<<<<<< HEAD
+        - AttributeName: "email"
+=======
         - AttributeName: "userId"
+>>>>>>> 52f4e108d543479b12b48491cad13bb698f3c7ac
           KeyType: "RANGE"
 
 Outputs:
@@ -123,6 +142,17 @@ Outputs:
     Export:
       Name: !Sub "${AWS::StackName}-RoomLogTableArn"
 
+<<<<<<< HEAD
+  # --- MANAGER TABLE ---
+  ManagerTableName:
+    Value: !Ref ManagerTable
+    Export:
+      Name: !Sub "${AWS::StackName}-ManagerTableName"
+  ManagerTableArn:
+    Value: !GetAtt ManagerTable.Arn
+    Export:
+      Name: !Sub "${AWS::StackName}-ManagerTableArn"
+=======
   # --- USER TABLE ---
   UserTableName:
     Value: !Ref UserTable
@@ -132,3 +162,4 @@ Outputs:
     Value: !GetAtt UserTable.Arn
     Export:
       Name: !Sub "${AWS::StackName}-UserTableArn"
+>>>>>>> 52f4e108d543479b12b48491cad13bb698f3c7ac
