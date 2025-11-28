@@ -2,10 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Files :: IT From Scratch</title>
-    <link>/note/01_programming-language/01_python/07_files/index.html</link>
+    <link>//localhost:1313/note/01_programming-language/01_python/07_files/index.html</link>
     <description>Read and write&#xD;Input&#xA;with open(&#39;example.txt&#39;, &#39;w&#39;) as file: file.write(&#39;Hello, world!\n&#39;) file.write(&#39;This is a test file\n&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: content = file.read() print(content) with open(&#39;example.txt&#39;, &#39;a&#39;) as file: file.write(&#39;\nAppending a new line.&#39;) with open(&#39;example.txt&#39;, &#39;r&#39;) as file: for line in file: print(line, end=&#39;&#39;)&#xD;Output&#xA;Hello, world!&#xD;This is a test file&#xD;Hello, world!&#xD;This is a test file&#xD;Appending a new line.&#xD;Read line&#xD;Input</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/note/01_programming-language/01_python/07_files/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/note/01_programming-language/01_python/07_files/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Practices</title>
+      <link>//localhost:1313/note/01_programming-language/01_python/07_files/practices/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/note/01_programming-language/01_python/07_files/practices/index.html</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

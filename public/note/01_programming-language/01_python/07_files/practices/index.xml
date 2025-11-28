@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Practices :: IT From Scratch</title>
+    <link>//localhost:1313/note/01_programming-language/01_python/07_files/practices/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/01_programming-language/01_python/07_files/practices/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

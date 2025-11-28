@@ -1,7 +1,7 @@
 ---
 linkTitle: 'With Dynamo and Cognito'
 title: "Lambda Funtion to update Dynamo and Cognito using Python"
-weight: 1
+weight: 2
 ---
 
 ```python

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GitHub :: IT From Scratch</title>
-    <link>/note/03_source-control/01_github/index.html</link>
-    <description></description>
+    <link>//localhost:1313/note/03_source-control/01_github/index.html</link>
+    <description>Important note&#xD;When rebase a branch, that branch cannot be deleted until finish rebase or stop rebase using git rebase --abort&#xA;Step to init a new repo&#xA;git init git remote add origin &lt;NEW_URL&gt;</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/note/03_source-control/01_github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/note/03_source-control/01_github/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,0 +1,8 @@
+google.com
+ is OFFLINE
+facebook.com
+ is OFFLINE
+thiswebsite-does-not-exist.com is OFFLINE
+google.com is ONLINE
+facebook.com is ONLINE
+thiswebsite-does-not-exist.com is OFFLINE

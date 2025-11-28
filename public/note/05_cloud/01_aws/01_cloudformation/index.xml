@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS CloudFormation :: IT From Scratch</title>
+    <link>//localhost:1313/note/05_cloud/01_aws/01_cloudformation/index.html</link>
+    <description>Exmaple project&#xD;smart_office_api_gateway&#xA;smart_office_authenticate_lambda&#xA;smart_office_budget&#xA;smart_office_cognito&#xA;smart_office_crud_lambda&#xA;smart_officesmart_office_dynamodb_api_gateway&#xA;smart_office_readonly_lambda&#xA;smart_office_s3_cloudfront&#xA;Note&#xD;smart_office_cognito.yaml&#xD;Hướng dẫn sử dụng sau khi Deploy Lấy Mật khẩu: Vì CloudFormation không cho phép đặt mật khẩu trực tiếp (để bảo mật), sau khi deploy xong, bạn cần vào AWS Console &gt; Cognito &gt; Users: + Bấm vào từng user (admin, manager1…). + Chọn Admin set password. + Đặt mật khẩu test (ví dụ: 123456) và tick chọn Permanent (để không bị bắt đổi pass lúc login lần đầu cho tiện). Cấu hình Web (S3/CloudFront): + Trong code Frontend, bạn sẽ cần 2 thông số từ phần Outputs: UserPoolId và WebClientId. When create Stack&#xD;Stack Failure Options (Chế độ khi lỗi) - Mẹo Debug Mặc định, nếu stack bị lỗi ở bất kỳ bước nào, CloudFormation sẽ Rollback (Xóa sạch mọi thứ vừa tạo để quay về trạng thái ban đầu). Vấn đề: Khi Rollback, mọi log lỗi cũng biến mất theo, rất khó để biết tại sao sai (đặc biệt là với Custom Resource hoặc Lambda).</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/note/05_cloud/01_aws/01_cloudformation/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

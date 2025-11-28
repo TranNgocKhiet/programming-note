@@ -93,3 +93,15 @@ line 3
 ```
 
 ---
+
+## Note 
+
+- ```w``` (Write): Creates a file. **WARNING**: If the file exists, it erases everything and starts fresh.
+- ```a``` (Append): Adds text to the end of an existing file (great for logs).
+- ```r``` (Read): Opens the file just to look at the data.
+
+When you don't specify a mode (like "r", "w", "a"), Python defaults to Read mode ("r")
+
+---
+
+{{<children>}}

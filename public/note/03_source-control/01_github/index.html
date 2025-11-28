@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
     <meta name="generator" content="Relearn 8.2.0+220806ce3ced8264fbdd693f77f28216a8a1b6ae">
-    <meta name="description" content="">
+    <meta name="description" content="Important noteWhen rebase a branch, that branch cannot be deleted until finish rebase or stop rebase using git rebase --abort
+Step to init a new repo
+git init git remote add origin &lt;NEW_URL&gt;">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="GitHub :: IT From Scratch">
-    <meta property="og:url" content="/note/03_source-control/01_github/index.html">
+    <meta name="twitter:description" content="Important noteWhen rebase a branch, that branch cannot be deleted until finish rebase or stop rebase using git rebase --abort
+Step to init a new repo
+git init git remote add origin &lt;NEW_URL&gt;">
+    <meta property="og:url" content="//localhost:1313/note/03_source-control/01_github/index.html">
     <meta property="og:site_name" content="IT From Scratch">
     <meta property="og:title" content="GitHub :: IT From Scratch">
+    <meta property="og:description" content="Important noteWhen rebase a branch, that branch cannot be deleted until finish rebase or stop rebase using git rebase --abort
+Step to init a new repo
+git init git remote add origin &lt;NEW_URL&gt;">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="GitHub :: IT From Scratch">
+    <meta itemprop="description" content="Important noteWhen rebase a branch, that branch cannot be deleted until finish rebase or stop rebase using git rebase --abort
+Step to init a new repo
+git init git remote add origin &lt;NEW_URL&gt;">
+    <meta itemprop="wordCount" content="34">
     <title>GitHub :: IT From Scratch</title>
     <link href="../../../note/03_source-control/01_github/index.xml" rel="alternate" type="application/rss+xml" title="GitHub :: IT From Scratch">
-    <link href="../../../images/favicon.png?1763823253" rel="icon" type="image/png">
-    <link href="../../../css/auto-complete/auto-complete.min.css?1763823253" rel="stylesheet">
-    <script src="../../../js/auto-complete/auto-complete.min.js?1763823253" defer></script>
-    <script src="../../../js/search-lunr.min.js?1763823253" defer></script>
-    <script src="../../../js/search.min.js?1763823253" defer></script>
+    <link href="../../../images/favicon.png?1764247963" rel="icon" type="image/png">
+    <link href="../../../css/auto-complete/auto-complete.min.css?1764247963" rel="stylesheet">
+    <script src="../../../js/auto-complete/auto-complete.min.js?1764247963" defer></script>
+    <script src="../../../js/search-lunr.js?1764247963" defer></script>
+    <script src="../../../js/search.js?1764247963" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../../searchindex.en.js?1763823253";
+      window.relearn.index_js_url="../../../searchindex.en.js?1764247963";
     </script>
-    <script src="../../../js/lunr/lunr.min.js?1763823253" defer></script>
-    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1763823253" defer></script>
-    <script src="../../../js/lunr/lunr.multi.min.js?1763823253" defer></script>
-    <script src="../../../js/lunr/lunr.en.min.js?1763823253" defer></script>
+    <script src="../../../js/lunr/lunr.min.js?1764247963" defer></script>
+    <script src="../../../js/lunr/lunr.stemmer.support.min.js?1764247963" defer></script>
+    <script src="../../../js/lunr/lunr.multi.min.js?1764247963" defer></script>
+    <script src="../../../js/lunr/lunr.en.min.js?1764247963" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1763823253" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1763823253" rel="stylesheet"></noscript>
-    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1763823253" rel="stylesheet">
-    <link href="../../../css/theme.min.css?1763823253" rel="stylesheet">
-    <link href="../../../css/format-html.min.css?1763823253" rel="stylesheet" id="R-format-style">
+    <link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1764247963" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../../fonts/fontawesome/css/fontawesome-all.min.css?1764247963" rel="stylesheet"></noscript>
+    <link href="../../../css/perfect-scrollbar/perfect-scrollbar.min.css?1764247963" rel="stylesheet">
+    <link href="../../../css/theme.css?1764247963" rel="stylesheet">
+    <link href="../../../css/format-html.css?1764247963" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/note\/03_source-control\/01_github\/index.html';
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..';
-      window.relearn.absBaseUri='';
+      window.relearn.absBaseUri='\/\/localhost:1313';
       window.relearn.disableInlineCopyToClipboard=false;
       window.relearn.enableBlockCodeWrap=true;
       // legal
@@ -103,7 +115,12 @@
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#important-note">Important note</a></li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
@@ -138,6 +155,20 @@
 
 <h1 id="github">GitHub</h1>
 
+<h2 id="important-note">Important note<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>
+<p>When rebase a branch, that branch cannot be deleted until finish rebase or stop rebase using
+<code>git rebase --abort</code></p>
+</li>
+<li>
+<p>Step to init a new repo</p>
+</li>
+</ul>
+<ol>
+<li><code>git init</code></li>
+<li><code>git remote add origin &lt;NEW_URL&gt;</code></li>
+</ol>
 
   <footer class="footline">
   </footer>
@@ -232,8 +263,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1763823253" defer></script>
-    <script src="../../../js/theme.min.js?1763823253" defer></script>
+    <script src="../../../js/perfect-scrollbar/perfect-scrollbar.min.js?1764247963" defer></script>
+    <script src="../../../js/theme.js?1764247963" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

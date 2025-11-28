@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Operators :: IT From Scratch</title>
-    <link>/note/01_programming-language/01_python/02_operators/index.html</link>
+    <link>//localhost:1313/note/01_programming-language/01_python/02_operators/index.html</link>
     <description>Comparison Operator&#xD;Input&#xA;42 == 42&#xD;Output&#xA;True&#xD;Input&#xA;42 == 42.0&#xD;Output&#xA;True&#xD;The expression 42 == ‘42’ evaluates to False because Python considers the integer 42 to be different from the string ‘42’. However, Python does consider the integer 42 to be the same as the float 42.0. Input&#xA;42 == &#39;42&#39;&#xD;Output</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/note/01_programming-language/01_python/02_operators/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/note/01_programming-language/01_python/02_operators/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

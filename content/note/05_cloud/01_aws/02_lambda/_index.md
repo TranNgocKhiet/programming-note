@@ -1,6 +1,6 @@
 ---
 title: "AWS Lambda"
-weight: 1
+weight: 2
 ---
 
 {{<children>}}

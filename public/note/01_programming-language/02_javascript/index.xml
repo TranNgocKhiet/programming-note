@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript :: IT From Scratch</title>
-    <link>/note/01_programming-language/02_javascript/index.html</link>
+    <link>//localhost:1313/note/01_programming-language/02_javascript/index.html</link>
     <description>Data Structures&#xD;Functions&#xD;Libraries&#xD;Runtime Environment&#xD;Object-Relational Mapping</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/note/01_programming-language/02_javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/note/01_programming-language/02_javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Structures</title>
-      <link>/note/01_programming-language/02_javascript/01_data-structures/index.html</link>
+      <link>//localhost:1313/note/01_programming-language/02_javascript/01_data-structures/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/note/01_programming-language/02_javascript/01_data-structures/index.html</guid>
+      <guid>//localhost:1313/note/01_programming-language/02_javascript/01_data-structures/index.html</guid>
       <description>let&#xD;let count = 0; count = 1; // OK const&#xD;const name = &#34;Alice&#34;; name = &#34;Bob&#34;; // Error Object | {}&#xD;Input&#xA;const photo = { id: &#34;123&#34;, title: &#34;Ảnh hoàng hôn&#34;, tags: [&#34;sunset&#34;, &#34;beach&#34;] }; console.log(photo.title); console.log(photo.tags[0]); Output</description>
     </item>
     <item>
       <title>Functions</title>
-      <link>/note/01_programming-language/02_javascript/02_functions/index.html</link>
+      <link>//localhost:1313/note/01_programming-language/02_javascript/02_functions/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/note/01_programming-language/02_javascript/02_functions/index.html</guid>
+      <guid>//localhost:1313/note/01_programming-language/02_javascript/02_functions/index.html</guid>
       <description>Arrow Functions&#xD;Old style function add(a, b) { return a + b; }&#xD;New style const add = (a, b) =&gt; { return a + b; };&#xD;Nếu hàm chỉ có 1 dòng return, bạn có thể viết siêu ngắn const addShort = (a, b) =&gt; a + b;&#xD;Nếu chỉ có 1 tham số const sayHello = name =&gt; `Hello, ${name}`;&#xD;map()&#xD;Input</description>
     </item>
     <item>
       <title>Libraries</title>
-      <link>/note/01_programming-language/02_javascript/03_libraries/index.html</link>
+      <link>//localhost:1313/note/01_programming-language/02_javascript/03_libraries/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/note/01_programming-language/02_javascript/03_libraries/index.html</guid>
+      <guid>//localhost:1313/note/01_programming-language/02_javascript/03_libraries/index.html</guid>
       <description>React</description>
     </item>
     <item>
       <title>Runtime Environment</title>
-      <link>/note/01_programming-language/02_javascript/04_runtime-environment/index.html</link>
+      <link>//localhost:1313/note/01_programming-language/02_javascript/04_runtime-environment/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/note/01_programming-language/02_javascript/04_runtime-environment/index.html</guid>
+      <guid>//localhost:1313/note/01_programming-language/02_javascript/04_runtime-environment/index.html</guid>
       <description></description>
     </item>
     <item>
       <title>Object-Relational Mapping</title>
-      <link>/note/01_programming-language/02_javascript/05_object-relational-mapping/index.html</link>
+      <link>//localhost:1313/note/01_programming-language/02_javascript/05_object-relational-mapping/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/note/01_programming-language/02_javascript/05_object-relational-mapping/index.html</guid>
+      <guid>//localhost:1313/note/01_programming-language/02_javascript/05_object-relational-mapping/index.html</guid>
       <description></description>
     </item>
   </channel>
