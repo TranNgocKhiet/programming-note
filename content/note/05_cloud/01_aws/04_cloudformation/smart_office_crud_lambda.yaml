@@ -50,14 +50,14 @@ Resources:
                 Resource: "*"
 
   # LAMBDA FUNCTION
-  RoomConfigFunction:
+  ConfigRoomFunction:
     Type: AWS::Lambda::Function
     Properties:
-      FunctionName: !Sub "${AWS::StackName}-RoomConfig"
+      FunctionName: !Sub "${AWS::StackName}-ConfigRoom"
       Description: "Handlde Smart Office Room Config (Code updated via GitLab)"
       Runtime: python3.14
       # filename.functionname
-      Handler: RoomConfig.lambda_handler
+      Handler: ConfigRoom.lambda_handler
       # Resource configuration
       MemorySize: 128 # MB
       Timeout: 10 # Second (Default is 3s)
@@ -74,10 +74,10 @@ Resources:
           def lambda_handler(event, context):
               return "Infrastructure created. Waiting for code deployment..."
 
-  RoomConfigLogGroup:
+  ConfigRoomLogGroup:
     Type: AWS::Logs::LogGroup
     Properties:
-      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-RoomConfig"
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-ConfigRoom"
       # Auto delete for cost saving
       RetentionInDays: 3
 
@@ -109,11 +109,11 @@ Resources:
       RetentionInDays: 3
 
 Outputs:
-  RoomConfigFunctionArn:
+  ConfigRoomFunctionArn:
     Description: ARN của Room Config Function
-    Value: !GetAtt RoomConfigFunction.Arn
+    Value: !GetAtt ConfigRoomFunction.Arn
     Export:
-      Name: !Sub "${AWS::StackName}-RoomConfigFunctionArn"
+      Name: !Sub "${AWS::StackName}-ConfigRoomFunctionArn"
 
   ProfileUpdateFunctionArn:
     Description: ARN của Profile Update Function
